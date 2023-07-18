@@ -1,0 +1,54 @@
+{
+  "name": "pedaki.fr",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PedakiApp/pedaki.fr.git"
+  },
+  "engines": {
+    "node": ">=18.0.0 <19.0.0"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "prepare": "husky install",
+    "generate-docs": "bun ./bin/generate-docs.ts",
+    "generate-docs:watch": "bun --watch ./bin/generate-docs.ts"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.10",
+    "@t3-oss/env-nextjs": "^0.6.0",
+    "lint-staged": "^13.2.3",
+    "next": "^13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.0",
+    "@types/node": "^20.4.2",
+    "@types/prettier": "^2.7.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "6.1.0",
+    "@typescript-eslint/parser": "6.1.0",
+    "autoprefixer": "^10.4.14",
+    "chokidar": "^3.5.3",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "^13.4.10",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.26",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
+  },
+  "lint-staged": {
+    "*.{html,js,ts,tsx,json,yml,css,scss}": "prettier --write",
+    "*.{js,ts,tsx}": "eslint"
+  }
+}
