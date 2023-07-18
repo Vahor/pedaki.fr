@@ -1,5 +1,7 @@
 {
   "*": {
-    "typesetting": "article"
+    "theme": {
+      "typesetting": "article"
+    }
   }
 }
