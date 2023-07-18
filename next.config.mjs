@@ -25,7 +25,21 @@ const config = {
             destination: '/docs/getting-started',
             permanent: false,
         },
-    ]
+    ],
+
+    compiler: {
+        removeConsole: process.env.NODE_ENV === "production"
+    },
+
+    eslint: {
+        // Already checked in ci
+        ignoreDuringBuilds: true
+    },
+
+    typescript: {
+        // Already checked in ci
+        ignoreBuildErrors: true
+    }
 
 };
 

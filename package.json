@@ -16,7 +16,7 @@
     "start": "next start",
     "prepare": "husky install",
     "clean": "rimraf .next",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache --ignore-unknown",
     "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "typecheck": "tsc --noEmit"
   },

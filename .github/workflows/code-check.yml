@@ -6,6 +6,9 @@ on:
 
 jobs:
   lint:
+    env:
+      SKIP_ENV_VALIDATION: true
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,9 +26,14 @@ jobs:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Install dependencies (cache)
+        run: yarn install --frozen-lockfile
 
-      - run: yarn lint && yarn typecheck && yarn format:check
-        env:
-          SKIP_ENV_VALIDATION: true
+      - name: Run eslint
+        run: yarn lint
+
+      - name: Run prettier
+        run: yarn format:check --list-different
+
+      - name: Run typescript
+        run: yarn typecheck
