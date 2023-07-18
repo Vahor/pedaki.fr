@@ -1,6 +1,11 @@
 {
   "docs": {
+    "title": "Documentation",
     "type": "page",
-    "title": "Documentation"
+    "href": "/docs"
+  },
+  "changelog": {
+    "title": "Changelog",
+    "type": "page"
   }
 }

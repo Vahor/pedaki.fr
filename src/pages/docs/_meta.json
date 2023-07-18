@@ -1,10 +1,5 @@
 {
-  "--": {
-    "type": "separator",
-    "title": "Documentation"
-  },
   "getting-started": "Introduction",
-  "modules": "Modules",
   "---": {
     "type": "separator",
     "title": "Modules"
