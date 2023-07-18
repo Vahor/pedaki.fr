@@ -1,5 +1,7 @@
 import React from "react";
 import "~/styles/globals.css";
+import { fontClassName } from "~/styles/fonts";
+import { cn } from "~/lib/utils";
 
 export default function RootLayout({
   children,
@@ -7,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={cn(fontClassName)} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

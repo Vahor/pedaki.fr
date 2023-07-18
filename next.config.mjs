@@ -1,20 +1,32 @@
-import withMDX from '@next/mdx';
+import nextra from 'nextra';
 
-const withMdxConfig = withMDX({
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-});
+const withNextra = nextra({
+    theme: 'nextra-theme-docs',
+    themeConfig: './nextra.config.tsx',
+    defaultShowCopyCode: true,
+    flexsearch: {
+        codeblocks: true
+    },
+    codeHighlight: true
+})
 
 /** @type {import("next").NextConfig} */
 const config = {
-  reactStrictMode: true,
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    reactStrictMode: true,
 
-  experimental: {
-    appDir: true,
-  }
+    swcMinify: true,
+    experimental: {
+        appDir: true,
+    },
+
+    redirects: async () => [
+        {
+            source: '/docs',
+            destination: '/docs/getting-started',
+            permanent: false,
+        },
+    ]
+
 };
 
-export default withMdxConfig(config);
+export default withNextra(config);

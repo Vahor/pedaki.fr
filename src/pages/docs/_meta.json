@@ -1,0 +1,22 @@
+{
+  "--": {
+    "type": "separator",
+    "title": "Documentation"
+  },
+  "getting-started": "Introduction",
+  "modules": "Modules",
+  "---": {
+    "type": "separator",
+    "title": "Modules"
+  },
+  "class": "Classes",
+  "----": {
+    "type": "separator",
+    "title": "Ressources"
+  },
+  "self-host": "Self-Host",
+  "migrate": "Migrer",
+  "billing": "Licenses",
+  "contribute": "Contribuer",
+  "privacy": "Privacy"
+}
