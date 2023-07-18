@@ -1,0 +1,31 @@
+name: Code check
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: actions/cache@v3
+        name: Setup yarn cache
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - run: yarn lint && yarn typecheck && yarn format:check
+        env:
+          SKIP_ENV_VALIDATION: true
