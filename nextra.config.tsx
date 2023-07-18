@@ -85,10 +85,10 @@ const config: DocsThemeConfig = {
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { locale } = useRouter();
+    const { locale = "fr" } = useRouter();
     return (
       <>
-        <span>Dernière mise à jour le</span>
+        <span>Dernière mise à jour le </span>
         <time dateTime={timestamp.toISOString()}>
           {timestamp.toLocaleDateString(locale, {
             day: "numeric",
