@@ -37,7 +37,7 @@ jobs:
         run: yarn lint
 
       - name: Run prettier
-        run: yarn format:check --list-different
+        run: yarn format:check
 
       - name: Run typescript
         run: yarn typecheck
