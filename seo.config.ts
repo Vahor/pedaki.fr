@@ -8,7 +8,7 @@ const seoConfig = defineMetadata({
     default: "Pedaki",
   },
   description: "todo",
-  themeColor: "#33887E",
+  themeColor: "#ffffff",
   openGraph: {
     images: "/og-image.png",
     url: "https://pedaki.fr",
