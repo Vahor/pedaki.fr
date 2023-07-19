@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
-const defineMetadata = <T extends Metadata>(metadata: T) => metadata;
-
-const seoConfig = defineMetadata({
+const seoConfig = {
   title: {
     template: "%s - Pedaki",
     default: "Pedaki",
@@ -13,6 +11,8 @@ const seoConfig = defineMetadata({
     images: "/og-image.png",
     url: "https://pedaki.fr",
   },
+  robots: "index, follow",
+  colorScheme: "light",
   manifest: "/site.webmanifest",
   icons: [
     { rel: "icon", url: "/favicon.ico" },
@@ -20,6 +20,6 @@ const seoConfig = defineMetadata({
     { rel: "mask-icon", url: "/favicon.ico" },
     { rel: "image/x-icon", url: "/favicon.ico" },
   ],
-});
+} satisfies Metadata;
 
 export default seoConfig;
