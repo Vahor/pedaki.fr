@@ -11,6 +11,9 @@ const config: DocsThemeConfig = {
   },
   primaryHue: 25,
   darkMode: false,
+  nextThemes: {
+    forcedTheme: "light",
+  },
   logo: (
     <div className="flex items-center">
       <Image src="/logo.svg" alt="Pedaki" width="32" height="32" />
