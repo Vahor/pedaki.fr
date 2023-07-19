@@ -20,7 +20,7 @@ const config: DocsThemeConfig = {
       <span className="ml-2 text-xl font-bold">pedaki</span>
     </div>
   ),
-  docsRepositoryBase: "https://github.com/pedakiapp/pedaki.fr/pages/docs",
+  docsRepositoryBase: "https://github.com/pedakiapp/pedaki.fr",
   useNextSeoProps() {
     const { route } = useRouter();
     const { url, images } = seoConfig.openGraph;
