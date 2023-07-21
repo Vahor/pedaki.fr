@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const config: DocsThemeConfig = {
   project: {
-    link: "https://github.com/pedakiapp/pedaki",
+    link: "https://github.com/vahor/pedaki-pedaki.fr",
   },
   primaryHue: 25,
   darkMode: false,
@@ -20,7 +20,7 @@ const config: DocsThemeConfig = {
       <span className="ml-2 text-xl font-bold">pedaki</span>
     </div>
   ),
-  docsRepositoryBase: "https://github.com/pedakiapp/pedaki.fr",
+  docsRepositoryBase: "https://github.com/vahor/pedaki-pedaki.fr/tree/main",
   useNextSeoProps() {
     const { route } = useRouter();
     const { url, images } = seoConfig.openGraph;
