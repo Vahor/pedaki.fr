@@ -20,7 +20,6 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "prepare": "husky install",
     "clean": "rimraf .next",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
     "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
