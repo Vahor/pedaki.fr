@@ -29,15 +29,12 @@
   "dependencies": {
     "@pedaki/common": "github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail",
     "@t3-oss/env-nextjs": "^0.6.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
     "lucide-react": "^0.263.0",
     "next": "^13.4.12",
     "nextra": "^2.10.0",
     "nextra-theme-docs": "^2.10.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwind-merge": "^1.14.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
@@ -49,11 +46,8 @@
     "@typescript-eslint/eslint-plugin": "6.2.1",
     "@typescript-eslint/parser": "6.2.1",
     "autoprefixer": "^10.4.14",
-    "chokidar": "^3.5.3",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.4.12",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
     "mini-svg-data-uri": "^1.4.4",
     "postcss": "^8.4.27",
     "prettier": "^3.0.0",
@@ -62,9 +56,5 @@
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "^5.1.6"
-  },
-  "lint-staged": {
-    "*.{html,js,ts,tsx,json,yml,css,scss}": "prettier --write",
-    "*.{js,ts,tsx}": "eslint"
   }
 }
