@@ -47,7 +47,7 @@ jobs:
         run: yarn lint
 
       - name: Run prettier
-        run: yarn format:check
+        run: pnpm format:check
 
       - name: Run typescript
-        run: yarn typecheck
+        run: pnpm typecheck
