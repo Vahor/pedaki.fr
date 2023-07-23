@@ -1,13 +1,13 @@
 <svg width="691" height="691" viewBox="0 0 691 691" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1.5" y="1.5" width="688" height="688" rx="106.5" fill="url(#paint0_radial_30_22)" stroke="black" stroke-width="3"/>
-<rect x="108" y="113" width="473.432" height="435.765" rx="60" fill="white"/>
+<rect x="1.5" y="1.5" width="688" height="688" rx="158.5" fill="url(#paint0_radial_30_22)" stroke="black" stroke-width="3"/>
+<rect x="125" y="142" width="440.358" height="405.322" rx="60" fill="white"/>
 <g filter="url(#filter0_d_30_22)">
-<path d="M179.997 113H521.432C554.569 113 581.432 139.863 581.432 173V330.882H179.997V113Z" fill="#E38845"/>
-<path d="M179.997 330.882H581.432V488.765C581.432 521.902 554.569 548.765 521.432 548.765H179.997V330.882Z" fill="#33887E"/>
+<path d="M191.967 142H505.358C538.495 142 565.358 168.863 565.358 202V344.661H191.967V142Z" fill="#E38845"/>
+<path d="M191.967 344.661H565.358V487.322C565.358 520.459 538.495 547.322 505.358 547.322H191.967V344.661Z" fill="#33887E"/>
 </g>
-<rect x="249.811" y="113" width="30.544" height="435.765" fill="#202139"/>
+<rect x="256.904" y="142" width="28.4102" height="405.322" fill="#202139"/>
 <defs>
-<filter id="filter0_d_30_22" x="79.9966" y="13" width="601.436" height="635.765" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_30_22" x="91.9668" y="42" width="573.391" height="605.322" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset/>

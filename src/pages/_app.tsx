@@ -1,5 +1,6 @@
-import { FiraCode, MonaSans } from "~/styles/fonts";
+import { FiraCode, MonaSans } from "@pedaki/common/styles/fonts";
 
+import "@pedaki/common/styles/globals.css";
 import "~/styles/globals.css";
 import "~/styles/nextra.css";
 import { type AppProps } from "next/app";

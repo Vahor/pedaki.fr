@@ -17,7 +17,11 @@ const config = {
     swcMinify: true,
     experimental: {
         appDir: true,
+        typedRoutes: true,
     },
+
+    transpilePackages: ["@pedaki/common"],
+
 
     redirects: async () => [
         {
