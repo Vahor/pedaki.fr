@@ -1,4 +1,4 @@
-const sharedConfig = require("@pedaki/common/src/tailwind.config");
+const sharedConfig = require("@pedaki/common/tailwind.config");
 
 module.exports = {
     presets: [sharedConfig],
@@ -6,6 +6,5 @@ module.exports = {
 // @ts-ignore
         ...sharedConfig.content,
         "nextra.config.tsx",
-        "node_modules/@pedaki/common/src/components/**/*.{ts,tsx}",
     ]
 };

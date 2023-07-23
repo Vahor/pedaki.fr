@@ -4,6 +4,7 @@ import "~/styles/globals.css";
 import { fontClassName } from "@pedaki/common/styles/fonts";
 import { cn } from "@pedaki/common/lib/utils";
 import seoConfig from "../../seo.config";
+import Header from "~/components/header";
 
 export default function RootLayout({
   children,
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={cn(fontClassName)} suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+      <Header />
+      {children}
+      </body>
     </html>
   );
 }

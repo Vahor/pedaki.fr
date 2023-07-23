@@ -27,8 +27,6 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      // TODO: remove
-      "@pedaki/common/*": ["./node_modules/@pedaki/common/src/*"]
     },
     "plugins": [
       {
