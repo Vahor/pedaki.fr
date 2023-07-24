@@ -1,6 +1,7 @@
 import React from "react";
 import { auth } from "~/server/auth";
 import { type Session } from "next-auth";
+import { Avatar, AvatarFallback, AvatarImage } from "@pedaki/common/ui/avatar";
 
 const User = async () => {
   const session = await auth();
@@ -21,8 +22,11 @@ const Guest = () => {
 
 const Authenticated = ({ session }: { session: Session }) => {
   return (
-    <div>
-      <span>{session.user.name}</span>
+    <div className="flex items-center space-x-2">
+      <Avatar>
+        <AvatarImage src={session.user.image} className="h-8 my-auto"/>
+        <AvatarFallback>..</AvatarFallback>
+      </Avatar>
     </div>
   );
 };
