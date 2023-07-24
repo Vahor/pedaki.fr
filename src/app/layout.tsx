@@ -14,8 +14,8 @@ export default function RootLayout({
   return (
     <html lang="fr" className={cn(fontClassName)} suppressHydrationWarning>
       <body>
-      <Header />
-      {children}
+        <Header />
+        {children}
       </body>
     </html>
   );

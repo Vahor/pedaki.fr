@@ -1,27 +1,19 @@
-"use client";
-
-import React, {useState} from 'react';
-import Burger from "@pedaki/common/ui/burger";
+import React from "react";
+import User from "~/components/header/user";
+import Mobile from "~/components/header/mobile";
 
 const Navigation = () => {
+  return (
+    <>
+      {/*Desktop navigation*/}
+      <div className="hidden lg:flex"></div>
 
-    const [mobileOpen, setMobileOpen] = useState(false);
-
-    return (
-        <>
-            {/*Desktop navigation*/}
-            <div className="hidden lg:flex">
-
-            </div>
-
-            {/* Mobile burger */}
-            <div className="flex lg:hidden">
-                <Burger onClick={() => setMobileOpen(!mobileOpen)} active={mobileOpen}/>
-            </div>
-            {/* Mobile navigation */}
-
-        </>
-    );
+      <div className="flex items-center gap-4">
+        <User />
+        <Mobile />
+      </div>
+    </>
+  );
 };
 
 export default Navigation;
