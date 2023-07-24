@@ -5,7 +5,7 @@ import {
 } from "next-auth";
 
 // Only used to extract the auth information
-// Mainly on the navbar to show a login button or the user's avatar
+// Mainly on the navbar to show a login button or the user's avatar.
 
 declare module "next-auth" {
   interface Session extends DefaultSession {
