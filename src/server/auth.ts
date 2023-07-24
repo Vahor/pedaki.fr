@@ -4,12 +4,9 @@ import {
   type NextAuthOptions,
 } from "next-auth";
 
-/**
- * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
- * object and keep type safety.
- *
- * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
- */
+// Only used to extract the auth information
+// Mainly on the navbar to show a login button or the user's avatar
+
 declare module "next-auth" {
   interface Session extends DefaultSession {
     user: {
