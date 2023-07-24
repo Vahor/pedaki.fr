@@ -30,6 +30,11 @@ const config = {
             destination: '/docs/getting-started',
             permanent: false,
         },
+        {
+            source: '/login',
+            destination: 'https://app.pedaki.fr/auth/login',
+            permanent: false,
+        }
     ],
 
     compiler: {

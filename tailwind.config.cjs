@@ -1,4 +1,4 @@
-const sharedConfig = require("@pedaki/common/tailwind.config");
+const sharedConfig = require("@pedaki/common/styles/tailwind.config");
 
 module.exports = {
     presets: [sharedConfig],
