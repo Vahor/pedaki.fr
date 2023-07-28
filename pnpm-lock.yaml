@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@pedaki/common':
     specifier: github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail
-    version: github.com/Vahor/pedaki-common/adf9418b458f0c50b88c95fe2d22b6f411ced582(@types/react-dom@18.2.7)(@types/react@18.2.17)(react-dom@18.2.0)(react@18.2.0)
+    version: github.com/Vahor/pedaki-common/9beb5c01e339cd3c02bcebbb66ba1c946eb6c8b9(@types/react-dom@18.2.7)(@types/react@18.2.17)(react-dom@18.2.0)(react@18.2.0)
   '@t3-oss/env-nextjs':
     specifier: ^0.6.0
     version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -7844,9 +7844,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/adf9418b458f0c50b88c95fe2d22b6f411ced582(@types/react-dom@18.2.7)(@types/react@18.2.17)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/adf9418b458f0c50b88c95fe2d22b6f411ced582}
-    id: github.com/Vahor/pedaki-common/adf9418b458f0c50b88c95fe2d22b6f411ced582
+  github.com/Vahor/pedaki-common/9beb5c01e339cd3c02bcebbb66ba1c946eb6c8b9(@types/react-dom@18.2.7)(@types/react@18.2.17)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/9beb5c01e339cd3c02bcebbb66ba1c946eb6c8b9}
+    id: github.com/Vahor/pedaki-common/9beb5c01e339cd3c02bcebbb66ba1c946eb6c8b9
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', pnpm: '>=8.0.0'}

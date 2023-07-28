@@ -7,9 +7,9 @@ const Navigation = () => {
   return (
     <>
       {/*Desktop navigation*/}
-      <nav className="ml-4 mr-auto hidden md:flex">
+      <div className="ml-4 mr-auto hidden md:flex">
         <Desktop />
-      </nav>
+      </div>
 
       <div className="flex items-center gap-4">
         <User />
