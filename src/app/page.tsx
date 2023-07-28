@@ -6,7 +6,7 @@ export default function Page() {
     <div>
       <Hero />
       <SocialProof />
-        after
+      after
     </div>
   );
 }

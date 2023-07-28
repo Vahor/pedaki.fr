@@ -6,13 +6,15 @@ const SocialProof = () => {
   return (
     <div className="relative z-10 block w-full bg-white px-8 pt-4 md:pt-0">
       <div className="flex flex-col items-center justify-center border-y py-16 md:-mt-[70px]">
-        <h2 className="leading-7 text-muted-foreground md:text-base pb-8 font-medium">Ils nous font confiance</h2>
-        <div className="grid sm:flex grid-cols-2 justify-between gap-4 max-w-screen-sm w-full place-items-center">
-          <Image src={mewo} alt="mewo" height={48}/>
-          <Image src={mewo} alt="mewo" height={48}/>
-          <Image src={mewo} alt="mewo" height={48}/>
-          <Image src={mewo} alt="mewo" height={48}/>
-          <Image src={mewo} alt="mewo" height={48}/>
+        <h2 className="pb-8 font-medium leading-7 text-muted-foreground md:text-base">
+          Ils nous font confiance
+        </h2>
+        <div className="grid w-full max-w-screen-sm grid-cols-2 place-items-center justify-between gap-4 sm:flex">
+          <Image src={mewo} alt="mewo" height={48} />
+          <Image src={mewo} alt="mewo" height={48} />
+          <Image src={mewo} alt="mewo" height={48} />
+          <Image src={mewo} alt="mewo" height={48} />
+          <Image src={mewo} alt="mewo" height={48} />
         </div>
       </div>
     </div>

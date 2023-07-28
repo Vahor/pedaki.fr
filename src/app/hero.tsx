@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative mt-8 w-full max-w-screen-lg px-4 flex justify-center mx-auto">
+      <div className="relative mx-auto mt-8 flex w-full max-w-screen-lg justify-center px-4">
         <Image src={mock} alt="mock" layout="responsive" priority />
       </div>
     </>
