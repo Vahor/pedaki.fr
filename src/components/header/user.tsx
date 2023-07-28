@@ -14,6 +14,7 @@ import { SignOutItem } from "~/components/header/signout-item";
 import { Button } from "@pedaki/common/ui/button";
 import Link from "next/link";
 import { Skeleton } from "@pedaki/common/ui/skeleton";
+import { env } from "~/env.mjs";
 
 const User = async () => {
   const session = await auth();
@@ -47,9 +48,9 @@ const Authenticated = ({ session }: { session: Session }) => {
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>{session.user.email}</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <Link href="http://localhost:4242">
+          <a href={env.NEXT_PUBLIC_APP_URL}>
             <DropdownMenuItem>Dashboard</DropdownMenuItem>
-          </Link>
+          </a>
           <DropdownMenuItem>Profile</DropdownMenuItem>
           <DropdownMenuSeparator />
           <SignOutItem />

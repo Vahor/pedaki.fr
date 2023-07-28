@@ -8,11 +8,14 @@ export const env = createEnv({
   },
 
   client: {
+    NEXT_PUBLIC_APP_URL: z.string().url().default("https://app.pedaki.fr"),
   },
 
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
   },
 
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
