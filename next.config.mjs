@@ -32,7 +32,7 @@ const config = {
         },
         {
             source: '/login',
-            destination: 'https://app.pedaki.fr/auth/login',
+            destination: process.env.NODE_ENV === "production" ? 'https://app.pedaki.fr/auth/login' : "http://localhost:4242/auth/login",
             permanent: false,
         }
     ],

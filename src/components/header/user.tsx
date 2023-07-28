@@ -13,6 +13,7 @@ import {
 import { SignOutItem } from "~/components/header/signout-item";
 import { Button } from "@pedaki/common/ui/button";
 import Link from "next/link";
+import { Skeleton } from "@pedaki/common/ui/skeleton";
 
 const User = async () => {
   const session = await auth();
@@ -36,15 +37,19 @@ const Authenticated = ({ session }: { session: Session }) => {
     <div className="flex items-center space-x-2">
       <DropdownMenu>
         <DropdownMenuTrigger className="outline-none focus:outline-none">
-          <Avatar>
-            <AvatarImage src={session.user.image} className="my-auto h-8" />
-            <AvatarFallback>..</AvatarFallback>
+          <Avatar className="h-8 w-8">
+            <AvatarImage src={session.user.image} className="my-auto" />
+            <AvatarFallback>
+              <Skeleton />
+            </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>{session.user.email}</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Dashboard</DropdownMenuItem>
+          <Link href="http://localhost:4242">
+            <DropdownMenuItem>Dashboard</DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>Profile</DropdownMenuItem>
           <DropdownMenuSeparator />
           <SignOutItem />
