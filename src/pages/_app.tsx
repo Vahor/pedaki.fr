@@ -1,4 +1,4 @@
-import { FiraCode, MonaSans } from "@pedaki/common/styles/fonts";
+import { FontSans, FontMono } from "@pedaki/common/styles/fonts";
 
 import "@pedaki/common/styles/globals.css";
 import "~/styles/globals.css";
@@ -11,8 +11,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <style jsx global>
         {`
           :root {
-            --font-mona-sans: ${MonaSans.style.fontFamily};
-            --font-fira-code: ${FiraCode.style.fontFamily};
+            --font-sans: ${FontSans.style.fontFamily};
+            --font-mono: ${FontMono.style.fontFamily};
           }
         `}
       </style>
