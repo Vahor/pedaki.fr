@@ -15,6 +15,7 @@ const config = {
     reactStrictMode: true,
 
     swcMinify: true,
+    poweredByHeader: false,
     experimental: {
         appDir: true,
         serverActions: true,

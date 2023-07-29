@@ -6,7 +6,7 @@ import { AspectRatio } from "@pedaki/common/ui/aspect-ratio";
 
 const VideoDemo = () => {
   return (
-    <div className="relative mx-auto mt-8 w-full max-w-screen-lg">
+    <div className="relative mx-auto mt-8 md:mt-12 w-full max-w-screen-lg px-4 xl:px-0">
       <div className="absolute top-[-8.7rem] z-20 hidden md:block">
         <svg
           width="132"
@@ -55,7 +55,7 @@ const VideoDemo = () => {
           aria-label="Play video"
           className="group relative flex w-full cursor-pointer"
         >
-          <div className="absolute inset-0 flex items-center justify-center rounded-2xl opacity-0 transition-all duration-300 m-1 hover:bg-gray-600/5 backdrop-blur-sm group-hover:opacity-100">
+          <div className="absolute inset-0 m-1 flex items-center justify-center rounded-2xl opacity-0 backdrop-blur-sm transition-all duration-300 hover:bg-gray-600/5 group-hover:opacity-100">
             <div className="box-content flex h-12 w-12 items-center justify-center rounded-full bg-gray-600 opacity-50 transition duration-300 hover:opacity-75 md:h-16 md:w-16">
               <svg
                 width="512"

@@ -4,6 +4,13 @@ import React, { useState } from "react";
 import Burger from "@pedaki/common/ui/burger";
 import { cn } from "@pedaki/common/lib/utils";
 import * as Portal from "@radix-ui/react-portal";
+import { navigation } from "~/config/navigation";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@pedaki/common/ui/accordion";
 
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,17 +28,38 @@ const Mobile = () => {
         {/* Mobile navigation */}
         <nav
           className={cn(
-            "h-0 overflow-hidden transition-all duration-500 ease-in-out",
-            mobileOpen ? "flex h-32 md:h-0" : "h-0",
+            "relative h-0 overflow-hidden transition-all duration-500 ease-in-out",
+            mobileOpen ? "flex h-96 md:h-0" : "h-0",
           )}
         >
           <ul className="mt-4 flex w-full flex-col gap-2 border-t border-t-secondary pt-4">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
+            <Accordion type="single" collapsible>
+              {navigation.map((item) => {
+                if (item.children) {
+                  return (
+                    <li key={item.name}>
+                      <AccordionItem
+                        value={item.name}
+                        className="border-transparent"
+                      >
+                        <AccordionTrigger>{item.name}</AccordionTrigger>
+                        <AccordionContent>
+                          <ul>
+                            {item.children.map((subitem) => (
+                              <li key={subitem.name}>
+                                <a href={subitem.href}>{subitem.name}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </li>
+                  );
+                }
+
+                return null;
+              })}
+            </Accordion>
           </ul>
         </nav>
       </Portal.Root>

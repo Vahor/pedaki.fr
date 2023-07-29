@@ -8,71 +8,58 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "@pedaki/common/ui/navigation-menu";
 import Link from "next/link";
 import { cn } from "@pedaki/common/lib/utils";
+import { navigation } from "~/config/navigation";
+import { usePathname } from "next/navigation";
 
 const Desktop = () => {
+  const pathname = usePathname();
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-              <ListItem href="/docs" title="Introduction">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-              <ListItem href="/docs" title="SelfHost">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-              <ListItem href="/docs" title="Jsp">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Modules</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-              <ListItem href="/docs" title="Gestion de classe">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-              <ListItem href="/docs" title="Gestion de classe">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-              <ListItem href="/docs" title="Gestion de classe">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Ressources</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-              <ListItem href="/docs" title="Introduction">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-              <ListItem href="/docs" title="SelfHost">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-              <ListItem href="/docs" title="Jsp">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-                quidem.
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+        {navigation.map((item) => {
+          if (item.children) {
+            return (
+              <NavigationMenuItem key={item.name}>
+                <>
+                  <NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
+                      {item.children.map((subitem) => (
+                        <ListItem
+                          href={subitem.href}
+                          title={subitem.name}
+                          key={subitem.name}
+                        >
+                          {subitem.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </>
+              </NavigationMenuItem>
+            );
+          }
+
+          const isActive = pathname === item.href;
+
+          return (
+            <NavigationMenuItem key={item.name}>
+              <Link href={item.href} passHref>
+                <NavigationMenuLink
+                  href={item.href}
+                  className={navigationMenuTriggerStyle()}
+                  data-active={isActive}
+                >
+                  {item.name}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          );
+        })}
       </NavigationMenuList>
     </NavigationMenu>
   );
