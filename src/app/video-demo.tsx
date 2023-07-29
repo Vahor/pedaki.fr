@@ -34,7 +34,7 @@ const VideoDemo = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
             allowFullScreen
-            className="rounded-md object-cover w-full h-full"
+            className="h-full w-full rounded-md object-cover"
           ></iframe>
         </AspectRatio>
       </DialogContent>
