@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@pedaki/common/ui/accordion";
+import Link from "next/link";
 
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -47,7 +48,7 @@ const Mobile = () => {
                           <ul>
                             {item.children.map((subitem) => (
                               <li key={subitem.name}>
-                                <a href={subitem.href}>{subitem.name}</a>
+                                <Link href={subitem.href}>{subitem.name}</Link>
                               </li>
                             ))}
                           </ul>

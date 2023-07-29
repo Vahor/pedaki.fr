@@ -7,7 +7,7 @@ type Navigation = {
     }
   | {
       href?: never;
-      children: (Navigation & { description: string })[];
+      children: (Navigation & { href: string, description: string })[];
     }
 );
 
