@@ -5,8 +5,8 @@ import VideoDemo from "~/app/video-demo";
 
 const Hero = () => {
   return (
-    <>
-      <div className="mx-auto mt-32 flex max-w-screen-md flex-col justify-center gap-3 px-4 md:gap-4">
+    <section>
+      <div className="mx-auto flex max-w-screen-md flex-col justify-center gap-3 px-4 pt-32 md:gap-4">
         <div>
           <Badges />
         </div>
@@ -23,8 +23,9 @@ const Hero = () => {
         </div>
       </div>
 
+
       <VideoDemo />
-    </>
+    </section>
   );
 };
 

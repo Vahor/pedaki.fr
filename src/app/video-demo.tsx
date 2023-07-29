@@ -68,7 +68,7 @@ const VideoDemo = () => {
               </svg>
             </div>
           </div>
-          <Image src={mock} alt="mock" layout="responsive" priority />
+          <Image src={mock} alt="mock" priority />
         </DialogTrigger>
         <DialogContent className="md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl">
           <AspectRatio ratio={16 / 9} className="p-2">
