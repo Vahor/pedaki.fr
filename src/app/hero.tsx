@@ -6,7 +6,7 @@ import VideoDemo from "~/app/video-demo";
 const Hero = () => {
   return (
     <>
-      <div className="mx-auto mt-28 flex max-w-screen-md flex-col justify-center gap-3 px-4 md:gap-4">
+      <div className="mx-auto mt-32 flex max-w-screen-md flex-col justify-center gap-3 px-4 md:gap-4">
         <div>
           <Badges />
         </div>
@@ -19,7 +19,6 @@ const Hero = () => {
         </p>
 
         <div className="mx-8 mt-4 flex flex-col gap-4 md:mx-auto md:flex-row">
-          <Button variant="secondary">Lorem ipsum</Button>
           <Button variant="default">Lorem ipsum</Button>
         </div>
       </div>

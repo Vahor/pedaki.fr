@@ -8,14 +8,9 @@ import * as Portal from "@radix-ui/react-portal";
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   return (
-    <div className="flex md:hidden">
+    <div className="md:hidden">
       {/* Mobile burger */}
-      <div className="flex md:hidden">
-        <Burger
-          onClick={() => setMobileOpen(!mobileOpen)}
-          active={mobileOpen}
-        />
-      </div>
+      <Burger onClick={() => setMobileOpen(!mobileOpen)} active={mobileOpen} />
       <Portal.Root
         container={
           typeof window !== "undefined"
@@ -30,7 +25,7 @@ const Mobile = () => {
             mobileOpen ? "flex h-32 md:h-0" : "h-0",
           )}
         >
-          <ul className="flex flex-col gap-2 mt-4 border-t border-t-secondary w-full pt-4">
+          <ul className="mt-4 flex w-full flex-col gap-2 border-t border-t-secondary pt-4">
             <li>
               <a href="#">Home</a>
             </li>
