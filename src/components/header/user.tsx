@@ -37,7 +37,7 @@ const Authenticated = ({ session }: { session: Session }) => {
   return (
     <div className="flex items-center space-x-2">
       <DropdownMenu>
-        <DropdownMenuTrigger className="outline-none focus:outline-none">
+        <DropdownMenuTrigger className="outline-none focus:outline-none" aria-label="Open profile dropdown">
           <Avatar className="h-8 w-8">
             <AvatarImage src={session.user.image} className="my-auto" />
             <AvatarFallback>

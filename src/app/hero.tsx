@@ -1,8 +1,7 @@
 import React from "react";
 import { Badge } from "@pedaki/common/ui/badge";
 import { Button } from "@pedaki/common/ui/button";
-import Image from "next/image";
-import mock from "../../public/a/mock-hero.png";
+import VideoDemo from "~/app/video-demo";
 
 const Hero = () => {
   return (
@@ -25,9 +24,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative mx-auto mt-8 flex w-full max-w-screen-lg justify-center px-4">
-        <Image src={mock} alt="mock" layout="responsive" priority />
-      </div>
+      <VideoDemo />
     </>
   );
 };
