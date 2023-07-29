@@ -5,7 +5,7 @@ import Navigation from "~/components/header/navigation";
 const Header = () => {
   return (
     <header className="container fixed inset-x-0 top-0 mx-auto flex w-full max-w-screen-xl items-center justify-center pt-8 md:w-max z-50" style={{
-        paddingRight: "var(--removed-body-scroll-bar-size)"
+        paddingRight: "calc(2rem + var(--removed-body-scroll-bar-size, 0px))"
     }}>
       <div className="relative flex w-full flex-col rounded-lg bg-white px-4 py-2 shadow">
         <div className="flex justify-between gap-4">
