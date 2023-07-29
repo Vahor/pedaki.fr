@@ -6,12 +6,12 @@ import VideoDemo from "~/app/video-demo";
 const Hero = () => {
   return (
     <>
-      <div className="mx-auto mt-8 flex max-w-screen-md flex-col justify-center gap-3 px-4 md:mt-16 md:gap-4">
+      <div className="mx-auto mt-28 flex max-w-screen-md flex-col justify-center gap-3 px-4 md:gap-4">
         <div>
           <Badges />
         </div>
-        <h1 className="text-center text-4xl font-bold tracking-tighter text-gray-900 md:text-6xl">
-          Lorem ipsum dolor sit amet.
+        <h1 className="text-center text-4xl font-semibold tracking-tighter text-gray-900 md:text-6xl">
+          Lorem Ipsum Dolor Sit Amet.
         </h1>
         <p className="mx-auto w-2/3 text-center text-sm leading-7 text-muted-foreground md:text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
@@ -32,7 +32,7 @@ const Hero = () => {
 const Badges = () => {
   return (
     <div className="flex justify-center gap-4">
-      <Badge variant="outline">Ouverture prévue en 2024</Badge>
+      <Badge variant="default">Ouverture prévue en 2024</Badge>
     </div>
   );
 };

@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Burger from "@pedaki/common/ui/burger";
+import { cn } from "@pedaki/common/lib/utils";
+import * as Portal from "@radix-ui/react-portal";
 
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,21 +16,30 @@ const Mobile = () => {
           active={mobileOpen}
         />
       </div>
-      {/* Mobile navigation */}
-      <nav
-        className={`fixed left-0 top-16 z-10 h-screen w-full bg-white ${
-          mobileOpen ? "block" : "hidden"
-        }`}
+      <Portal.Root
+        container={
+          typeof window !== "undefined"
+            ? document.getElementById("mobile-target")
+            : null
+        }
       >
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-      </nav>
+        {/* Mobile navigation */}
+        <nav
+          className={cn(
+            "h-0 overflow-hidden transition-all duration-500 ease-in-out",
+            mobileOpen ? "flex h-32 md:h-0" : "h-0",
+          )}
+        >
+          <ul className="flex flex-col gap-2 mt-4 border-t border-t-secondary w-full pt-4">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </nav>
+      </Portal.Root>
     </div>
   );
 };
