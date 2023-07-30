@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import mock from "../../public/a/mock-hero.png";
-import { Dialog, DialogContent, DialogTrigger } from "@pedaki/common/ui/dialog";
-import { AspectRatio } from "@pedaki/common/ui/aspect-ratio";
+import { AspectRatio } from '@pedaki/common/ui/aspect-ratio';
+import { Dialog, DialogContent, DialogTrigger } from '@pedaki/common/ui/dialog';
+import Image from 'next/image';
+import React from 'react';
+import mock from '../../public/a/mock-hero.png';
 
 const Arrow = () => {
   return (

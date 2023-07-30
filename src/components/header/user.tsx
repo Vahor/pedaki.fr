@@ -1,7 +1,5 @@
-import React from "react";
-import { auth } from "~/server/auth";
-import { type Session } from "next-auth";
-import { Avatar, AvatarFallback, AvatarImage } from "@pedaki/common/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
+import { Button } from '@pedaki/common/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,12 +7,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@pedaki/common/ui/dropdown-menu";
-import { SignOutItem } from "~/components/header/signout-item";
-import { Button } from "@pedaki/common/ui/button";
-import Link from "next/link";
-import { Skeleton } from "@pedaki/common/ui/skeleton";
-import { env } from "~/env.mjs";
+} from '@pedaki/common/ui/dropdown-menu';
+import { Skeleton } from '@pedaki/common/ui/skeleton';
+import { SignOutItem } from '~/components/header/signout-item';
+import { env } from '~/env.mjs';
+import { auth } from '~/server/auth';
+import { type Session } from 'next-auth';
+import Link from 'next/link';
+import React from 'react';
 
 const User = async () => {
   const session = await auth();

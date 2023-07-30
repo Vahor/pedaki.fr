@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import mewo from "../../public/a/sp/mewo.png";
+import Image from 'next/image';
+import React from 'react';
+import mewo from '../../public/a/sp/mewo.png';
 
 const SocialProof = () => {
   return (

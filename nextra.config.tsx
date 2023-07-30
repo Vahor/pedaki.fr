@@ -1,18 +1,18 @@
-import React from "react";
-import type { DocsThemeConfig } from "nextra-theme-docs";
-import { useConfig } from "nextra-theme-docs";
-import { useRouter } from "next/router";
-import seoConfig from "./seo.config";
-import Image from "next/image";
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import type { DocsThemeConfig } from 'nextra-theme-docs';
+import { useConfig } from 'nextra-theme-docs';
+import React from 'react';
+import seoConfig from './seo.config';
 
 const config: DocsThemeConfig = {
   project: {
-    link: "https://github.com/vahor/pedaki-pedaki.fr",
+    link: 'https://github.com/vahor/pedaki-pedaki.fr',
   },
   primaryHue: 25,
   darkMode: false,
   nextThemes: {
-    forcedTheme: "light",
+    forcedTheme: 'light',
   },
   logo: (
     <div className="flex items-center">
@@ -20,13 +20,13 @@ const config: DocsThemeConfig = {
       <span className="ml-2 text-xl font-bold">pedaki</span>
     </div>
   ),
-  docsRepositoryBase: "https://github.com/vahor/pedaki-pedaki.fr/tree/main",
+  docsRepositoryBase: 'https://github.com/vahor/pedaki-pedaki.fr/tree/main',
   useNextSeoProps() {
     const { route } = useRouter();
     const { url, images } = seoConfig.openGraph;
 
-    let template = "Pedaki";
-    if (route !== "/docs") {
+    let template = 'Pedaki';
+    if (route !== '/docs') {
       template = `%s - ${template}`;
     }
     return {
@@ -39,8 +39,8 @@ const config: DocsThemeConfig = {
     const { route } = useRouter();
     const { title } = meta;
 
-    let finalTitle = "Pedaki";
-    if (route !== "/docs") {
+    let finalTitle = 'Pedaki';
+    if (route !== '/docs') {
       finalTitle = `${title} - ${finalTitle}`;
     }
 
@@ -50,10 +50,7 @@ const config: DocsThemeConfig = {
           <link key={index} rel={icon.rel} href={icon.url} />
         ))}
         <meta httpEquiv="Content-Language" content="fr" />
-        <meta
-          name="description"
-          content={(meta.description as string) || seoConfig.description}
-        />
+        <meta name="description" content={(meta.description as string) || seoConfig.description} />
         <meta name="og:title" content={finalTitle} />
         <meta name="og:image" content={seoConfig.openGraph.images} />
         <meta name="og:url" content={seoConfig.openGraph.url} />
@@ -64,14 +61,14 @@ const config: DocsThemeConfig = {
     );
   },
   editLink: {
-    text: "Modifier cette page sur GitHub →",
+    text: 'Modifier cette page sur GitHub →',
   },
   toc: {
     float: true,
-    title: "Sur cette page",
+    title: 'Sur cette page',
   },
   search: {
-    placeholder: "Rechercher...",
+    placeholder: 'Rechercher...',
   },
   navbar: {
     extraContent: <></>,
@@ -80,33 +77,31 @@ const config: DocsThemeConfig = {
     component: (
       <div className="flex w-full items-center justify-center py-8 text-sm text-slate-500">
         <div className="flex items-center justify-center space-x-4">aa</div>
-        <div className="mt-4 flex items-center justify-center space-x-6">
-          bb
-        </div>
+        <div className="mt-4 flex items-center justify-center space-x-6">bb</div>
       </div>
     ),
   },
   gitTimestamp({ timestamp }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { locale = "fr" } = useRouter();
+    const { locale = 'fr' } = useRouter();
     return (
       <>
         <span>Dernière mise à jour le </span>
         <time dateTime={timestamp.toISOString()}>
           {timestamp.toLocaleDateString(locale, {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
           })}
         </time>
       </>
     );
   },
   feedback: {
-    content: "Un soucis avec cette page ?",
+    content: 'Un soucis avec cette page ?',
   },
   banner: {
-    text: "Cette documentation est en cours de rédaction.",
+    text: 'Cette documentation est en cours de rédaction.',
     dismissible: false,
   },
   sidebar: {
@@ -114,11 +109,9 @@ const config: DocsThemeConfig = {
     toggleButton: true,
     defaultMenuCollapseLevel: 1,
     titleComponent({ title, type }) {
-      if (type === "separator") {
+      if (type === 'separator') {
         return (
-          <span className="-ml-1.5 cursor-default text-xs font-bold text-slate-500">
-            {title}
-          </span>
+          <span className="-ml-1.5 cursor-default text-xs font-bold text-slate-500">{title}</span>
         );
       }
       return <>{title}</>;

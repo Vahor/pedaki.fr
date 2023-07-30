@@ -1,12 +1,10 @@
-"use client";
+'use client';
 
-import { Toaster } from "sonner";
-import React from "react";
+import React from 'react';
+import { Toaster } from 'sonner';
 
 interface Props {
-  children:
-    | (React.ReactElement | React.ReactNode)
-    | (React.ReactElement | React.ReactNode)[];
+  children: (React.ReactElement | React.ReactNode) | (React.ReactElement | React.ReactNode)[];
 }
 
 export const Providers = ({ children }: Props) => {

@@ -1,13 +1,9 @@
-import {
-  type DefaultSession,
-  getServerSession,
-  type NextAuthOptions,
-} from "next-auth";
+import { getServerSession, type DefaultSession, type NextAuthOptions } from 'next-auth';
 
 // Only used to extract the auth information
 // Mainly on the navbar to show a login button or the user's avatar.
 
-declare module "next-auth" {
+declare module 'next-auth' {
   interface Session extends DefaultSession {
     user: {
       image: string;
@@ -17,26 +13,25 @@ declare module "next-auth" {
   }
 }
 
-const useSecureCookies = process.env.NODE_ENV === "production";
+const useSecureCookies = process.env.NODE_ENV === 'production';
 
 export const authOptions: NextAuthOptions = {
-  debug: process.env.NODE_ENV !== "production",
+  debug: process.env.NODE_ENV !== 'production',
   useSecureCookies: useSecureCookies,
   cookies: {
     sessionToken: {
-      name: `${useSecureCookies ? "__Secure-" : ""}next-auth.session-token`,
+      name: `${useSecureCookies ? '__Secure-' : ''}next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: "lax",
-        path: "/",
-        domain:
-          process.env.NODE_ENV === "production" ? ".pedaki.fr" : undefined,
+        sameSite: 'lax',
+        path: '/',
+        domain: process.env.NODE_ENV === 'production' ? '.pedaki.fr' : undefined,
         secure: useSecureCookies,
       },
     },
   },
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
   },
   providers: [],
 };
