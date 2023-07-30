@@ -48,15 +48,13 @@ const Desktop = () => {
 
           return (
             <NavigationMenuItem key={item.name}>
-              <Link href={item.href} passHref>
-                <NavigationMenuLink
-                  href={item.href}
-                  className={navigationMenuTriggerStyle()}
-                  data-active={isActive}
-                >
-                  {item.name}
-                </NavigationMenuLink>
-              </Link>
+              <NavigationMenuLink
+                href={item.href}
+                className={navigationMenuTriggerStyle()}
+                data-active={isActive}
+              >
+                {item.name}
+              </NavigationMenuLink>
             </NavigationMenuItem>
           );
         })}

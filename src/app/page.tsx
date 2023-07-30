@@ -6,6 +6,11 @@ export default function Page() {
     <>
       <Hero />
       <SocialProof />
+      <SocialProof />
+      <SocialProof />
+      <SocialProof />
+      <SocialProof />
+      <SocialProof />
       after
     </>
   );
