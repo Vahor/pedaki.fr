@@ -1,4 +1,4 @@
 body {
-    background-color: #FAFBFD;
+    background-color: #f9fafb; /* gray-50 */
     --removed-body-scroll-bar-size: 0px;
 }

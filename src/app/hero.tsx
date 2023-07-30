@@ -23,7 +23,6 @@ const Hero = () => {
         </div>
       </div>
 
-
       <VideoDemo />
     </section>
   );
