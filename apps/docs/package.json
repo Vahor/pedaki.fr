@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "docs",
   "version": "0.1.0",
   "license": "MIT",
   "repository": {
@@ -17,7 +17,7 @@
   "packageManager": "pnpm@8.6.11",
   "scripts": {
     "build": "next build",
-    "dev": "next dev -p 8000",
+    "dev": "next dev -p 8080",
     "lint": "next lint",
     "start": "next start",
     "clean": "rimraf .next",
@@ -28,14 +28,12 @@
   "dependencies": {
     "@pedaki/common": "github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail",
     "@t3-oss/env-nextjs": "^0.6.0",
-    "lucide-react": "^0.263.1",
     "next": "^13.4.13-canary.6",
-    "next-auth": "^4.22.3",
+    "nextra": "^2.10.0",
+    "nextra-theme-docs": "^2.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.64.1",
     "sharp": "^0.32.4",
-    "zod": "^3.21.4",
     "@pedaki/eslint-config": "workspace:*"
   },
   "devDependencies": {

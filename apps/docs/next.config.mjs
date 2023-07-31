@@ -1,3 +1,15 @@
+import nextra from 'nextra';
+
+const withNextra = nextra({
+    theme: 'nextra-theme-docs',
+    themeConfig: './nextra.config.tsx',
+    defaultShowCopyCode: true,
+    flexsearch: {
+        codeblocks: true
+    },
+    codeHighlight: true
+})
+
 /** @type {import("next").NextConfig} */
 const config = {
     reactStrictMode: true,
@@ -14,18 +26,8 @@ const config = {
 
     redirects: async () => [
         {
-            source: '/docs',
-            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/docs`,
-            permanent: false,
-        },
-        {
-            source: '/docs/:path*',
-            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/docs/:path*`,
-            permanent: false,
-        },
-        {
-            source: '/login',
-            destination: `${process.env.NEXT_PUBLIC_APP_URL}/auth/login`,
+            source: '/',
+            destination: '/-/getting-started',
             permanent: false,
         }
     ],
@@ -46,4 +48,4 @@ const config = {
 
 };
 
-export default config;
+export default withNextra(config);
