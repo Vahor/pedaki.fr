@@ -10,16 +10,16 @@ const Hero = () => {
         <div>
           <Badges />
         </div>
-        <h1 className="text-center text-4xl font-semibold tracking-tighter text-gray-900 md:text-6xl">
+        <h1 className="text-center text-4xl font-bold tracking-tighter text-gray-900 md:text-6xl">
           Lorem Ipsum Dolor Sit Amet.
         </h1>
-        <p className="mx-auto w-2/3 text-center text-sm leading-7 text-muted-foreground md:text-base">
+        <p className="mx-auto w-2/3 text-center text-base leading-7 text-muted-foreground md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ex facilis non,
           recusandae tempora voluptatum.
         </p>
 
         <div className="mx-8 mt-4 flex flex-col gap-4 md:mx-auto md:flex-row">
-          <Button variant="default">Lorem ipsum</Button>
+          <Button variant="default" size="lg" className="text-base">Lorem ipsum</Button>
         </div>
       </div>
 
