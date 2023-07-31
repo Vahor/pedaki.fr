@@ -1,3 +1,5 @@
+import "./src/env.mjs";
+
 /** @type {import("next").NextConfig} */
 const config = {
     reactStrictMode: true,
@@ -15,12 +17,12 @@ const config = {
     redirects: async () => [
         {
             source: '/docs',
-            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/docs`,
+            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}`,
             permanent: false,
         },
         {
             source: '/docs/:path*',
-            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/docs/:path*`,
+            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/-/:path*`,
             permanent: false,
         },
         {
