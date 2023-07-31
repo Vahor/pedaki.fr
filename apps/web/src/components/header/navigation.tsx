@@ -1,7 +1,7 @@
+import React from 'react';
 import Desktop from './desktop';
 import Mobile from './mobile';
 import User from './user';
-import React from 'react';
 
 const Navigation = () => {
   return (

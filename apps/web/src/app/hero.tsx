@@ -1,7 +1,7 @@
 import { Badge } from '@pedaki/common/ui/badge';
 import { Button } from '@pedaki/common/ui/button';
-import VideoDemo from './video-demo';
 import React from 'react';
+import VideoDemo from './video-demo';
 
 const Hero = () => {
   return (
