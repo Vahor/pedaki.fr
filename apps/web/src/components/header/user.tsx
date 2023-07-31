@@ -27,7 +27,7 @@ const User = async () => {
 
 const Guest = () => {
   return (
-    <Button asChild>
+    <Button asChild variant="secondary">
       <Link href="/login">Connexion</Link>
     </Button>
   );

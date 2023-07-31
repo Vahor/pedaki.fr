@@ -25,7 +25,7 @@ const Desktop = () => {
             return (
               <NavigationMenuItem key={item.name}>
                 <>
-                  <NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-white">{item.name}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
                       {item.children.map(subitem => (
@@ -46,7 +46,7 @@ const Desktop = () => {
             <NavigationMenuItem key={item.name}>
               <NavigationMenuLink
                 href={item.href}
-                className={navigationMenuTriggerStyle()}
+                className={cn(navigationMenuTriggerStyle(), "bg-white data-[active]:text-accent-foreground")}
                 data-active={isActive}
               >
                 {item.name}

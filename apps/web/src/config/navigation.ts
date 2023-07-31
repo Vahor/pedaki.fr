@@ -21,17 +21,17 @@ export const navigation = [
     children: [
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 1',
         description: 'About the project',
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 2',
         description: 'About the project',
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 3',
         description: 'About the project',
       },
     ],
@@ -46,17 +46,17 @@ export const navigation = [
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 1',
         description: 'About the project',
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 2',
         description: 'About the project',
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 3',
         description: 'About the project',
       },
     ],
@@ -71,12 +71,12 @@ export const navigation = [
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 1',
         description: 'About the project',
       },
       {
         href: '/',
-        name: 'Gestion de classes',
+        name: 'Gestion de classes 2',
         description: 'About the project',
       },
     ],

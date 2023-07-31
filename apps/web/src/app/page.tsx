@@ -1,4 +1,8 @@
+import Faq from './faq';
+import Features from './features';
 import Hero from './hero';
+import Newsletter from './newsletter';
+import Roadmap from './roadmap';
 import SocialProof from './social-proof';
 
 export default function Page() {
@@ -6,7 +10,10 @@ export default function Page() {
     <>
       <Hero />
       <SocialProof />
-      after
+      <Features />
+      <Roadmap />
+      <Faq />
+      <Newsletter />
     </>
   );
 }
