@@ -16,28 +16,14 @@
   },
   "packageManager": "pnpm@8.6.12",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start",
-    "clean": "rimraf .next",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@pedaki/common": "github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail",
-    "@t3-oss/env-nextjs": "^0.6.0",
-    "lucide-react": "^0.263.1",
-    "next": "^13.4.12",
-    "next-auth": "^4.22.3",
-    "nextra": "^2.10.0",
-    "nextra-theme-docs": "^2.10.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.64.1",
-    "sharp": "^0.32.4",
-    "zod": "^3.21.4"
+    "start": "dotenv -- turbo run start",
+    "format:check": "turbo run format:check",
+    "format": "turbo run format",
+    "clean": "turbo run clean",
+    "build": "turbo run build",
+    "dev": "dotenv -- turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
@@ -49,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "6.2.1",
     "@typescript-eslint/parser": "6.2.1",
     "autoprefixer": "^10.4.14",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.46.0",
     "eslint-config-next": "^13.4.12",
     "eslint-config-prettier": "^8.9.0",
@@ -59,6 +46,7 @@
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.6",
+    "turbo": "^1.10.12",
     "typescript": "^5.1.6"
   }
 }

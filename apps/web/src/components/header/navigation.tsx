@@ -1,6 +1,6 @@
-import Desktop from '~/components/header/desktop';
-import Mobile from '~/components/header/mobile';
-import User from '~/components/header/user';
+import Desktop from './desktop';
+import Mobile from './mobile';
+import User from './user';
 import React from 'react';
 
 const Navigation = () => {

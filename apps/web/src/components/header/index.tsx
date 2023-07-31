@@ -1,5 +1,5 @@
-import Logo from '~/components/header/logo';
-import Navigation from '~/components/header/navigation';
+import Logo from './logo';
+import Navigation from './navigation';
 import React from 'react';
 
 const Header = () => {

@@ -24,9 +24,9 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
+    "baseUrl": "../..",
     "paths": {
-      "~/*": ["./src/*"],
+      "~/*": ["./src/*"]
     },
     "plugins": [
       {
@@ -36,12 +36,12 @@
   },
   "include": [
     ".eslintrc.cjs",
-    "next-env.d.ts",
+    "apps/web/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["../../node_modules"]
 }

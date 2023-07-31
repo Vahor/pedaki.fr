@@ -9,7 +9,7 @@ import {
 } from '@pedaki/common/ui/accordion';
 import Burger from '@pedaki/common/ui/burger';
 import { Portal } from '@radix-ui/react-portal';
-import { navigation } from '~/config/navigation';
+import { navigation } from '../../config/navigation';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 

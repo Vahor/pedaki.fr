@@ -15,7 +15,7 @@ aside ul li.active > a {
 
 html {
   font-family:
-    var(--font-mona-sans),
+    var(--font-sans),
     ui-sans-serif,
     system-ui,
     -apple-system,

@@ -5,6 +5,7 @@ module.exports = {
     content: [
 // @ts-ignore
         ...sharedConfig.content,
+        "../../node_modules/@pedaki/common/**/*.{ts,tsx}",
         "nextra.config.tsx",
     ]
 };
