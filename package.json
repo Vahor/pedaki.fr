@@ -1,7 +1,8 @@
 {
-  "name": "pedaki.fr",
+  "name": "pedaki",
   "version": "0.1.0",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/PedakiApp/pedaki.fr.git"
@@ -27,7 +28,6 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
-    "@types/eslint": "^8.44.1",
     "@types/node": "^18.17.1",
     "@types/prettier": "^2.7.3",
     "@types/react": "^18.2.17",
@@ -36,9 +36,6 @@
     "@typescript-eslint/parser": "6.2.1",
     "autoprefixer": "^10.4.14",
     "dotenv-cli": "^7.2.1",
-    "eslint": "^8.46.0",
-    "eslint-config-next": "^13.4.12",
-    "eslint-config-prettier": "^8.9.0",
     "mini-svg-data-uri": "^1.4.4",
     "postcss": "^8.4.27",
     "prettier": "^3.0.0",

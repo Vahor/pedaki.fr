@@ -11,9 +11,6 @@ importers:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.1.0
         version: 4.1.0(prettier@3.0.0)
-      '@types/eslint':
-        specifier: ^8.44.1
-        version: 8.44.1
       '@types/node':
         specifier: ^18.17.1
         version: 18.17.1
@@ -26,27 +23,12 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.7
-      '@typescript-eslint/eslint-plugin':
-        specifier: 6.2.0
-        version: 6.2.0(@typescript-eslint/parser@6.2.0)(eslint@8.46.0)(typescript@5.1.6)
-      '@typescript-eslint/parser':
-        specifier: 6.2.0
-        version: 6.2.0(eslint@8.46.0)(typescript@5.1.6)
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.27)
       dotenv-cli:
         specifier: ^7.2.1
         version: 7.2.1
-      eslint:
-        specifier: ^8.46.0
-        version: 8.46.0
-      eslint-config-next:
-        specifier: ^13.4.12
-        version: 13.4.12(eslint@8.46.0)(typescript@5.1.6)
-      eslint-config-prettier:
-        specifier: ^8.9.0
-        version: 8.9.0(eslint@8.46.0)
       mini-svg-data-uri:
         specifier: ^1.4.4
         version: 1.4.4
@@ -80,6 +62,9 @@ importers:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail
         version: github.com/Vahor/pedaki-common/75672f9aacafb6513b16d5dd4d3378e10c7299cb(@types/react-dom@18.2.7)(@types/react@18.2.17)(react-dom@18.2.0)(react@18.2.0)
+      '@pedaki/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config/eslint
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -113,6 +98,27 @@ importers:
       zod:
         specifier: ^3.21.4
         version: 3.21.4
+
+  packages/config/eslint:
+    devDependencies:
+      '@types/eslint':
+        specifier: ^8.44.1
+        version: 8.44.1
+      '@typescript-eslint/eslint-plugin':
+        specifier: 6.2.0
+        version: 6.2.0(@typescript-eslint/parser@6.2.0)(eslint@8.46.0)(typescript@5.1.6)
+      '@typescript-eslint/parser':
+        specifier: 6.2.0
+        version: 6.2.0(eslint@8.46.0)(typescript@5.1.6)
+      eslint:
+        specifier: ^8.46.0
+        version: 8.46.0
+      eslint-config-next:
+        specifier: ^13.4.12
+        version: 13.4.12(eslint@8.46.0)(typescript@5.1.6)
+      eslint-config-prettier:
+        specifier: ^8.9.0
+        version: 8.9.0(eslint@8.46.0)
 
 packages:
 
