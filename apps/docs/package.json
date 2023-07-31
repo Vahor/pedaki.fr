@@ -33,9 +33,10 @@
     "nextra-theme-docs": "^2.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.32.4",
-    "@pedaki/eslint-config": "workspace:*"
+    "sharp": "^0.32.4"
   },
   "devDependencies": {
+    "@pedaki/eslint-config": "workspace:*",
+    "@pedaki/prettier-config": "workspace:*"
   }
 }
