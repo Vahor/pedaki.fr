@@ -1,12 +1,3 @@
 body {
     --removed-body-scroll-bar-size: 0px;
-
-    --primary: 32 100% 51%;
-    --primary-foreground: 32 100% 97%;
-
-    --secondary: 32 100% 97%;
-    --secondary-foreground: 32 100% 51%;
-
-    --accent: 32 100% 97%;
-    --accent-foreground: 32 100% 51%;
 }
