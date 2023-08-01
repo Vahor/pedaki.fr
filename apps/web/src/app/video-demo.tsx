@@ -92,6 +92,7 @@ const Arrow = () => {
 const VideoDemo = () => {
   return (
     <div className="relative mx-auto mt-20 w-full max-w-screen-lg px-4 md:mt-14 xl:px-0">
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-95% to-gray-50 sm:h-64 z-[2] pointer-events-none"></div>
       <Arrow />
       <Dialog>
         <DialogTrigger

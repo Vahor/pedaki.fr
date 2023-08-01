@@ -4,21 +4,30 @@ import mewo from '../../public/a/sp/mewo.png';
 
 const SocialProof = () => {
   return (
-    <div className="relative z-10 block w-full bg-gray-50 max-w-screen-xl px-8 mx-auto pt-4 md:pt-0">
-      <div className="flex flex-col items-center justify-center border-y py-16 md:-mt-[70px] md:py-20">
-        <h1 className="pb-8 font-semibold leading-7 text-muted-foreground md:text-base">
+    <section className="relative mx-auto block w-full max-w-screen-xl px-8">
+      <div className="flex flex-col items-center justify-center py-4 sm:py-4 2xl:pb-8">
+        <h1 className="text-sm font-semibold uppercase leading-7 text-muted-foreground">
           Ils nous font confiance
         </h1>
-        <div className="grid w-full grid-cols-2 place-items-center justify-between gap-4 sm:grid-cols-3 md:flex ">
-          <Image src={mewo} alt="mewo" height={48} />
-          <Image src={mewo} alt="mewo" height={48} />
-          <Image src={mewo} alt="mewo" height={48} />
-          <Image src={mewo} alt="mewo" height={48} />
-          <Image src={mewo} alt="mewo" height={48} />
-          <Image src={mewo} alt="mewo" height={48} />
+        <div className="grid grid-cols-3 gap-12 pt-12 sm:grid-cols-5 sm:py-12">
+          <div className="h-8">
+            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
+          </div>
+          <div className="h-8">
+            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
+          </div>
+          <div className="h-8">
+            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
+          </div>
+          <div className="h-8">
+            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
+          </div>
+          <div className="h-8">
+            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
