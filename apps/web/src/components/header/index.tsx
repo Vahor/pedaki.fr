@@ -9,7 +9,7 @@ const Header = () => {
         {/* Grid bg */}
         <div
           aria-hidden
-          className="absolute inset-x-0 top-0 z-[-1] mx-auto h-96 bg-grid-gray-200"
+          className="absolute inset-x-0 top-0 z-[-1] mx-auto h-96 bgi-grid-gray-200"
           style={{
             backgroundPositionX: '-16px',
           }}

@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-1 gap-4 lg:gap-16 justify-center flex-col md:flex-row divide-y md:divide-y-0 max-w-[20rem] md:max-w-full w-full mx-auto">
             <div className="flex flex-col gap-6 pt-4">
-              <p className="font-semibold text-sm+">Features</p>
+              <p className="font-semibold text-sm2">Features</p>
               <ul className="-ml-3.5">
                 <li>
                   <Button variant="ghost" asChild>
@@ -38,7 +38,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-6 pt-4">
-              <p className="font-semibold text-sm+ text-left">Resources</p>
+              <p className="font-semibold text-sm2 text-left">Resources</p>
               <ul className="-ml-3.5">
                 <li>
                   <Button variant="ghost" asChild className="w-full justify-start">
@@ -58,7 +58,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-6 pt-4">
-              <p className="font-semibold text-sm+ text-left">Jsp</p>
+              <p className="font-semibold text-sm2 text-left">Jsp</p>
               <ul className="-ml-3.5">
                 <li>
                   <Button variant="ghost" asChild>

@@ -18,8 +18,8 @@ const Hero = () => {
           recusandae tempora voluptatum.
         </p>
 
-        <div className="mx-24 mt-4 flex flex-col gap-4 md:mx-auto md:flex-row">
-          <Button variant="default" size="lg" className="text-base bg-amber-500 font-bold hover:opacity-90">
+        <div className="mx-8 mt-4 flex flex-col gap-4 sm:mx-auto md:flex-row">
+          <Button variant="default" size="lg" className="font-bold hover:opacity-90">
             Découvrir le projet
           </Button>
         </div>
