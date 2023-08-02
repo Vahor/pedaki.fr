@@ -1,34 +1,29 @@
 import Image from 'next/image';
+import type {ImageProps} from 'next/image';
 import React from 'react';
+import grandEst from '../../public/a/sp/grand-est.png';
 import mewo from '../../public/a/sp/mewo.png';
+import univLorraine from '../../public/a/sp/univ-lorraine.png';
+
 
 const SocialProof = () => {
   return (
     <section className="relative mx-auto block w-full max-w-screen-xl px-8">
-      <div className="flex flex-col items-center justify-center py-4 sm:py-4 2xl:pb-8">
-        <h1 className="text-sm font-semibold uppercase leading-7 text-muted-foreground">
-          Ils nous font confiance
-        </h1>
-        <div className="grid grid-cols-3 gap-12 pt-12 sm:grid-cols-5 sm:py-12">
-          <div className="h-8">
-            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
-          </div>
-          <div className="h-8">
-            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
-          </div>
-          <div className="h-8">
-            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
-          </div>
-          <div className="h-8">
-            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
-          </div>
-          <div className="h-8">
-            <Image src={mewo} alt="Pedaki customer logo: mewo.fr" height={43} priority={false} />
-          </div>
-        </div>
+      {/* TODO: flex w-max overflow-hidden + slider ? */}
+      <div className="grid grid-cols-3 gap-12 py-4 pt-12 sm:py-12 2xl:pb-8 max-w-screen-md mx-auto">
+        {/* TODO: svg ?*/}
+        <OrganizationIcon src={grandEst} alt="grandest.fr" />
+        <OrganizationIcon src={mewo} alt="mewo.fr" />
+        <OrganizationIcon src={univLorraine} alt="univ-lorraine.fr" />
       </div>
     </section>
   );
 };
+
+const OrganizationIcon = ({ src, alt }: ImageProps) => (
+    <div className="mx-auto h-10">
+        <Image src={src} alt={alt} height={40} priority={false} />
+    </div>
+);
 
 export default SocialProof;

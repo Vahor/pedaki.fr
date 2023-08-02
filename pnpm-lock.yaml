@@ -49,7 +49,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail
-        version: github.com/Vahor/pedaki-common/0a6f2fe29cb0770831d1122c3f180856844af0ca(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+        version: github.com/Vahor/pedaki-common/32df1907e757ad4937a969ba09fac32973915856(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -83,7 +83,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail
-        version: github.com/Vahor/pedaki-common/0a6f2fe29cb0770831d1122c3f180856844af0ca(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+        version: github.com/Vahor/pedaki-common/32df1907e757ad4937a969ba09fac32973915856(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -2657,7 +2657,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001518
-      electron-to-chromium: 1.4.478
+      electron-to-chromium: 1.4.480
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: true
@@ -3539,8 +3539,8 @@ packages:
     resolution: {integrity: sha512-shUVy6Eawp33dFBFIoYbIwLHrX0IZ857AlH9ug2o4rvbWmpaCUdBpQ5Zw39HRrfzAFm4APJE9V+E2A/WB0YqJw==}
     dev: true
 
-  /electron-to-chromium@1.4.478:
-    resolution: {integrity: sha512-qjTA8djMXd+ruoODDFGnRCRBpID+AAfYWCyGtYTNhsuwxI19s8q19gbjKTwRS5z/LyVf5wICaIiPQGLekmbJbA==}
+  /electron-to-chromium@1.4.480:
+    resolution: {integrity: sha512-IXTgg+bITkQv/FLP9FjX6f9KFCs5hQWeh5uNSKxB9mqYj/JXhHDbu+ekS43LVvbkL3eW6/oZy4+r9Om6lan1Uw==}
     dev: true
 
   /elkjs@0.8.2:
@@ -8574,9 +8574,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/0a6f2fe29cb0770831d1122c3f180856844af0ca(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/0a6f2fe29cb0770831d1122c3f180856844af0ca}
-    id: github.com/Vahor/pedaki-common/0a6f2fe29cb0770831d1122c3f180856844af0ca
+  github.com/Vahor/pedaki-common/32df1907e757ad4937a969ba09fac32973915856(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/32df1907e757ad4937a969ba09fac32973915856}
+    id: github.com/Vahor/pedaki-common/32df1907e757ad4937a969ba09fac32973915856
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', pnpm: '>=8.0.0'}
