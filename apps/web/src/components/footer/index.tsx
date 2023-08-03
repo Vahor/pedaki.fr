@@ -2,13 +2,12 @@ import { Button } from '@pedaki/common/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import Logo from "../header/logo";
 
 const Footer = () => {
   return (
-    <footer className="pt-32">
-      <div className="container">
-        <div className="flex justify-between gap-12 border-t pb-8 pt-12 flex-col md:flex-row">
+    <footer className="pt-32 dark">
+      <div className="container bg-background text-foreground">
+        <div className="flex justify-between gap-12 pb-8 pt-12 flex-col md:flex-row">
           <div className="max-w-[20rem] w-full mx-auto">
             <Link className="flex select-none items-center hover:opacity-75 mb-4" href="/">
               <Image src="/logo.svg" alt="Pedaki" width="36" height="36" />
