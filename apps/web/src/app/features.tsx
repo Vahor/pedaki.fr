@@ -11,8 +11,8 @@ const Features = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eveniet!
       </p>
 
-      <div className="relative mb-2 mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
-        <Card className="relative overflow-hidden bg-white shadow bgi-grid-gray-200 flex flex-col h-[380px] sm:h-[400px] lg:h-[500px]">
+      <div className="relative mb-2 mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <Card className="relative flex h-[380px] flex-col overflow-hidden bg-white shadow bgi-grid-gray-200 sm:h-[400px] lg:h-[500px]">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/90 to-white"></div>
           <CardHeader className="relative space-y-4">
             <CardTitle>Lorem ipsum dolor sit amet, consectetur 1.</CardTitle>
@@ -20,12 +20,12 @@ const Features = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eos?
             </CardDescription>
           </CardHeader>
-          <div className="relative -left-6 -bottom-4">
-            <Image src={mock} alt="mock" priority height={420}/>
+          <div className="relative -bottom-4 -left-6">
+            <Image src={mock} alt="mock" priority height={420} />
           </div>
         </Card>
 
-        <Card className="relative overflow-hidden bg-white shadow bgi-grid-gray-200 h-[380px] sm:h-[400px] lg:h-[500px]">
+        <Card className="relative h-[380px] overflow-hidden bg-white shadow bgi-grid-gray-200 sm:h-[400px] lg:h-[500px]">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/90 to-white"></div>
           <CardHeader className="relative space-y-4">
             <CardTitle className="">Lorem ipsum dolor sit amet, consectetur.</CardTitle>
@@ -33,14 +33,14 @@ const Features = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eos?
             </CardDescription>
           </CardHeader>
-          <div className="relative -right-6 -bottom-4">
+          <div className="relative -bottom-4 -right-6">
             <Image src={mock} alt="mock" priority />
           </div>
         </Card>
       </div>
 
-      <div className="relative mb-2 mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
-        <Card className="relative overflow-hidden bg-white shadow bgi-grid-gray-200 h-[380px] sm:h-[400px] lg:h-[500px] col-span-2">
+      <div className="relative mb-2 mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <Card className="relative col-span-2 h-[380px] overflow-hidden bg-white shadow bgi-grid-gray-200 sm:h-[400px] lg:h-[500px]">
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/90 to-white"></div>
           <CardHeader className="relative space-y-4">
             <CardTitle className="">Lorem ipsum dolor sit amet, consectetur.</CardTitle>

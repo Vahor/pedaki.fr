@@ -1,23 +1,25 @@
 import { Button } from '@pedaki/common/ui/button';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="pt-32 dark">
+    <footer className="dark pt-32">
       <div className="container bg-background text-foreground">
-        <div className="flex justify-between gap-12 pb-8 pt-12 flex-col md:flex-row">
-          <div className="max-w-[20rem] w-full mx-auto">
-            <Link className="flex select-none items-center hover:opacity-75 mb-4" href="/">
+        <div className="flex flex-col justify-between gap-12 pb-8 pt-12 md:flex-row">
+          <div className="mx-auto w-full max-w-[20rem]">
+            <Link className="mb-4 flex select-none items-center hover:opacity-75" href="/">
               <Image src="/logo.svg" alt="Pedaki" width="36" height="36" />
-              <span className="ml-2 mb-1 inline text-2xl font-bold">pedaki</span>
+              <span className="mb-1 ml-2 inline text-2xl font-bold">pedaki</span>
             </Link>
-            <p className="font-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.</p>
+            <p className="font-medium">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.
+            </p>
           </div>
-          <div className="flex flex-1 gap-4 lg:gap-16 justify-center flex-col md:flex-row divide-y md:divide-y-0 max-w-[20rem] md:max-w-full w-full mx-auto">
+          <div className="mx-auto flex w-full max-w-[20rem] flex-1 flex-col justify-center gap-4 divide-y md:max-w-full md:flex-row md:divide-y-0 lg:gap-16">
             <div className="flex flex-col gap-6 pt-4">
-              <p className="font-semibold text-sm2">Features</p>
+              <p className="text-sm2 font-semibold">Features</p>
               <ul className="-ml-3.5">
                 <li>
                   <Button variant="ghost" asChild>
@@ -37,7 +39,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-6 pt-4">
-              <p className="font-semibold text-sm2 text-left">Resources</p>
+              <p className="text-left text-sm2 font-semibold">Resources</p>
               <ul className="-ml-3.5">
                 <li>
                   <Button variant="ghost" asChild className="w-full justify-start">
@@ -57,7 +59,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-6 pt-4">
-              <p className="font-semibold text-sm2 text-left">Jsp</p>
+              <p className="text-left text-sm2 font-semibold">Jsp</p>
               <ul className="-ml-3.5">
                 <li>
                   <Button variant="ghost" asChild>
@@ -78,7 +80,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-4 max-w-[20rem] md:max-w-full mx-auto">Pedaki © 2023</div>
+        <div className="mx-auto max-w-[20rem] py-4 md:max-w-full">Pedaki © 2023</div>
       </div>
     </footer>
   );

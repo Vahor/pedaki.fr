@@ -1,5 +1,5 @@
-import React from 'react';
 import { Button } from '@pedaki/common/ui/button';
+import React from 'react';
 
 const Newsletter = () => {
   return (
@@ -11,7 +11,7 @@ const Newsletter = () => {
         </div>
         <div>
           <input type="text" />
-          <Button >sub</Button>
+          <Button>sub</Button>
         </div>
       </div>
     </div>

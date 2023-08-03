@@ -46,7 +46,10 @@ const Desktop = () => {
             <NavigationMenuItem key={item.name}>
               <NavigationMenuLink
                 href={item.href}
-                className={cn(navigationMenuTriggerStyle(), "bg-white data-[active]:text-accent-foreground data-[active]:bg-accent/50")}
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  'bg-white data-[active]:bg-accent/50 data-[active]:text-accent-foreground',
+                )}
                 data-active={isActive}
               >
                 {item.name}

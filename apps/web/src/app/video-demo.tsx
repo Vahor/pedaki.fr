@@ -92,14 +92,14 @@ const Arrow = () => {
 const VideoDemo = () => {
   return (
     <div className="relative mx-auto mt-20 w-full max-w-screen-lg px-4 md:mt-14 xl:px-0">
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-95% to-gray-50 sm:h-64 z-[2] pointer-events-none"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 bg-gradient-to-b from-transparent to-gray-50 to-95% sm:h-64"></div>
       <Arrow />
       <Dialog>
         <DialogTrigger
           aria-label="Play video"
           className="group relative flex w-full cursor-pointer"
         >
-          <div className="absolute inset-0 sm:m-[.325rem] flex items-center justify-center rounded-lg md:rounded-2xl opacity-0 backdrop-blur-sm transition-all duration-300 hover:bg-gray-600/5 group-hover:opacity-100">
+          <div className="absolute inset-0 flex items-center justify-center rounded-lg opacity-0 backdrop-blur-sm transition-all duration-300 hover:bg-gray-600/5 group-hover:opacity-100 sm:m-[.325rem] md:rounded-2xl">
             <div className="box-content flex h-12 w-12 items-center justify-center rounded-full bg-gray-600 opacity-50 transition duration-300 hover:opacity-75 md:h-16 md:w-16">
               <svg
                 width="512"

@@ -33,7 +33,9 @@ const Hero = () => {
 const Badges = () => {
   return (
     <div className="flex justify-center gap-4">
-      <Badge variant="secondary" className="border-accent-foreground/10">Ouverture prévue en 2024</Badge>
+      <Badge variant="secondary" className="border-accent-foreground/10">
+        Ouverture prévue en 2024
+      </Badge>
     </div>
   );
 };

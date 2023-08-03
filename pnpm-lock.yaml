@@ -49,7 +49,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail
-        version: github.com/Vahor/pedaki-common/92756ecc76e1f448a43ac34a7b837fdc0cb22a42(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+        version: github.com/Vahor/pedaki-common/295e380ca3796a79e46fb66f78e752dd09fa5932(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -83,7 +83,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail
-        version: github.com/Vahor/pedaki-common/92756ecc76e1f448a43ac34a7b837fdc0cb22a42(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+        version: github.com/Vahor/pedaki-common/295e380ca3796a79e46fb66f78e752dd09fa5932(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -1178,6 +1178,12 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
+  /@radix-ui/number@1.0.1:
+    resolution: {integrity: sha512-T5gIdVO2mmPW3NNhjNgEP3cqMXjXL9UbO0BzWcXfvdBs+BohbQxvd/K5hSVKmn9/lbTdsQVKbUcP5WLCwvUbBg==}
+    dependencies:
+      '@babel/runtime': 7.22.6
+    dev: false
+
   /@radix-ui/primitive@1.0.1:
     resolution: {integrity: sha512-yQ8oGX2GVsEYMWGxcovu1uGWPCxV5BFfeeYxqPmuAzUyLT9qmaMXSAhXpb0WrspIeqYzdJpkh2vHModJPgRIaw==}
     dependencies:
@@ -1748,6 +1754,37 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
+  /@radix-ui/react-slider@1.1.2(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-NKs15MJylfzVsCagVSWKhGGLNR1W9qWs+HtgbmjjVUB3B9+lb3PYoXxVju3kOrpf0VKyVCtZp+iTwVoqpa1Chw==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.6
+      '@radix-ui/number': 1.0.1
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-context': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-direction': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-use-previous': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-use-size': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@types/react': 18.2.18
+      '@types/react-dom': 18.2.7
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /@radix-ui/react-slot@1.0.2(@types/react@18.2.18)(react@18.2.0):
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
     peerDependencies:
@@ -1761,6 +1798,38 @@ packages:
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.18)(react@18.2.0)
       '@types/react': 18.2.18
       react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-tooltip@1.0.6(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-DmNFOiwEc2UDigsYj6clJENma58OelxD24O4IODoZ+3sQc3Zb+L8w1EP+y9laTuKCLAysPw4fD6/v0j4KNV8rg==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.6
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-context': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-dismissable-layer': 1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-id': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-popper': 1.1.2(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-portal': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-presence': 1.0.1(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-visually-hidden': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': 18.2.18
+      '@types/react-dom': 18.2.7
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.18)(react@18.2.0):
@@ -8574,9 +8643,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/92756ecc76e1f448a43ac34a7b837fdc0cb22a42(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/92756ecc76e1f448a43ac34a7b837fdc0cb22a42}
-    id: github.com/Vahor/pedaki-common/92756ecc76e1f448a43ac34a7b837fdc0cb22a42
+  github.com/Vahor/pedaki-common/295e380ca3796a79e46fb66f78e752dd09fa5932(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/295e380ca3796a79e46fb66f78e752dd09fa5932}
+    id: github.com/Vahor/pedaki-common/295e380ca3796a79e46fb66f78e752dd09fa5932
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', pnpm: '>=8.0.0'}
@@ -8592,7 +8661,9 @@ packages:
       '@radix-ui/react-label': 2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-navigation-menu': 1.1.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-separator': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-slider': 1.1.2(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-slot': 1.0.2(@types/react@18.2.18)(react@18.2.0)
+      '@radix-ui/react-tooltip': 1.0.6(@types/react-dom@18.2.7)(@types/react@18.2.18)(react-dom@18.2.0)(react@18.2.0)
       '@react-email/button': 0.0.10
       '@react-email/head': 0.0.5
       '@react-email/html': 0.0.4
