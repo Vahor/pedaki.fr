@@ -20,7 +20,6 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import React, { useState } from 'react';
 
 const parseIntOr = (value: string | null, defaultValue: number) => {
-  console.log(value);
   // TODO: move this utils in @pedaki/common
   if (value === null) return defaultValue;
   const parsed = parseInt(value, 10);
@@ -70,9 +69,7 @@ const safeHistoryReplaceState = (state: any, title: string, url: string) => {
 
 const PriceScaler = () => {
   const param = useSearchParams();
-  const [size, updateSize] = useState(
-    () => parseIntOr(param.get('size'), 1),
-  );
+  const [size, updateSize] = useState(() => parseIntOr(param.get('size'), 1));
   const pathname = usePathname();
 
   const onValueChange = (value: number[]) => {
@@ -89,7 +86,7 @@ const PriceScaler = () => {
   const selectedPrice = prices[selectedSize - 1]!;
 
   return (
-    <Card className="col-span-3 border-accent-foreground/80">
+    <Card className="border-accent-foreground/80 md:col-span-3">
       <CardHeader className="space-y-1">
         <CardTitle className="text-sm">Price Scaler</CardTitle>
         <CardDescription className="text-xs">

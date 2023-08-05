@@ -18,10 +18,10 @@ const Price = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eveniet!
         </p>
 
-        <div className="mx-4 grid grid-cols-5 gap-4 py-4">
-          <Card className="col-span-2">
+        <div className="mx-4 grid grid-cols-1 gap-4 py-4 md:grid-cols-5">
+          <Card className="md:col-span-2">
             <CardHeader className="space-y-1">
-              <CardTitle className="text-sm">Price Scaler</CardTitle>
+              <CardTitle className="text-sm">Price Self-Host</CardTitle>
               <CardDescription className="text-xs">Heberge le chez toi mec</CardDescription>
             </CardHeader>
             <CardContent className="border-b">
