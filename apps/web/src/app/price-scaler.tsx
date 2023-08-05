@@ -16,10 +16,12 @@ import {
   TooltipTrigger,
 } from '@pedaki/common/ui/tooltip';
 import * as SliderPrimitive from '@radix-ui/react-slider';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import React from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+import React, { useState } from 'react';
 
 const parseIntOr = (value: string | null, defaultValue: number) => {
+  console.log(value);
+  // TODO: move this utils in @pedaki/common
   if (value === null) return defaultValue;
   const parsed = parseInt(value, 10);
   if (isNaN(parsed)) {
@@ -47,19 +49,43 @@ const prices = [
   },
 ];
 
+const conversionSizeCoefficient = 100;
+
+const clamp = (value: number, min: number, max: number) => {
+  // TODO: move this utils in @pedaki/common
+  return Math.max(Math.min(value, max), min);
+};
+
+const clampSize = (size: number) => clamp(Math.ceil(size / conversionSizeCoefficient), 1, 4);
+
+const safeHistoryReplaceState = (state: any, title: string, url: string) => {
+  // TODO: move this utils in @pedaki/common
+  try {
+    history.replaceState(state, title, url);
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 const PriceScaler = () => {
   const param = useSearchParams();
-  const size = parseIntOr(param.get('size'), 1);
-  const router = useRouter();
+  const [size, updateSize] = useState(
+    () => parseIntOr(param.get('size'), 1) * conversionSizeCoefficient,
+  );
   const pathname = usePathname();
 
-  const updateSize = (value: number) => {
+  const onValueChange = (value: number[]) => {
+    if (value.length !== 1) return;
+    const newValue = value[0]!;
     const newParams = new URLSearchParams(param);
-    newParams.set('size', value.toString());
-    router.replace(`${pathname}?${newParams.toString()}`, { shallow: true, scroll: false });
+    const newSize = clampSize(newValue);
+    newParams.set('size', newSize.toString());
+    safeHistoryReplaceState(null, '', `${pathname}?${newParams.toString()}`);
+    updateSize(newSize * conversionSizeCoefficient);
   };
 
-  const selectedPrice = prices[size - 1]!;
+  const selectedSize = clampSize(size);
+  const selectedPrice = prices[selectedSize - 1]!;
 
   return (
     <Card className="col-span-3 border-accent-foreground/80">
@@ -97,10 +123,10 @@ const PriceScaler = () => {
         <SliderPrimitive.Root
           className={cn('relative flex w-full touch-none select-none items-center')}
           defaultValue={[size]}
-          max={4}
+          max={400}
           min={1}
           step={1}
-          onValueChange={value => updateSize(value)}
+          onValueChange={onValueChange}
         >
           <SliderPrimitive.Track className="relative h-1 w-full grow overflow-hidden rounded-full bg-secondary">
             <SliderPrimitive.Range className="absolute h-full bg-primary" />
