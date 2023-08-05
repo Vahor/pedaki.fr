@@ -30,6 +30,9 @@ const parseIntOr = (value: string | null, defaultValue: number) => {
   return parsed;
 };
 
+// TODO: move this utils in @pedaki/common (or config ?)
+//  we'll have to link this to stripe somehow to have the real prices ?
+//  we'll have to see how to share the translation (we'll reuse the same description in the app.pedaki.fr licenses pages)
 const prices = [
   {
     price: 20,
@@ -49,14 +52,12 @@ const prices = [
   },
 ];
 
-const conversionSizeCoefficient = 100;
-
 const clamp = (value: number, min: number, max: number) => {
   // TODO: move this utils in @pedaki/common
   return Math.max(Math.min(value, max), min);
 };
 
-const clampSize = (size: number) => clamp(Math.ceil(size / conversionSizeCoefficient), 1, 4);
+const clampSize = (size: number) => clamp(Math.ceil(size), 1, prices.length);
 
 const safeHistoryReplaceState = (state: any, title: string, url: string) => {
   // TODO: move this utils in @pedaki/common
@@ -70,7 +71,7 @@ const safeHistoryReplaceState = (state: any, title: string, url: string) => {
 const PriceScaler = () => {
   const param = useSearchParams();
   const [size, updateSize] = useState(
-    () => parseIntOr(param.get('size'), 1) * conversionSizeCoefficient,
+    () => parseIntOr(param.get('size'), 1),
   );
   const pathname = usePathname();
 
@@ -81,7 +82,7 @@ const PriceScaler = () => {
     const newSize = clampSize(newValue);
     newParams.set('size', newSize.toString());
     safeHistoryReplaceState(null, '', `${pathname}?${newParams.toString()}`);
-    updateSize(newSize * conversionSizeCoefficient);
+    updateSize(newSize);
   };
 
   const selectedSize = clampSize(size);
@@ -123,9 +124,9 @@ const PriceScaler = () => {
         <SliderPrimitive.Root
           className={cn('relative flex w-full touch-none select-none items-center')}
           defaultValue={[size]}
-          max={400}
+          max={4}
           min={1}
-          step={1}
+          step={0.01}
           onValueChange={onValueChange}
         >
           <SliderPrimitive.Track className="relative h-1 w-full grow overflow-hidden rounded-full bg-secondary">
