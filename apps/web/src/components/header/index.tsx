@@ -19,7 +19,7 @@ const Header = () => {
 
         <div className="pt-8"></div>
       </div>
-      <header className="sticky inset-x-0 top-2 z-50">
+      <header className="sticky inset-x-0 top-2 z-50 h-16">
         <div
           className="container mx-auto flex w-full max-w-screen-xl items-center justify-center md:w-max"
           style={

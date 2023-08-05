@@ -11,7 +11,7 @@ import Burger from '@pedaki/common/ui/burger';
 import { Portal } from '@radix-ui/react-portal';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { navigation } from '../../config/navigation';
+import { navigation } from '~/config/navigation';
 
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
