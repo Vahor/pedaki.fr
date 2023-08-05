@@ -10,10 +10,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@pedaki/common/ui/navigation-menu';
+import { navigation } from '~/config/navigation';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
-import { navigation } from '../../config/navigation';
 
 const Desktop = () => {
   const pathname = usePathname();

@@ -9,11 +9,11 @@ import {
   DropdownMenuTrigger,
 } from '@pedaki/common/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
+import { auth } from '~/services/auth';
 import type { Session } from 'next-auth';
 import Link from 'next/link';
 import React from 'react';
 import { env } from '../../env.mjs';
-import { auth } from '../../server/auth';
 import { SignOutItem } from './signout-item';
 
 const User = async () => {

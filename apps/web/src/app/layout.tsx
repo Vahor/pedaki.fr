@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import '@pedaki/common/styles/globals.css';
 import { cn } from '@pedaki/common/lib/utils';
 import { fontClassName } from '@pedaki/common/styles/fonts';
-import seoConfig from '../../seo.config';
+import seoConfig from '~/config/seo';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import { Providers } from './providers';
