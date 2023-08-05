@@ -14,6 +14,7 @@ const config = {
   printWidth: 100,
   tailwindConfig: './tailwind.config.cjs',
   arrowParens: 'avoid',
+  tabWidth: 2,
 };
 
 module.exports = config;
