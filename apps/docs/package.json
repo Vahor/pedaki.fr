@@ -26,7 +26,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@pedaki/common": "github:Vahor/pedaki-common#feature/ped-42-preparer-le-systeme-de-mail",
+    "@pedaki/common": "github:Vahor/pedaki-common",
     "@t3-oss/env-nextjs": "^0.6.0",
     "next": "^13.4.13-canary.6",
     "nextra": "^2.10.0",

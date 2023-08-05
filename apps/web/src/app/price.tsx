@@ -18,7 +18,7 @@ const Price = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eveniet!
         </p>
 
-        <div className="grid grid-cols-5 gap-4 mx-4 py-4">
+        <div className="mx-4 grid grid-cols-5 gap-4 py-4">
           <Card className="col-span-2">
             <CardHeader className="space-y-1">
               <CardTitle className="text-sm">Price Scaler</CardTitle>
