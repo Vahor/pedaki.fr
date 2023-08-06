@@ -10,10 +10,6 @@ module.exports = {
     ],
     theme: {
         extend: {
-            boxShadow: {
-                "outline": "var(--shadow-outline) 0 0 0 6px",
-                "outline-lg": "var(--shadow-outline) 0 0 0 8px",
-            }
         }
     }
 };

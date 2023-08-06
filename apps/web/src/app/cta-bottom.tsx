@@ -3,7 +3,7 @@ import React from 'react';
 
 const CallToActionBottom = () => {
   return (
-    <div className="border-t bg-gray-50 pt-16">
+    <div className="border-t bg-gray-100 py-16">
       <div className="container">
         <div>
           <h1 className="text-3xl font-bold text-foreground md:text-5xl">
@@ -17,7 +17,7 @@ const CallToActionBottom = () => {
           </p>
         </div>
         <div>
-          <Button size="lg" variant="default" className="space-x-2 font-semibold">
+          <Button size="lg" variant="default" className="space-x-2 font-bold">
             <span>Créer mon compte</span>
             {/*TODO move this icon somewhere like in @pedaki/common/ui/icons */}
             <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">

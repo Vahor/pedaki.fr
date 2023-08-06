@@ -48,7 +48,7 @@ const Desktop = () => {
                 href={item.href}
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  'bg-white data-[active]:bg-accent/50 data-[active]:text-accent-foreground',
+                  'data-[active]:text-accent-foreground',
                 )}
                 data-active={isActive}
               >
