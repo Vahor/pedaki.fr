@@ -7,11 +7,11 @@ const Navigation = () => {
   return (
     <>
       {/*Desktop navigation*/}
-      <div className="hidden md:flex">
+      <div className="hidden md:flex md:-ml-4">
         <Desktop />
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 md:ml-8">
         <User />
         <Mobile />
       </div>

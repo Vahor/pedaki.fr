@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Provider as BalancerProvider } from 'react-wrap-balancer';
 import { Toaster } from 'sonner';
 
 interface Props {
@@ -11,7 +12,7 @@ export const Providers = ({ children }: Props) => {
   return (
     <>
       <Toaster />
-      {children}
+      <BalancerProvider>{children}</BalancerProvider>
     </>
   );
 };

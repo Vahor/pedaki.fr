@@ -10,7 +10,7 @@ const Features = () => {
   return (
     <section className="border-y bg-gray-100 py-7">
       <div className="container py-4">
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex lg:flex-row lg:items-center justify-between flex-col">
           <div className="space-y-2">
             <h2 className="text-4xl font-bold">Des super trucs</h2>
             <p className="text-muted-foreground">

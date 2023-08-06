@@ -92,8 +92,8 @@ const Arrow = () => {
 
 const VideoDemo = () => {
   return (
-    <div className="relative mx-auto mt-20 w-full max-w-screen-lg px-4 md:mt-14 xl:px-0">
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 bg-gradient-to-b from-transparent to-gray-50 to-95% sm:h-64"></div>
+    <section className="relative mx-auto mt-20 w-full max-w-screen-xl px-4 md:mt-14 xl:px-0">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 bg-gradient-to-b from-transparent to-gray-50 to-90% sm:h-64"></div>
       <Arrow />
       <Dialog>
         <DialogTrigger
@@ -125,7 +125,7 @@ const VideoDemo = () => {
           </AspectRatio>
         </DialogContent>
       </Dialog>
-    </div>
+    </section>
   );
 };
 

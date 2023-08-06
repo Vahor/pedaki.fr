@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="bg-background text-foreground">
         <div className="container">
           <div className="flex flex-col justify-between gap-6 divide-y pb-8 pt-12 md:flex-row md:gap-12 md:divide-y-0">
-            <div className="mx-auto w-full max-w-[20rem]">
+            <div className="mx-auto w-full max-w-[40rem] md:max-w-[20rem]">
               <Link className="mb-4 flex select-none items-center hover:opacity-75" href="/">
                 <Image src="/logo.svg" alt="Pedaki" width="36" height="36" />
                 <span className="mb-1 ml-2 inline text-2xl font-bold">pedaki</span>
@@ -18,7 +18,7 @@ const Footer = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.
               </p>
             </div>
-            <div className="mx-auto flex w-full max-w-[20rem] flex-1 flex-col justify-center gap-4 divide-y md:max-w-full md:flex-row md:divide-y-0 lg:gap-16">
+            <div className="mx-auto flex w-full max-w-[40rem] flex-1 flex-col justify-center gap-4 divide-y md:max-w-full md:flex-row md:divide-y-0 lg:gap-16">
               <div className="flex flex-col gap-3 pt-4">
                 <p className="text-sm2 font-semibold">Features</p>
                 <ul className="-ml-3.5">
@@ -81,7 +81,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto max-w-[20rem] py-4 md:max-w-full">Pedaki © 2023</div>
+          <div className="mx-auto max-w-[40rem] py-4 md:max-w-full">Pedaki © 2023</div>
         </div>
       </div>
     </footer>

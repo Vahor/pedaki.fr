@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import type { ImageProps } from 'next/image';
+import Image from 'next/image';
 import React from 'react';
 import grandEst from '../../public/a/sp/grand-est.png';
 import mewo from '../../public/a/sp/mewo.png';
@@ -9,18 +9,21 @@ const SocialProof = () => {
   return (
     <section className="relative mx-auto block w-full max-w-screen-xl px-8">
       {/* TODO: flex w-max overflow-hidden + slider ? */}
-      <div className="mx-auto grid max-w-screen-md grid-cols-3 gap-12 py-4 pt-12 sm:py-12 2xl:pb-8">
-        {/* TODO: svg ?*/}
-        <OrganizationIcon src={grandEst} alt="grandest.fr" />
-        <OrganizationIcon src={mewo} alt="mewo.fr" />
-        <OrganizationIcon src={univLorraine} alt="univ-lorraine.fr" />
+      <div className="flex flex-col items-center gap-4 pb-8">
+        <p className="text-muted-foreground">Un projet soutenu par</p>
+        <div className="flex max-w-screen-sm items-center">
+          {/* TODO: svg ?*/}
+          <OrganizationIcon src={grandEst} alt="grandest.fr" />
+          <OrganizationIcon src={mewo} alt="mewo.fr" />
+          <OrganizationIcon src={univLorraine} alt="univ-lorraine.fr" />
+        </div>
       </div>
     </section>
   );
 };
 
 const OrganizationIcon = ({ src, alt }: ImageProps) => (
-  <div className="mx-auto h-10">
+  <div className="mx-auto md:h-10 border-r px-8 last:border-transparent">
     <Image src={src} alt={alt} height={40} priority={false} />
   </div>
 );

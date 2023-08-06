@@ -33,12 +33,13 @@
     "next-auth": "^4.22.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-wrap-balancer": "^1.0.0",
     "sass": "^1.64.2",
     "sharp": "^0.32.4",
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@pedaki/prettier-config": "workspace:*",
-    "@pedaki/eslint-config": "workspace:*"
+    "@pedaki/eslint-config": "workspace:*",
+    "@pedaki/prettier-config": "workspace:*"
   }
 }

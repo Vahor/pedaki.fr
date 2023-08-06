@@ -19,7 +19,8 @@ const Price = () => {
   // TODO: voir pour ajouter des icons / svg ça fait vide là
   return (
     <section className="container py-7">
-      <div className="flex flex-row items-center justify-between">
+      {/* TODO: faire un composant pour les header de section, je les ai repris 4 fois */}
+      <div className="flex lg:flex-row lg:items-center justify-between flex-col">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold">Les bons prix super cool</h2>
           <p className="text-muted-foreground">
@@ -67,7 +68,7 @@ const Price = () => {
       <Dialog>
         <div className="mt-4 flex w-full justify-center">
           <DialogTrigger asChild>
-            <Button variant="outline">
+            <Button variant="outline" className="bg-white">
               <span>Comparer toutes les offres</span>
               {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
               <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">

@@ -13,10 +13,6 @@ type Navigation = {
 
 export const navigation = [
   {
-    name: 'Home',
-    href: '/',
-  },
-  {
     name: 'Modules',
     children: [
       {

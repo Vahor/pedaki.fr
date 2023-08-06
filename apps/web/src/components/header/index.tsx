@@ -31,6 +31,7 @@ const Header = () => {
           <div className="relative flex w-full flex-col rounded-lg bg-white px-4 py-2 shadow-xl">
             <div className="flex justify-between gap-4">
               <Logo />
+              <div className="h-4 w-[1px] bg-gray-200 my-auto hidden md:inline"></div>
               <Navigation />
             </div>
             <div id="mobile-target"></div>
