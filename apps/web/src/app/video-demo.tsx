@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import mock from '../../public/a/mock-hero.webp';
 
+
 const Arrow = () => {
   return (
     <div className="">
@@ -99,16 +100,13 @@ const VideoDemo = () => {
           aria-label="Play video"
           className="group relative flex w-full cursor-pointer"
         >
-          <div className="absolute inset-0 flex items-center justify-center rounded-lg opacity-0 backdrop-blur-sm transition-all duration-300 hover:bg-gray-600/5 group-hover:opacity-100 sm:m-[.3rem] md:rounded-2xl">
-            <div className="box-content flex h-12 w-12 items-center justify-center rounded-full bg-gray-600 opacity-50 transition duration-300 hover:opacity-75 md:h-16 md:w-16">
-              <svg
-                width="512"
-                height="512"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="Play button"
-              >
-                <path fill="#ffffff" d="M8 5.14v14l11-7l-11-7Z" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary shadow-outline shadow-primary/20 transition  duration-300 hover:shadow-outline-lg hover:shadow-primary/30 group-hover:scale-110 md:h-16 md:w-16">
+              <svg width="32" height="32" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill="#ffffff"
+                  d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128Z"
+                />
               </svg>
             </div>
           </div>
