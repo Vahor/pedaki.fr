@@ -28,9 +28,9 @@
   "dependencies": {
     "@pedaki/common": "github:Vahor/pedaki-common#refactor/update-base-style",
     "@t3-oss/env-nextjs": "^0.6.0",
-    "lucide-react": "^0.263.1",
-    "next": "^13.4.13-canary.16",
-    "next-auth": "^4.22.3",
+    "lucide-react": "^0.264.0",
+    "next": "^13.4.13",
+    "next-auth": "^4.22.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^1.0.0",

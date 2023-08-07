@@ -28,7 +28,7 @@
   "dependencies": {
     "@pedaki/common": "github:Vahor/pedaki-common",
     "@t3-oss/env-nextjs": "^0.6.0",
-    "next": "^13.4.13-canary.6",
+    "next": "^13.4.13",
     "nextra": "^2.10.0",
     "nextra-theme-docs": "^2.10.0",
     "react": "^18.2.0",

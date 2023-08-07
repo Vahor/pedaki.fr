@@ -2,12 +2,13 @@ import { Badge } from '@pedaki/common/ui/badge';
 import { Button } from '@pedaki/common/ui/button';
 import React from 'react';
 import Balancer from 'react-wrap-balancer';
+import Link from 'next/link';
 
 
 const Hero = () => {
   return (
     <section>
-      <div className="flex flex-col justify-center gap-3 px-4 pt-8 pb-2 md:gap-4">
+      <div className="flex flex-col justify-center gap-4 px-4 pt-8">
         <div>
           <Badges />
         </div>
@@ -16,7 +17,7 @@ const Hero = () => {
             as="h1"
             className="text-center text-4xl font-bold tracking-tighter text-gray-900 md:text-5xl"
           >
-            Pedaki rend la gestion scolaire <u className="decoration-primary decoration-4">magique</u>
+            Pedaki rend la gestion scolaire <u className="decoration-accent decoration-4">magique</u>
           </Balancer>
         </div>
         <div className="mx-auto max-w-screen-md">
@@ -29,16 +30,12 @@ const Hero = () => {
           </Balancer>
         </div>
 
-        <div className="mx-8 mt-4 flex flex-col gap-4 sm:mx-auto md:flex-row">
+        <div className="md:mt-6 flex flex-col gap-4 mx-auto sm:flex-row">
+          <Button variant="secondary" size="lg" className="space-x-2 font-bold hover:opacity-90 border" asChild>
+            <Link href="https://demo.pedaki.fr">Ouvrir la démo</Link>
+          </Button>
           <Button variant="default" size="lg" className="space-x-2 font-bold hover:opacity-90">
             <span>Découvrir le projet</span>
-            {/*TODO move this icon somewhere like in @pedaki/common/ui/icons */}
-            <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="currentColor"
-                d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
-              />
-            </svg>
           </Button>
         </div>
       </div>
