@@ -1,16 +1,12 @@
 import { CardDescription, CardTitle } from '@pedaki/common/ui/card';
-import type { StaticImageData } from 'next/image';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import mock from '../../public/a/mock-hero.webp';
-
 
 const Features = () => {
   return (
     <section className="border-y bg-gray-100 py-7">
       <div className="container py-4">
-        <div className="flex lg:flex-row lg:items-center justify-between flex-col">
+        <div className="flex flex-col justify-between lg:flex-row lg:items-center">
           <div className="space-y-2">
             <h2 className="text-4xl font-bold">Des super trucs</h2>
             <p className="text-muted-foreground">
@@ -39,7 +35,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Super sécurisé"
             link="/docs/feature1"
-            image={mock}
+            video='a/v/feature1.mp4'
             alt="mock"
           />
           <FeatureCard
@@ -47,7 +43,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Gere les trucs"
             link="/docs/feature2"
-            image={mock}
+            video='a/v/feature2.mp4'
             alt="mock"
           />
 
@@ -56,7 +52,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Host le chez toi"
             link="/docs/feature3"
-            image={mock}
+            video='a/v/feature3.mp4'
             alt="mock"
           />
 
@@ -65,7 +61,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Super option 3"
             link="/docs/feature4"
-            image={mock}
+            video='a/v/feature3.mp4'
             alt="mock"
           />
         </div>
@@ -79,18 +75,22 @@ const FeatureCard: React.FC<{
   description: string;
   link: string;
   learnMore: string;
-  image: StaticImageData;
+  video: string;
   alt: string;
-}> = ({ title, description, link, learnMore, alt, image }) => {
+}> = ({ title, description, link, learnMore, alt, video }) => {
   return (
     <div className="flex flex-col gap-2">
-      <Image
-        src={image}
-        alt={alt}
-        priority
-        height={460}
-        className="mb-4 rounded-xl border bg-gray-200 p-0.5"
-      />
+      <video
+        title={alt}
+        loop
+        playsInline
+        autoPlay
+        muted
+        controls={false}
+        className="mb-4 h-[300px] overflow-hidden rounded-xl border bg-gray-200 object-cover object-center"
+      >
+        <source src={video} type="video/mp4" />
+      </video>
       <div className="relative space-y-4 p-0.5">
         <CardTitle className="">{title}</CardTitle>
         <CardDescription>
