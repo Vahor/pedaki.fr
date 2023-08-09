@@ -7,7 +7,7 @@ const PriceHeader = () => {
       <div className="mx-auto">
         <Balancer
           as="h1"
-          className="text-center text-4xl font-bold tracking-tighter text-gray-900 md:text-5xl"
+          className="text-center text-5xl font-bold tracking-tighter text-gray-900 md:text-5xl"
         >
           Trouve une offre qui te convient
         </Balancer>
