@@ -102,7 +102,7 @@ const VideoDemo = () => {
           className="group relative flex w-full cursor-pointer"
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent shadow-outline shadow-accent/20 transition duration-300 hover:shadow-outline-lg hover:shadow-accent/30 group-hover:scale-110 md:h-16 md:w-16">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary shadow-outline shadow-primary/20 transition duration-300 hover:shadow-outline-lg hover:shadow-primary/30 group-hover:scale-110 md:h-16 md:w-16">
               <svg width="32" height="32" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="#ffffff"

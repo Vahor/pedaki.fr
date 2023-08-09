@@ -124,7 +124,7 @@ const PriceScaler = () => {
           max={4}
           min={1}
           step={0.01}
-          onValueChange={onValueChange}
+          onValueCommit={onValueChange}
         >
           <SliderPrimitive.Track className="relative h-1 w-full grow overflow-hidden rounded-full bg-secondary">
             <SliderPrimitive.Range className="absolute h-full bg-primary" />
