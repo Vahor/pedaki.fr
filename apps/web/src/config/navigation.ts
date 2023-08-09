@@ -36,8 +36,8 @@ export const navigation = [
     name: 'Resources',
     children: [
       {
-        href: '/',
-        name: 'About',
+        href: '/pricing',
+        name: 'Pricing',
         description: 'About the project',
       },
       {

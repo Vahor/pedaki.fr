@@ -35,7 +35,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Super sécurisé"
             link="/docs/feature1"
-            video='a/v/feature1.mp4'
+            video="a/v/feature1.mp4"
             alt="mock"
           />
           <FeatureCard
@@ -43,7 +43,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Gere les trucs"
             link="/docs/feature2"
-            video='a/v/feature2.mp4'
+            video="a/v/feature2.mp4"
             alt="mock"
           />
 
@@ -52,7 +52,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Host le chez toi"
             link="/docs/feature3"
-            video='a/v/feature3.mp4'
+            video="a/v/feature3.mp4"
             alt="mock"
           />
 
@@ -61,7 +61,7 @@ const Features = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Super option 3"
             link="/docs/feature4"
-            video='a/v/feature3.mp4'
+            video="a/v/feature3.mp4"
             alt="mock"
           />
         </div>

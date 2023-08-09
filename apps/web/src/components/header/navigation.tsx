@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <>
       {/*Desktop navigation*/}
-      <div className="hidden md:flex md:ml-4">
+      <div className="hidden md:ml-4 md:flex">
         <Desktop />
       </div>
 

@@ -4,12 +4,11 @@ import Image from 'next/image';
 import React from 'react';
 import mock from '../../public/a/mock-hero.webp';
 
-
 const Arrow = () => {
   return (
     <div className="">
       {/* Desktop */}
-      <div className="absolute top-[-8.7rem] left-10 hidden md:block">
+      <div className="absolute left-10 top-[-8.7rem] hidden md:block">
         <svg
           width="132"
           height="22"
@@ -53,7 +52,7 @@ const Arrow = () => {
         </svg>
       </div>
       {/* Mobile */}
-      <div className="absolute top-[-4rem] left-10 block md:hidden">
+      <div className="absolute left-10 top-[-4rem] block md:hidden">
         <svg
           width="218"
           height="73"

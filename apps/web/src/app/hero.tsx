@@ -1,9 +1,8 @@
 import { Badge } from '@pedaki/common/ui/badge';
 import { Button } from '@pedaki/common/ui/button';
+import Link from 'next/link';
 import React from 'react';
 import Balancer from 'react-wrap-balancer';
-import Link from 'next/link';
-
 
 const Hero = () => {
   return (
@@ -17,7 +16,7 @@ const Hero = () => {
             as="h1"
             className="text-center text-4xl font-bold tracking-tighter text-gray-900 md:text-5xl"
           >
-            Pedaki rend la gestion scolaire <u className="decoration-accent decoration-4">magique</u>
+            Pedaki rend la gestion scolaire magique
           </Balancer>
         </div>
         <div className="mx-auto max-w-screen-md">
@@ -30,8 +29,13 @@ const Hero = () => {
           </Balancer>
         </div>
 
-        <div className="md:mt-6 flex flex-col gap-4 mx-auto sm:flex-row">
-          <Button variant="secondary" size="lg" className="space-x-2 font-bold hover:opacity-90 border" asChild>
+        <div className="mx-auto flex flex-col gap-4 sm:flex-row md:mt-6">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="space-x-2 border font-bold hover:opacity-90"
+            asChild
+          >
             <Link href="https://demo.pedaki.fr">Ouvrir la démo</Link>
           </Button>
           <Button variant="default" size="lg" className="space-x-2 font-bold hover:opacity-90">

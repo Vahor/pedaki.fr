@@ -23,7 +23,7 @@ const SocialProof = () => {
 };
 
 const OrganizationIcon = ({ src, alt }: ImageProps) => (
-  <div className="mx-auto md:h-10 border-r px-8 last:border-transparent">
+  <div className="mx-auto border-r px-8 last:border-transparent md:h-10">
     <Image src={src} alt={alt} height={40} priority={false} />
   </div>
 );

@@ -75,11 +75,16 @@ const PriceScaler = () => {
   const onValueChange = (value: number[]) => {
     if (value.length !== 1) return;
     const newValue = value[0]!;
+    const newSize = clampSize(newValue);
+    updateSize(newSize);
+  };
+
+  const onValueCommit = (value: number[]) => {
+    const newValue = value[0]!;
     const newParams = new URLSearchParams(param);
     const newSize = clampSize(newValue);
     newParams.set('size', newSize.toString());
     safeHistoryReplaceState(null, '', `${pathname}?${newParams.toString()}`);
-    updateSize(newSize);
   };
 
   const selectedSize = clampSize(size);
@@ -124,7 +129,8 @@ const PriceScaler = () => {
           max={4}
           min={1}
           step={0.01}
-          onValueCommit={onValueChange}
+          onValueChange={onValueChange}
+          onValueCommit={onValueCommit}
         >
           <SliderPrimitive.Track className="relative h-1 w-full grow overflow-hidden rounded-full bg-secondary">
             <SliderPrimitive.Range className="absolute h-full bg-primary" />

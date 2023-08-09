@@ -10,11 +10,11 @@ import { Providers } from './providers';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={cn(fontClassName)} suppressHydrationWarning>
+    <html lang="fr" dir="ltr" className={cn(fontClassName)} suppressHydrationWarning>
       <body>
         <Providers>
           <Header />
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </Providers>
       </body>

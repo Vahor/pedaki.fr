@@ -6,13 +6,13 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="border-t">
-      <div className="bg-background text-foreground">
+      <div className="bg-background">
         <div className="container">
           <div className="flex flex-col justify-between gap-6 divide-y pb-8 pt-12 md:flex-row md:gap-12 md:divide-y-0">
             <div className="mx-auto w-full max-w-[40rem] md:max-w-[20rem]">
               <Link className="mb-4 flex select-none items-center hover:opacity-75" href="/">
                 <Image src="/logo.svg" alt="Pedaki" width="36" height="36" />
-                <span className="mb-1 ml-2 inline text-2xl font-bold">pedaki</span>
+                <span className="mb-1 ml-2 inline text-2xl font-bold text-foreground">pedaki</span>
               </Link>
               <p className="text-sm2 font-medium text-gray-700">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.
@@ -43,17 +43,26 @@ const Footer = () => {
                 <p className="text-left text-sm2 font-semibold">Resources</p>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/features" className="text-sm font-medium hover:text-primary text-gray-700">
+                    <Link
+                      href="/features"
+                      className="text-sm font-medium text-gray-700 hover:text-primary"
+                    >
                       Feature 1
                     </Link>
                   </li>
                   <li>
-                    <Link href="/features" className="text-sm font-medium hover:text-primary text-gray-700">
+                    <Link
+                      href="/features"
+                      className="text-sm font-medium text-gray-700 hover:text-primary"
+                    >
                       Feature 2
                     </Link>
                   </li>
                   <li>
-                    <Link href="/features" className="text-sm font-medium hover:text-primary text-gray-700">
+                    <Link
+                      href="/features"
+                      className="text-sm font-medium text-gray-700 hover:text-primary"
+                    >
                       Feature 3
                     </Link>
                   </li>
