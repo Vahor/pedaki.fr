@@ -29,7 +29,7 @@ const Features = () => {
             </Link>
           </div>
         </div>
-        <div className="relative mb-2 mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="relative mb-2 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
           <FeatureCard
             title="Lorem ipsum dolor sit amet, consectetur. 1"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
@@ -79,7 +79,7 @@ const FeatureCard: React.FC<{
   alt: string;
 }> = ({ title, description, link, learnMore, alt, video }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col-reverse lg:flex-row lg:odd:flex-row-reverse gap-4 lg:gap-16 items-center">
       <video
         title={alt}
         loop
@@ -87,11 +87,14 @@ const FeatureCard: React.FC<{
         autoPlay
         muted
         controls={false}
-        className="mb-4 h-[300px] overflow-hidden rounded-xl border bg-gray-200 object-cover object-center p-1"
+        className="mb-4 rounded-xl border bg-secondary-foreground overflow-hidden object-cover object-center p-1 lg:w-[50%] max-h-[300px] lg:max-h-[400px]"
       >
         <source src={video} type="video/mp4" />
       </video>
       <div className="relative space-y-4 p-0.5">
+        <div className="w-10 h-10 rounded-full bg-primary/50">
+          {/*  TODO icon per feature */}
+        </div>
         <CardTitle className="">{title}</CardTitle>
         <CardDescription>
           <span>{description}</span>
