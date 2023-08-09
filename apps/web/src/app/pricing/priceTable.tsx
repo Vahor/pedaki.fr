@@ -5,11 +5,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@pedaki/common/ui/tooltip';
+import Link from 'next/link';
 import React from 'react';
 
 interface Feature {
   title: string;
-  tooltip: string;
+  tooltip?: string;
   selfHost: string;
   scaler: React.ReactNode;
 }
@@ -31,8 +32,6 @@ const table1 = [
   },
   {
     title: 'Bidule3',
-    tooltip:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum possimus repellat suscipit!',
     selfHost: 'toi même',
     scaler: 'inclus',
   },
@@ -57,12 +56,13 @@ const table1 = [
       </div>
     ),
   },
-];
+] as Feature[];
 
 const PriceTable = () => {
   return (
     <div>
-      <div className="sticky top-0 -mb-2 w-full sm:bg-background/80 pb-4 pt-20 backdrop-blur">
+      <h2 className="sr-only">Comparatif</h2>
+      <div className="sticky top-0 -mb-2 w-full pb-4 pt-20 backdrop-blur sm:bg-background/80">
         <div className="container flex text-base">
           <div className="w-0 sm:w-[24%]"></div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
@@ -70,6 +70,9 @@ const PriceTable = () => {
             <div>
               <span className="text-3xl">Gratuit</span>
             </div>
+            <Link href="/docs/how-to-self-host" className="text-xs text-primary hover:underline">
+              Comment ça marche ?
+            </Link>
           </div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Scaler</span>
@@ -93,7 +96,12 @@ const PriceTable = () => {
 const FeatureTable = ({ features, title }: { features: Feature[]; title: string }) => {
   return (
     <section>
-      <h2 className="border-b pb-2 text-xl font-bold">{title}</h2>
+      {/* TODO: use static id */}
+      <a href={`#${title}`}>
+        <h3 className="scroll-mt-[220px] border-b pb-2 text-xl font-bold" id={title}>
+          {title}
+        </h3>
+      </a>
       <div className="mb-16 w-full text-base">
         <Card className="my-2 bg-secondary" withShadow={false}>
           {features.map((feature, i) => (
@@ -102,18 +110,22 @@ const FeatureTable = ({ features, title }: { features: Feature[]; title: string 
               key={i}
             >
               <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left font-semibold">
-                <TooltipProvider delayDuration={0}>
-                  <Tooltip>
-                    <TooltipTrigger className="text-muted-foreground">
-                      <span className="border-b border-dotted border-foreground">
-                        {feature.title}
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent align="center" side="right">
-                      <p className="max-w-sm">{feature.tooltip}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                {feature.tooltip ? (
+                  <TooltipProvider delayDuration={0}>
+                    <Tooltip>
+                      <TooltipTrigger className="text-muted-foreground">
+                        <span className="border-b border-dotted border-foreground">
+                          {feature.title}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent align="center" side="right">
+                        <p className="max-w-sm">{feature.tooltip}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                ) : (
+                  <span className="text-muted-foreground">{feature.title}</span>
+                )}
               </div>
               <div className="flex flex-1 items-center pb-2 sm:pb-0">
                 <div className="w-[50%] min-w-[180px] px-1.5 text-center sm:text-left">

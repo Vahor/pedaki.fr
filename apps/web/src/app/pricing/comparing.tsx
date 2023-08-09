@@ -2,7 +2,7 @@ import React from 'react';
 
 const Comparing = () => {
     return (
-        <div>
+        <div className="h-96 my-96">
 Compare
         </div>
     );

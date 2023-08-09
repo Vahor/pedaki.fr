@@ -2,6 +2,7 @@ import Comparing from '~/app/pricing/comparing';
 import PriceHeader from '~/app/pricing/header';
 import PriceTable from '~/app/pricing/priceTable';
 import React from 'react';
+import Faq from "~/app/pricing/faq";
 
 const PricingPage = () => {
   return (
@@ -9,6 +10,7 @@ const PricingPage = () => {
       <PriceHeader />
       <PriceTable />
       <Comparing />
+      <Faq />
     </div>
   );
 };
