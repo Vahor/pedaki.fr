@@ -87,7 +87,7 @@ const FeatureCard: React.FC<{
         autoPlay
         muted
         controls={false}
-        className="mb-4 h-[300px] overflow-hidden rounded-xl border bg-gray-200 object-cover object-center"
+        className="mb-4 h-[300px] overflow-hidden rounded-xl border bg-gray-200 object-cover object-center p-1"
       >
         <source src={video} type="video/mp4" />
       </video>
