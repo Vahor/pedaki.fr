@@ -39,7 +39,7 @@ const Price = () => {
         />
 
         <PriceCard
-          className="border-primary/80 md:col-span-3"
+          className="border-primary md:col-span-3"
           title="Price Scaler"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           price="A partir de 20€"
@@ -53,7 +53,7 @@ const Price = () => {
         />
       </div>
       <div className="mt-4 flex w-full justify-center">
-        <Button variant="outline" className="gap-2 bg-white" asChild>
+        <Button variant="outline" className="gap-2" asChild>
           <Link href="/pricing">
             <span>Comparer toutes les offres</span>
             {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
@@ -88,11 +88,11 @@ const PriceCard: React.FC<{
         <div className="flex items-center justify-between">
           <p>
             {price}
-            {monthly ? <span className="text-xs text-muted-foreground">/mois</span> : ''}
+            {monthly ? <span className="text-xs text-muted-foreground pl-1">/mois</span> : ''}
           </p>
         </div>
       </CardContent>
-      <CardFooter className="rounded-b-lg bg-gray-50">
+      <CardFooter className="rounded-b-lg bg-secondary">
         <ul>
           {features.map((feature, index) => (
             <li key={index} className={feature.enabled ? '' : 'line-through'}>

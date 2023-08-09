@@ -1,17 +1,77 @@
+import { Card } from '@pedaki/common/ui/card';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@pedaki/common/ui/tooltip';
 import React from 'react';
+
+
+interface Feature {
+  title: string;
+  tooltip: string;
+  selfHost: string;
+  scaler: React.ReactNode;
+}
+
+const table1 = [
+  {
+    title: 'Bidule1',
+    tooltip:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum possimus repellat suscipit!',
+    selfHost: 'toi même',
+    scaler: 'inclus',
+  },
+  {
+    title: 'Bidule2',
+    tooltip:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum possimus repellat suscipit!',
+    selfHost: 'toi même',
+    scaler: 'inclus',
+  },
+  {
+    title: 'Bidule3',
+    tooltip:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum possimus repellat suscipit!',
+    selfHost: 'toi même',
+    scaler: 'inclus',
+  },
+  {
+    title: 'Bidule4',
+    tooltip:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum possimus repellat suscipit!',
+    selfHost: 'toi même',
+    scaler: 'inclus',
+  },
+  {
+    title: 'Bidule5',
+    tooltip:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum possimus repellat suscipit!',
+    selfHost: 'toi même',
+    scaler: (
+      <div>
+        <span>inclus</span>
+        <p>
+          <span className="text-xs text-primary">+ 20e pour plus gros</span>
+        </p>
+      </div>
+    ),
+  },
+];
 
 const PriceTable = () => {
   return (
     <div className="mx-8">
-      <div className="-mb-2 flex w-full text-base">
-        <div className="w-[24%]"></div>
-        <div className="w-[38%] text-left font-semibold">
+      <div className="sticky top-0 -mb-2 flex w-full bg-background pb-4 pt-20 text-base sm:py-0 sm:pt-12">
+        <div className="w-0 sm:w-[24%]"></div>
+        <div className="w-[50%] text-left font-semibold sm:w-[38%]">
           <span>Self-Host</span>
           <div>
             <span className="text-3xl">Gratuit</span>
           </div>
         </div>
-        <div className="w-[38%] text-left font-semibold">
+        <div className="w-[50%] text-left font-semibold sm:w-[38%]">
           <span>Scaler</span>
           <div>
             <span className="text-3xl">20e</span>
@@ -20,55 +80,51 @@ const PriceTable = () => {
           <span>Paiement à l&apos;année</span>
         </div>
       </div>
-      <h1 className="border-b border-black  pb-2 text-xl font-bold">Sécurité</h1>
-      <table className="mb-16 w-full text-base">
-        <tbody>
-          {Array.from({ length: 5 }).map((_, i) => (
-            <tr className="border-b text-sm transition last:border-b hover:bg-secondary" key={i}>
-              <td className="w-[24%] min-w-[200px] py-4 pl-4 text-left font-semibold">Prix {i}</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">0€</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">0€</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <h1 className="border-b border-black pb-2 text-xl font-bold">Features</h1>
-      <table className="mb-16 w-full text-base">
-        <tbody>
-          {Array.from({ length: 5 }).map((_, i) => (
-            <tr className="border-b text-sm transition last:border-b hover:bg-secondary" key={i}>
-              <td className="w-[24%] min-w-[200px] py-4 pl-4 text-left font-semibold">Prix {i}</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">0€</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">
-                  <span>0€</span>
-              </td>
-            </tr>
-          ))}
-          <tr className="border-b text-sm transition last:border-b hover:bg-secondary">
-              <td className="w-[24%] min-w-[200px] py-4 pl-4 text-left font-semibold">Perfs</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">Tu paie toi même</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">
-                  <span>Inclus</span>
-                  <p>
-                      <span className="text-xs text-muted-foreground">+5e pour une grosse machine</span>
-                  </p>
-              </td>
-          </tr>
-        </tbody>
-      </table>
-      <h1 className="border-b border-black  pb-2 text-xl font-bold">Autre chose</h1>
-      <table className="mb-16 w-full text-base">
-        <tbody>
-          {Array.from({ length: 5 }).map((_, i) => (
-            <tr className="border-b text-sm transition last:border-b hover:bg-secondary" key={i}>
-              <td className="w-[24%] min-w-[200px] py-4 pl-4 text-left font-semibold">Prix {i}</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">0€</td>
-              <td className="w-[38%] min-w-[180px] px-1.5 text-left">0€</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <FeatureTable features={table1} title="Features" />
+      <FeatureTable features={table1} title="Sécurité" />
+      <FeatureTable features={table1} title="Jsp" />
     </div>
+  );
+};
+
+const FeatureTable = ({ features, title }: { features: Feature[]; title: string }) => {
+  return (
+    <section>
+      <h2 className="border-b pb-2 text-xl font-bold">{title}</h2>
+      <div className="mb-16 w-full text-base">
+        <Card className="my-2 bg-secondary" withShadow={false}>
+          {features.map((feature, i) => (
+            <div
+              className="flex flex-col items-center border-b text-sm transition last:border-transparent hover:bg-secondary sm:flex-row"
+              key={i}
+            >
+              <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left font-semibold">
+                <TooltipProvider delayDuration={0}>
+                  <Tooltip>
+                    <TooltipTrigger className="text-muted-foreground">
+                      <span className="border-b border-dotted border-foreground">
+                        {feature.title}
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent align="center" side="right">
+                      <p className="max-w-sm">{feature.tooltip}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+              <div className="flex flex-1 pb-2 sm:pb-0 items-center">
+                <div className="w-[50%] min-w-[180px] px-1.5 text-center sm:text-left">
+                  {feature.selfHost}
+                </div>
+                <div className="w-[50%] min-w-[180px] px-1.5 text-center sm:text-left">
+                  {feature.scaler}
+                </div>
+              </div>
+            </div>
+          ))}
+        </Card>
+      </div>
+    </section>
   );
 };
 

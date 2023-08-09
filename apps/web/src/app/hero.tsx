@@ -33,7 +33,7 @@ const Hero = () => {
           <Button
             variant="secondary"
             size="lg"
-            className="space-x-2 border font-bold hover:opacity-90"
+            className="space-x-2 border font-bold hover:opacity-90 bg-white"
             asChild
           >
             <Link href="https://demo.pedaki.fr">Ouvrir la démo</Link>

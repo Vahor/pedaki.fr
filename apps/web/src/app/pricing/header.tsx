@@ -3,7 +3,7 @@ import Balancer from 'react-wrap-balancer';
 
 const PriceHeader = () => {
   return (
-    <div className="mb-16 flex flex-col justify-center gap-4 px-4 pt-8">
+    <div className="flex flex-col justify-center gap-4 px-4 pt-8">
       <div className="mx-auto">
         <Balancer
           as="h1"
