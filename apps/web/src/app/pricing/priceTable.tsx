@@ -7,7 +7,6 @@ import {
 } from '@pedaki/common/ui/tooltip';
 import React from 'react';
 
-
 interface Feature {
   title: string;
   tooltip: string;
@@ -62,27 +61,31 @@ const table1 = [
 
 const PriceTable = () => {
   return (
-    <div className="mx-8">
-      <div className="sticky top-0 -mb-2 flex w-full bg-background pb-4 pt-20 text-base sm:py-0 sm:pt-12">
-        <div className="w-0 sm:w-[24%]"></div>
-        <div className="w-[50%] text-left font-semibold sm:w-[38%]">
-          <span>Self-Host</span>
-          <div>
-            <span className="text-3xl">Gratuit</span>
+    <div>
+      <div className="sticky top-0 -mb-2 w-full sm:bg-background/80 pb-4 pt-20 backdrop-blur">
+        <div className="container flex text-base">
+          <div className="w-0 sm:w-[24%]"></div>
+          <div className="w-[50%] text-left font-semibold sm:w-[38%]">
+            <span>Self-Host</span>
+            <div>
+              <span className="text-3xl">Gratuit</span>
+            </div>
           </div>
-        </div>
-        <div className="w-[50%] text-left font-semibold sm:w-[38%]">
-          <span>Scaler</span>
-          <div>
-            <span className="text-3xl">20e</span>
-            <span className="pl-1 text-xs text-primary">/mois</span>
+          <div className="w-[50%] text-left font-semibold sm:w-[38%]">
+            <span>Scaler</span>
+            <div>
+              <span className="text-3xl">20e</span>
+              <span className="pl-1 text-xs text-primary">/mois</span>
+            </div>
+            <span>Paiement à l&apos;année</span>
           </div>
-          <span>Paiement à l&apos;année</span>
         </div>
       </div>
-      <FeatureTable features={table1} title="Features" />
-      <FeatureTable features={table1} title="Sécurité" />
-      <FeatureTable features={table1} title="Jsp" />
+      <div className="container">
+        <FeatureTable features={table1} title="Features" />
+        <FeatureTable features={table1} title="Sécurité" />
+        <FeatureTable features={table1} title="Jsp" />
+      </div>
     </div>
   );
 };
@@ -112,7 +115,7 @@ const FeatureTable = ({ features, title }: { features: Feature[]; title: string 
                   </Tooltip>
                 </TooltipProvider>
               </div>
-              <div className="flex flex-1 pb-2 sm:pb-0 items-center">
+              <div className="flex flex-1 items-center pb-2 sm:pb-0">
                 <div className="w-[50%] min-w-[180px] px-1.5 text-center sm:text-left">
                   {feature.selfHost}
                 </div>
