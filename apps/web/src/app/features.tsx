@@ -79,7 +79,29 @@ const FeatureCard: React.FC<{
   alt: string;
 }> = ({ title, description, link, learnMore, alt, video }) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row lg:odd:flex-row-reverse gap-4 lg:gap-16 items-center">
+    <div className="flex lg:flex-row lg:even:flex-row-reverse gap-4 lg:gap-16 items-center">
+      <div className="relative space-y-4 p-0.5">
+        <div className="w-10 h-10 rounded-full bg-primary/50">
+          {/*  TODO icon per feature */}
+        </div>
+        <CardTitle className="">{title}</CardTitle>
+        <CardDescription>
+          <span>{description}</span>
+          <Link
+              href={link}
+              className="flex items-center gap-1 pt-2 font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
+          >
+            <span>{learnMore}</span>
+            {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
+            <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  fill="currentColor"
+                  d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
+              />
+            </svg>
+          </Link>
+        </CardDescription>
+      </div>
       <video
         title={alt}
         loop
@@ -91,28 +113,7 @@ const FeatureCard: React.FC<{
       >
         <source src={video} type="video/mp4" />
       </video>
-      <div className="relative space-y-4 p-0.5">
-        <div className="w-10 h-10 rounded-full bg-primary/50">
-          {/*  TODO icon per feature */}
-        </div>
-        <CardTitle className="">{title}</CardTitle>
-        <CardDescription>
-          <span>{description}</span>
-          <Link
-            href={link}
-            className="flex items-center gap-1 pt-2 font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
-          >
-            <span>{learnMore}</span>
-            {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
-            <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="currentColor"
-                d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
-              />
-            </svg>
-          </Link>
-        </CardDescription>
-      </div>
+
     </div>
   );
 };
