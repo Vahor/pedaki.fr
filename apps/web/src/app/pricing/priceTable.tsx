@@ -62,7 +62,7 @@ const PriceTable = () => {
   return (
     <div>
       <h2 className="sr-only">Comparatif</h2>
-      <div className="sticky top-0 w-full pb-4 pt-20 backdrop-blur sm:bg-background/80">
+      <div className="sticky top-0 w-full pb-4 pt-20 backdrop-blur bg-background/90 z-[1]">
         <div className="container flex text-base">
           <div className="w-0 sm:w-[24%]"></div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
@@ -93,16 +93,22 @@ const PriceTable = () => {
   );
 };
 
-const FeatureTable = ({ features, title }: { features: Feature[]; title: string }) => {
+const FeatureTable = ({
+  features,
+  title,
+}: {
+  features: Feature[];
+  title: string;
+}) => {
   return (
     <section>
       {/* TODO: use static id */}
       <a href={`#${title}`}>
-        <h3 className="scroll-mt-[220px] border-b pb-2 text-xl font-bold" id={title}>
+        <h3 className="scroll-mt-[220px] border-b pb-2 text-xl font-bold sticky top-44 backdrop-blur bg-background/90 z-0" id={title}>
           {title}
         </h3>
       </a>
-      <div className="mb-16 w-full text-base">
+      <div className="pb-12 mb-4 w-full text-base">
         <Card className="my-2 bg-secondary" withShadow={false}>
           {features.map((feature, i) => (
             <div
