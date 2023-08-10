@@ -23,9 +23,9 @@
     "format:check": "turbo run format:check",
     "format": "turbo run format",
     "clean": "turbo run clean",
-    "build": "turbo run build",
+    "build": "dotenv -- turbo run build",
     "dev": "dotenv -- turbo run dev",
-    "lint": "turbo run lint",
+    "lint": "export SKIP_ENV_VALIDATION=true && turbo run lint",
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {

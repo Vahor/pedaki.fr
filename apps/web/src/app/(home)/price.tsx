@@ -88,7 +88,7 @@ const PriceCard: React.FC<{
         <div className="flex items-center justify-between">
           <p>
             {price}
-            {monthly ? <span className="text-xs text-muted-foreground pl-1">/mois</span> : ''}
+            {monthly ? <span className="pl-1 text-xs text-muted-foreground">/mois</span> : ''}
           </p>
         </div>
       </CardContent>

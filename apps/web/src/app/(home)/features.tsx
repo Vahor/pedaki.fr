@@ -29,7 +29,7 @@ const Features = () => {
             </Link>
           </div>
         </div>
-        <div className="relative mb-2 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+        <div className="relative mb-2 mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
           <FeatureCard
             title="Lorem ipsum dolor sit amet, consectetur. 1"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
@@ -79,24 +79,22 @@ const FeatureCard: React.FC<{
   alt: string;
 }> = ({ title, description, link, learnMore, alt, video }) => {
   return (
-    <div className="flex lg:flex-row lg:even:flex-row-reverse gap-4 lg:gap-16 items-center">
+    <div className="flex items-center gap-4 lg:flex-row lg:gap-16 lg:even:flex-row-reverse">
       <div className="relative space-y-4 p-0.5">
-        <div className="w-10 h-10 rounded-full bg-primary/50">
-          {/*  TODO icon per feature */}
-        </div>
+        <div className="h-10 w-10 rounded-full bg-primary/50">{/*  TODO icon per feature */}</div>
         <CardTitle className="">{title}</CardTitle>
         <CardDescription>
           <span>{description}</span>
           <Link
-              href={link}
-              className="flex items-center gap-1 pt-2 font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
+            href={link}
+            className="flex items-center gap-1 pt-2 font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
           >
             <span>{learnMore}</span>
             {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
             <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
               <path
-                  fill="currentColor"
-                  d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
+                fill="currentColor"
+                d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
               />
             </svg>
           </Link>
@@ -109,11 +107,10 @@ const FeatureCard: React.FC<{
         autoPlay
         muted
         controls={false}
-        className="mb-4 rounded-xl bg-secondary-foreground overflow-hidden object-cover object-center p-1 lg:w-[50%] max-h-[300px] lg:max-h-[400px]"
+        className="mb-4 max-h-[300px] overflow-hidden rounded-xl bg-secondary-foreground object-cover object-center p-1 lg:max-h-[400px] lg:w-[50%]"
       >
         <source src={video} type="video/mp4" />
       </video>
-
     </div>
   );
 };

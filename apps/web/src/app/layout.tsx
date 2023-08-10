@@ -6,7 +6,7 @@ import { fontClassName } from '@pedaki/common/styles/fonts';
 import seoConfig from '~/config/seo';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import { Providers } from './providers';
+import { Providers } from './(home)/providers';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

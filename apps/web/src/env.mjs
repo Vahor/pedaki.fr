@@ -5,6 +5,8 @@ export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
     NEXTAUTH_SECRET: z.string().min(1).default("secret"),
+
+    GITHUB_ROADMAP_ACCESS_TOKEN: z.string(),
   },
 
   client: {
@@ -18,6 +20,8 @@ export const env = createEnv({
 
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_DOCS_URL: process.env.NEXT_PUBLIC_DOCS_URL,
+
+    GITHUB_ROADMAP_ACCESS_TOKEN: process.env.GITHUB_ROADMAP_ACCESS_TOKEN,
   },
 
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
