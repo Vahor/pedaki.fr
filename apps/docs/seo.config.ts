@@ -14,12 +14,12 @@ const seoConfig = {
   },
   robots: 'index, follow',
   colorScheme: 'light',
-  manifest: 'https://pedaki.fr/site.webmanifest',
+  manifest: 'https://www.pedaki.fr/site.webmanifest',
   icons: [
-    { rel: 'icon', url: 'https://pedaki.fr/favicon.ico' },
-    { rel: 'apple-touch-icon', url: 'https://pedaki.fr/apple-touch-icon.png' },
-    { rel: 'mask-icon', url: 'https://pedaki.fr/favicon.ico' },
-    { rel: 'image/x-icon', url: 'https://pedaki.fr/favicon.ico' },
+    { rel: 'icon', url: 'https://www.pedaki.fr/favicon.ico' },
+    { rel: 'apple-touch-icon', url: 'https://www.pedaki.fr/apple-touch-icon.png' },
+    { rel: 'mask-icon', url: 'https://www.pedaki.fr/favicon.ico' },
+    { rel: 'image/x-icon', url: 'https://www.pedaki.fr/favicon.ico' },
   ],
 } satisfies Metadata;
 

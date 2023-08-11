@@ -16,7 +16,7 @@ const config: DocsThemeConfig = {
   },
   logo: (
     <div className="flex items-center">
-      <Image src="https://pedaki.fr/logo.svg" alt="Pedaki" width="32" height="32" />
+      <Image src="https://www.pedaki.fr/logo.svg" alt="Pedaki" width="32" height="32" />
       <span className="ml-2 text-xl font-bold">pedaki</span>
     </div>
   ),
