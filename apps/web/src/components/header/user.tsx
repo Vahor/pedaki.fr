@@ -1,5 +1,3 @@
-'use client';
-
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
 import { Button } from '@pedaki/common/ui/button';
 import {
@@ -12,14 +10,14 @@ import {
 } from '@pedaki/common/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
 import type { Session } from 'next-auth';
-import { SessionProvider, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { env } from '../../env.mjs';
 import { SignOutItem } from './signout-item';
+import {auth} from "~/services/auth";
 
-const User = () => {
-  const { data: session } = useSession();
+const User = async () => {
+  const session = await auth();
 
   if (session) {
     return <Authenticated session={session} />;
@@ -27,18 +25,18 @@ const User = () => {
   return <Guest />;
 };
 
-const UserWithProvider = () => {
-  return (
-    <SessionProvider>
-      <User />
-    </SessionProvider>
-  );
-};
+// const UserWithProvider = () => {
+//   return (
+//     <SessionProvider>
+//       <User />
+//     </SessionProvider>
+//   );
+// };
 
 const Guest = () => {
   return (
     <Button asChild variant="default">
-      <Link href="/login">Connexion</Link>
+      <Link href="/login" prefetch={false}>Connexion</Link>
     </Button>
   );
 };
@@ -73,4 +71,4 @@ const Authenticated = ({ session }: { session: Session }) => {
   );
 };
 
-export default UserWithProvider;
+export default User;
