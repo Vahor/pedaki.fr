@@ -87,9 +87,6 @@ export const getRoadmapIssues = async (): Promise<Roadmap> => {
       Authorization: `bearer ${accessToken}`,
     },
     body: JSON.stringify({ query }),
-    next: {
-      revalidate: 3600 * 6, // 6 hours
-    },
   });
 
   const { data, errors } = (await response.json()) as JsonResponse;

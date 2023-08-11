@@ -17,7 +17,7 @@
   "packageManager": "pnpm@8.6.11",
   "scripts": {
     "build": "next build",
-    "dev": "next dev -p 8000",
+    "dev": "next dev -p 3000",
     "lint": "next lint",
     "start": "next start",
     "clean": "rimraf .next",
@@ -28,8 +28,8 @@
   "dependencies": {
     "@pedaki/common": "github:Vahor/pedaki-common#refactor/update-base-style",
     "@t3-oss/env-nextjs": "^0.6.0",
-    "next": "13.4.14-canary.1",
-    "next-auth": "^4.22.5",
+    "next": "13.4.14-canary.2",
+    "next-auth": "^4.23.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^1.0.0",

@@ -1,29 +1,32 @@
+'use client';
+
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
 import { Button } from '@pedaki/common/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@pedaki/common/ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@pedaki/common/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
-import { auth } from '~/services/auth';
 import type { Session } from 'next-auth';
+import { SessionProvider, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 import { env } from '../../env.mjs';
 import { SignOutItem } from './signout-item';
 
-const User = async () => {
-  const session = await auth();
+const User = () => {
+  const { data: session } = useSession();
 
   if (session) {
     return <Authenticated session={session} />;
   }
   return <Guest />;
 };
+
+const UserWithProvider = () => {
+  return (
+    <SessionProvider>
+      <User />
+    </SessionProvider>
+  );
+}
 
 const Guest = () => {
   return (
@@ -63,4 +66,4 @@ const Authenticated = ({ session }: { session: Session }) => {
   );
 };
 
-export default User;
+export default UserWithProvider;
