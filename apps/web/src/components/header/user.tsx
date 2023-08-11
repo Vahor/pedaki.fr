@@ -2,7 +2,14 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
 import { Button } from '@pedaki/common/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@pedaki/common/ui/dropdown-menu';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@pedaki/common/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
 import type { Session } from 'next-auth';
 import { SessionProvider, useSession } from 'next-auth/react';
@@ -26,7 +33,7 @@ const UserWithProvider = () => {
       <User />
     </SessionProvider>
   );
-}
+};
 
 const Guest = () => {
   return (

@@ -1,6 +1,6 @@
 export const metadata = {
-    description: "not found description",
-    title: "404 - Pedaki",
+  description: 'not found description',
+  title: '404 - Pedaki',
 };
 
 export default function NotFound() {

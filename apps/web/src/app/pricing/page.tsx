@@ -1,12 +1,12 @@
 import Faq from '~/app/pricing/faq';
 import PriceHeader from '~/app/pricing/header';
 import PriceTable from '~/app/pricing/priceTable';
+import { Metadata } from 'next';
 import React from 'react';
-import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    description: "lorem ipsum dolor sit amet",
-    title: "Pricing",
+  description: 'lorem ipsum dolor sit amet',
+  title: 'Pricing',
 };
 
 const PricingPage = () => {

@@ -1,8 +1,8 @@
 'use client';
 
 export const metadata = {
-    description: "error description",
-    title: "Error - Pedaki",
+  description: 'error description',
+  title: 'Error - Pedaki',
 };
 
 export default function Error() {
