@@ -85,7 +85,7 @@ query User {
                             }
                             author {
                                 login
-                                avatarUrl(size: 24)
+                                avatarUrl(size: 20)
                                 ... on User {
                                     name
                                 }
@@ -144,6 +144,7 @@ export const getRoadmapIssues = async () => {
       data.user.projectV2.items.nodes.forEach(issue => {
         // Sanitize HTML, we are never too safe
         issue.content.titleHTML = sanitizeHtml(issue.content.titleHTML);
+        issue.content.repository.descriptionHTML = sanitizeHtml(issue.content.repository.descriptionHTML);
 
         // Remove starting / from resourcePath
         issue.content.repository.resourcePath = issue.content.repository.resourcePath.replace(

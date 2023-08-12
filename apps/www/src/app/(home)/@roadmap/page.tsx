@@ -5,7 +5,12 @@ import { Badge } from '@pedaki/common/ui/badge';
 import { Button } from '@pedaki/common/ui/button';
 import { Card, CardContent, CardFooter } from '@pedaki/common/ui/card';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@pedaki/common/ui/tooltip';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@pedaki/common/ui/tooltip';
 import type { Issue } from '~/services/github/roadmap';
 import { getRoadmapIssues } from '~/services/github/roadmap';
 import dayjs from 'dayjs';
@@ -97,22 +102,24 @@ const Roadmap = async () => {
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 gap-2 md:grid-cols-6">
-        <div className="col-span-6 flex flex-col gap-4 md:col-span-3 lg:col-span-2 lg:mt-2 lg:scale-95">
-          {roadmapColumns[0].map(issue => (
-            <GithubCard key={issue.content.number} issue={issue} />
-          ))}
-        </div>
-        <div className="col-span-6 flex flex-col gap-4 md:col-span-3 lg:col-span-2">
-          {roadmapColumns[1].map(issue => (
-            <GithubCard key={issue.content.number} issue={issue} />
-          ))}
-        </div>
-        {/* Hide this column on smaller screen (shown on lg)*/}
-        <div className="col-span-6 hidden flex-col gap-4 md:col-span-3 lg:col-span-2 lg:mt-2 lg:flex lg:scale-95">
-          {roadmapColumns[2].map(issue => (
-            <GithubCard key={issue.content.number} issue={issue} />
-          ))}
-        </div>
+        <TooltipProvider delayDuration={0}>
+          <div className="col-span-6 flex flex-col gap-4 md:col-span-3 lg:col-span-2 lg:scale-95">
+            {roadmapColumns[0].map(issue => (
+              <GithubCard key={issue.content.number} issue={issue} />
+            ))}
+          </div>
+          <div className="col-span-6 flex flex-col gap-4 md:col-span-3 lg:col-span-2">
+            {roadmapColumns[1].map(issue => (
+              <GithubCard key={issue.content.number} issue={issue} />
+            ))}
+          </div>
+          {/* Hide this column on smaller screen (shown on lg)*/}
+          <div className="col-span-6 hidden flex-col gap-4 md:col-span-3 lg:col-span-2 lg:flex lg:scale-95">
+            {roadmapColumns[2].map(issue => (
+              <GithubCard key={issue.content.number} issue={issue} />
+            ))}
+          </div>
+        </TooltipProvider>
       </div>
       <div className="mt-6 flex w-full justify-center">
         <Button variant="outline" className="gap-2 bg-white" asChild>
@@ -135,20 +142,25 @@ const Roadmap = async () => {
 
 const GithubCard = ({ issue }: { issue: Issue }) => {
   return (
-    <Link href={issue.content.url} prefetch={false} target="_blank">
+    <Link
+      href={issue.content.url}
+      prefetch={false}
+      target="_blank"
+      aria-label={`Github issue "${issue.content.repository}"`}
+    >
       <Card className="cursor-pointer hover:border-primary">
         <CardContent className="space-y-2 pb-3 pt-6">
           <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-muted-foreground">
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <span className="underline">{issue.content.repository.resourcePath}</span>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <span dangerouslySetInnerHTML={{ __html: issue.content.repository.descriptionHTML }}></span>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <span className="underline">{issue.content.repository.resourcePath}</span>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs">
+                <span
+                  dangerouslySetInnerHTML={{ __html: issue.content.repository.descriptionHTML }}
+                ></span>
+              </TooltipContent>
+            </Tooltip>
             <span>on {dayjs(issue.content.createdAt).format('MMM DD')}</span>
           </div>
           <div className="flex flex-row items-baseline gap-2">
@@ -167,47 +179,48 @@ const GithubCard = ({ issue }: { issue: Issue }) => {
               const rgb = hexToRgb(hex);
               const dark = rgb ? isDark(rgb) : false;
 
-              const badgeComponent = <Badge variant="outline"
-                                            className={cn('border-transparent', { 'text-white': dark })}
-                                            style={{ backgroundColor: `#${label.color}` }} key={label.name}>
-                {label.name}
-              </Badge>
+              const badgeComponent = (
+                <Badge
+                  variant="outline"
+                  className={cn('border-transparent', { 'text-white': dark })}
+                  style={{ backgroundColor: `#${label.color}` }}
+                  key={label.name}
+                >
+                  {label.name}
+                </Badge>
+              );
 
               if (!label.description) {
                 return badgeComponent;
               }
 
-
-
               return (
-                <TooltipProvider delayDuration={0} key={label.name}>
-                  <Tooltip>
-                    <TooltipTrigger className="text-muted-foreground">
-                      {badgeComponent}
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs">
-                      <span>{label.description}</span>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                <Tooltip key={label.name}>
+                  <TooltipTrigger className="text-muted-foreground">
+                    {badgeComponent}
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <span>{label.description}</span>
+                  </TooltipContent>
+                </Tooltip>
               );
             })}
           </div>
         </CardContent>
         <CardFooter className="border-t py-2">
           <div className="flex items-center gap-2">
-            <Avatar className="h-[24px] w-[24px]">
+            <Avatar className="h-[20px] w-[20px]">
               <AvatarImage
                 src={issue.content.author.avatarUrl}
                 className="my-auto"
-                height={24}
-                width={24}
+                height={20}
+                width={20}
               />
               <AvatarFallback>
                 <Skeleton />
               </AvatarFallback>
             </Avatar>
-            <span className="text-sm text-muted-foreground">
+            <span className="text-xs text-muted-foreground">
               Ouvert par {issue.content.author.name}
             </span>
           </div>
