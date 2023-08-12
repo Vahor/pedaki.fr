@@ -11,8 +11,20 @@ const Footer = () => {
           <div className="flex flex-col justify-between gap-6 divide-y pb-8 pt-12 md:flex-row md:gap-12 md:divide-y-0">
             <div className="mx-auto w-full max-w-[40rem] md:max-w-[20rem]">
               <Link className="mb-4 flex select-none items-center hover:opacity-75" href="/">
-                <Image src="/logo-light.svg" alt="Pedaki" height="36" width="120" className="dark:hidden inline" />
-                <Image src="/logo-dark.svg" alt="Pedaki" height="36" width="120" className="hidden dark:inline" />
+                <Image
+                  src="/logo-light.svg"
+                  alt="Pedaki"
+                  height="36"
+                  width="120"
+                  className="inline dark:hidden"
+                />
+                <Image
+                  src="/logo-dark.svg"
+                  alt="Pedaki"
+                  height="36"
+                  width="120"
+                  className="hidden dark:inline"
+                />
               </Link>
               <p className="text-sm2 font-medium text-gray-700">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.

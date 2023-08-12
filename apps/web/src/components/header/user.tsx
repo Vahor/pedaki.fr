@@ -9,12 +9,12 @@ import {
   DropdownMenuTrigger,
 } from '@pedaki/common/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
+import { auth } from '~/services/auth';
 import type { Session } from 'next-auth';
 import Link from 'next/link';
 import React from 'react';
 import { env } from '../../env.mjs';
 import { SignOutItem } from './signout-item';
-import {auth} from "~/services/auth";
 
 // TODO: RSC makes the page cache not work
 //  See the UserWithProvider below, but with this there is a flicker
@@ -41,7 +41,9 @@ const User = async () => {
 const Guest = () => {
   return (
     <Button asChild variant="default">
-      <Link href="/login" prefetch={false}>Connexion</Link>
+      <Link href="/login" prefetch={false}>
+        Connexion
+      </Link>
     </Button>
   );
 };

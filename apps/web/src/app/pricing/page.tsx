@@ -1,7 +1,7 @@
 import Faq from '~/app/pricing/faq';
 import PriceHeader from '~/app/pricing/header';
 import PriceTable from '~/app/pricing/priceTable';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
