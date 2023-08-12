@@ -98,6 +98,9 @@ query User {
 `;
 
 export const getRoadmapIssues = async () => {
+  // TODO set permanent cache, with "generatedAt", and revalidate every 5 minutes
+  //  In case of error, return cached data if it exists
+  //  Or update the lib to handle this case
   return cache(
     async () => {
       const response = await fetch(apiUrl, {
@@ -150,7 +153,6 @@ export const getRoadmapIssues = async () => {
       return data.user.projectV2;
     },
     'roadmap:issues',
-    // { ttl: 1000 * 60 * 60 * 24 },
-    { ttl: 1000 },
+    { ttl: 1000 * 60 * 10 }, // 10 minutes
   );
 };

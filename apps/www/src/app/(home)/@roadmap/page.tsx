@@ -79,6 +79,8 @@ const Roadmap = async () => {
     roadmap.items.nodes.slice(roadmapSizePerColumn * 2, roadmapSize),
   ] as const;
 
+  // TODO: add labels ?
+
   return (
     <section className="container border-t bg-gray-100 py-16">
       {/* TODO: faire un composant pour les header de section, je les ai repris 4 fois */}
@@ -109,7 +111,7 @@ const Roadmap = async () => {
         </div>
       </div>
       <div className="mt-6 flex w-full justify-center">
-        <Button variant="outline" className="gap-2" asChild>
+        <Button variant="outline" className="gap-2 bg-white" asChild>
           {/*TODO: add env variable for the github url*/}
           <Link href="https://github.com/vahor/pedaki-pedaki.fr" prefetch={false} target="_blank">
             <span>Rejoindre la communauté</span>

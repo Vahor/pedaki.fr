@@ -53,7 +53,7 @@ const Price = () => {
         />
       </div>
       <div className="mt-6 flex w-full justify-center">
-        <Button variant="outline" className="gap-2" asChild>
+        <Button variant="outline" className="gap-2 bg-white" asChild>
           <Link href="/pricing">
             <span>Comparer toutes les offres</span>
             {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
