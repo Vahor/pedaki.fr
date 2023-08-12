@@ -63,7 +63,7 @@
         "resources/subscription",
         {
           "group": "Migration",
-          "icon": "arrow-right",
+          "icon": "arrows-spin",
           "pages": [
             "resources/migration/overview",
             "resources/migration/from-pronote"
