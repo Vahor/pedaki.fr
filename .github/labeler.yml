@@ -1,13 +1,9 @@
-{
-  "labels": {
-    "created-by: Pedaki team": [
-      { "type": "user", "pattern": "vahor" }
-    ],
-    "area: documentation": [
-      "docs/**"
-    ],
-    "area: site": [
-      "apps/web/**"
-    ]
-  }
-}
+'📚 documentation':
+  - any:
+    - 'docs/**'
+'🖥️ www':
+  - any:
+    - 'apps/www/**'
+'📦 packages':
+    - any:
+      - 'packages/**'

@@ -19,7 +19,7 @@ cp .env.example .env.local
 ```sh
 pnpm dev
 # or
-pnpm dev --filter <web|docs>
+pnpm dev --filter <www|docs>
 ```
 
 ## License
