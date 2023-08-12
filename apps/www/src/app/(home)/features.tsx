@@ -88,6 +88,7 @@ const FeatureCard: React.FC<{
           <Link
             href={link}
             className="flex items-center gap-1 pt-2 font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
+            prefetch={false}
           >
             <span>{learnMore}</span>
             {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}

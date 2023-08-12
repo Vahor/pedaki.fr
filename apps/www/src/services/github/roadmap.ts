@@ -102,6 +102,7 @@ query User {
 export const getRoadmapIssues = async () => {
   return cache(
     async () => {
+      console.log('Fetching roadmap issues')
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
