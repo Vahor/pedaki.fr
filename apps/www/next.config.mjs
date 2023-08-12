@@ -17,16 +17,6 @@ const config = {
 
     redirects: async () => [
         {
-            source: '/docs',
-            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}`,
-            permanent: false,
-        },
-        {
-            source: '/docs/:path*',
-            destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/-/:path*`,
-            permanent: false,
-        },
-        {
             source: '/login',
             destination: `${process.env.NEXT_PUBLIC_APP_URL}/auth/login`,
             permanent: false,
