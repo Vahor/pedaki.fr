@@ -112,12 +112,12 @@ const FeatureTable = ({ features, title }: { features: Feature[]; title: string 
               className="flex flex-col items-center border-b text-sm transition last:border-transparent hover:bg-secondary sm:flex-row"
               key={i}
             >
-              <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left font-semibold">
+              <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left">
                 {feature.tooltip ? (
                   <TooltipProvider delayDuration={0}>
                     <Tooltip>
                       <TooltipTrigger className="text-muted-foreground">
-                        <span className="border-b border-dotted border-foreground">
+                        <span className="border-b border-dotted border-foreground font-semibold">
                           {feature.title}
                         </span>
                       </TooltipTrigger>

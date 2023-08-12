@@ -3,7 +3,7 @@ import React from 'react';
 
 const CallToActionBottom = () => {
   return (
-    <div className="border-t py-16">
+    <div className="border-t bg-gray-100 py-16">
       <div className="container">
         <div>
           <h1 className="text-3xl font-bold text-foreground md:text-5xl">

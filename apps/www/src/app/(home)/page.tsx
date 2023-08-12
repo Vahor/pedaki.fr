@@ -1,6 +1,5 @@
 import Features from '~/app/(home)/features';
 import Hero from '~/app/(home)/hero';
-import Price from '~/app/(home)/price';
 import SocialProof from '~/app/(home)/social-proof';
 import VideoDemo from '~/app/(home)/video-demo';
 import type { Metadata } from 'next';
@@ -20,7 +19,6 @@ export default function Page() {
       <VideoDemo />
       <SocialProof />
       <Features />
-      <Price />
     </>
   );
 }

@@ -1,7 +1,11 @@
+import { hexToRgb, isDark } from '@pedaki/common/lib/colors';
+import { cn } from '@pedaki/common/lib/utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
+import { Badge } from '@pedaki/common/ui/badge';
 import { Button } from '@pedaki/common/ui/button';
 import { Card, CardContent, CardFooter } from '@pedaki/common/ui/card';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@pedaki/common/ui/tooltip';
 import type { Issue } from '~/services/github/roadmap';
 import { getRoadmapIssues } from '~/services/github/roadmap';
 import dayjs from 'dayjs';
@@ -82,7 +86,7 @@ const Roadmap = async () => {
   // TODO: add labels ?
 
   return (
-    <section className="container border-t bg-gray-100 py-16">
+    <section className="container py-16">
       {/* TODO: faire un composant pour les header de section, je les ai repris 4 fois */}
       <div className="flex flex-col justify-between lg:flex-row lg:items-center">
         <div className="space-y-2">
@@ -135,7 +139,16 @@ const GithubCard = ({ issue }: { issue: Issue }) => {
       <Card className="cursor-pointer hover:border-primary">
         <CardContent className="space-y-2 pb-3 pt-6">
           <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-muted-foreground">
-            <span className="underline">{issue.content.repository.resourcePath}</span>
+            <TooltipProvider delayDuration={0}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <span className="underline">{issue.content.repository.resourcePath}</span>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs">
+                  <span dangerouslySetInnerHTML={{ __html: issue.content.repository.descriptionHTML }}></span>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
             <span>on {dayjs(issue.content.createdAt).format('MMM DD')}</span>
           </div>
           <div className="flex flex-row items-baseline gap-2">
@@ -147,6 +160,38 @@ const GithubCard = ({ issue }: { issue: Issue }) => {
               ></span>
               <span className="ml-1 text-sm text-muted-foreground">#{issue.content.number}</span>
             </div>
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            {issue.content.labels.nodes.map(label => {
+              const hex = `#${label.color}`;
+              const rgb = hexToRgb(hex);
+              const dark = rgb ? isDark(rgb) : false;
+
+              const badgeComponent = <Badge variant="outline"
+                                            className={cn('border-transparent', { 'text-white': dark })}
+                                            style={{ backgroundColor: `#${label.color}` }} key={label.name}>
+                {label.name}
+              </Badge>
+
+              if (!label.description) {
+                return badgeComponent;
+              }
+
+
+
+              return (
+                <TooltipProvider delayDuration={0} key={label.name}>
+                  <Tooltip>
+                    <TooltipTrigger className="text-muted-foreground">
+                      {badgeComponent}
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <span>{label.description}</span>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              );
+            })}
           </div>
         </CardContent>
         <CardFooter className="border-t py-2">

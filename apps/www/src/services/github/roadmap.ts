@@ -25,6 +25,7 @@ export interface Issue {
     repository: {
       resourcePath: string;
       isPrivate: boolean;
+      descriptionHTML: string;
     };
     author: {
       login: string;
@@ -70,7 +71,7 @@ query User {
                             number
                             createdAt
                             updatedAt
-                            labels(first: 5) {
+                            labels(first: 3) {
                                 nodes {
                                     name
                                     color
@@ -80,6 +81,7 @@ query User {
                             repository {
                                 resourcePath
                                 isPrivate
+                                descriptionHTML
                             }
                             author {
                                 login
