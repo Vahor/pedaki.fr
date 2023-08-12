@@ -43,5 +43,8 @@
     "tailwindcss-animate": "^1.0.6",
     "turbo": "^1.10.12",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "million": "^2.5.13"
   }
 }

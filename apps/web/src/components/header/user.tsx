@@ -16,6 +16,11 @@ import { env } from '../../env.mjs';
 import { SignOutItem } from './signout-item';
 import {auth} from "~/services/auth";
 
+// TODO: RSC makes the page cache not work
+//  See the UserWithProvider below, but with this there is a flicker
+//  https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic#dynamic-rendering
+// headers(): Using these in a Server Component will opt the whole route into dynamic rendering at request time.
+
 const User = async () => {
   const session = await auth();
 

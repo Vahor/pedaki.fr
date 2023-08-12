@@ -1,4 +1,5 @@
 import "./src/env.mjs";
+import million from "million/compiler";
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -33,7 +34,7 @@ const config = {
     ],
 
     compiler: {
-        removeConsole: process.env.NODE_ENV === "production"
+        // removeConsole: process.env.NODE_ENV === "production"
     },
 
     eslint: {
@@ -48,4 +49,8 @@ const config = {
 
 };
 
-export default config;
+// million is not needed here, it's just a test to see if it works
+//  before adding it to the other apps
+export default million.next(config, {
+    auto: {rsc: true},
+});

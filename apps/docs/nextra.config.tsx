@@ -16,8 +16,8 @@ const config: DocsThemeConfig = {
   },
   logo: (
     <div className="flex items-center">
-      <Image src="https://www.pedaki.fr/logo.svg" alt="Pedaki" width="32" height="32" />
-      <span className="ml-2 text-xl font-bold">pedaki</span>
+      <Image src="/logo-light.svg" alt="Pedaki" height="36" className="dark:hidden inline" />
+      <Image src="/logo-dark.svg" alt="Pedaki" height="36" className="hidden dark:inline" />
     </div>
   ),
   docsRepositoryBase: 'https://github.com/vahor/pedaki-pedaki.fr/tree/main',

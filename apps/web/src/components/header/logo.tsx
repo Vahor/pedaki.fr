@@ -5,8 +5,8 @@ import React from 'react';
 const Logo = () => {
   return (
     <Link className="flex select-none items-center hover:opacity-75" href="/">
-      <Image src="/logo.svg" alt="Pedaki" width="36" height="36" />
-      <span className="mb-0.5 ml-2 inline text-lg font-bold">pedaki</span>
+        <Image src="/logo-light.svg" alt="Pedaki" height="36" width="120" className="dark:hidden inline" />
+        <Image src="/logo-dark.svg" alt="Pedaki" height="36" width="120" className="hidden dark:inline" />
     </Link>
   );
 };
