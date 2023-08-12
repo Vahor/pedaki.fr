@@ -1,31 +1,40 @@
+import { cache } from '@pedaki/common/lib/cache/memory-cache';
 import { env } from '~/env.mjs';
+import sanitizeHtml from 'sanitize-html';
 
-interface Roadmap {
+export interface Roadmap {
   url: string;
   items: {
     nodes: Issue[];
   };
 }
 
-interface Issue {
+export interface Issue {
   type: string;
   content: {
     state: string;
+    stateReason: string;
     titleHTML: string;
     url: string;
     number: number;
+    createdAt: string;
     updatedAt: string;
     labels: {
       nodes: Label[];
     };
     repository: {
-      url: string;
+      resourcePath: string;
       isPrivate: boolean;
+    };
+    author: {
+      login: string;
+      name: string;
+      avatarUrl: string;
     };
   };
 }
 
-interface Label {
+export interface Label {
   name: string;
   color: string;
   description: string;
@@ -49,15 +58,17 @@ const query = `
 query User {
     user(login: "vahor") {
         projectV2(number: 1) {
-            items(first: 10) {
+            items(first: 100) {
                 nodes {
                     type
                     content {
                         ... on Issue {
                             state
+                            stateReason
                             titleHTML
                             url
                             number
+                            createdAt
                             updatedAt
                             labels(first: 5) {
                                 nodes {
@@ -67,8 +78,15 @@ query User {
                                 }
                             }
                             repository {
-                                url
+                                resourcePath
                                 isPrivate
+                            }
+                            author {
+                                login
+                                avatarUrl(size: 24)
+                                ... on User {
+                                    name
+                                }
                             }
                         }
                     }
@@ -79,21 +97,60 @@ query User {
 }
 `;
 
-export const getRoadmapIssues = async (): Promise<Roadmap> => {
-  const response = await fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `bearer ${accessToken}`,
+export const getRoadmapIssues = async () => {
+  return cache(
+    async () => {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ query }),
+      });
+
+      const { data, errors } = (await response.json()) as JsonResponse;
+
+      if (errors) {
+        console.error(errors);
+        throw new Error('Error fetching roadmap issues');
+      }
+
+      // filter out private repos
+      data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.filter(issue => {
+        return !issue.content.repository.isPrivate;
+      });
+
+      data.user.projectV2.items.nodes.sort((a, b) => {
+        return new Date(b.content.updatedAt).getTime() - new Date(a.content.updatedAt).getTime();
+      });
+      // 3 columns so 9 issues max
+      data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.slice(0, 9);
+
+      // fill to 9 (TODO: remove)
+      while (data.user.projectV2.items.nodes.length < 9) {
+        const first = data.user.projectV2.items.nodes[0]!;
+        data.user.projectV2.items.nodes.push({
+          ...first,
+          content: { ...first.content, number: Math.random() * 100000 + 1000 },
+        } as Issue);
+      }
+
+      data.user.projectV2.items.nodes.forEach(issue => {
+        // Sanitize HTML, we are never too safe
+        issue.content.titleHTML = sanitizeHtml(issue.content.titleHTML);
+
+        // Remove starting / from resourcePath
+        issue.content.repository.resourcePath = issue.content.repository.resourcePath.replace(
+          /^\//,
+          '',
+        );
+      });
+
+      return data.user.projectV2;
     },
-    body: JSON.stringify({ query }),
-  });
-
-  const { data, errors } = (await response.json()) as JsonResponse;
-
-  if (errors) {
-    throw new Error('Error fetching roadmap issues');
-  }
-
-  return data.user.projectV2;
+    'roadmap:issues',
+    // { ttl: 1000 * 60 * 60 * 24 },
+    { ttl: 1000 },
+  );
 };

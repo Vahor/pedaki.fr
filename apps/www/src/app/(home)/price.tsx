@@ -13,7 +13,7 @@ import React from 'react';
 const Price = () => {
   // TODO: voir pour ajouter des icons / svg ça fait vide là
   return (
-    <section className="container py-7">
+    <section className="container py-16">
       {/* TODO: faire un composant pour les header de section, je les ai repris 4 fois */}
       <div className="flex flex-col justify-between lg:flex-row lg:items-center">
         <div className="space-y-2">
@@ -52,7 +52,7 @@ const Price = () => {
           ]}
         />
       </div>
-      <div className="mt-4 flex w-full justify-center">
+      <div className="mt-6 flex w-full justify-center">
         <Button variant="outline" className="gap-2" asChild>
           <Link href="/pricing">
             <span>Comparer toutes les offres</span>

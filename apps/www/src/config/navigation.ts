@@ -16,17 +16,17 @@ export const navigation = [
     name: 'Modules',
     children: [
       {
-        href: '/',
+        href: '/1',
         name: 'Gestion de classes 1',
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/2',
         name: 'Gestion de classes 2',
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/3',
         name: 'Gestion de classes 3',
         description: 'About the project',
       },
@@ -41,17 +41,17 @@ export const navigation = [
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/4',
         name: 'Gestion de classes 1',
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/5',
         name: 'Gestion de classes 2',
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/6',
         name: 'Gestion de classes 3',
         description: 'About the project',
       },
@@ -61,17 +61,17 @@ export const navigation = [
     name: 'Documentation',
     children: [
       {
-        href: '/',
+        href: '/6',
         name: 'About',
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/7',
         name: 'Gestion de classes 1',
         description: 'About the project',
       },
       {
-        href: '/',
+        href: '/8',
         name: 'Gestion de classes 2',
         description: 'About the project',
       },

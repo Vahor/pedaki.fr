@@ -9,7 +9,6 @@ import { navigation } from '~/config/navigation';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
-
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 

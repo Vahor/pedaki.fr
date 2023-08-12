@@ -4,7 +4,7 @@ import React from 'react';
 
 const Features = () => {
   return (
-    <section className="border-y bg-gray-100 py-7">
+    <section className="border-y bg-gray-100 py-16">
       <div className="container py-4">
         <div className="flex flex-col justify-between lg:flex-row lg:items-center">
           <div className="space-y-2">

@@ -28,17 +28,21 @@
   "dependencies": {
     "@pedaki/common": "github:Vahor/pedaki-common#refactor/update-base-style",
     "@t3-oss/env-nextjs": "^0.6.0",
+    "dayjs": "^1.11.9",
+    "million": "^2.5.13",
     "next": "13.4.14-canary.2",
     "next-auth": "^4.23.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^1.0.0",
+    "sanitize-html": "^2.11.0",
     "sharp": "^0.32.4",
-    "million": "^2.5.13",
     "zod": "^3.21.4"
   },
   "devDependencies": {
     "@pedaki/eslint-config": "workspace:*",
-    "@pedaki/prettier-config": "workspace:*"
+    "@pedaki/prettier-config": "workspace:*",
+    "@types/memory-cache": "^0.2.3",
+    "@types/sanitize-html": "^2.9.0"
   }
 }

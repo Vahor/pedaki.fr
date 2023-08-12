@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <pre>{new Date().toISOString()}</pre>
       <Hero />
       <VideoDemo />
       <SocialProof />
