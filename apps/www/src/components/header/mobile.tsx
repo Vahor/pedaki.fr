@@ -66,17 +66,18 @@ const PortalNav = ({
                       <div className="mb-3.5 font-semibold text-gray-900">{item.name}</div>
                       <ul>
                         {item.children.map(subitem => (
-                          <Button
-                            asChild
-                            key={subitem.name}
-                            variant="ghost"
-                            className="flex justify-start px-0 py-0"
-                            onClick={closeMobile}
-                          >
-                            <Link href={subitem.href}>
-                              <li className="px-4 py-2">{subitem.name}</li>
-                            </Link>
-                          </Button>
+                          <li key={subitem.name}>
+                            <Button
+                              asChild
+                              variant="ghost"
+                              className="flex justify-start px-0 py-0"
+                              onClick={closeMobile}
+                            >
+                              <Link href={subitem.href} className="px-4 py-2">
+                                {subitem.name}
+                              </Link>
+                            </Button>
+                          </li>
                         ))}
                       </ul>
                     </li>
