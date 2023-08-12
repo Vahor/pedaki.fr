@@ -65,6 +65,7 @@ const StatusCircle = ({ status, stateReason }: { status: string; stateReason: st
       className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border"
       style={{ borderColor: `${color}`, color: `${color}` }}
       aria-label={`Issue status: ${statusKey}`}
+      role="img"
     >
       {icon}
     </div>
