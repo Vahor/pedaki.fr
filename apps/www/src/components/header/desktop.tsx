@@ -21,26 +21,39 @@ const Desktop = () => {
     <NavigationMenu>
       <NavigationMenuList>
         {navigation.map(item => {
+          const isActive =
+            pathname === item.href ||
+            (item.children?.some(subitem => subitem.href === pathname) ?? false);
+          console.log('Desktop', { item, isActive });
           if (item.children) {
             return (
               <NavigationMenuItem key={item.name}>
                 <>
-                  <NavigationMenuTrigger className="bg-white">{item.name}</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-white" data-active={isActive}>
+                    {item.name}
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr_1fr]">
-                      {item.children.map(subitem => (
-                        <ListItem href={subitem.href} title={subitem.name} key={subitem.name}>
-                          {subitem.description}
-                        </ListItem>
-                      ))}
+                      {item.children.map(subitem => {
+                        const isChildrenActive = pathname === subitem.href;
+
+                        return (
+                          <ListItem
+                            href={subitem.href}
+                            title={subitem.name}
+                            key={subitem.name}
+                            data-active={isChildrenActive}
+                          >
+                            {subitem.description}
+                          </ListItem>
+                        );
+                      })}
                     </ul>
                   </NavigationMenuContent>
                 </>
               </NavigationMenuItem>
             );
           }
-
-          const isActive = pathname === item.href;
 
           return (
             <NavigationMenuItem key={item.name}>
@@ -61,6 +74,7 @@ const Desktop = () => {
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
   ({ className, title, children, href, ...props }, ref) => {
+    console.log('ListItem', { className, title, children, href, props });
     return (
       <li>
         <NavigationMenuLink asChild>
@@ -68,7 +82,7 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
             ref={ref}
             href={href!}
             className={cn(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active=true]:bg-accent/50',
               className,
             )}
             {...props}
