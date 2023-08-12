@@ -100,9 +100,6 @@ query User {
 `;
 
 export const getRoadmapIssues = async () => {
-  // TODO set permanent cache, with "generatedAt", and revalidate every 5 minutes
-  //  In case of error, return cached data if it exists
-  //  Or update the lib to handle this case
   return cache(
     async () => {
       const response = await fetch(apiUrl, {
@@ -112,6 +109,9 @@ export const getRoadmapIssues = async () => {
           Authorization: `bearer ${accessToken}`,
         },
         body: JSON.stringify({ query }),
+        next: {
+          revalidate: 600, // 10 minutes in seconds
+        },
       });
 
       const { data, errors } = (await response.json()) as JsonResponse;
@@ -132,19 +132,12 @@ export const getRoadmapIssues = async () => {
       // 3 columns so 9 issues max
       data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.slice(0, 9);
 
-      // fill to 9 (TODO: remove)
-      while (data.user.projectV2.items.nodes.length < 9) {
-        const first = data.user.projectV2.items.nodes[0]!;
-        data.user.projectV2.items.nodes.push({
-          ...first,
-          content: { ...first.content, number: Math.random() * 100000 + 1000 },
-        } as Issue);
-      }
-
       data.user.projectV2.items.nodes.forEach(issue => {
         // Sanitize HTML, we are never too safe
         issue.content.titleHTML = sanitizeHtml(issue.content.titleHTML);
-        issue.content.repository.descriptionHTML = sanitizeHtml(issue.content.repository.descriptionHTML);
+        issue.content.repository.descriptionHTML = sanitizeHtml(
+          issue.content.repository.descriptionHTML,
+        );
 
         // Remove starting / from resourcePath
         issue.content.repository.resourcePath = issue.content.repository.resourcePath.replace(
@@ -156,6 +149,9 @@ export const getRoadmapIssues = async () => {
       return data.user.projectV2;
     },
     'roadmap:issues',
-    { ttl: 1000 * 60 * 10 }, // 10 minutes
+    {
+      ttl: 1000 * 60 * 10, // 10 minutes
+      keepStale: true,
+    },
   );
 };
