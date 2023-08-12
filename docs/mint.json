@@ -1,0 +1,94 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Pedaki",
+  "logo": {
+    "dark": "/public/logo-dark.svg",
+    "light": "/public/logo-light.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#F97316",
+    "dark": "#F97316",
+    "light": "#F97316",
+    "background": {
+      "dark": "#090014"
+    },
+    "anchors": {
+      "from": "#FBAB73",
+      "to": "#F97316"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Accueil",
+      "url": "https://www.pedaki.fr"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://app.pedaki.fr"
+  },
+  "anchors": [
+    {
+      "name": "Changelog",
+      "icon": "timer",
+      "url": "changelog"
+    },
+    {
+      "name": "Communauté",
+      "icon": "discord",
+      "url": "https://www.pedaki.fr/community"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "documentation/introduction"
+      ]
+    },
+    {
+      "group": "Modules",
+      "pages": [
+        "modules/overview",
+        "modules/class-management"
+      ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "resources/privacy",
+        "resources/self-host",
+        "resources/contributing",
+        "resources/subscription",
+        {
+          "group": "Migration",
+          "icon": "arrow-right",
+          "pages": [
+            "resources/migration/overview",
+            "resources/migration/from-pronote"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Changelog",
+      "pages": [
+        "changelog/2023-08",
+        "changelog/2023-07"
+      ]
+    }
+  ],
+  "search": {
+    "prompt": "Rechercher..."
+  },
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true,
+    "thumbsRating": true
+  },
+  "footerSocials": {
+    "github": "https://github.com/vahor",
+    "discord": "https://discord.gg/todo"
+  }
+}
