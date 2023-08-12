@@ -24,7 +24,6 @@ const Desktop = () => {
           const isActive =
             pathname === item.href ||
             (item.children?.some(subitem => subitem.href === pathname) ?? false);
-          console.log('Desktop', { item, isActive });
           if (item.children) {
             return (
               <NavigationMenuItem key={item.name}>
@@ -74,7 +73,6 @@ const Desktop = () => {
 
 const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
   ({ className, title, children, href, ...props }, ref) => {
-    console.log('ListItem', { className, title, children, href, props });
     return (
       <li>
         <NavigationMenuLink asChild>
