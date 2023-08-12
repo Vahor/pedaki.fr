@@ -42,6 +42,7 @@
   "devDependencies": {
     "@pedaki/eslint-config": "workspace:*",
     "@pedaki/prettier-config": "workspace:*",
+    "@types/bcryptjs": "^2.4.2",
     "@types/memory-cache": "^0.2.3",
     "@types/sanitize-html": "^2.9.0"
   }

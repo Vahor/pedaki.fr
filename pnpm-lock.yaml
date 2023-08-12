@@ -55,7 +55,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#refactor/update-base-style
-        version: github.com/Vahor/pedaki-common/ede3c83603052f5a6f6d026add7985a5a5679610(@types/react-dom@18.2.7)(@types/react@18.2.20)
+        version: github.com/Vahor/pedaki-common/b815e5e6e0fa2f528cc91e71f49653bdafcf6666(@types/react-dom@18.2.7)(@types/react@18.2.20)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -96,6 +96,9 @@ importers:
       '@pedaki/prettier-config':
         specifier: workspace:*
         version: link:../../packages/config/prettier
+      '@types/bcryptjs':
+        specifier: ^2.4.2
+        version: 2.4.2
       '@types/memory-cache':
         specifier: ^0.2.3
         version: 0.2.3
@@ -2129,6 +2132,10 @@ packages:
     dependencies:
       '@types/estree': 1.0.1
     dev: false
+
+  /@types/bcryptjs@2.4.2:
+    resolution: {integrity: sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==}
+    dev: true
 
   /@types/debug@4.1.8:
     resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
@@ -7881,9 +7888,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/ede3c83603052f5a6f6d026add7985a5a5679610(@types/react-dom@18.2.7)(@types/react@18.2.20):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/ede3c83603052f5a6f6d026add7985a5a5679610}
-    id: github.com/Vahor/pedaki-common/ede3c83603052f5a6f6d026add7985a5a5679610
+  github.com/Vahor/pedaki-common/b815e5e6e0fa2f528cc91e71f49653bdafcf6666(@types/react-dom@18.2.7)(@types/react@18.2.20):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/b815e5e6e0fa2f528cc91e71f49653bdafcf6666}
+    id: github.com/Vahor/pedaki-common/b815e5e6e0fa2f528cc91e71f49653bdafcf6666
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}

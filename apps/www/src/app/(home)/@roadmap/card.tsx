@@ -5,11 +5,10 @@ import { Badge } from '@pedaki/common/ui/badge';
 import { Card, CardContent, CardFooter } from '@pedaki/common/ui/card';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@pedaki/common/ui/tooltip';
-import type {Issue} from '~/services/github/roadmap';
+import type { Issue } from '~/services/github/roadmap';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import React from 'react';
-
 
 type Status = 'OPEN' | 'CLOSED_COMPLETED' | 'CLOSED_NOT_PLANNED';
 const StatusMap = {
@@ -74,12 +73,7 @@ const StatusCircle = ({ status, stateReason }: { status: string; stateReason: st
 
 export const GithubCard = ({ issue }: { issue: Issue }) => {
   return (
-    <Link
-      href={issue.content.url}
-      prefetch={false}
-      target="_blank"
-      aria-label={`Github issue #${issue.content.number} on ${issue.content.repository.resourcePath}`}
-    >
+    <Link href={issue.content.url} prefetch={false} target="_blank">
       <Card className="cursor-pointer hover:border-primary">
         <CardContent className="space-y-2 pb-3 pt-6">
           <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-muted-foreground">

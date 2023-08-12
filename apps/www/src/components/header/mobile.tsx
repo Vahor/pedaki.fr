@@ -1,5 +1,6 @@
 'use client';
 
+import { useScrollLock } from '@pedaki/common/hooks/use-scroll-lock';
 import { cn } from '@pedaki/common/lib/utils';
 import Burger from '@pedaki/common/ui/burger';
 import { Button } from '@pedaki/common/ui/button';
@@ -15,6 +16,8 @@ const Mobile = () => {
   const closeMobile = () => {
     setMobileOpen(false);
   };
+
+  useScrollLock(mobileOpen);
 
   return (
     <div className="md:hidden">
@@ -67,11 +70,12 @@ const PortalNav = ({
                             asChild
                             key={subitem.name}
                             variant="ghost"
-                            className="list-item"
+                            className="flex justify-start px-0 py-0"
                             onClick={closeMobile}
-                            role="listitem"
                           >
-                            <Link href={subitem.href}>{subitem.name}</Link>
+                            <Link href={subitem.href}>
+                              <li className="px-4 py-2">{subitem.name}</li>
+                            </Link>
                           </Button>
                         ))}
                       </ul>
