@@ -1,7 +1,7 @@
 'use client';
 
 import { DropdownMenuItem, DropdownMenuLabel } from '@pedaki/common/ui/dropdown-menu';
-import type {locales} from '~/config/locales';
+import type { locales } from '~/config/locales';
 import React from 'react';
 
 export const LocaleItem = ({ locale }: { locale: (typeof locales)[0] }) => {

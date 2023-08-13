@@ -87,7 +87,7 @@ const FeatureCard: React.FC<{
         <CardTitle className="">{title}</CardTitle>
         <CardDescription>
           <span>{description}</span>
-          <StyledLink href={link} prefetch={false} className="flex items-center font-semibold mt-2">
+          <StyledLink href={link} prefetch={false} className="mt-2 flex items-center font-semibold">
             <span>{learnMore}</span>
             {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
             <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">

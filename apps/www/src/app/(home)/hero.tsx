@@ -4,11 +4,10 @@ import { PageHeader } from '~/components/PageHeader';
 import Link from 'next/link';
 import React from 'react';
 
-
 const Hero = () => {
   return (
     <section>
-      <div className="flex flex-col justify-center items-center gap-4 px-4 pt-8">
+      <div className="flex flex-col items-center justify-center gap-4 px-4 pt-8">
         <div>
           <Badges />
         </div>

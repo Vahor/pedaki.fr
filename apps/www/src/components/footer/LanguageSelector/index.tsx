@@ -1,8 +1,12 @@
-import {Button} from '@pedaki/common/ui/button';
-import {DropdownMenu, DropdownMenuContent, DropdownMenuTrigger,} from '@pedaki/common/ui/dropdown-menu';
-import {locales} from '~/config/locales';
+import { Button } from '@pedaki/common/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from '@pedaki/common/ui/dropdown-menu';
+import { LocaleItem } from '~/components/footer/LanguageSelector/LocaleItem';
+import { locales } from '~/config/locales';
 import React from 'react';
-import {LocaleItem} from "~/components/footer/LanguageSelector/LocaleItem";
 
 const LanguageSelector = () => {
   // TODO: use the active locale from the i18n context
