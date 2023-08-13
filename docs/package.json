@@ -18,7 +18,9 @@
   "scripts": {
     "dev": "mintlify dev",
     "typecheck": "mintlify broken-links",
-    "prepare": "bash ./scripts/copy-assets.sh"
+    "prepare": "bash ./scripts/copy-assets.sh",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
     "mintlify": "latest"
