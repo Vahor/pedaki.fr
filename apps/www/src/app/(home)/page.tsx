@@ -8,6 +8,10 @@ import React from 'react';
 export const metadata: Metadata = {
   description: 'lorem ipsum dolor sit amet',
   openGraph: {
+    images: [
+      // TODO
+    ],
+    locale: 'fr',
     type: 'website',
   },
 };

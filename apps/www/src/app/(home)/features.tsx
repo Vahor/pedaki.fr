@@ -16,8 +16,9 @@ const Features = () => {
           </div>
           <div>
             <Link
-              href="/docs"
+              href="https://docs.pedaki.fr"
               className="flex items-center gap-1 pt-2 text-sm font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
+              prefetch={false}
             >
               <span>En savoir plus</span>
               {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
@@ -35,7 +36,7 @@ const Features = () => {
             title="Lorem ipsum dolor sit amet, consectetur. 1"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Super sécurisé"
-            link="/docs/feature1"
+            link="https://docs.pedaki.fr"
             video="a/v/feature1.mp4"
             alt="mock"
           />
@@ -43,7 +44,7 @@ const Features = () => {
             title="Lorem ipsum dolor sit amet, consectetur. 2"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Gere les trucs"
-            link="/docs/feature2"
+            link="https://docs.pedaki.fr"
             video="a/v/feature2.mp4"
             alt="mock"
           />
@@ -52,7 +53,7 @@ const Features = () => {
             title="Lorem ipsum dolor sit amet, consectetur. 3"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Host le chez toi"
-            link="/docs/feature3"
+            link="https://docs.pedaki.fr"
             video="a/v/feature3.mp4"
             alt="mock"
           />
@@ -61,7 +62,7 @@ const Features = () => {
             title="Lorem ipsum dolor sit amet, consectetur. 4"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
             learnMore="Super option 3"
-            link="/docs/feature4"
+            link="https://docs.pedaki.fr"
             video="a/v/feature3.mp4"
             alt="mock"
           />

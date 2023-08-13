@@ -23,10 +23,10 @@ const Footer = () => {
       <div className="border-t py-4">
         <div className="flex flex-row items-center justify-between gap-2">
           <div className="flex flex-col gap-3.5 text-sm md:flex-row md:items-center">
-            <StyledLink href="/legal/cgu" prefetch={false} variant="secondary">
+            <StyledLink href="/legal/terms-of-service" prefetch={false} variant="secondary">
               Terms
             </StyledLink>
-            <StyledLink href="/legal/privacy" prefetch={false} variant="secondary">
+            <StyledLink href="/legal/privacy-policy" prefetch={false} variant="secondary">
               Privacy
             </StyledLink>
             <StyledLink href="https://status.pedaki.fr" prefetch={false} variant="secondary">
