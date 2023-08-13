@@ -85,10 +85,10 @@
   "feedback": {
     "suggestEdit": true,
     "raiseIssue": true,
-    "thumbsRating": true
+    "thumbsRating": false
   },
   "footerSocials": {
     "github": "https://github.com/vahor",
-    "discord": "https://discord.gg/todo"
+    "discord": "https://www.pedaki.fr/community"
   }
 }
