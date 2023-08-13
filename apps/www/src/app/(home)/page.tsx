@@ -6,6 +6,9 @@ import type { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
+  title: {
+      absolute: 'Pedaki: Le futur de la gestion scolaire' // TODO
+  },
   description: 'lorem ipsum dolor sit amet',
   openGraph: {
     images: [
