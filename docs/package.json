@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "mintlify dev",
     "typecheck": "mintlify broken-links",
-    "prepare": "scripts/copy-assets.sh"
+    "prepare": "bash ./scripts/copy-assets.sh"
   },
   "dependencies": {
     "mintlify": "latest"
