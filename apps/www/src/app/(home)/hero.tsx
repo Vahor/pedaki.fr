@@ -1,35 +1,24 @@
 import { Badge } from '@pedaki/common/ui/badge';
 import { Button } from '@pedaki/common/ui/button';
+import { PageHeader } from '~/components/PageHeader';
 import Link from 'next/link';
 import React from 'react';
-import Balancer from 'react-wrap-balancer';
+
 
 const Hero = () => {
   return (
     <section>
-      <div className="flex flex-col justify-center gap-4 px-4 pt-8">
+      <div className="flex flex-col justify-center items-center gap-4 px-4 pt-8">
         <div>
           <Badges />
         </div>
-        <div className="mx-auto max-w-screen-sm">
-          <Balancer
-            as="h1"
-            className="text-center text-4xl font-bold tracking-tighter text-gray-900 md:text-5xl"
-          >
-            Pedaki rend la gestion scolaire magique
-          </Balancer>
-        </div>
-        <div className="mx-auto max-w-screen-md">
-          <Balancer
-            as="p"
-            className="text-center text-base leading-7 text-muted-foreground md:text-lg"
-          >
-            Un seul outil pour Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure
-            nisi non nostrum possimus repellat suscipit!
-          </Balancer>
-        </div>
+        <PageHeader
+          title="Le futur de la gestion scolaire"
+          description="Toutes les fonctionnalités pour gérer votre établissement, dans une seule application."
+          withPadding={false}
+        />
 
-        <div className="mx-auto flex flex-col gap-4 sm:flex-row md:mt-6">
+        <div className="mt-3 flex flex-col gap-4 sm:flex-row md:mt-8">
           <Button
             variant="secondary"
             size="lg"

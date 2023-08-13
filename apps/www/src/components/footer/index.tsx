@@ -26,8 +26,8 @@ const Footer = () => {
             <StyledLink href="/legal/cgu" prefetch={false} variant="secondary">
               Terms
             </StyledLink>
-            <StyledLink href="/legal/cgu" prefetch={false} variant="secondary">
-              Cookies
+            <StyledLink href="/legal/privacy" prefetch={false} variant="secondary">
+              Privacy
             </StyledLink>
             <StyledLink href="https://status.pedaki.fr" prefetch={false} variant="secondary">
               Status
