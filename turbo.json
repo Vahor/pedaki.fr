@@ -19,8 +19,12 @@
       ]
     },
     "lint": {},
-    "format": {},
-    "format:check": {},
+    "format": {
+      "cache": false
+    },
+    "format:check": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true
@@ -28,6 +32,8 @@
     "clean": {
       "cache": false
     },
-    "typecheck": {}
+    "typecheck": {
+      "cache": false
+    }
   }
 }
