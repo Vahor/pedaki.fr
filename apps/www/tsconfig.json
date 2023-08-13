@@ -38,12 +38,13 @@
   },
   "include": [
     ".eslintrc.cjs",
-    "apps/web/next-env.d.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/reset.d.ts"
   ],
   "exclude": ["../../node_modules", "node_modules"]
 }
