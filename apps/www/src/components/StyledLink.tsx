@@ -29,7 +29,6 @@ const StyledLink: React.FC<StyledLinkProps> = ({
   focusable = true,
   ...props
 }) => {
-  const Comp = <Link className={cn(styledLinkVariants({ variant, className }))} {...props} />;
   if (focusable) {
     const { children, ...other } = props;
 
@@ -39,7 +38,7 @@ const StyledLink: React.FC<StyledLinkProps> = ({
       </Link>
     );
   }
-  return <Comp />;
+  return <Link className={cn(styledLinkVariants({ variant, className }))} {...props} />;
 };
 StyledLink.displayName = 'StyledLink';
 
