@@ -1,5 +1,6 @@
 import "./src/env.mjs";
 import million from "million/compiler";
+import {env} from "~/env.mjs";
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -18,7 +19,17 @@ const config = {
     redirects: async () => [
         {
             source: '/login',
-            destination: `${process.env.NEXT_PUBLIC_APP_URL}/auth/login`,
+            destination: `${env.NEXT_PUBLIC_APP_URL}/auth/login`,
+            permanent: false,
+        },
+        {
+            source: '/community',
+            destination: `https://discord.gg/${env.NEXT_PUBLIC_DISCORD_INVITE}`,
+            permanent: false,
+        },
+        {
+            source: '/support',
+            destination: `https://github.com/vahor/pedaki-pedaki.fr/issues/new/choose`,
             permanent: false,
         }
     ],
