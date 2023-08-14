@@ -1,6 +1,5 @@
-import "./src/env.mjs";
+import {env} from "./src/env.mjs";
 import million from "million/compiler";
-import {env} from "~/env.mjs";
 
 /** @type {import("next").NextConfig} */
 const config = {
