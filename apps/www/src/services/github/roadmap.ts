@@ -59,7 +59,7 @@ const query = `
 query User {
     user(login: "vahor") {
         projectV2(number: 1) {
-            items(first: 100) {
+            items(first: 50) {
                 nodes {
                     type
                     content {
@@ -122,8 +122,11 @@ export const getRoadmapIssues = async () => {
         throw new Error('Error fetching roadmap issues');
       }
 
-      // filter out private repos
+      // filter out private repos / pull requests
       data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.filter(issue => {
+        if (issue.type !== 'ISSUE') {
+          return false;
+        }
         return !issue.content.repository.isPrivate;
       });
 
