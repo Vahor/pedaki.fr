@@ -9,7 +9,6 @@ import { LocaleItem } from '~/components/footer/LanguageSelector/LocaleItem';
 import { locales } from '~/config/locales';
 import React from 'react';
 
-
 const LanguageSelector = () => {
   // TODO: use the active locale from the i18n context
   return (

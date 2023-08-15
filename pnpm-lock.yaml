@@ -58,7 +58,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#refactor/update-base-style
-        version: github.com/Vahor/pedaki-common/c5dec6f5514ca87a48e6c970fc1e3eebf2425555(@types/react-dom@18.2.7)(@types/react@18.2.20)
+        version: github.com/Vahor/pedaki-common/e7f909753c383cec832778e375063d748fde100d(@types/react-dom@18.2.7)(@types/react@18.2.20)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.22.1)
@@ -7852,9 +7852,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/c5dec6f5514ca87a48e6c970fc1e3eebf2425555(@types/react-dom@18.2.7)(@types/react@18.2.20):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/c5dec6f5514ca87a48e6c970fc1e3eebf2425555}
-    id: github.com/Vahor/pedaki-common/c5dec6f5514ca87a48e6c970fc1e3eebf2425555
+  github.com/Vahor/pedaki-common/e7f909753c383cec832778e375063d748fde100d(@types/react-dom@18.2.7)(@types/react@18.2.20):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/e7f909753c383cec832778e375063d748fde100d}
+    id: github.com/Vahor/pedaki-common/e7f909753c383cec832778e375063d748fde100d
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}

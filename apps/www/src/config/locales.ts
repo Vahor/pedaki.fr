@@ -7,6 +7,6 @@ export const locales = [
     name: 'Français',
     code: 'fr',
   },
-] as const
+] as const;
 
-export type LocaleCode = typeof locales[number]['code']
+export type LocaleCode = (typeof locales)[number]['code'];
