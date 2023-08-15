@@ -1,4 +1,6 @@
 import { Button } from '@pedaki/common/ui/button';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
+import Link from 'next/link';
 import React from 'react';
 
 const CallToActionBottom = () => {
@@ -17,16 +19,12 @@ const CallToActionBottom = () => {
           </p>
         </div>
         <div>
-          <Button size="lg" variant="default" className="space-x-2 font-bold">
-            <span>Créer mon compte</span>
-            {/*TODO move this icon somewhere like in @pedaki/common/ui/icons */}
-            <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="currentColor"
-                d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
-              />
-            </svg>
-          </Button>
+          <Link href="https://docs.pedaki.fr">
+            <Button size="lg" variant="default" className="group space-x-2 font-bold">
+              <span>Créer mon compte</span>
+              <AnimatedChevronRight />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

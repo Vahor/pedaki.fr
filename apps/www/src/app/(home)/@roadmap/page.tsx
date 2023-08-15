@@ -1,5 +1,6 @@
 import { Button } from '@pedaki/common/ui/button';
 import { TooltipProvider } from '@pedaki/common/ui/tooltip';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import { getRoadmapIssues } from '~/services/github/roadmap';
 import Link from 'next/link';
 import React from 'react';
@@ -48,19 +49,13 @@ const Roadmap = async () => {
         </TooltipProvider>
       </div>
       <div className="mt-6 flex w-full justify-center">
-        <Button variant="outline" className="gap-2 bg-white" asChild>
-          {/*TODO: add env variable for the github url*/}
-          <Link href="https://github.com/vahor/pedaki-pedaki.fr" prefetch={false} target="_blank">
+        <Link href="https://github.com/vahor/pedaki-pedaki.fr" prefetch={false} target="_blank">
+          <Button variant="outline" className="group gap-2 bg-white">
+            {/*TODO: add env variable for the github url*/}
             <span>Rejoindre la communauté</span>
-            {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
-            <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="currentColor"
-                d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
-              />
-            </svg>
-          </Link>
-        </Button>
+            <AnimatedChevronRight />
+          </Button>
+        </Link>
       </div>
     </section>
   );

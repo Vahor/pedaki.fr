@@ -1,4 +1,5 @@
 import { CardDescription, CardTitle } from '@pedaki/common/ui/card';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import { StyledLink } from '~/components/StyledLink';
 import Link from 'next/link';
 import React from 'react';
@@ -17,17 +18,11 @@ const Features = () => {
           <div>
             <Link
               href="https://docs.pedaki.fr"
-              className="flex items-center gap-1 pt-2 text-sm font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
+              className="group flex items-center gap-1 pt-2 text-sm font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
               prefetch={false}
             >
               <span>En savoir plus</span>
-              {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
-              <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill="currentColor"
-                  d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
-                />
-              </svg>
+              <AnimatedChevronRight />
             </Link>
           </div>
         </div>
@@ -87,15 +82,13 @@ const FeatureCard: React.FC<{
         <CardTitle className="">{title}</CardTitle>
         <CardDescription>
           <span>{description}</span>
-          <StyledLink href={link} prefetch={false} className="mt-2 flex items-center font-semibold">
+          <StyledLink
+            href={link}
+            prefetch={false}
+            className="group mt-2 flex w-max items-center gap-1 font-semibold"
+          >
             <span>{learnMore}</span>
-            {/* TODO: replace with arrow icon from @pedaki/common/ui/icons */}
-            <svg width="18" height="18" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="currentColor"
-                d="m220.24 132.24l-72 72a6 6 0 0 1-8.48-8.48L201.51 134H40a6 6 0 0 1 0-12h161.51l-61.75-61.76a6 6 0 0 1 8.48-8.48l72 72a6 6 0 0 1 0 8.48Z"
-              />
-            </svg>
+            <AnimatedChevronRight />
           </StyledLink>
         </CardDescription>
       </div>

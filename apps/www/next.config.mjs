@@ -33,6 +33,13 @@ const config = {
         }
     ],
 
+    modularizeImports: {
+        "@pedaki/common/ui/icons": {
+            transform: "@pedaki/common/ui/icons/{{member}}",
+            preventFullImport: true,
+        }
+    },
+
     compiler: {
         // removeConsole: process.env.NODE_ENV === "production"
     },

@@ -21,19 +21,21 @@ const styledLinkVariants = cva(
 export type StyledLinkProps = React.ComponentProps<typeof Link> &
   VariantProps<typeof styledLinkVariants> & {
     focusable?: boolean;
+    linkClassName?: string;
   };
 
 const StyledLink: React.FC<StyledLinkProps> = ({
   className,
   variant,
   focusable = true,
+  linkClassName,
   ...props
 }) => {
   if (focusable) {
     const { children, ...other } = props;
 
     return (
-      <Link {...other}>
+      <Link {...other} className={cn('block w-max', linkClassName)}>
         <button className={cn(styledLinkVariants({ variant, className }))}>{children}</button>
       </Link>
     );
