@@ -63,5 +63,4 @@ const Roadmap = async () => {
 
 export default Roadmap;
 
-// Does not work as we need to see the cookies() in the user component
-// export const revalidate = 3600; // 1 hour
+export const revalidate = 3600; // 1 hour

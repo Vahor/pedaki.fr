@@ -24,15 +24,13 @@ import { SignOutItem } from './signout-item';
 // headers(): Using these in a Server Component will opt the whole route into dynamic rendering at request time.
 
 const User = () => {
-  const { data: session, status } = useSession({
-    suspense: true,
-  });
+  const { data: session, status } = useSession();
   console.log({
     session,
     status,
   });
 
-  if (session ?? status === 'authenticated') {
+  if (status === 'authenticated') {
     return <Authenticated session={session} />;
   }
   return <Guest />;

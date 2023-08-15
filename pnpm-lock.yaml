@@ -58,7 +58,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#refactor/update-base-style
-        version: github.com/Vahor/pedaki-common/03b97e4caaa1198a9c06fc80dda56c7f24165075(@types/react-dom@18.2.7)(@types/react@18.2.20)
+        version: github.com/Vahor/pedaki-common/f31215c5005a8181756cba575c9fa5721ef5e731(@types/react-dom@18.2.7)(@types/react@18.2.20)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.22.0)
@@ -641,7 +641,7 @@ packages:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
       eslint: 8.47.0
-      eslint-visitor-keys: 3.4.2
+      eslint-visitor-keys: 3.4.3
     dev: true
 
   /@eslint-community/regexpp@4.6.2:
@@ -3631,11 +3631,6 @@ packages:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 5.3.0
-    dev: true
-
-  /eslint-visitor-keys@3.4.2:
-    resolution: {integrity: sha512-8drBzUEyZ2llkpCA67iYrgEssKDUu68V8ChqqOfFupIaG/LCVPUT+CoGJpT77zJprs4T/W7p07LP7zAIMuweVw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
   /eslint-visitor-keys@3.4.3:
@@ -7857,9 +7852,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/03b97e4caaa1198a9c06fc80dda56c7f24165075(@types/react-dom@18.2.7)(@types/react@18.2.20):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/03b97e4caaa1198a9c06fc80dda56c7f24165075}
-    id: github.com/Vahor/pedaki-common/03b97e4caaa1198a9c06fc80dda56c7f24165075
+  github.com/Vahor/pedaki-common/f31215c5005a8181756cba575c9fa5721ef5e731(@types/react-dom@18.2.7)(@types/react@18.2.20):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/f31215c5005a8181756cba575c9fa5721ef5e731}
+    id: github.com/Vahor/pedaki-common/f31215c5005a8181756cba575c9fa5721ef5e731
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}

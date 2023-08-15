@@ -127,7 +127,7 @@ query User {
 `;
 
 export const getRoadmapIssues = async () => {
-  return cache(
+  return await cache(
     async () => {
       console.log('Fetching roadmap issues');
       const response = await fetch(apiUrl, {
@@ -138,7 +138,7 @@ export const getRoadmapIssues = async () => {
         },
         body: JSON.stringify({ query }),
         next: {
-          revalidate: 600, // 10 minutes in seconds
+          revalidate: 300, // 5 minutes in seconds
         },
       });
 

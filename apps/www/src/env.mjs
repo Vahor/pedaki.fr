@@ -7,6 +7,9 @@ export const env = createEnv({
     NEXTAUTH_SECRET: z.string().min(1).default("secret"),
 
     GITHUB_ROADMAP_ACCESS_TOKEN: z.string(),
+
+    BETTERUPTIME_STATUS_PAGE_ID: z.string(),
+    BETTERUPTIME_API_TOKEN: z.string(),
   },
 
   client: {
@@ -25,6 +28,9 @@ export const env = createEnv({
     NEXT_PUBLIC_DISCORD_INVITE: process.env.NEXT_PUBLIC_DISCORD_INVITE,
 
     GITHUB_ROADMAP_ACCESS_TOKEN: process.env.GITHUB_ROADMAP_ACCESS_TOKEN,
+
+    BETTERUPTIME_STATUS_PAGE_ID: process.env.BETTERUPTIME_STATUS_PAGE_ID,
+    BETTERUPTIME_API_TOKEN: process.env.BETTERUPTIME_API_TOKEN,
   },
 
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,

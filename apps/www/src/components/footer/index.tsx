@@ -1,4 +1,5 @@
 import LanguageSelector from '~/components/footer/LanguageSelector';
+import Status from '~/components/footer/Status';
 import Logo from '~/components/header/logo';
 import { StyledLink } from '~/components/StyledLink';
 import React from 'react';
@@ -29,9 +30,7 @@ const Footer = () => {
             <StyledLink href="/legal/privacy-policy" prefetch={false} variant="secondary">
               Privacy
             </StyledLink>
-            <StyledLink href="https://status.pedaki.fr" prefetch={false} variant="secondary">
-              Status
-            </StyledLink>
+            <Status />
           </div>
           <div className="flex flex-row items-center gap-2">
             <span className="text-sm2 text-muted-foreground">© 2023</span>
