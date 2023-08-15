@@ -13,7 +13,7 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="group" asChild>
-        <Button variant="outline" aria-label="Open language selector">
+        <Button variant="outline" aria-label="Open language selector" className="data-[state=open]:bg-accent">
           <div className="flex items-center">
             <div className="flex items-center gap-1">
               {/*TODO save icon on @pedaki/common/ui/icons (lucide-icon : languages)*/}
