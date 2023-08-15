@@ -38,7 +38,7 @@
     "autoprefixer": "^10.4.15",
     "dotenv-cli": "^7.2.1",
     "mini-svg-data-uri": "^1.4.4",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.28",
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.6",
