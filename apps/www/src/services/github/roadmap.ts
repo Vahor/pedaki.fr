@@ -91,6 +91,33 @@ query User {
                                 }
                             }
                         }
+                        ... on PullRequest {
+                            state
+                            titleHTML
+                            url
+                            number
+                            createdAt
+                            updatedAt
+                            labels(first: 3) {
+                                nodes {
+                                    name
+                                    color
+                                    description
+                                }
+                            }
+                            repository {
+                                resourcePath
+                                isPrivate
+                                descriptionHTML
+                            }
+                            author {
+                                login
+                                avatarUrl(size: 20)
+                                ... on User {
+                                    name
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -124,7 +151,7 @@ export const getRoadmapIssues = async () => {
 
       // filter out private repos / pull requests
       data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.filter(issue => {
-        if (issue.type !== 'ISSUE') {
+        if (issue.type !== 'ISSUE' && issue.type !== 'PULL_REQUEST') {
           return false;
         }
         return !issue.content.repository.isPrivate;
