@@ -6,9 +6,15 @@ interface PageHeaderProps {
   title: string;
   description?: string;
   withPadding?: boolean;
+  titleClassName?: string;
 }
 
-export const PageHeader = ({ title, description, withPadding = true }: PageHeaderProps) => {
+export const PageHeader = ({
+  title,
+  description,
+  withPadding = true,
+  titleClassName,
+}: PageHeaderProps) => {
   return (
     <div
       className={cn(
@@ -16,11 +22,14 @@ export const PageHeader = ({ title, description, withPadding = true }: PageHeade
         withPadding && wrapperClassName,
       )}
     >
-      <Balancer as="h1" className="text-center text-5xl font-bold tracking-tighter text-gray-900">
+      <Balancer
+        as="h1"
+        className={cn('text-center text-5xl font-bold text-gray-900', titleClassName)}
+      >
         {title}
       </Balancer>
       {description && description.length > 0 && (
-        <div className="max-w-[350px] md:max-w-[500px]">
+        <div className="max-w-md md:max-w-lg">
           <Balancer
             as="p"
             className="text-center text-base leading-7 text-muted-foreground md:text-lg"
