@@ -144,6 +144,16 @@ export const getRoadmapIssues = async () => {
 
       const { data, errors } = (await response.json()) as JsonResponse;
 
+      // log headers
+      console.log('RateLimit Headers');
+      console.log({
+        'X-RateLimit-Limit': response.headers.get('X-RateLimit-Limit'),
+        'X-RateLimit-Remaining': response.headers.get('X-RateLimit-Remaining'),
+        'X-RateLimit-Reset': response.headers.get('X-RateLimit-Reset'),
+        'X-RateLimit-Used': response.headers.get('X-RateLimit-Used'),
+        'X-RateLimit-Resource': response.headers.get('X-RateLimit-Resource'),
+      });
+
       if (errors) {
         console.error(errors);
         throw new Error('Error fetching roadmap issues');
