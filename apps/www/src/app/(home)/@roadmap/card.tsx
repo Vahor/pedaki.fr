@@ -5,7 +5,7 @@ import { Badge } from '@pedaki/common/ui/badge';
 import { Card, CardContent, CardFooter } from '@pedaki/common/ui/card';
 import { Skeleton } from '@pedaki/common/ui/skeleton';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@pedaki/common/ui/tooltip';
-import type { Issue } from '~/services/github/roadmap';
+import type { Issue, IssueState, IssueStateReason } from '~/services/github/roadmap';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import React from 'react';
@@ -49,11 +49,17 @@ const StatusIcon = {
   ),
 } as Record<Status, JSX.Element>;
 
-const getStatusKey = (status: string, stateReason: string): Status => {
-  return status === 'OPEN' ? 'OPEN' : (`CLOSED_${stateReason}` as Status);
+const getStatusKey = (status: IssueState, stateReason: IssueStateReason): Status => {
+  return status === 'OPEN' ? 'OPEN' : (`CLOSED_${stateReason!}` as Status);
 };
 
-const StatusCircle = ({ status, stateReason }: { status: string; stateReason: string }) => {
+const StatusCircle = ({
+  status,
+  stateReason,
+}: {
+  status: IssueState;
+  stateReason: IssueStateReason;
+}) => {
   // I could use svg, but I'm lazy, css is fine for now
   const statusKey = getStatusKey(status, stateReason);
   const color = StatusMap[statusKey];

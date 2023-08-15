@@ -9,14 +9,18 @@ export interface Roadmap {
   };
 }
 
+export type IssueType = 'ISSUE' | 'PULL_REQUEST';
+export type IssueState = 'OPEN' | 'CLOSED';
+export type IssueStateReason = null | 'COMPLETED' | 'NOT_PLANNED';
+
 export interface Issue {
-  type: string;
+  type: IssueType;
   content: {
-    state: string;
-    stateReason: string;
+    number: number;
+    state: IssueState;
+    stateReason: IssueStateReason;
     titleHTML: string;
     url: string;
-    number: number;
     createdAt: string;
     updatedAt: string;
     labels: {
@@ -28,7 +32,6 @@ export interface Issue {
       descriptionHTML: string;
     };
     author: {
-      login: string;
       name: string;
       avatarUrl: string;
     };
@@ -111,7 +114,6 @@ query User {
                                 descriptionHTML
                             }
                             author {
-                                login
                                 avatarUrl(size: 20)
                                 ... on User {
                                     name
