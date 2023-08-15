@@ -15,7 +15,20 @@ const LanguageSelector = () => {
       <DropdownMenuTrigger className="group" asChild>
         <Button variant="outline" aria-label="Open language selector">
           <div className="flex items-center">
-            <span>Change language</span>
+            <div className="flex items-center gap-1">
+              {/*TODO save icon on @pedaki/common/ui/icons (lucide-icon : languages)*/}
+              <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6"
+                />
+              </svg>
+              <span>Change language</span>
+            </div>
             {/*TODO: add icon in @pedaki/common/ui/icons*/}
             <div className="relative top-[1px] ml-1 w-max transition duration-100 group-data-[state=open]:rotate-180">
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
