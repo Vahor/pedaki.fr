@@ -10,7 +10,7 @@ interface JsonResponse {
   };
 }
 
-export type MonitoringStatus = 'operational' | 'degraded' | 'downtime';
+export type MonitoringStatus = 'operational' | 'degraded' | 'downtime' | 'unknown';
 
 // zod schema to validate the response
 const schema = z.object({
@@ -23,27 +23,32 @@ export const getMonitoringStatus = async () => {
   return await cache(
     async () => {
       console.log('Fetching BetterStack status');
-      const response = await fetch(
-        `https://betteruptime.com/api/v2/status-pages/${env.BETTERUPTIME_STATUS_PAGE_ID}`,
-        {
-          headers: {
-            Authorization: `Bearer ${env.BETTERUPTIME_API_TOKEN}`,
+      try {
+        const response = await fetch(
+          `https://betteruptime.com/api/v2/status-pages/${env.BETTERUPTIME_STATUS_PAGE_ID}`,
+          {
+            headers: {
+              Authorization: `Bearer ${env.BETTERUPTIME_API_TOKEN}`,
+            },
+            next: {
+              revalidate: 20, // 20 seconds
+            },
           },
-          next: {
-            revalidate: 20, // 20 seconds
-          },
-        },
-      );
-      const { data } = (await response.json()) as JsonResponse;
-      console.log('Response from BetterStack: ', data);
+        );
+        const { data } = (await response.json()) as JsonResponse;
+        console.log('Response from BetterStack: ', data);
 
-      // validate the response
-      const validated = schema.parse(data);
+        // validate the response
+        const validated = schema.parse(data);
 
-      const status = validated.attributes.aggregate_state;
-      console.log(`BetterStack status: ${status}`);
+        const status = validated.attributes.aggregate_state;
+        console.log(`BetterStack status: ${status}`);
 
-      return status;
+        return status;
+      } catch (e) {
+        console.error('Error while fetching BetterStack status: ', (e as Error).message);
+        return 'unknown' as MonitoringStatus;
+      }
     },
     'monitoring:status',
     {

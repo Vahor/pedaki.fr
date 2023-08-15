@@ -12,11 +12,11 @@ import type { MonitoringStatus } from '~/services/betterstack/status';
 import { getMonitoringStatus } from '~/services/betterstack/status';
 import React from 'react';
 
-
 const StatusMap: Record<MonitoringStatus, [string, string]> = {
   degraded: ['bg-yellow-300', 'bg-yellow-500'],
   downtime: ['bg-red-300', 'bg-red-500'],
   operational: ['bg-green-300', 'bg-green-500'],
+  unknown: ['bg-gray-300', 'bg-gray-500'],
 };
 
 const StatusCircle = ({ status }: { status: MonitoringStatus }) => {
@@ -29,8 +29,8 @@ const StatusCircle = ({ status }: { status: MonitoringStatus }) => {
           'absolute inline-flex h-full w-full animate-ping rounded-full opacity-75',
           statusColor[0],
         )}
-      ></span>
-      <span className={cn('relative inline-flex h-2.5 w-2.5 rounded-full', statusColor[1])}></span>
+      />
+      <span className={cn('relative inline-flex h-2.5 w-2.5 rounded-full', statusColor[1])} />
     </span>
   );
 };
