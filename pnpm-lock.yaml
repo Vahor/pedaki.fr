@@ -58,7 +58,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#refactor/update-base-style
-        version: github.com/Vahor/pedaki-common/f0bcbc12fe6681d96169b42271d48a0940f8daaa(@types/react-dom@18.2.7)(@types/react@18.2.20)
+        version: github.com/Vahor/pedaki-common/c5dec6f5514ca87a48e6c970fc1e3eebf2425555(@types/react-dom@18.2.7)(@types/react@18.2.20)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.22.1)
@@ -2729,7 +2729,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001520
-      electron-to-chromium: 1.4.491
+      electron-to-chromium: 1.4.492
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
 
@@ -3279,8 +3279,8 @@ packages:
       semver: 7.5.4
     dev: false
 
-  /electron-to-chromium@1.4.491:
-    resolution: {integrity: sha512-ZzPqGKghdVzlQJ+qpfE+r6EB321zed7e5JsvHIlMM4zPFF8okXUkF5Of7h7F3l3cltPL0rG7YVmlp5Qro7RQLA==}
+  /electron-to-chromium@1.4.492:
+    resolution: {integrity: sha512-36K9b/6skMVwAIEsC7GiQ8I8N3soCALVSHqWHzNDtGemAcI9Xu8hP02cywWM0A794rTHm0b0zHPeLJHtgFVamQ==}
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -7852,9 +7852,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/f0bcbc12fe6681d96169b42271d48a0940f8daaa(@types/react-dom@18.2.7)(@types/react@18.2.20):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/f0bcbc12fe6681d96169b42271d48a0940f8daaa}
-    id: github.com/Vahor/pedaki-common/f0bcbc12fe6681d96169b42271d48a0940f8daaa
+  github.com/Vahor/pedaki-common/c5dec6f5514ca87a48e6c970fc1e3eebf2425555(@types/react-dom@18.2.7)(@types/react@18.2.20):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/c5dec6f5514ca87a48e6c970fc1e3eebf2425555}
+    id: github.com/Vahor/pedaki-common/c5dec6f5514ca87a48e6c970fc1e3eebf2425555
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}

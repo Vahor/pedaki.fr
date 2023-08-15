@@ -1,12 +1,21 @@
 'use client';
 
 import { DropdownMenuItem, DropdownMenuLabel } from '@pedaki/common/ui/dropdown-menu';
-import type { locales } from '~/config/locales';
+import { IconFlagFR, IconFlagGB  } from '@pedaki/common/ui/icons';
+import type {IconType} from '@pedaki/common/ui/icons';
+import type { LocaleCode, locales } from '~/config/locales';
 import React from 'react';
 
-export const LocaleItem = ({ locale }: { locale: (typeof locales)[0] }) => {
+
+const LocaleIcon: Record<LocaleCode, IconType> = {
+    fr: IconFlagFR,
+    en: IconFlagGB,
+}
+
+export const LocaleItem = ({ locale }: { locale: (typeof locales)[number] }) => {
   const activeLocale = 'fr';
   const isActive = locale.code === activeLocale;
+  const Icon = LocaleIcon[locale.code];
 
   return (
     <DropdownMenuItem
@@ -15,7 +24,7 @@ export const LocaleItem = ({ locale }: { locale: (typeof locales)[0] }) => {
       className="flex items-center space-x-2"
       onClick={() => alert('TODO: change locale to ' + locale.code)}
     >
-      {locale.icon}
+      <Icon className="w-6 h-6 rounded-lg" />
       <DropdownMenuLabel>{locale.name}</DropdownMenuLabel>
     </DropdownMenuItem>
   );
