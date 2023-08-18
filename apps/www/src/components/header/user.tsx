@@ -61,7 +61,11 @@ const Authenticated = ({ session }: { session: Session }) => {
           aria-label="Open profile dropdown"
         >
           <Avatar className="h-8 w-8">
-            <AvatarImage src={session.user.image} className="my-auto" />
+            <AvatarImage
+              src={session.user.image}
+              className="my-auto"
+              alt={`Your avatar, ${session.user.name}`}
+            />
             <AvatarFallback>
               <Skeleton />
             </AvatarFallback>
