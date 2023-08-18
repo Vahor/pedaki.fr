@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@total-typescript/ts-reset':
-        specifier: ^0.4.2
-        version: 0.4.2
+        specifier: ^0.5.1
+        version: 0.5.1
       '@types/node':
         specifier: ^18.17.5
         version: 18.17.5
@@ -30,8 +30,8 @@ importers:
         specifier: ^10.4.15
         version: 10.4.15(postcss@8.4.28)
       dotenv-cli:
-        specifier: ^7.2.1
-        version: 7.2.1
+        specifier: ^7.3.0
+        version: 7.3.0
       mini-svg-data-uri:
         specifier: ^1.4.4
         version: 1.4.4
@@ -58,10 +58,10 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#refactor/update-base-style
-        version: github.com/Vahor/pedaki-common/e7f909753c383cec832778e375063d748fde100d(@types/react-dom@18.2.7)(@types/react@18.2.20)
+        version: github.com/Vahor/pedaki-common/3f38daeb224c90cfc764f8e144cd1727bbcbb50e(@types/react-dom@18.2.7)(@types/react@18.2.20)
       '@t3-oss/env-nextjs':
-        specifier: ^0.6.0
-        version: 0.6.0(typescript@5.1.6)(zod@3.22.1)
+        specifier: ^0.6.1
+        version: 0.6.1(typescript@5.1.6)(zod@3.22.1)
       dayjs:
         specifier: ^1.11.9
         version: 1.11.9
@@ -69,11 +69,11 @@ importers:
         specifier: ^2.5.13
         version: 2.5.13
       next:
-        specifier: 13.4.16
-        version: 13.4.16(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 13.4.18
+        version: 13.4.18(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       next-auth:
-        specifier: ^4.23.0
-        version: 4.23.0(next@13.4.16)(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^4.23.1
+        version: 4.23.1(next@13.4.18)(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -113,7 +113,7 @@ importers:
     dependencies:
       mintlify:
         specifier: latest
-        version: 3.0.88
+        version: 3.0.92
 
   packages/config/eslint:
     devDependencies:
@@ -130,8 +130,8 @@ importers:
         specifier: ^8.47.0
         version: 8.47.0
       eslint-config-next:
-        specifier: ^13.4.16
-        version: 13.4.16(eslint@8.47.0)(typescript@5.1.6)
+        specifier: ^13.4.18
+        version: 13.4.18(eslint@8.47.0)(typescript@5.1.6)
       eslint-config-prettier:
         specifier: ^9.0.0
         version: 9.0.0(eslint@8.47.0)
@@ -808,17 +808,17 @@ packages:
       read-yaml-file: 1.1.0
     dev: false
 
-  /@mintlify/cli@3.0.87:
-    resolution: {integrity: sha512-7FNdCR8ppkqT7uFwtokrm5b5qZSPI61E6xArnyJPQ6/jLRAInPvpj9cCs2NIzkxcTDvx9tKxsJQtd7cdL+molQ==}
+  /@mintlify/cli@3.0.91:
+    resolution: {integrity: sha512-93cXdJ/Y9omEPu3COIVbLyosVdaYkRf9KT5op1jRI+rWwHB5VKpzl5AnRWRHysRxNkdVorg6ysqFWJws1B2WMw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/link-rot': 3.0.27(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)(gray-matter@4.0.3)
-      '@mintlify/models': 0.0.25(@mintlify/validation@0.1.59)
-      '@mintlify/prebuild': 1.0.27(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
-      '@mintlify/previewing': 3.1.83(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)
-      '@mintlify/validation': 0.1.59(openapi-types@12.1.3)
+      '@mintlify/link-rot': 3.0.30(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)(gray-matter@4.0.3)
+      '@mintlify/models': 0.0.26(openapi-types@12.1.3)
+      '@mintlify/prebuild': 1.0.30(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
+      '@mintlify/previewing': 3.1.87(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)
+      '@mintlify/validation': 0.1.60(@mintlify/models@0.0.26)(openapi-types@12.1.3)
       axios: 1.4.0
       chalk: 5.3.0
       detect-port: 1.5.1
@@ -844,12 +844,12 @@ packages:
       - supports-color
     dev: false
 
-  /@mintlify/link-rot@3.0.27(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)(gray-matter@4.0.3):
-    resolution: {integrity: sha512-vFugUAmo7RDZOVtt8Q9LBE482osgkzC0SRmWut22ze4DxJT3UA4Ayk/Sw0gfl0pP/kVLxaDJop0PzeKVmJDkbQ==}
+  /@mintlify/link-rot@3.0.30(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)(gray-matter@4.0.3):
+    resolution: {integrity: sha512-Zb03eF6RtAK4uaYrGUUYjHpTlQjQHJ8MjHY5DTePP3mJKpypO4ZxxO4SYd3zfLUn7jxlXts4nfw2IBOTI5i/2Q==}
     engines: {node: '>=18.0.0'}
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/prebuild': 1.0.27(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
+      '@mintlify/prebuild': 1.0.30(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
       chalk: 5.3.0
       fs-extra: 11.1.1
       is-absolute-url: 4.0.1
@@ -867,17 +867,17 @@ packages:
       - supports-color
     dev: false
 
-  /@mintlify/models@0.0.25(@mintlify/validation@0.1.59):
-    resolution: {integrity: sha512-Cgtrd51vhqvA/hrYChvF6FTjGPUlmNUlu5tgQo4iV9E9GdtoIyzgfj95SLDQbpdNVdQ7ij8EKkELGzbADyyAgA==}
+  /@mintlify/models@0.0.26(openapi-types@12.1.3):
+    resolution: {integrity: sha512-udpR7iPQtlgjtr11JrckuCcWEBh1mGv4e0lB6/Ovu8jjfOC09L6h2cuS9oFgPzOIf7vgwVe0kU7tY/DBfnLokA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@mintlify/validation': '>= 0.1.57 < 1'
+      openapi-types: 12.x
     dependencies:
-      '@mintlify/validation': 0.1.59(openapi-types@12.1.3)
+      openapi-types: 12.1.3
     dev: false
 
-  /@mintlify/prebuild@1.0.27(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2):
-    resolution: {integrity: sha512-fWO0VO8ivYczLiawBwH+/R4ev2K1u5Itv+Mwg4CAgwSmVunKTnRKp+Y9RZEWvLwYQZ3LEp+n3VbteNV1Tv0dVg==}
+  /@mintlify/prebuild@1.0.30(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2):
+    resolution: {integrity: sha512-ktukGuiq2HxD0XMZgHF/T0AWAIDUGCdfJX6eXICIC0K26/HockAseETeXde7h6qGxy1GBCGGwaai+y1f6sBeuQ==}
     peerDependencies:
       '@apidevtools/swagger-parser': 10.x
       '@mintlify/models': '>= 0.0.15 < 1'
@@ -888,23 +888,23 @@ packages:
       unist-util-visit: ^4.1.1
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/models': 0.0.25(@mintlify/validation@0.1.59)
-      '@mintlify/validation': 0.1.59(openapi-types@12.1.3)
+      '@mintlify/models': 0.0.26(openapi-types@12.1.3)
+      '@mintlify/validation': 0.1.60(@mintlify/models@0.0.26)(openapi-types@12.1.3)
       fs-extra: 11.1.1
       gray-matter: 4.0.3
       openapi-types: 12.1.3
       unist-util-visit: 4.1.2
     dev: false
 
-  /@mintlify/previewing@3.1.83(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59):
-    resolution: {integrity: sha512-tKvKxN1K2V5c/aHPPwnSsj03iHEI1KiV1SYAuoBdKw97Cp+gegZy1EFc7gn11gSt0NzqJc9I1oVEwW8ZcoLNZA==}
+  /@mintlify/previewing@3.1.87(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60):
+    resolution: {integrity: sha512-Zb5eZWijB6bZ5gPiWI96+tbgN/Ncy+ErsCgRzQnoSzrDZlOGE4OOwQWmYiLEeCQMKc2DuqLmqpWhtZ05rRzwng==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@mintlify/validation': '>= 0.1.48 < 1'
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/prebuild': 1.0.27(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.25)(@mintlify/validation@0.1.59)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
-      '@mintlify/validation': 0.1.59(openapi-types@12.1.3)
+      '@mintlify/prebuild': 1.0.30(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.26)(@mintlify/validation@0.1.60)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
+      '@mintlify/validation': 0.1.60(@mintlify/models@0.0.26)(openapi-types@12.1.3)
       '@octokit/rest': 19.0.13
       axios: 1.4.0
       chalk: 5.3.0
@@ -931,29 +931,31 @@ packages:
       - supports-color
     dev: false
 
-  /@mintlify/validation@0.1.59(openapi-types@12.1.3):
-    resolution: {integrity: sha512-H1lw51cxwftK8iW+Py7VqK+dfD1lPTToTH/5sd/pX4438lgtbmsRuqkcWtMig/9ob52CQsBACu4dDMMtNSrbiA==}
+  /@mintlify/validation@0.1.60(@mintlify/models@0.0.26)(openapi-types@12.1.3):
+    resolution: {integrity: sha512-CXUyVktQTzYAzTZuc6r8S+ZIwwe8dii19SFp5vg8a1czglM4d4eiir5wrdnU8gwjBP8pTGtfv4qDOVAA4IqJPw==}
     peerDependencies:
+      '@mintlify/models': 0.0.25
       openapi-types: 12.x
     dependencies:
+      '@mintlify/models': 0.0.26(openapi-types@12.1.3)
       lcm: 0.0.3
       openapi-types: 12.1.3
       zod: 3.22.1
       zod-to-json-schema: 3.21.4(zod@3.22.1)
     dev: false
 
-  /@next/env@13.4.16:
-    resolution: {integrity: sha512-pCU0sJBqdfKP9mwDadxvZd+eLz3fZrTlmmDHY12Hdpl3DD0vy8ou5HWKVfG0zZS6tqhL4wnQqRbspdY5nqa7MA==}
+  /@next/env@13.4.18:
+    resolution: {integrity: sha512-ZUG5Y/KSSerggdeD2LIYgiYziKTuSE9oE2RnW8bhNw6WunA8MrVfrWaCDTYSx/UG8qzPpSF+BiZNiHUiALxCdA==}
     dev: false
 
-  /@next/eslint-plugin-next@13.4.16:
-    resolution: {integrity: sha512-QuFtQl+oSEEQb0HMYBdvBoUaTiMxbY3go/MFkF3zOnfY0t84+IbAX78cw8ZCfr6cA6UcTq3nMIlCrHwDC/moxg==}
+  /@next/eslint-plugin-next@13.4.18:
+    resolution: {integrity: sha512-GlOmUjZYYTjKl782mKk5a0bYEmKaouGaxPhi6t9yDILqrppU7JTIyONzLKQPszRXDCVZge0NFd4gwRs1ARZsMg==}
     dependencies:
       glob: 7.1.7
     dev: true
 
-  /@next/swc-darwin-arm64@13.4.16:
-    resolution: {integrity: sha512-Rl6i1uUq0ciRa3VfEpw6GnWAJTSKo9oM2OrkGXPsm7rMxdd2FR5NkKc0C9xzFCI4+QtmBviWBdF2m3ur3Nqstw==}
+  /@next/swc-darwin-arm64@13.4.18:
+    resolution: {integrity: sha512-d/73jvZe7dNTjLugDsIIy2AdQrwE2dFC9/QRr7yHmFm8mS5EiIHeDKzaqIsv9+JXKD9ZB1i/c0x7+F0PlKo1vQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -961,8 +963,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-darwin-x64@13.4.16:
-    resolution: {integrity: sha512-o1vIKYbZORyDmTrPV1hApt9NLyWrS5vr2p5hhLGpOnkBY1cz6DAXjv8Lgan8t6X87+83F0EUDlu7klN8ieZ06A==}
+  /@next/swc-darwin-x64@13.4.18:
+    resolution: {integrity: sha512-PwfvxgxG5rvUJppF02IdVAVx4HTtbZrS/Nz9qHfYfeFOQ9a+PijL8Xr9BJ21jiIS+dPQjwzvpsOdsC+DOrlzhg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -970,8 +972,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-gnu@13.4.16:
-    resolution: {integrity: sha512-JRyAl8lCfyTng4zoOmE6hNI2f1MFUr7JyTYCHl1RxX42H4a5LMwJhDVQ7a9tmDZ/yj+0hpBn+Aan+d6lA3v0UQ==}
+  /@next/swc-linux-arm64-gnu@13.4.18:
+    resolution: {integrity: sha512-Nayn6yFeox9wKaRTLaWRvO3DjB8xEM3BnXu7QnQeZb0AgD484XmdxK13TYZW4jdNy3VJ5OyYIpL4mhkgWEVq/A==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -979,8 +981,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-musl@13.4.16:
-    resolution: {integrity: sha512-9gqVqNzUMWbUDgDiND18xoUqhwSm2gmksqXgCU0qaOKt6oAjWz8cWYjgpPVD0WICKFylEY/gvPEP1fMZDVFZ/g==}
+  /@next/swc-linux-arm64-musl@13.4.18:
+    resolution: {integrity: sha512-sQzJ5DFPvGlKjI97R17v2RxKJYYzHw4lJZ4xhK6wvyYJYYcn9JfIMyKCvLtfLgpU1tOUcbkmx7i8XC28sB1BsQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -988,8 +990,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-gnu@13.4.16:
-    resolution: {integrity: sha512-KcQGwchAKmZVPa8i5PLTxvTs1/rcFnSltfpTm803Tr/BtBV3AxCkHLfhtoyVtVzx/kl/oue8oS+DSmbepQKwhw==}
+  /@next/swc-linux-x64-gnu@13.4.18:
+    resolution: {integrity: sha512-zqCLvGdz+T0V+set8zRHbkl3PQq0quUp5Dtuj1yGw0N9htp3beL1RVyhfSusbgxT82TRTXJe94IREgM8iYq6wg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -997,8 +999,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-musl@13.4.16:
-    resolution: {integrity: sha512-2RbMZNxYnJmW8EPHVBsGZPq5zqWAyBOc/YFxq/jIQ/Yn3RMFZ1dZVCjtIcsiaKmgh7mjA/W0ApbumutHNxRqqQ==}
+  /@next/swc-linux-x64-musl@13.4.18:
+    resolution: {integrity: sha512-V/+dWy32eo3iiWkro+0M4/vNp1anGrVzNp90teVKG5tl5t5qNGc/qWOgmgTG8JhowdJAxj7+fp+WltrcezqsDA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1006,8 +1008,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-arm64-msvc@13.4.16:
-    resolution: {integrity: sha512-thDcGonELN7edUKzjzlHrdoKkm7y8IAdItQpRvvMxNUXa4d9r0ElofhTZj5emR7AiXft17hpen+QAkcWpqG7Jg==}
+  /@next/swc-win32-arm64-msvc@13.4.18:
+    resolution: {integrity: sha512-anytZjyD1tAgfA/crOrVcUlm0yrSNKYKpg53NQ+Y83nAungrghBthZZiA1/QvmIs1Igu0Rqw/O6hqCOH63o8pw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -1015,8 +1017,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-ia32-msvc@13.4.16:
-    resolution: {integrity: sha512-f7SE1Mo4JAchUWl0LQsbtySR9xCa+x55C0taetjUApKtcLR3AgAjASrrP+oE1inmLmw573qRnE1eZN8YJfEBQw==}
+  /@next/swc-win32-ia32-msvc@13.4.18:
+    resolution: {integrity: sha512-lgsZDjbU0FQQH2pDSYeKIbVX9g8dqA7fUtgcAcwbj4eEuVW/K41rKFQceMM1kt0ktVUZ4uF2qOHsgebOWpDJIw==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
@@ -1024,8 +1026,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-x64-msvc@13.4.16:
-    resolution: {integrity: sha512-WamDZm1M/OEM4QLce3lOmD1XdLEl37zYZwlmOLhmF7qYJ2G6oYm9+ejZVv+LakQIsIuXhSpVlOvrxIAHqwRkPQ==}
+  /@next/swc-win32-x64-msvc@13.4.18:
+    resolution: {integrity: sha512-cS72bVNqICglP/uEzqNy26lfRH30zf4AbqnnhPhe+UxRg6d+OTtRQpFX7C4xtBP09FKA+MSSflNVkrn2ZfaWrA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -2101,8 +2103,8 @@ packages:
       tslib: 2.6.1
     dev: false
 
-  /@t3-oss/env-core@0.6.0(typescript@5.1.6)(zod@3.22.1):
-    resolution: {integrity: sha512-3FkPAba069WRZVVab/sB1m3eSGn/rZeypx5k+sWEu1d+k0OQdRDnvFS+7MtxYgqVrwaRk3b7yVnX2dgSPVmWPQ==}
+  /@t3-oss/env-core@0.6.1(typescript@5.1.6)(zod@3.22.1):
+    resolution: {integrity: sha512-KQD7qEDJtkWIWWmTVjNvk0wnHpkvAQ6CRbUxbWMFNG/fiosBQDQvtRpBNu6USxBscJCoC4z6y7P9MN52/mLOzw==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
@@ -2111,19 +2113,19 @@ packages:
       zod: 3.22.1
     dev: false
 
-  /@t3-oss/env-nextjs@0.6.0(typescript@5.1.6)(zod@3.22.1):
-    resolution: {integrity: sha512-SpzcGNIbUYcQw4zPPFeRJqCC1560zL7QmB0puIqOnuCsmykPkqHPX+n9CNZLXVQerboHzfvb7Kd+jAdouk72Vw==}
+  /@t3-oss/env-nextjs@0.6.1(typescript@5.1.6)(zod@3.22.1):
+    resolution: {integrity: sha512-z1dIC++Vxj9kmzX5nSPfcrCSkszy3dTEPC4Ssx7Ap5AqR3c2Qa7S0xf8axn6coy7D/vCXDAAnHYnCMDhtcY3SQ==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
     dependencies:
-      '@t3-oss/env-core': 0.6.0(typescript@5.1.6)(zod@3.22.1)
+      '@t3-oss/env-core': 0.6.1(typescript@5.1.6)(zod@3.22.1)
       typescript: 5.1.6
       zod: 3.22.1
     dev: false
 
-  /@total-typescript/ts-reset@0.4.2:
-    resolution: {integrity: sha512-vqd7ZUDSrXFVT1n8b2kc3LnklncDQFPvR58yUS1kEP23/nHPAO9l1lMjUfnPrXYYk4Hj54rrLKMW5ipwk7k09A==}
+  /@total-typescript/ts-reset@0.5.1:
+    resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==}
     dev: true
 
   /@types/acorn@4.0.6:
@@ -3238,8 +3240,8 @@ packages:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  /dotenv-cli@7.2.1:
-    resolution: {integrity: sha512-ODHbGTskqRtXAzZapDPvgNuDVQApu4oKX8lZW7Y0+9hKA6le1ZJlyRS687oU9FXjOVEDU/VFV6zI125HzhM1UQ==}
+  /dotenv-cli@7.3.0:
+    resolution: {integrity: sha512-314CA4TyK34YEJ6ntBf80eUY+t1XaFLyem1k9P0sX1gn30qThZ5qZr/ZwE318gEnzyYP9yj9HJk6SqwE0upkfw==}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
@@ -3433,8 +3435,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /eslint-config-next@13.4.16(eslint@8.47.0)(typescript@5.1.6):
-    resolution: {integrity: sha512-Of73d/FiaGf0GLCxxTGdh4rW8bRDvsqypylefkshE/uDDpQr8ifVQsD4UiB99rhegks7nJGkYtUnR3dC7kfFlw==}
+  /eslint-config-next@13.4.18(eslint@8.47.0)(typescript@5.1.6):
+    resolution: {integrity: sha512-G15CYbsIHwV6Fzoly5SXo/Mj3pNqNkOzbf+wQcPod3LgVNviWVYlb9czjdiREXHq2VF6oV79Kv0Wunguj6RMEw==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -3442,7 +3444,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.4.16
+      '@next/eslint-plugin-next': 13.4.18
       '@rushstack/eslint-patch': 1.3.2
       '@typescript-eslint/parser': 6.4.0(eslint@8.47.0)(typescript@5.1.6)
       eslint: 8.47.0
@@ -5518,12 +5520,12 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dev: true
 
-  /mintlify@3.0.88:
-    resolution: {integrity: sha512-wHLcmEpFXlJzgeaTdKZSCq/ftk/doG82/hCVQVIZrFMJ/6JMKfyG/NKSXSURcn3Pj65f5gFGTIinpfJEMVtMUQ==}
+  /mintlify@3.0.92:
+    resolution: {integrity: sha512-wzwWEh9+01A1pK1WDjlcOCjYkn1N+l7V5Chjcmh67Gn/0YqEex6Njd81Ojyv0GNJvS0wK4hZdhIPkauih+Seqg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
-      '@mintlify/cli': 3.0.87
+      '@mintlify/cli': 3.0.91
     transitivePeerDependencies:
       - debug
       - encoding
@@ -5585,8 +5587,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-auth@4.23.0(next@13.4.16)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-RgukcJkBdvsJwEfA+B80Wcowvtgy6tk8KKWffb7CMCdzcLO4fCCA6aB6sp/DZ2I0ISvWGnbVcO5KXmlan71igw==}
+  /next-auth@4.23.1(next@13.4.18)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mL083z8KgRtlrIV6CDca2H1kduWJuK/3pTS0Fe2og15KOm4v2kkLGdSDfc2g+019aEBrJUT0pPW2Xx42ImN1WA==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
@@ -5600,7 +5602,7 @@ packages:
       '@panva/hkdf': 1.1.1
       cookie: 0.5.0
       jose: 4.14.4
-      next: 13.4.16(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.18(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       oauth: 0.9.15
       openid-client: 5.4.3
       preact: 10.16.0
@@ -5610,8 +5612,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next@13.4.16(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1xaA/5DrfpPu0eV31Iro7JfPeqO8uxQWb1zYNTe+KDKdzqkAGapLcDYHMLNKXKB7lHjZ7LfKUOf9dyuzcibrhA==}
+  /next@13.4.18(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-V/IIFA/znYYnOFlZQegrlhlWRpyIuCLXLGuH6pzCjwyxThNBZl4ItqoE3ffUyYY9f0X6XIQ2dX6UUBpNVSKZ8A==}
     engines: {node: '>=16.8.0'}
     hasBin: true
     peerDependencies:
@@ -5625,7 +5627,7 @@ packages:
       sass:
         optional: true
     dependencies:
-      '@next/env': 13.4.16
+      '@next/env': 13.4.18
       '@swc/helpers': 0.5.1
       busboy: 1.6.0
       caniuse-lite: 1.0.30001520
@@ -5636,15 +5638,15 @@ packages:
       watchpack: 2.4.0
       zod: 3.21.4
     optionalDependencies:
-      '@next/swc-darwin-arm64': 13.4.16
-      '@next/swc-darwin-x64': 13.4.16
-      '@next/swc-linux-arm64-gnu': 13.4.16
-      '@next/swc-linux-arm64-musl': 13.4.16
-      '@next/swc-linux-x64-gnu': 13.4.16
-      '@next/swc-linux-x64-musl': 13.4.16
-      '@next/swc-win32-arm64-msvc': 13.4.16
-      '@next/swc-win32-ia32-msvc': 13.4.16
-      '@next/swc-win32-x64-msvc': 13.4.16
+      '@next/swc-darwin-arm64': 13.4.18
+      '@next/swc-darwin-x64': 13.4.18
+      '@next/swc-linux-arm64-gnu': 13.4.18
+      '@next/swc-linux-arm64-musl': 13.4.18
+      '@next/swc-linux-x64-gnu': 13.4.18
+      '@next/swc-linux-x64-musl': 13.4.18
+      '@next/swc-win32-arm64-msvc': 13.4.18
+      '@next/swc-win32-ia32-msvc': 13.4.18
+      '@next/swc-win32-x64-msvc': 13.4.18
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -7852,9 +7854,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/e7f909753c383cec832778e375063d748fde100d(@types/react-dom@18.2.7)(@types/react@18.2.20):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/e7f909753c383cec832778e375063d748fde100d}
-    id: github.com/Vahor/pedaki-common/e7f909753c383cec832778e375063d748fde100d
+  github.com/Vahor/pedaki-common/3f38daeb224c90cfc764f8e144cd1727bbcbb50e(@types/react-dom@18.2.7)(@types/react@18.2.20):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/3f38daeb224c90cfc764f8e144cd1727bbcbb50e}
+    id: github.com/Vahor/pedaki-common/3f38daeb224c90cfc764f8e144cd1727bbcbb50e
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}
