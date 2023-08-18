@@ -58,7 +58,7 @@ importers:
     dependencies:
       '@pedaki/common':
         specifier: github:Vahor/pedaki-common#refactor/update-base-style
-        version: github.com/Vahor/pedaki-common/afd65f8bc57bdaea1330af79e878b57563618233(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+        version: github.com/Vahor/pedaki-common/b21a9c88d6b56e0e5b101a097ebbcefc9030c277(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.1
         version: 0.6.1(typescript@5.1.6)(zod@3.22.1)
@@ -5071,6 +5071,10 @@ packages:
       '@types/mdast': 3.0.12
     dev: false
 
+  /memory-cache@0.2.0:
+    resolution: {integrity: sha512-OcjA+jzjOYzKmKS6IQVALHLVz+rNTMPoJvCztFaZxwG14wtAW7VRZjwTQu06vKCYOxh4jVnik7ya0SXTB0W+xA==}
+    dev: false
+
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
@@ -7855,9 +7859,9 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  github.com/Vahor/pedaki-common/afd65f8bc57bdaea1330af79e878b57563618233(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/afd65f8bc57bdaea1330af79e878b57563618233}
-    id: github.com/Vahor/pedaki-common/afd65f8bc57bdaea1330af79e878b57563618233
+  github.com/Vahor/pedaki-common/b21a9c88d6b56e0e5b101a097ebbcefc9030c277(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/Vahor/pedaki-common/tar.gz/b21a9c88d6b56e0e5b101a097ebbcefc9030c277}
+    id: github.com/Vahor/pedaki-common/b21a9c88d6b56e0e5b101a097ebbcefc9030c277
     name: '@pedaki/common'
     version: 1.0.0
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}
@@ -7887,6 +7891,7 @@ packages:
       class-variance-authority: 0.7.0
       clsx: 2.0.0
       lucide-react: 0.268.0(react@18.2.0)
+      memory-cache: 0.2.0
       nanoid: 4.0.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
