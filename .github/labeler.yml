@@ -1,0 +1,9 @@
+'📚 documentation':
+  - any:
+    - 'docs/**'
+'🖥️ www':
+  - any:
+    - 'apps/www/**'
+'📦 packages':
+    - any:
+      - 'packages/**'

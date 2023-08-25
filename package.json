@@ -1,64 +1,48 @@
 {
-  "name": "pedaki.fr",
+  "name": "pedaki",
   "version": "0.1.0",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/PedakiApp/pedaki.fr.git"
   },
+  "bugs": {
+    "url": "https://github.com/PedakiApp/pedaki.fr/issues"
+  },
+  "homepage": "https://www.pedaki.fr",
   "engines": {
     "node": ">=18.0.0 <19.0.0",
-    "pnpm": ">=8.0.0"
+    "pnpm": ">=8.0.0",
+    "yarn": "use-pnpm",
+    "npm": "use-pnpm"
   },
   "packageManager": "pnpm@8.6.12",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start",
-    "prepare": "husky install",
-    "clean": "rimraf .next",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@t3-oss/env-nextjs": "^0.6.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "lucide-react": "^0.264.0",
-    "next": "^13.4.11",
-    "nextra": "^2.10.0",
-    "nextra-theme-docs": "^2.10.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwind-merge": "^1.14.0",
-    "zod": "^3.21.4"
+    "start": "dotenv -- turbo run start",
+    "format:check": "turbo run format:check",
+    "format": "turbo run format",
+    "clean": "turbo run clean",
+    "build": "dotenv -- turbo run build",
+    "dev": "dotenv -- turbo run dev",
+    "lint": "export SKIP_ENV_VALIDATION=true && turbo run lint",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.0",
-    "@types/node": "^20.4.2",
-    "@types/prettier": "^2.7.3",
-    "@types/react": "^18.2.15",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@types/node": "^18.17.6",
+    "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "6.2.1",
-    "@typescript-eslint/parser": "6.2.1",
-    "autoprefixer": "^10.4.14",
-    "chokidar": "^3.5.3",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^13.4.11",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.1",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "autoprefixer": "^10.4.15",
+    "dotenv-cli": "^7.3.0",
+    "mini-svg-data-uri": "^1.4.4",
+    "postcss": "^8.4.28",
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.6",
+    "turbo": "^1.10.12",
     "typescript": "^5.1.6"
-  },
-  "lint-staged": {
-    "*.{html,js,ts,tsx,json,yml,css,scss}": "prettier --write",
-    "*.{js,ts,tsx}": "eslint"
   }
 }
