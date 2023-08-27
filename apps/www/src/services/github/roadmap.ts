@@ -59,8 +59,8 @@ const accessToken = env.GITHUB_ROADMAP_ACCESS_TOKEN;
 const apiUrl = 'https://api.github.com/graphql';
 
 const query = `
-query User {
-    user(login: "vahor") {
+query Roadmap {
+    organization(login: "PedakiHQ") {
         projectV2(number: 1) {
             items(first: 50) {
                 nodes {
