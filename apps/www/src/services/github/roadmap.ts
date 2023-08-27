@@ -162,12 +162,14 @@ export const getRoadmapIssues = async () => {
       }
 
       // filter out private repos / pull requests
-      data.organization.projectV2.items.nodes = data.organization.projectV2.items.nodes.filter(issue => {
-        if (issue.type !== 'ISSUE' && issue.type !== 'PULL_REQUEST') {
-          return false;
-        }
-        return !issue.content.repository.isPrivate;
-      });
+      data.organization.projectV2.items.nodes = data.organization.projectV2.items.nodes.filter(
+        issue => {
+          if (issue.type !== 'ISSUE' && issue.type !== 'PULL_REQUEST') {
+            return false;
+          }
+          return !issue.content.repository.isPrivate;
+        },
+      );
 
       data.organization.projectV2.items.nodes.sort((a, b) => {
         return new Date(b.content.updatedAt).getTime() - new Date(a.content.updatedAt).getTime();
