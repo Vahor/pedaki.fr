@@ -26,7 +26,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@pedaki/common": "github:Vahor/pedaki-common#refactor/update-base-style",
+    "@pedaki/common": "github:Vahor/pedaki-common",
     "@t3-oss/env-nextjs": "^0.6.1",
     "dayjs": "^1.11.9",
     "million": "^2.5.13",
