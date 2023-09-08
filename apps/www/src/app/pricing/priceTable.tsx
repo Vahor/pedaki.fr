@@ -1,10 +1,4 @@
-import { Card } from '@pedaki/common/ui/card';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@pedaki/common/ui/tooltip';
+import {Card, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@pedaki/design';
 import Link from 'next/link';
 import React from 'react';
 

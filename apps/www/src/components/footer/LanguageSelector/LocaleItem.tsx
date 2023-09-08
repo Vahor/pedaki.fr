@@ -1,9 +1,9 @@
 'use client';
 
-import { DropdownMenuItem, DropdownMenuLabel } from '@pedaki/common/ui/dropdown-menu';
-import { IconFlagFR, IconFlagGB } from '@pedaki/common/ui/icons';
-import type { IconType } from '@pedaki/common/ui/icons';
-import type { LocaleCode, locales } from '~/config/locales';
+import {DropdownMenuItem, DropdownMenuLabel} from '@pedaki/design';
+import type {IconType} from '@pedaki/design/icons';
+import {IconFlagFR, IconFlagGB} from '@pedaki/design/icons';
+import type {LocaleCode, locales} from '~/config/locales';
 import React from 'react';
 
 const LocaleIcon: Record<LocaleCode, IconType> = {

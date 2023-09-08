@@ -1,14 +1,12 @@
 'use client';
 
-import { useScrollLock } from '@pedaki/common/hooks/use-scroll-lock';
-import { cn } from '@pedaki/common/lib/utils';
-import Burger from '@pedaki/common/ui/burger';
-import { Button } from '@pedaki/common/ui/button';
-import { ScrollArea } from '@pedaki/common/ui/scroll-area';
-import { Portal } from '@radix-ui/react-portal';
-import { navigation } from '~/config/navigation';
+import {useScrollLock} from '@pedaki/common/hooks';
+import {cn} from '@pedaki/design/utils';
+import {Burger, Button, ScrollArea} from '@pedaki/design';
+import {Portal} from '@radix-ui/react-portal';
+import {navigation} from '~/config/navigation';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

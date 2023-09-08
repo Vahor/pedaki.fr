@@ -1,4 +1,4 @@
-import { IconChevronRight } from '@pedaki/common/ui/icons';
+import {IconChevronRight} from '@pedaki/design/icons';
 import React from 'react';
 
 export const AnimatedChevronRight = () => {

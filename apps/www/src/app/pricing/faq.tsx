@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@pedaki/common/ui/accordion';
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from '@pedaki/design';
 import Link from 'next/link';
 import React from 'react';
 

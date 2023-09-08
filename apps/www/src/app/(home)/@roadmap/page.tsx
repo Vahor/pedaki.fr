@@ -1,9 +1,9 @@
-import { TooltipProvider } from '@pedaki/common/ui/tooltip';
+import {TooltipProvider} from '@pedaki/design';
 import Footer from '~/app/(home)/@roadmap/footer';
 import Header from '~/app/(home)/@roadmap/header';
-import { getRoadmapIssues } from '~/services/github/roadmap';
+import {getRoadmapIssues} from '~/services/github/roadmap';
 import React from 'react';
-import { GithubCard } from './card';
+import {GithubCard} from './card';
 
 const Roadmap = async () => {
   const roadmap = await getRoadmapIssues();

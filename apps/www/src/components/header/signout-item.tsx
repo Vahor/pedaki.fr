@@ -1,9 +1,9 @@
 'use client';
 
-import { DropdownMenuItem } from '@pedaki/common/ui/dropdown-menu';
-import { signOut } from 'next-auth/react';
+import {DropdownMenuItem} from '@pedaki/design';
+import {signOut} from 'next-auth/react';
 import React from 'react';
-import { toast } from 'sonner';
+import {toast} from 'sonner';
 
 export const SignOutItem = () => {
   const onSignOut = async () => {

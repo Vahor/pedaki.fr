@@ -1,15 +1,10 @@
 'use server';
 
-import { cn } from '@pedaki/common/lib/utils';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@pedaki/common/ui/tooltip';
-import { StyledLink } from '~/components/StyledLink';
-import type { MonitoringStatus } from '~/services/betterstack/status';
-import { getMonitoringStatus } from '~/services/betterstack/status';
+import {cn} from '@pedaki/design/utils';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,} from '@pedaki/design';
+import {StyledLink} from '~/components/StyledLink';
+import type {MonitoringStatus} from '~/services/betterstack/status';
+import {getMonitoringStatus} from '~/services/betterstack/status';
 import React from 'react';
 
 const StatusMap: Record<MonitoringStatus, [string, string]> = {

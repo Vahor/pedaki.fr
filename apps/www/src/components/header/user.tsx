@@ -1,22 +1,24 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
-import { Button } from '@pedaki/common/ui/button';
 import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@pedaki/common/ui/dropdown-menu';
-import { Skeleton } from '@pedaki/common/ui/skeleton';
-import type { Session } from 'next-auth';
-import { SessionProvider, useSession } from 'next-auth/react';
+  Skeleton
+} from '@pedaki/design';
+import type {Session} from 'next-auth';
+import {SessionProvider, useSession} from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
-import { env } from '../../env.mjs';
-import { SignOutItem } from './signout-item';
+import {env} from '../../env.mjs';
+import {SignOutItem} from './signout-item';
 
 // TODO: RSC makes the page cache not work
 //  See the UserWithProvider below, but with this there is a flicker

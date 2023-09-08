@@ -1,5 +1,5 @@
-import { cache } from '@pedaki/common/lib/cache/memory-cache';
-import { env } from '~/env.mjs';
+import {cache} from '@pedaki/common/cache';
+import {env} from '~/env.mjs';
 import * as z from 'zod';
 
 interface JsonResponse {

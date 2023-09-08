@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@pedaki/common/lib/utils';
+import {cn} from '@pedaki/design/utils';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,10 +9,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@pedaki/common/ui/navigation-menu';
-import { navigation } from '~/config/navigation';
+} from '@pedaki/design';
+import {navigation} from '~/config/navigation';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import {usePathname} from 'next/navigation';
 import React from 'react';
 
 const Desktop = () => {
