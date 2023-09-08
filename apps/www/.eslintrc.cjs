@@ -1,10 +1,6 @@
-// @ts-ignore
-const baseConfig = require("@pedaki/eslint-config");
-
 module.exports = {
-    ...baseConfig,
+    extends: ['@pedaki/eslint-config'],
     parserOptions: {
-        ...baseConfig.parserOptions,
         project: true,
-    }
-}
+    },
+};
