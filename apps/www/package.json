@@ -26,7 +26,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@pedaki/common": "github:Vahor/pedaki-common",
     "@t3-oss/env-nextjs": "^0.6.1",
     "dayjs": "^1.11.9",
     "memory-cache": "^0.2.0",
@@ -41,9 +40,9 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "^0.0.3",
-    "@pedaki/prettier-config": "^0.0.3",
-    "@types/bcryptjs": "^2.4.2",
+    "@pedaki/eslint-config": "^0.0.4",
+    "@pedaki/prettier-config": "^0.0.5",
+    "@types/bcryptjs": "^2.4.3",
     "@types/memory-cache": "^0.2.3",
     "@types/sanitize-html": "^2.9.0"
   }
