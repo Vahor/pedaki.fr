@@ -1,5 +1,5 @@
-import {Button} from '@pedaki/design';
-import {AnimatedChevronRight} from '~/components/AnimatedChevronRight';
+import { Button } from '@pedaki/design';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 

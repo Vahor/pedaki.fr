@@ -1,5 +1,4 @@
-import {hexToRgb, isDark} from '@pedaki/common/utils';
-import {cn} from '@pedaki/design/utils';
+import { hexToRgb, isDark } from '@pedaki/common/utils';
 import {
   Avatar,
   AvatarFallback,
@@ -11,9 +10,10 @@ import {
   Skeleton,
   Tooltip,
   TooltipContent,
-  TooltipTrigger
+  TooltipTrigger,
 } from '@pedaki/design';
-import type {Issue, IssueState, IssueStateReason} from '~/services/github/roadmap';
+import { cn } from '@pedaki/design/utils';
+import type { Issue, IssueState, IssueStateReason } from '~/services/github/roadmap';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import React from 'react';

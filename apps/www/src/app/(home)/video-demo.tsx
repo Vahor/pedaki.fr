@@ -1,4 +1,4 @@
-import {AspectRatio, Dialog, DialogContent, DialogTrigger} from '@pedaki/design';
+import { AspectRatio, Dialog, DialogContent, DialogTrigger } from '@pedaki/design';
 import Image from 'next/image';
 import React from 'react';
 import mock from '../../../public/a/mock-hero.webp';

@@ -1,6 +1,6 @@
-import {CardDescription, CardTitle} from '@pedaki/design';
-import {AnimatedChevronRight} from '~/components/AnimatedChevronRight';
-import {StyledLink} from '~/components/StyledLink';
+import { CardDescription, CardTitle } from '@pedaki/design';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
+import { StyledLink } from '~/components/StyledLink';
 import Link from 'next/link';
 import React from 'react';
 

@@ -11,14 +11,14 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-  Skeleton
+  Skeleton,
 } from '@pedaki/design';
-import type {Session} from 'next-auth';
-import {SessionProvider, useSession} from 'next-auth/react';
+import type { Session } from 'next-auth';
+import { SessionProvider, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
-import {env} from '../../env.mjs';
-import {SignOutItem} from './signout-item';
+import { env } from '../../env.mjs';
+import { SignOutItem } from './signout-item';
 
 // TODO: RSC makes the page cache not work
 //  See the UserWithProvider below, but with this there is a flicker

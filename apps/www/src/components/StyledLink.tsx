@@ -1,6 +1,6 @@
-import {cn} from '@pedaki/design/utils';
-import type {VariantProps} from 'class-variance-authority';
-import {cva} from 'class-variance-authority';
+import { cn } from '@pedaki/design/utils';
+import type { VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 import Link from 'next/link';
 import * as React from 'react';
 

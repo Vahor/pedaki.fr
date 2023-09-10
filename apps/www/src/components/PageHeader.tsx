@@ -1,6 +1,6 @@
-import {cn} from '@pedaki/design/utils';
+import { cn } from '@pedaki/design/utils';
 import React from 'react';
-import {Balancer} from 'react-wrap-balancer';
+import { Balancer } from 'react-wrap-balancer';
 
 interface PageHeaderProps {
   title: string;

@@ -1,5 +1,5 @@
-import {Badge, Button} from '@pedaki/design';
-import {PageHeader} from '~/components/PageHeader';
+import { Badge, Button } from '@pedaki/design';
+import { PageHeader } from '~/components/PageHeader';
 import Link from 'next/link';
 import React from 'react';
 
