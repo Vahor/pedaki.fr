@@ -1,12 +1,12 @@
 import React from 'react';
-import '@pedaki/design/styles.css';
+import '@pedaki/design//tailwind/index.css';
 import '../styles/globals.css';
-import { fontClassName } from '@pedaki/design/fonts';
 import { cn } from '@pedaki/design/utils';
 import type { Metadata } from 'next';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import { Providers } from './(home)/providers';
+import {fontClassName} from "~/config/font";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

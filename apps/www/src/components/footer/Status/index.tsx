@@ -1,6 +1,11 @@
 'use server';
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@pedaki/design';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@pedaki/design/ui/tooltip';
 import { cn } from '@pedaki/design/utils';
 import { StyledLink } from '~/components/StyledLink';
 import type { MonitoringStatus } from '~/services/betterstack/status';

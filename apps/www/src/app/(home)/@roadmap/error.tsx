@@ -1,6 +1,6 @@
 'use client';
 
-import { TooltipProvider } from '@pedaki/design';
+import { TooltipProvider } from '@pedaki/design/ui';
 import { GithubCard } from '~/app/(home)/@roadmap/card';
 import Footer from '~/app/(home)/@roadmap/footer';
 import Header from '~/app/(home)/@roadmap/header';

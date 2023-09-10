@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@pedaki/design';
+} from '@pedaki/design/ui/navigation-menu';
 import { cn } from '@pedaki/design/utils';
 import { navigation } from '~/config/navigation';
 import Link from 'next/link';

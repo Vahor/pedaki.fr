@@ -1,4 +1,4 @@
-import { CardDescription, CardTitle } from '@pedaki/design';
+import { CardDescription, CardTitle } from '@pedaki/design/ui/card';
 import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import { StyledLink } from '~/components/StyledLink';
 import Link from 'next/link';

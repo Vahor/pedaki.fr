@@ -27,6 +27,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@pedaki/common": "0.0.0-20230910191755",
+    "@pedaki/design": "0.0.0-20230910191755",
     "@t3-oss/env-nextjs": "^0.6.1",
     "dayjs": "^1.11.9",
     "million": "^2.5.13",
@@ -36,8 +38,6 @@
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^1.1.0",
     "sanitize-html": "^2.11.0",
-    "@pedaki/design": "0.0.0-20230910160100",
-    "@pedaki/common": "^0.0.1",
     "sharp": "^0.32.5",
     "zod": "^3.22.2"
   },

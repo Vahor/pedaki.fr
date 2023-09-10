@@ -1,7 +1,9 @@
 'use client';
 
 import { useScrollLock } from '@pedaki/common/hooks';
-import { Burger, Button, ScrollArea } from '@pedaki/design';
+import { Burger } from '@pedaki/design/ui/burger';
+import { Button } from '@pedaki/design/ui/button';
+import { ScrollArea } from '@pedaki/design/ui/scroll-area';
 import { cn } from '@pedaki/design/utils';
 import { Portal } from '@radix-ui/react-portal';
 import { navigation } from '~/config/navigation';

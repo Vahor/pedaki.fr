@@ -1,17 +1,9 @@
 import { hexToRgb, isDark } from '@pedaki/common/utils';
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-  Badge,
-  Card,
-  CardContent,
-  CardFooter,
-  Skeleton,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@pedaki/design';
+import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/design/ui/avatar';
+import { Badge } from '@pedaki/design/ui/badge';
+import { Card, CardContent, CardFooter } from '@pedaki/design/ui/card';
+import { Skeleton } from '@pedaki/design/ui/skeleton';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@pedaki/design/ui/tooltip';
 import { cn } from '@pedaki/design/utils';
 import type { Issue, IssueState, IssueStateReason } from '~/services/github/roadmap';
 import dayjs from 'dayjs';
