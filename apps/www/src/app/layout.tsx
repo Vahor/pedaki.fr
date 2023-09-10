@@ -1,5 +1,5 @@
 import React from 'react';
-import '@pedaki/design//tailwind/index.css';
+import '@pedaki/design/tailwind/index.css';
 import '../styles/globals.css';
 import { cn } from '@pedaki/design/utils';
 import { fontClassName } from '~/config/font';
