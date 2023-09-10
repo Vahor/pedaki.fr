@@ -46,7 +46,7 @@ export interface Label {
 
 interface JsonResponse {
   data: {
-    user: {
+    organization: {
       projectV2: Roadmap;
     };
   };
@@ -59,8 +59,8 @@ const accessToken = env.GITHUB_ROADMAP_ACCESS_TOKEN;
 const apiUrl = 'https://api.github.com/graphql';
 
 const query = `
-query User {
-    user(login: "vahor") {
+query Roadmap {
+    organization(login: "PedakiHQ") {
         projectV2(number: 1) {
             items(first: 50) {
                 nodes {
@@ -162,20 +162,22 @@ export const getRoadmapIssues = async () => {
       }
 
       // filter out private repos / pull requests
-      data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.filter(issue => {
-        if (issue.type !== 'ISSUE' && issue.type !== 'PULL_REQUEST') {
-          return false;
-        }
-        return !issue.content.repository.isPrivate;
-      });
+      data.organization.projectV2.items.nodes = data.organization.projectV2.items.nodes.filter(
+        issue => {
+          if (issue.type !== 'ISSUE' && issue.type !== 'PULL_REQUEST') {
+            return false;
+          }
+          return !issue.content.repository.isPrivate;
+        },
+      );
 
-      data.user.projectV2.items.nodes.sort((a, b) => {
+      data.organization.projectV2.items.nodes.sort((a, b) => {
         return new Date(b.content.updatedAt).getTime() - new Date(a.content.updatedAt).getTime();
       });
       // 3 columns so 9 issues max
-      data.user.projectV2.items.nodes = data.user.projectV2.items.nodes.slice(0, 9);
+      data.organization.projectV2.items.nodes = data.organization.projectV2.items.nodes.slice(0, 9);
 
-      data.user.projectV2.items.nodes.forEach(issue => {
+      data.organization.projectV2.items.nodes.forEach(issue => {
         // Sanitize HTML, we are never too safe
         issue.content.titleHTML = sanitizeHtml(issue.content.titleHTML);
         issue.content.repository.descriptionHTML = sanitizeHtml(
@@ -189,7 +191,7 @@ export const getRoadmapIssues = async () => {
         );
       });
 
-      return data.user.projectV2;
+      return data.organization.projectV2;
     },
     'roadmap:issues',
     {
