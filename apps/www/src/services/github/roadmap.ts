@@ -2,6 +2,7 @@ import { cache } from '@pedaki/common/cache';
 import { env } from '~/env.mjs';
 import sanitizeHtml from 'sanitize-html';
 
+
 export interface Roadmap {
   url: string;
   items: {
@@ -156,7 +157,7 @@ export const getRoadmapIssues = async () => {
         'X-RateLimit-Resource': response.headers.get('X-RateLimit-Resource'),
       });
 
-      if (errors) {
+      if (errors || !data) {
         console.error(errors);
         throw new Error('Error fetching roadmap issues');
       }
