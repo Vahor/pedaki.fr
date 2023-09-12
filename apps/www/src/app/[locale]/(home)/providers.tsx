@@ -1,5 +1,8 @@
 'use client';
 
+import { I18nProviderClient } from '~/locales/client';
+import fr from '~/locales/fr';
+import type { BaseLocale } from 'international-types';
 import React from 'react';
 import { Provider as BalancerProvider } from 'react-wrap-balancer';
 
@@ -8,9 +11,14 @@ interface Props {
 }
 
 export const Providers = ({ children }: Props) => {
+  // TODO: fix usage of `as unknown as BaseLocale`
   return (
     <>
-      <BalancerProvider>{children}</BalancerProvider>
+      <BalancerProvider>
+        <I18nProviderClient fallbackLocale={fr as unknown as BaseLocale}>
+          {children}
+        </I18nProviderClient>
+      </BalancerProvider>
     </>
   );
 };

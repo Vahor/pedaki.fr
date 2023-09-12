@@ -1,10 +1,14 @@
 export const fr = {
-  'footer.terms': 'Termes',
-  'footer.privacy': 'Confidentialité',
-  'footer.status': 'Statut',
-  'language.en': 'Anglais',
-  'language.fr': 'Français',
-  'language.change': 'Changer de langue',
+  footer: {
+    terms: 'Termes',
+    privacy: 'Confidentialité',
+    status: 'Statut',
+  },
+  language: {
+    en: 'Anglais',
+    fr: 'Français',
+    change: 'Changer de langue',
+  },
 } as const;
 
 export default fr;
