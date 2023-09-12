@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Providers = ({ children }: Props) => {
-  // TODO: fix usage of `as unknown as BaseLocale`
+  // TODO: fix usage of `as unknown as BaseLocale`, related to the use of object notation in the lang files
   return (
     <>
       <BalancerProvider>
