@@ -1,3 +1,5 @@
+import Faq from '~/app/[locale]/pricing/faq';
+import PriceTable from '~/app/[locale]/pricing/priceTable';
 import { Separator } from '@pedaki/design/ui/separator';
 import Faq from '~/app/pricing/faq';
 import PriceTable from '~/app/pricing/price-table';
