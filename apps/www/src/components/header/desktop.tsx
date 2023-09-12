@@ -1,6 +1,5 @@
 'use client';
 
-import { cn } from '@pedaki/common/lib/utils';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,7 +8,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@pedaki/common/ui/navigation-menu';
+} from '@pedaki/design/ui/navigation-menu';
+import { cn } from '@pedaki/design/utils';
 import { navigation } from '~/config/navigation';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

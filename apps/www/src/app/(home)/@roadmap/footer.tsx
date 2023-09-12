@@ -1,4 +1,4 @@
-import { Button } from '@pedaki/common/ui/button';
+import { Button } from '@pedaki/design/ui/button';
 import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';

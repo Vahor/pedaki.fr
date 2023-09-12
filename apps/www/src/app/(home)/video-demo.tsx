@@ -1,5 +1,5 @@
-import { AspectRatio } from '@pedaki/common/ui/aspect-ratio';
-import { Dialog, DialogContent, DialogTrigger } from '@pedaki/common/ui/dialog';
+import { AspectRatio } from '@pedaki/design/ui/aspect-ratio';
+import { Dialog, DialogContent, DialogTrigger } from '@pedaki/design/ui/dialog';
 import Image from 'next/image';
 import React from 'react';
 import mock from '../../../public/a/mock-hero.webp';

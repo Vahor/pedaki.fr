@@ -1,7 +1,7 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/common/ui/avatar';
-import { Button } from '@pedaki/common/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/design/ui/avatar';
+import { Button } from '@pedaki/design/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,8 +9,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@pedaki/common/ui/dropdown-menu';
-import { Skeleton } from '@pedaki/common/ui/skeleton';
+} from '@pedaki/design/ui/dropdown-menu';
+import { Skeleton } from '@pedaki/design/ui/skeleton';
 import type { Session } from 'next-auth';
 import { SessionProvider, useSession } from 'next-auth/react';
 import Link from 'next/link';

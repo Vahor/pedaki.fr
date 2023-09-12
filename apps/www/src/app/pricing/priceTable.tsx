@@ -1,10 +1,10 @@
-import { Card } from '@pedaki/common/ui/card';
+import { Card } from '@pedaki/design/ui/card';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@pedaki/common/ui/tooltip';
+} from '@pedaki/design/ui/tooltip';
 import Link from 'next/link';
 import React from 'react';
 

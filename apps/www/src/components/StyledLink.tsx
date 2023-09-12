@@ -1,4 +1,4 @@
-import { cn } from '@pedaki/common/lib/utils';
+import { cn } from '@pedaki/design/utils';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import Link from 'next/link';

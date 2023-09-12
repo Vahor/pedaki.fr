@@ -1,14 +1,4 @@
-const sharedConfig = require("@pedaki/common/styles/tailwind.config");
-
 module.exports = {
-    presets: [sharedConfig],
-    content: [
-// @ts-ignore
-        ...sharedConfig.content,
-        "../../node_modules/@pedaki/common/**/*.{ts,tsx}"
-    ],
-    theme: {
-        extend: {
-        }
-    }
+    content: ['node_modules/@pedaki/design/**/*.{js,ts,jsx,tsx,mdx}', '../../node_modules/@pedaki/design/**/*.{js,ts,jsx,tsx,mdx}', "src/**/*.{js,ts,jsx,tsx,mdx}"],
+    presets: [require('@pedaki/design/tailwind/tailwind.config')],
 };

@@ -1,10 +1,10 @@
-import { Button } from '@pedaki/common/ui/button';
+import { Button } from '@pedaki/design/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from '@pedaki/common/ui/dropdown-menu';
-import { IconChevronDown, IconTranslation } from '@pedaki/common/ui/icons';
+} from '@pedaki/design/ui/dropdown-menu';
+import { IconChevronDown, IconTranslation } from '@pedaki/design/ui/icons';
 import { LocaleItem } from '~/components/footer/LanguageSelector/LocaleItem';
 import { locales } from '~/config/locales';
 import React from 'react';

@@ -1,8 +1,8 @@
 import React from 'react';
-import '@pedaki/common/styles/globals.css';
+import '@pedaki/design/tailwind/index.css';
 import '../styles/globals.css';
-import { cn } from '@pedaki/common/lib/utils';
-import { fontClassName } from '@pedaki/common/styles/fonts';
+import { cn } from '@pedaki/design/utils';
+import { fontClassName } from '~/config/font';
 import type { Metadata } from 'next';
 import Footer from '../components/footer';
 import Header from '../components/header';

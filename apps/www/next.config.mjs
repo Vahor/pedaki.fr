@@ -10,6 +10,7 @@ const config = {
     experimental: {
         appDir: true,
         serverActions: true,
+        esmExternals: true,
     },
 
     transpilePackages: ["@pedaki/common"],
@@ -34,8 +35,8 @@ const config = {
     ],
 
     modularizeImports: {
-        "@pedaki/common/ui/icons": {
-            transform: "@pedaki/common/ui/icons/{{member}}",
+        "@pedaki/design/ui/icons": {
+            transform: "@pedaki/design/ui/icons/{{member}}",
             preventFullImport: true,
         }
     },

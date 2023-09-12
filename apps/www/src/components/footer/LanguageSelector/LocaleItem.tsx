@@ -1,8 +1,8 @@
 'use client';
 
-import { DropdownMenuItem, DropdownMenuLabel } from '@pedaki/common/ui/dropdown-menu';
-import { IconFlagFR, IconFlagGB } from '@pedaki/common/ui/icons';
-import type { IconType } from '@pedaki/common/ui/icons';
+import { DropdownMenuItem, DropdownMenuLabel } from '@pedaki/design/ui/dropdown-menu';
+import type { IconType } from '@pedaki/design/ui/icons';
+import { IconFlagFR, IconFlagGB } from '@pedaki/design/ui/icons';
 import type { LocaleCode, locales } from '~/config/locales';
 import React from 'react';
 

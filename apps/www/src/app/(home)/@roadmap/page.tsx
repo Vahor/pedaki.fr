@@ -1,4 +1,4 @@
-import { TooltipProvider } from '@pedaki/common/ui/tooltip';
+import { TooltipProvider } from '@pedaki/design/ui/tooltip';
 import Footer from '~/app/(home)/@roadmap/footer';
 import Header from '~/app/(home)/@roadmap/header';
 import { getRoadmapIssues } from '~/services/github/roadmap';

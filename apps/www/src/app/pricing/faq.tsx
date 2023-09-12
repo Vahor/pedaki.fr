@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@pedaki/common/ui/accordion';
+} from '@pedaki/design/ui/accordion';
 import Link from 'next/link';
 import React from 'react';
 

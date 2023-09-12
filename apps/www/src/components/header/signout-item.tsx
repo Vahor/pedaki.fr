@@ -1,6 +1,6 @@
 'use client';
 
-import { DropdownMenuItem } from '@pedaki/common/ui/dropdown-menu';
+import { DropdownMenuItem } from '@pedaki/design/ui/dropdown-menu';
 import { signOut } from 'next-auth/react';
 import React from 'react';
 import { toast } from 'sonner';
