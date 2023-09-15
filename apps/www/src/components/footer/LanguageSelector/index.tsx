@@ -13,7 +13,6 @@ import React from 'react';
 const LanguageSelector = async () => {
   const languageT = await getScopedI18n('language');
 
-  // TODO: use the active locale from the i18n context
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="group" asChild>
