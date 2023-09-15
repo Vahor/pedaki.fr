@@ -72,8 +72,8 @@ importers:
         specifier: ^4.23.1
         version: 4.23.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
       next-international:
-        specifier: 1.0.0-rc.6
-        version: 1.0.0-rc.6
+        specifier: ^1.0.1
+        version: 1.0.1
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
@@ -104,7 +104,7 @@ importers:
     dependencies:
       mintlify:
         specifier: latest
-        version: 4.0.15
+        version: 4.0.16
     devDependencies:
       '@pedaki/prettier-config':
         specifier: ^0.0.5
@@ -525,17 +525,17 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /@mintlify/cli@4.0.15:
-    resolution: {integrity: sha512-Nh02givcMguLQTRt1gAv1pcquW5rQXo8GFd0N8730VKpOK/KuwBiGascU84mFO4lokCL8EwZkjLDDIp6vZfZBw==}
+  /@mintlify/cli@4.0.16:
+    resolution: {integrity: sha512-jDfL2fEnugKebq04GJGfAw31wwsGJ79T+Q2/zodZFVTn11U67tPaWPmGeETT243Nhk/MPk0BDhPeQni3oL1Yiw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/link-rot': 3.0.42(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)(gray-matter@4.0.3)
-      '@mintlify/models': 0.0.36(openapi-types@12.1.3)
-      '@mintlify/prebuild': 1.0.42(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
-      '@mintlify/previewing': 4.0.15(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)
-      '@mintlify/validation': 0.1.71(@mintlify/models@0.0.36)(openapi-types@12.1.3)
+      '@mintlify/link-rot': 3.0.43(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)(gray-matter@4.0.3)
+      '@mintlify/models': 0.0.37(openapi-types@12.1.3)
+      '@mintlify/prebuild': 1.0.43(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
+      '@mintlify/previewing': 4.0.16(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)
+      '@mintlify/validation': 0.1.72(@mintlify/models@0.0.37)(openapi-types@12.1.3)
       axios: 1.5.0
       chalk: 5.3.0
       detect-port: 1.5.1
@@ -562,12 +562,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@mintlify/link-rot@3.0.42(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)(gray-matter@4.0.3):
-    resolution: {integrity: sha512-tpY1bGPOGlIaqKkA39KSzfPeiKTN27ad7JTpfndMAQhklQefLLHywMcPED2IuVeE47wQ3PhNkrOB9gFjic/MzA==}
+  /@mintlify/link-rot@3.0.43(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)(gray-matter@4.0.3):
+    resolution: {integrity: sha512-ldtAdjLCjbkzctKbn3sFjpEV4H14dtAbWdVRLJhP8eYr1qOS0FBYfYoTg3lD1/QLxi1BT1H4Co+PCjSV65Gl+g==}
     engines: {node: '>=18.0.0'}
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/prebuild': 1.0.42(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
+      '@mintlify/prebuild': 1.0.43(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
       chalk: 5.3.0
       fs-extra: 11.1.1
       is-absolute-url: 4.0.1
@@ -585,8 +585,8 @@ packages:
       - supports-color
     dev: false
 
-  /@mintlify/models@0.0.36(openapi-types@12.1.3):
-    resolution: {integrity: sha512-T0EVS+dULu6GQI8SxitPHv5lHOxfJ3tl+yA5CBMi2EMesGIHnbub38mltwHIjpTJO6lfVf2ob5kNkPrgwl2Agg==}
+  /@mintlify/models@0.0.37(openapi-types@12.1.3):
+    resolution: {integrity: sha512-bfr+3E1DoFU6TvbY1DuBT4sXo5aNHAP2yXAjIe3bsDa7HThHJ8nkCxbq2LZIJd5An2hC3poDVXfiGrOyx8Vn5Q==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       openapi-types: 12.x
@@ -594,8 +594,8 @@ packages:
       openapi-types: 12.1.3
     dev: false
 
-  /@mintlify/prebuild@1.0.42(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2):
-    resolution: {integrity: sha512-0bHGvzeGx7l6qh1Glm8k7s5WRPQezMtbP9KfH+Z+klDXwpX4c7QhUba5hbGwQwCIUB7x9+iF+5GEp3Z5a4e5SA==}
+  /@mintlify/prebuild@1.0.43(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2):
+    resolution: {integrity: sha512-navkQmNDVzGi1XCX/X4NnDlyQRcGg/XeUHELY9zHdvR1K49pzNn70zO7xS89JyK6Q/J8D5ozrB/vG6wB+EYGsg==}
     peerDependencies:
       '@apidevtools/swagger-parser': 10.x
       '@mintlify/models': '>= 0.0.15 < 1'
@@ -606,23 +606,23 @@ packages:
       unist-util-visit: ^4.1.1
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/models': 0.0.36(openapi-types@12.1.3)
-      '@mintlify/validation': 0.1.71(@mintlify/models@0.0.36)(openapi-types@12.1.3)
+      '@mintlify/models': 0.0.37(openapi-types@12.1.3)
+      '@mintlify/validation': 0.1.72(@mintlify/models@0.0.37)(openapi-types@12.1.3)
       fs-extra: 11.1.1
       gray-matter: 4.0.3
       openapi-types: 12.1.3
       unist-util-visit: 4.1.2
     dev: false
 
-  /@mintlify/previewing@4.0.15(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71):
-    resolution: {integrity: sha512-vilWevw54pU14Y5PjbP3+TY5t0iFjIHtlm/9UemCWjfzRyWzkFYhwpmrHs/Jj2ePiatufwDpLc0PiK4dNbtoJA==}
+  /@mintlify/previewing@4.0.16(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72):
+    resolution: {integrity: sha512-UPvEOEn75lbqYdVOfMWLAUv7UwdJX/SU2YXsQPa87pybPYtnv7OtTH8ziDFZjwSl0aXmiEQdWo6Pop+AWXoqfg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@mintlify/validation': '>= 0.1.48 < 1'
     dependencies:
       '@apidevtools/swagger-parser': 10.1.0(openapi-types@12.1.3)
-      '@mintlify/prebuild': 1.0.42(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.36)(@mintlify/validation@0.1.71)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
-      '@mintlify/validation': 0.1.71(@mintlify/models@0.0.36)(openapi-types@12.1.3)
+      '@mintlify/prebuild': 1.0.43(@apidevtools/swagger-parser@10.1.0)(@mintlify/models@0.0.37)(@mintlify/validation@0.1.72)(fs-extra@11.1.1)(gray-matter@4.0.3)(openapi-types@12.1.3)(unist-util-visit@4.1.2)
+      '@mintlify/validation': 0.1.72(@mintlify/models@0.0.37)(openapi-types@12.1.3)
       '@octokit/rest': 19.0.13
       chalk: 5.3.0
       chokidar: 3.5.3
@@ -652,13 +652,13 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@mintlify/validation@0.1.71(@mintlify/models@0.0.36)(openapi-types@12.1.3):
-    resolution: {integrity: sha512-uLH/Tsj8A5tOlnWQEZrS90mC3y9qmjwfS6UZPErVCPUPl/QcuoZcAlWgygwJJ+u4GQtjaAYsMCJgICUg4LPO9A==}
+  /@mintlify/validation@0.1.72(@mintlify/models@0.0.37)(openapi-types@12.1.3):
+    resolution: {integrity: sha512-8PyhxXlBLzSYQC7QY4uh7sgvk/0Vhpvl7Nj904BDGtVs20s7QV8jwR6eybH2xT7t1k9Ro/JixSKujj+txcdmjA==}
     peerDependencies:
       '@mintlify/models': '>= 0.0.36 < 1'
       openapi-types: 12.x
     dependencies:
-      '@mintlify/models': 0.0.36(openapi-types@12.1.3)
+      '@mintlify/models': 0.0.37(openapi-types@12.1.3)
       lcm: 0.0.3
       openapi-types: 12.1.3
       zod: 3.22.2
@@ -5283,12 +5283,12 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /mintlify@4.0.15:
-    resolution: {integrity: sha512-0oUrL3Vmt7HCnqpgIvUX0oHMpcvSJZX+gWZsKGtDFfD/sIWgcyl3cNPncp4pAM/Yk/gzG5jyfbxCuUIefLeB0Q==}
+  /mintlify@4.0.16:
+    resolution: {integrity: sha512-wFQwSB8m97lNIR/Zw+8Eo7gi/z8As0tAKgD+JSl5JDMGR1BqtKWs9ntVDJ25A+d8UAhgdSL6dxN7SGjsRrO7KA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
-      '@mintlify/cli': 4.0.15
+      '@mintlify/cli': 4.0.16
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -5384,8 +5384,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /next-international@1.0.0-rc.6:
-    resolution: {integrity: sha512-SZN7vYJxu+wWjvN63TBrS7gDrkbtqWYzsb+buEaDf4LYgCUErEwGjJeertZJCz54uLPVDMp4qRbE/0bDxyKPzQ==}
+  /next-international@1.0.1:
+    resolution: {integrity: sha512-oIwIJnMkhMtTvebVSaOYEyGznpIIMPo2D69I+aSt0JFh+kPzB1s2oSLaAQ9CuhzXiiUDPiAgMB5OPSkk1HR3yg==}
     dependencies:
       client-only: 0.0.1
       international-types: 0.8.0
