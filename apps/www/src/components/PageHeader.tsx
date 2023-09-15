@@ -31,7 +31,7 @@ export const PageHeader = ({
       {description && description.length > 0 && (
         <div className="max-w-md md:max-w-lg">
           <Balancer
-            as="p"
+            as="h2"
             className="text-center text-base leading-7 text-muted-foreground md:text-lg"
           >
             {description}

@@ -30,8 +30,8 @@ const Footer = () => {
             <StyledLink href="/legal/privacy-policy" prefetch={false} variant="secondary">
               Privacy
             </StyledLink>
-            <StyledLink href="/press" prefetch={false} variant="secondary">
-              Press
+            <StyledLink href="/brand" prefetch={false} variant="secondary">
+              Company
             </StyledLink>
             <Status />
           </div>

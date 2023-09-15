@@ -37,8 +37,10 @@ const User = () => {
 };
 
 const UserWithProvider = () => {
+  // We don't need to refetch the session as it's only used to
+  // display the username and avatar
   return (
-    <SessionProvider>
+    <SessionProvider refetchInterval={0} refetchOnWindowFocus={false}>
       <User />
     </SessionProvider>
   );

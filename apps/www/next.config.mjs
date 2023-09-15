@@ -31,6 +31,11 @@ const config = {
             source: '/support',
             destination: `https://github.com/vahor/pedaki-pedaki.fr/issues/new/choose`,
             permanent: false,
+        },
+        {
+            source: '/about',
+            destination: `/brand`,
+            permanent: false,
         }
     ],
 

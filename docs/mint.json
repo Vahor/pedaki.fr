@@ -11,7 +11,7 @@
     "dark": "#F97316",
     "light": "#F97316",
     "background": {
-      "dark": "#090014"
+      "dark": "#0F1118"
     },
     "anchors": {
       "from": "#FBAB73",
@@ -30,14 +30,19 @@
   },
   "anchors": [
     {
-      "name": "Changelog",
-      "icon": "timer",
-      "url": "changelog"
-    },
-    {
       "name": "Communauté",
       "icon": "discord",
       "url": "https://www.pedaki.fr/community"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Support",
+      "url": "support"
+    },
+    {
+      "name": "Nouveautés",
+      "url": "news"
     }
   ],
   "navigation": [
@@ -72,10 +77,28 @@
       ]
     },
     {
+      "group": "Support",
+      "pages": [
+        "support/introduction",
+        "support/roadmap"
+      ]
+    },
+    {
+      "group": "News",
+      "pages": [
+        "news/introduction"
+      ]
+    },
+    {
+      "group": "Articles",
+      "pages": [
+        "news/post/initial-press-release"
+      ]
+    },
+    {
       "group": "Changelog",
       "pages": [
-        "changelog/2023-08",
-        "changelog/2023-07"
+        "news/changelog/2023-08"
       ]
     }
   ],
