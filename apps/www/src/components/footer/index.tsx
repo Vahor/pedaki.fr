@@ -30,6 +30,9 @@ const Footer = () => {
             <StyledLink href="/legal/privacy-policy" prefetch={false} variant="secondary">
               Privacy
             </StyledLink>
+            <StyledLink href="/press" prefetch={false} variant="secondary">
+              Press
+            </StyledLink>
             <Status />
           </div>
           <div className="flex flex-row items-center gap-2">

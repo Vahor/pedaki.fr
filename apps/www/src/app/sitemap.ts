@@ -6,6 +6,7 @@ const staticRoutes = [
   { url: '/pricing', priority: 1 },
   { url: '/legal/privacy-policy', priority: 0.5 },
   { url: '/legal/terms-of-service', priority: 0.5 },
+  { url: '/press', priority: 0.5 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
