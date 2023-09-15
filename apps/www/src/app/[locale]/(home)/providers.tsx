@@ -2,7 +2,6 @@
 
 import { I18nProviderClient } from '~/locales/client';
 import fr from '~/locales/fr';
-import type { BaseLocale } from 'international-types';
 import React from 'react';
 import { Provider as BalancerProvider } from 'react-wrap-balancer';
 import { Toaster } from 'sonner';
