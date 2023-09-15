@@ -1,6 +1,7 @@
 import AboutUs from '~/app/brand/about-us';
 import Assets from '~/app/brand/assets';
 import Naming from '~/app/brand/naming';
+import News from '~/app/brand/news';
 import { PageHeader } from '~/components/PageHeader';
 import type { Metadata } from 'next';
 import React from 'react';
@@ -20,6 +21,7 @@ const CompanyPage = () => {
       <Naming />
       <AboutUs />
       <Assets />
+      <News />
     </div>
   );
 };

@@ -5,11 +5,8 @@ const Naming = () => {
     <section>
       <h3>Naming</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci aliquam assumenda
-        consequuntur deleniti deserunt dolorem doloremque eius eligendi error expedita illum iure
-        magni minima minus modi molestiae nemo odio officiis quam, quas qui sapiente sint unde,
-        voluptate. Consequuntur, cumque eaque facere maiores numquam repudiandae sapiente sint sunt
-        tempora voluptatum.
+        Là on explique ce qu'est le nom, comment il se dit, comment il s'écrit (en minuscule "pedaki" et pas "Pedaki" par exemple).
+          Faudrait le respecter aussi, pas comme sur cette page.
       </p>
     </section>
   );
