@@ -4,9 +4,7 @@ const AboutUs = () => {
   return (
     <section>
       <h3>About Us</h3>
-      <p>
-        Ici on dit qu'on est 3 gus qui font ça pour un projet de fin d'études.
-      </p>
+      <p>Ici on dit qu&apos;on est 3 gus qui font ça pour un projet de fin d&apos;études.</p>
     </section>
   );
 };
