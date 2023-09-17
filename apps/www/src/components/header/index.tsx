@@ -9,12 +9,12 @@ const Header = () => {
         {/* Grid bg */}
         <div
           aria-hidden
-          className="absolute inset-x-0 top-0 z-[-1] mx-auto h-96 bgi-grid-gray-200"
+          className="absolute inset-x-0 top-0 z-[-1] mx-auto h-96 bgi-grid-slate-200"
           style={{
             backgroundPositionX: '-16px',
           }}
         >
-          <div className="h-full w-full bg-gradient-to-b from-transparent via-gray-50 to-gray-50"></div>
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-white to-white"></div>
         </div>
 
         <div className="pt-8"></div>

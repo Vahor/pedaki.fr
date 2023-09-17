@@ -83,13 +83,13 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
             ref={ref}
             href={href!}
             className={cn(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground data-[active=true]:bg-accent/50',
+              'block select-none space-y-1 group rounded-md p-3 leading-none no-underline outline-none hover:bg-secondary/50 focus:bg-secondary focus:text-secondary data-[active=true]:bg-secondary/50',
               className,
             )}
             {...props}
           >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+            <div className="text-sm font-medium leading-none group-hover:text-orange">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted">{children}</p>
           </Link>
         </NavigationMenuLink>
       </li>
