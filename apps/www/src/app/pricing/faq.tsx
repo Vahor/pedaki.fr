@@ -28,7 +28,7 @@ const elements = [
 
 const Faq = () => {
   return (
-    <section className="container grid grid-cols-1 gap-8 py-16 md:grid-cols-[1fr_2fr]" id="faq">
+    <section className="container grid grid-cols-1 gap-8 pt-16 md:grid-cols-[1fr_2fr]" id="faq">
       {/* TODO: add patten somewhere */}
       <div className="flex flex-col gap-2">
         <h2 className="text-4xl font-bold">FAQ</h2>

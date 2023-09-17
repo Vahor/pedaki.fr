@@ -21,7 +21,7 @@ const Footer = () => {
           <LanguageSelector />
         </div>
       </div>
-      <div className="border-t py-4">
+      <div className="border-t py-4 text-xs text-secondary">
         <div className="flex flex-row items-center justify-between gap-2">
           <div className="flex flex-col gap-3.5 text-sm md:flex-row md:items-center">
             <StyledLink href="/legal/terms-of-service" prefetch={false} variant="secondary">
@@ -36,8 +36,8 @@ const Footer = () => {
             <Status />
           </div>
           <div className="flex flex-row items-center gap-2">
-            <span className="text-sm2 text-muted-foreground">© 2023</span>
-            <span className="text-sm2 text-muted-foreground">Lorem ipsum dolor sit amet.</span>
+            <span>© 2023</span>
+            <span>Lorem ipsum dolor sit amet.</span>
           </div>
         </div>
       </div>

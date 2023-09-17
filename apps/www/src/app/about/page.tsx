@@ -1,10 +1,12 @@
+import { Separator } from '@pedaki/design/ui/separator';
 import AboutUs from '~/app/about/about-us';
 import Assets from '~/app/about/assets';
 import Naming from '~/app/about/naming';
-import News from '~/app/about/news';
 import { PageHeader } from '~/components/PageHeader';
 import type { Metadata } from 'next';
 import React from 'react';
+import {pageBaseStyle} from "~/styles/constants";
+
 
 export const metadata: Metadata = {
   description: 'lorem ipsum dolor sit amet',
@@ -13,15 +15,18 @@ export const metadata: Metadata = {
 
 const CompanyPage = () => {
   return (
-    <div>
+    <div className={pageBaseStyle}>
       <PageHeader
-        title="Pedaki"
-        description="Page qui regroupe nos assets et informations sur la companie."
+        title="A propos de pedaki"
+        description="Page qui regroupe nos assets et informations sur pedaki."
       />
-      <Naming />
-      <AboutUs />
-      <Assets />
-      <News />
+      <div className="container mt-8 flex flex-col gap-4">
+        <Separator className="bg-gradient-to-r from-gray-50 via-gray-200 to-gray-50 my-4" />
+        <AboutUs />
+
+        <Naming />
+        <Assets />
+      </div>
     </div>
   );
 };

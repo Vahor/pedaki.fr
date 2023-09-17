@@ -3,6 +3,7 @@ import PriceTable from '~/app/pricing/priceTable';
 import { PageHeader } from '~/components/PageHeader';
 import type { Metadata } from 'next';
 import React from 'react';
+import {pageBaseStyle} from "~/styles/constants";
 
 export const metadata: Metadata = {
   description: 'lorem ipsum dolor sit amet',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const PricingPage = () => {
   return (
-    <div>
+    <div className={pageBaseStyle}>
       <PageHeader
         title="Trouve une offre qui te convient"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure nisi non nostrum
