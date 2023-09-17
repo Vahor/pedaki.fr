@@ -49,7 +49,7 @@ const UserWithProvider = () => {
 const Guest = () => {
   return (
     <Link href="/login" prefetch={false}>
-      <Button variant="outline" rounded="full" className="font-semibold">Connexion</Button>
+      <Button variant="outline" className="font-semibold">Connexion</Button>
     </Link>
   );
 };
