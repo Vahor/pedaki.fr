@@ -24,13 +24,13 @@ const Footer = () => {
       <div className="border-t py-4 text-xs text-secondary">
         <div className="flex flex-row items-center justify-between gap-2">
           <div className="flex flex-col gap-3.5 text-sm md:flex-row md:items-center">
-            <StyledLink href="/legal/terms-of-service" prefetch={false} variant="secondary">
+            <StyledLink href="/legal/terms-of-service" prefetch={false} variant="subtle_secondary">
               Terms
             </StyledLink>
-            <StyledLink href="/legal/privacy-policy" prefetch={false} variant="secondary">
+            <StyledLink href="/legal/privacy-policy" prefetch={false} variant="subtle_secondary">
               Privacy
             </StyledLink>
-            <StyledLink href="/about" prefetch={false} variant="secondary">
+            <StyledLink href="/about" prefetch={false} variant="subtle_secondary">
               Company
             </StyledLink>
             <Status />

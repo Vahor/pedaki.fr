@@ -3,9 +3,9 @@ import AboutUs from '~/app/about/about-us';
 import Assets from '~/app/about/assets';
 import Naming from '~/app/about/naming';
 import { PageHeader } from '~/components/PageHeader';
+import { pageBaseStyle } from '~/styles/constants';
 import type { Metadata } from 'next';
 import React from 'react';
-import {pageBaseStyle} from "~/styles/constants";
 
 
 export const metadata: Metadata = {
@@ -20,12 +20,13 @@ const CompanyPage = () => {
         title="A propos de pedaki"
         description="Page qui regroupe nos assets et informations sur pedaki."
       />
-      <div className="container mt-8 flex flex-col gap-4">
-        <Separator className="bg-gradient-to-r from-gray-50 via-gray-200 to-gray-50 my-4" />
-        <AboutUs />
-
-        <Naming />
-        <Assets />
+      <div className="mt-8 container">
+        <Separator gradient="gray" className="mb-8"/>
+        <div className="flex flex-col gap-16">
+          <AboutUs />
+          <Naming />
+          <Assets />
+        </div>
       </div>
     </div>
   );

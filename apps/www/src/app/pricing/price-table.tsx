@@ -62,8 +62,9 @@ const PriceTable = () => {
   return (
     <div>
       <h2 className="sr-only">Comparatif</h2>
-      <div className="sticky top-0 z-[1] w-full pb-4 pt-20 backdrop-blur">
-        <div className="container flex text-base">
+      <div className="sticky top-12 z-[1] w-full pb-4 pt-8">
+        <div className="absolute inset-0 -mt-12 backdrop-blur z-[1]"></div>
+        <div className="relative flex text-base z-[20]">
           <div className="w-0 sm:w-[24%]"></div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Self-Host</span>
@@ -87,7 +88,7 @@ const PriceTable = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container relative">
         <FeatureTable features={table1} title="Features" />
         <FeatureTable features={table1} title="Sécurité" />
         <FeatureTable features={table1} title="Jsp" />
@@ -102,7 +103,7 @@ const FeatureTable = ({ features, title }: { features: Feature[]; title: string 
       {/* TODO: use static id */}
       <a href={`#${title}`}>
         <h3
-          className="sticky top-44 z-0 scroll-mt-[180px] border-b pb-2 text-xl font-bold backdrop-blur"
+          className="sticky top-44 z-0 scroll-mt-[180px] border-b pb-1 mb-1 text-xl font-bold backdrop-blur"
           id={title}
         >
           {title}

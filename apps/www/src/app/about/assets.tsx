@@ -7,56 +7,41 @@ const Assets = () => {
   return (
     <section>
       <SectionTitle anchor="assets">Assets</SectionTitle>
-      <p className="pb-8 text-secondary">
-        Là on fait une petite grille avec le logo, les couleurs, les polices, etc. Et qui dit les
-        conditions pour utiliser tout ça.
+      <p className="mb-8 text-secondary">
+        Tous nos assets sont à votre disposition, la seule chose que nous vous demandons est de nous
+        citer si vous les utilisez, et de ne pas les modifier.
       </p>
-
-      <p className="text-orange-500">
-        orange -500
-      </p>
-      <p className="text-orange-500/50">
-        orange -500/50
-      </p>
-      <p className="text-orange-300">
-        orange -300
-      </p>
-
-        <p className="text-primary">
-            text-primary
-        </p>
-        <p className="text-primary/50">
-            text-primary/50
-        </p>
-
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <AssetImage
-          className="dark bg-primary text-primary"
+          className="dark bg-primary"
           title="Logo"
           alt="Le logo de Pedaki"
           image="https://pedaki.fr/logo-dark.svg"
-          width={200}
-          height={200}
         />
         <AssetImage
-          className="bg-gray-50 text-black"
+          className="bg-secondary"
           title="Logo"
           alt="Le logo de Pedaki"
           image="https://pedaki.fr/logo-light.svg"
-          width={200}
-          height={200}
         />
         <AssetImage
-          className="bg-gray-50 p-16 text-black"
+          className="bg-secondary"
           title="Logo"
           alt="Icon"
           image="https://pedaki.fr/logo.png"
-          width={700}
-          height={700}
         />
-        <AssetColor title="Primary" hex="#F97316" hsl="HSL 25, 90%, 60%" descriptionClassName="text-primary-foreground"/>
-        <AssetColor title="Accent" hex="#F97316" />
-        <AssetColor title="Muted white" hex="#F4F5F8" />
+        <AssetColor
+          title="Orange"
+          hex="#F76808"
+          rgb="RGB 243 88 21"
+          descriptionClassName="text-primary-foreground"
+        />
+        <AssetColor
+          title="Brown Orange"
+          hex="#E48844"
+          rgb="RGB 228 136 68"
+          descriptionClassName="text-primary-foreground"
+        />
       </div>
     </section>
   );
@@ -87,20 +72,23 @@ const AssetCard = ({
 const AssetImage = ({
   alt,
   image,
-  width,
-  height,
   className,
 }: {
   title: string;
   alt: string;
   image: string;
-  width: number;
-  height: number;
   className?: string;
 }) => {
   return (
     <AssetCard className={cn(className, 'select-none')}>
-      <Image src={image} alt={alt} width={width} height={height} />
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        style={{ objectFit: 'contain' }}
+        className="p-8"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
     </AssetCard>
   );
 };
@@ -108,22 +96,22 @@ const AssetImage = ({
 const AssetColor = ({
   title,
   hex,
-  hsl,
+  rgb,
   className,
-    descriptionClassName,
+  descriptionClassName,
 }: {
   title: string;
   hex: string;
-  hsl?: string;
+  rgb?: string;
   className?: string;
   descriptionClassName?: string;
 }) => {
   return (
     <AssetCard className={className} style={{ backgroundColor: hex }}>
       <div>
-        <p className="select-none text-lg font-medium text-foreground">{title}</p>
-        <p className={cn("text-sm", descriptionClassName)}>{hex}</p>
-        <p className={cn("text-sm", descriptionClassName)}>{hsl}</p>
+        <p className="text-foreground select-none text-lg font-medium">{title}</p>
+        <p className={cn('text-sm', descriptionClassName)}>{hex}</p>
+        <p className={cn('text-sm', descriptionClassName)}>{rgb}</p>
       </div>
     </AssetCard>
   );

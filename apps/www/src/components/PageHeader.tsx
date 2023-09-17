@@ -30,9 +30,10 @@ export const PageHeader = ({
       </Balancer>
       {description && description.length > 0 && (
         <div className="max-w-md md:max-w-xl">
+          {/* z-[2] is required as we use a blur hack in PriceTable */}
           <Balancer
             as="h2"
-            className="text-center text-base leading-7 text-secondary md:text-lg"
+            className="text-center text-base leading-7 text-secondary md:text-lg z-[2] relative"
           >
             {description}
           </Balancer>
@@ -42,4 +43,4 @@ export const PageHeader = ({
   );
 };
 
-export const wrapperClassName = 'px-4 pt-8';
+export const wrapperClassName = 'mx-4 mt-12';

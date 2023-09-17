@@ -10,9 +10,7 @@ const Hero = () => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center gap-4 px-4 pt-12">
-        <div>
-          <Badges />
-        </div>
+        <Badges />
         <PageHeader
           title="Le futur de la gestion scolaire"
           description="Toutes les fonctionnalités pour gérer votre établissement, dans une seule application."
@@ -21,7 +19,7 @@ const Hero = () => {
         />
         <div className="mt-3 flex flex-col gap-2 sm:flex-row md:mt-8 items-center justify-center">
           <Link href="https://demo.pedaki.fr">
-            <Button variant="outline" className="font-semibold hover:text-orange">
+            <Button variant="outline" className="font-semibold">
               <span>Découvrir le projet</span>
               <AnimatedChevronRight />
             </Button>
@@ -41,7 +39,7 @@ const Hero = () => {
 const Badges = () => {
   return (
     <div className="flex justify-center gap-4">
-      <Badge variant="secondary" className="border-accent-foreground/10">
+      <Badge variant="outline" className="bg-white">
         Ouverture prévue en 2024
       </Badge>
     </div>
