@@ -19,9 +19,9 @@ const PricingPage = () => {
         title="Trouve une offre qui te convient"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
       />
-      <div className="container mt-8">
+      <div className="mt-8">
         {/* z-[2] is required as we use a blur hack in PriceTable */}
-        <Separator gradient="gray" className="z-[2] relative" />
+        <Separator gradient="gray" className="z-[2] relative container" />
         <PriceTable />
         <Faq />
       </div>

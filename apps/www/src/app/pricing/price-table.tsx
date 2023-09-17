@@ -64,7 +64,7 @@ const PriceTable = () => {
       <h2 className="sr-only">Comparatif</h2>
       <div className="sticky top-12 z-[1] w-full pb-4 pt-8">
         <div className="absolute inset-0 -mt-12 backdrop-blur z-[1]"></div>
-        <div className="relative flex text-base z-[20]">
+        <div className="relative flex container text-base z-[20]">
           <div className="w-0 sm:w-[24%]"></div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Self-Host</span>
@@ -89,22 +89,21 @@ const PriceTable = () => {
         </div>
       </div>
       <div className="container relative">
-        <FeatureTable features={table1} title="Features" />
-        <FeatureTable features={table1} title="Sécurité" />
-        <FeatureTable features={table1} title="Jsp" />
+        <FeatureTable features={table1} title="Features" id="features"/>
+        <FeatureTable features={table1} title="Sécurité" id="security" />
+        <FeatureTable features={table1} title="Jsp" id="aaaaaa" />
       </div>
     </div>
   );
 };
 
-const FeatureTable = ({ features, title }: { features: Feature[]; title: string }) => {
+const FeatureTable = ({ features, title, id }: { features: Feature[]; title: string; id:string }) => {
   return (
     <section>
-      {/* TODO: use static id */}
-      <a href={`#${title}`}>
+      <a href={`#${id}`}>
         <h3
           className="sticky top-44 z-0 scroll-mt-[180px] border-b pb-1 mb-1 text-xl font-bold backdrop-blur"
-          id={title}
+          id={id}
         >
           {title}
         </h3>
@@ -113,7 +112,7 @@ const FeatureTable = ({ features, title }: { features: Feature[]; title: string 
         <Card className="my-2 bg-secondary" withShadow={false}>
           {features.map((feature, i) => (
             <div
-              className="flex flex-col items-center border-b text-sm transition last:border-transparent hover:bg-secondary sm:flex-row"
+              className="flex flex-col items-center border-b text-sm transition last:border-transparent sm:flex-row"
               key={i}
             >
               <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left">
