@@ -12,7 +12,7 @@ const Footer = () => {
           <Logo />
           <div className="">
             <p className="font-semibold">Lorem ipsum dolor sit amet.</p>
-            <p className="text-sm2 font-medium text-muted-foreground">
+            <p className="text-sm font-medium text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.
             </p>
           </div>

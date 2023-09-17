@@ -32,7 +32,7 @@ export const PageHeader = ({
         <div className="max-w-md md:max-w-xl">
           <Balancer
             as="h2"
-            className="text-center text-base leading-7 text-muted-foreground md:text-lg"
+            className="text-center text-base leading-7 text-secondary md:text-lg"
           >
             {description}
           </Balancer>

@@ -14,7 +14,7 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="group" asChild>
-        <Button variant="outline" className="data-[state=open]:bg-accent">
+        <Button variant="outline">
           <div className="flex items-center">
             <div className="flex items-center gap-1">
               <IconTranslation className="h-4 w-4" />

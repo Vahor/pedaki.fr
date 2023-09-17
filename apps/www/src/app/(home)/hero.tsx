@@ -1,8 +1,10 @@
 import { Badge } from '@pedaki/design/ui/badge';
 import { Button } from '@pedaki/design/ui/button';
+import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import { PageHeader } from '~/components/PageHeader';
 import Link from 'next/link';
 import React from 'react';
+
 
 const Hero = () => {
   return (
@@ -17,18 +19,19 @@ const Hero = () => {
           withPadding={false}
           titleClassName="md:text-6xl max-w-screen-md"
         />
-        <div className="mt-3 flex flex-col gap-4 sm:flex-row md:mt-8">
-          <Button
-            variant="secondary"
-            size="lg"
-            className="space-x-2 border bg-white font-bold hover:opacity-90"
-            asChild
-          >
-            <Link href="https://demo.pedaki.fr">Ouvrir la démo</Link>
-          </Button>
-          <Button variant="default" size="lg" className="space-x-2 font-bold hover:opacity-90">
-            <span>Découvrir le projet</span>
-          </Button>
+        <div className="mt-3 flex flex-col gap-2 sm:flex-row md:mt-8 items-center justify-center">
+          <Link href="https://demo.pedaki.fr">
+            <Button variant="outline" rounded="full" className="font-semibold">
+              <span>Découvrir le projet</span>
+              <AnimatedChevronRight />
+            </Button>
+          </Link>
+          <Link href="https://app.pedaki.fr">
+            <Button variant="transparent" rounded="full" className="font-semibold">
+              <span>Ouvrir la démo</span>
+              <AnimatedChevronRight />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

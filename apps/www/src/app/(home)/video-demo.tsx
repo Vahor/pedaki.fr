@@ -93,7 +93,7 @@ const Arrow = () => {
 const VideoDemo = () => {
   return (
     <section className="relative mx-auto mt-20 w-full max-w-screen-xl px-8 md:mt-14 xl:px-4 2xl:px-0">
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 bg-gradient-to-b from-transparent to-gray-50 to-90% sm:h-64"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 bg-gradient-to-b from-transparent to-white to-90% sm:h-64"></div>
       <Arrow />
       <Dialog>
         <DialogTrigger
@@ -101,7 +101,7 @@ const VideoDemo = () => {
           className="group relative flex w-full cursor-pointer"
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary shadow-outline shadow-primary/20 transition duration-300 hover:shadow-outline-lg hover:shadow-primary/30 group-hover:scale-110 md:h-16 md:w-16">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange shadow-outline shadow-orange/20 transition duration-300 hover:shadow-outline-lg hover:shadow-orange/30 group-hover:scale-110 md:h-16 md:w-16">
               <svg width="32" height="32" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="#ffffff"

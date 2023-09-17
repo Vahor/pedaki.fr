@@ -28,7 +28,7 @@ const Desktop = () => {
             return (
               <NavigationMenuItem key={item.name}>
                 <>
-                  <NavigationMenuTrigger className="bg-white" data-active={isActive}>
+                  <NavigationMenuTrigger className="bg-white font-medium" data-active={isActive}>
                     {item.name}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>

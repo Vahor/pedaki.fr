@@ -10,7 +10,7 @@ const SocialProof = () => {
     <section className="relative mx-auto block w-full max-w-screen-xl px-8">
       {/* TODO: flex w-max overflow-hidden + slider ? */}
       <div className="flex flex-col items-center gap-4 pb-8">
-        <p className="text-muted-foreground">Un projet soutenu par</p>
+        <p className="text-secondary">Un projet soutenu par</p>
         <div className="flex max-w-screen-sm items-center">
           {/* TODO: svg ?*/}
           <OrganizationIcon src={grandEst} alt="grandest.fr" />

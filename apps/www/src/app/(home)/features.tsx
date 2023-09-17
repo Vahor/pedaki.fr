@@ -1,3 +1,4 @@
+import { Button } from '@pedaki/design/ui/button';
 import { CardDescription, CardTitle } from '@pedaki/design/ui/card';
 import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import { StyledLink } from '~/components/StyledLink';
@@ -6,26 +7,9 @@ import React from 'react';
 
 const Features = () => {
   return (
-    <section className="border-y bg-gray-100 py-16">
+    <section className="border-y bg-secondary py-16">
       <div className="container py-4">
-        <div className="flex flex-col justify-between lg:flex-row lg:items-center">
-          <div className="space-y-2">
-            <h2 className="text-4xl font-bold">Des super trucs</h2>
-            <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis, ipsam
-            </p>
-          </div>
-          <div>
-            <Link
-              href="https://docs.pedaki.fr"
-              className="group flex items-center gap-1 pt-2 text-sm font-semibold text-primary transition-opacity duration-300 hover:opacity-75"
-              prefetch={false}
-            >
-              <span>En savoir plus</span>
-              <AnimatedChevronRight />
-            </Link>
-          </div>
-        </div>
+        <h2 className="sr-only" id="features">Features</h2>
         <div className="relative mb-2 mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
           <FeatureCard
             title="Lorem ipsum dolor sit amet, consectetur. 1"
@@ -78,18 +62,16 @@ const FeatureCard: React.FC<{
   return (
     <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-16 lg:even:flex-row-reverse">
       <div className="relative space-y-4 p-0.5">
-        <div className="h-10 w-10 rounded-full bg-primary/50">{/*  TODO icon per feature */}</div>
+        <div className="h-10 w-10 rounded-full bg-orange/50">{/*  TODO icon per feature */}</div>
         <CardTitle className="">{title}</CardTitle>
         <CardDescription>
           <span>{description}</span>
-          <StyledLink
-            href={link}
-            prefetch={false}
-            className="group mt-2 flex w-max items-center gap-1 font-semibold"
-          >
-            <span>{learnMore}</span>
-            <AnimatedChevronRight />
-          </StyledLink>
+          <Link href={link} prefetch={false} className="block">
+            <Button variant="transparent" rounded="full" className="font-semibold flex p-0 h-min mt-2">
+              <span>{learnMore}</span>
+              <AnimatedChevronRight />
+            </Button>
+          </Link>
         </CardDescription>
       </div>
       <video
@@ -99,7 +81,7 @@ const FeatureCard: React.FC<{
         autoPlay
         muted
         controls={false}
-        className="mb-4 max-h-[300px] overflow-hidden rounded-xl bg-secondary-foreground object-cover object-center p-1 lg:max-h-[400px] lg:w-[50%]"
+        className="mb-4 max-h-[300px] overflow-hidden rounded-xl border bg-secondary object-cover object-center p-1 lg:max-h-[400px] lg:w-[50%]"
       >
         <source src={video} type="video/mp4" />
       </video>

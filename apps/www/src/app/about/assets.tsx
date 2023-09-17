@@ -7,7 +7,7 @@ const Assets = () => {
   return (
     <section>
       <SectionTitle anchor="assets">Assets</SectionTitle>
-      <p className="pb-8 text-muted-foreground">
+      <p className="pb-8 text-secondary">
         Là on fait une petite grille avec le logo, les couleurs, les polices, etc. Et qui dit les
         conditions pour utiliser tout ça.
       </p>
@@ -31,7 +31,7 @@ const Assets = () => {
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <AssetImage
-          className="dark bg-background text-foreground"
+          className="dark bg-primary text-primary"
           title="Logo"
           alt="Le logo de Pedaki"
           image="https://pedaki.fr/logo-dark.svg"
