@@ -42,7 +42,7 @@ const Font = ({
   descriptionClassName?: string;
 }) => {
   return (
-    <div className={cn('', className)}>
+    <div className={cn('rounded-lg border bg-secondary p-2', className)}>
       <p className="text-foreground mr-2 text-lg font-medium">{title}</p>
       <p className={cn('text-sm', descriptionClassName)}>{description}</p>
       <p style={{ fontFamily: `var(${fontVar})` }} className="mt-1">

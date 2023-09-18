@@ -10,7 +10,7 @@ const BrandColors = () => {
         Les couleurs de notre marque sont les suivantes, vous pouvez les voir en action sur notre
         site web.
       </p>
-      <div className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-2 rounded-lg border bg-secondary p-2 md:grid-cols-2 lg:grid-cols-3">
         <AssetColor
           title="Orange"
           hex="#F76808"
