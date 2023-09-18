@@ -1,6 +1,15 @@
+import { Card } from '@pedaki/design/ui/card';
+import { ColorPill } from '@pedaki/design/ui/color-pill';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@pedaki/design/ui/tooltip';
 import { cn } from '@pedaki/design/utils';
 import SectionTitle from '~/components/section/SectionTitle';
 import React from 'react';
+
 
 const BrandColors = () => {
   return (
@@ -9,69 +18,61 @@ const BrandColors = () => {
       <p className="mb-8 text-secondary">
         Les couleurs de notre marque sont les suivantes, vous pouvez les voir en action sur notre
         site web.
+        <br />
+        Chaque couleur à plusieurs nuances, mais celles-ci sont les principales.
       </p>
-      <div className="grid grid-cols-1 gap-x-8 gap-y-2 rounded-lg border bg-secondary p-2 md:grid-cols-2 lg:grid-cols-3">
-        <AssetColor
-          title="Orange"
-          hex="#F76808"
-          rgb="RGB 243 88 21"
-          descriptionClassName="text-primary-foreground"
-        />
-        <AssetColor
-          title="Brown Orange"
-          hex="#E48844"
-          rgb="RGB 228 136 68"
-          descriptionClassName="text-primary-foreground"
-        />
-        <AssetColor
-          title="Logo green"
-          hex="#4e867e"
-          rgb="RGB 78 134 126"
-          descriptionClassName="text-primary-foreground"
-        />
-        <AssetColor
-          title="Light gray"
-          hex="#F9F9F9"
-          rgb="RGB 249 249 249"
-          descriptionClassName="text-primary-foreground"
-        />
-        <AssetColor
-          title="Dark gray"
-          hex="#1a1a1a"
-          rgb="RGB 26 26 26"
-          descriptionClassName="text-primary-foreground"
-        />
-      </div>
+      <Card>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 p-6 sm:grid-cols-2 lg:grid-cols-3">
+          <TooltipProvider delayDuration={0}>
+            <Color title="Orange" hex="#F76808" tooltip="Couleur d'accentuation" />
+            <Color
+              title="Orange-brun"
+              hex="#E48844"
+              tooltip="Utilisé pour les ombres et effets où le orange est déjà présent"
+            />
+            <Color title="Vert foncé" hex="#4E867E" tooltip="Vert utilisé dans le logo" />
+            <Color
+              title="Gris clair"
+              hex="#F9F9F9"
+              tooltip="Gris utilisé pour mettre en avant les éléments comme celui-ci"
+            />
+            <Color title="Gris foncé" hex="#1A1A1A" tooltip="Couleur de texte principale" />
+          </TooltipProvider>
+        </div>
+      </Card>
     </section>
   );
 };
 
-const AssetColor = ({
+const Color = ({
   title,
   hex,
-  rgb,
   className,
-  descriptionClassName,
+  tooltip,
 }: {
   title: string;
   hex: string;
-  rgb?: string;
   className?: string;
   descriptionClassName?: string;
+  tooltip: string;
 }) => {
   return (
-    <div className={cn('flex items-center', className)}>
-      <div
-        className="mr-2 inline-block h-5 w-5 rounded-full border"
-        style={{ backgroundColor: hex }}
-      ></div>
-      <div className="inline-block">
-        <p>
-          <span className="text-foreground mr-2 select-none text-lg font-medium">{title}</span>
-          <span className={cn('mr-2 text-sm', descriptionClassName)}>{hex}</span>
-          <span className={cn('mr-2 text-sm', descriptionClassName)}>{rgb}</span>
-        </p>
-      </div>
+    <div className={cn('flex items-center gap-2', className)}>
+      <ColorPill color={hex} className="h-[1.5rem] min-h-[1.5rem] w-[1.5rem] min-w-[1.5rem]" />
+      <Tooltip>
+        <TooltipTrigger>
+          <div className="text-left">
+            <p className="mb-0.5 font-medium text-primary">{title}</p>
+
+            <div className="text-xs text-secondary">
+              <p>{hex}</p>
+            </div>
+          </div>
+        </TooltipTrigger>
+        <TooltipContent className="max-w-xs" side="top" align="center">
+          <p>{tooltip}</p>
+        </TooltipContent>
+      </Tooltip>
     </div>
   );
 };
