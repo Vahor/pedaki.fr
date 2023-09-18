@@ -2,6 +2,7 @@ import { Separator } from '@pedaki/design/ui/separator';
 import AboutUs from '~/app/about/about-us';
 import Assets from '~/app/about/assets';
 import BrandColors from '~/app/about/brand-colors';
+import Fonts from '~/app/about/fonts';
 import Naming from '~/app/about/naming';
 import { PageHeader } from '~/components/PageHeader';
 import { pageBaseStyle } from '~/styles/constants';
@@ -27,6 +28,7 @@ const CompanyPage = () => {
           <Naming />
           <Assets />
           <BrandColors />
+          <Fonts />
         </div>
       </div>
     </div>
