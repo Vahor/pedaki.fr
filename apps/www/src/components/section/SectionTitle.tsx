@@ -8,7 +8,11 @@ interface SectionTitleProps {
 
 const SectionTitle = ({ children, anchor }: SectionTitleProps) => {
   return (
-    <Link href={`#${anchor}`} id={anchor} className="text-xl font-bold text-gray-900 sm:text-2xl pb-2 block">
+    <Link
+      href={`#${anchor}`}
+      id={anchor}
+      className="block pb-2 text-xl font-bold text-gray-900 sm:text-2xl"
+    >
       <h3>{children}</h3>
     </Link>
   );

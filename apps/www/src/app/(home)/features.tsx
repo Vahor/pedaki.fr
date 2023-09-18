@@ -1,7 +1,6 @@
 import { Button } from '@pedaki/design/ui/button';
 import { CardDescription, CardTitle } from '@pedaki/design/ui/card';
 import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
-import { StyledLink } from '~/components/StyledLink';
 import Link from 'next/link';
 import React from 'react';
 
@@ -9,7 +8,9 @@ const Features = () => {
   return (
     <section className="border-y bg-secondary py-16">
       <div className="container py-4">
-        <h2 className="sr-only" id="features">Features</h2>
+        <h2 className="sr-only" id="features">
+          Features
+        </h2>
         <div className="relative mb-2 mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
           <FeatureCard
             title="Lorem ipsum dolor sit amet, consectetur. 1"
@@ -67,7 +68,11 @@ const FeatureCard: React.FC<{
         <CardDescription>
           <span>{description}</span>
           <Link href={link} prefetch={false} className="block">
-            <Button variant="transparent" rounded="full" className="font-semibold flex p-0 h-min mt-2">
+            <Button
+              variant="transparent"
+              rounded="full"
+              className="mt-2 flex h-min p-0 font-semibold"
+            >
               <span>{learnMore}</span>
               <AnimatedChevronRight />
             </Button>

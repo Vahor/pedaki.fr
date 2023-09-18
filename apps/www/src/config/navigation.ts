@@ -36,7 +36,7 @@ export const navigation = [
         href: '/about',
         name: 'About',
         description: 'About the project',
-      }
+      },
     ],
   },
   {

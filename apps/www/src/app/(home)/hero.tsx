@@ -5,7 +5,6 @@ import { PageHeader } from '~/components/PageHeader';
 import Link from 'next/link';
 import React from 'react';
 
-
 const Hero = () => {
   return (
     <section>
@@ -17,7 +16,7 @@ const Hero = () => {
           withPadding={false}
           titleClassName="md:text-6xl max-w-screen-md"
         />
-        <div className="mt-3 flex flex-col gap-2 sm:flex-row md:mt-8 items-center justify-center">
+        <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:flex-row md:mt-8">
           <Link href="https://demo.pedaki.fr">
             <Button variant="outline" className="font-semibold">
               <span>Découvrir le projet</span>

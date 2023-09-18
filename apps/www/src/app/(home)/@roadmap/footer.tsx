@@ -3,7 +3,6 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
-
 const Footer = () => {
   return (
     <div className="mt-8 flex w-full justify-center gap-4">

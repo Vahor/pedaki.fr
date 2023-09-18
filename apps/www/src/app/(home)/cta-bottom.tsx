@@ -3,7 +3,6 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
-
 const CallToActionBottom = () => {
   return (
     <div className="border-t bg-secondary py-16">
@@ -21,9 +20,9 @@ const CallToActionBottom = () => {
         </div>
         <div>
           <Link href="https://docs.pedaki.fr">
-            <Button size='lg' variant="orange" className="font-semibold">
+            <Button size="lg" variant="orange" className="font-semibold">
               <span>Créer mon compte</span>
-              <AnimatedChevronRight className="text-white"/>
+              <AnimatedChevronRight className="text-white" />
             </Button>
           </Link>
         </div>

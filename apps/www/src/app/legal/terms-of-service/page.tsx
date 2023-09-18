@@ -1,7 +1,7 @@
 import { PageHeader } from '~/components/PageHeader';
+import { pageBaseStyle } from '~/styles/constants';
 import type { Metadata } from 'next';
 import React from 'react';
-import {pageBaseStyle} from "~/styles/constants";
 
 export const metadata: Metadata = {
   description: 'lorem ipsum dolor sit amet',

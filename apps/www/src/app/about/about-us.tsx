@@ -16,7 +16,11 @@ const AboutUs = () => {
           <div className="mb-2 text-secondary">
             <p>
               Ce projet a été initialisé par 3 étudiants de{' '}
-              <StyledLink href="https://www.mewo.fr/?ref=pedaki" className="text-primary" decoration="underline">
+              <StyledLink
+                href="https://www.mewo.fr/?ref=pedaki"
+                className="text-primary"
+                decoration="underline"
+              >
                 Mewo
               </StyledLink>{' '}
               en 2023 en tant que projet de fin d&apos;études.

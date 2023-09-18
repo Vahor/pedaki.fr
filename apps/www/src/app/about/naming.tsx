@@ -1,5 +1,5 @@
+import SectionTitle from '~/components/section/SectionTitle';
 import React from 'react';
-import SectionTitle from "~/components/section/SectionTitle";
 
 const Naming = () => {
   return (

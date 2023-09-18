@@ -6,7 +6,6 @@ import { pageBaseStyle } from '~/styles/constants';
 import type { Metadata } from 'next';
 import React from 'react';
 
-
 export const metadata: Metadata = {
   description: 'lorem ipsum dolor sit amet',
   title: 'Pricing',
@@ -21,7 +20,7 @@ const PricingPage = () => {
       />
       <div className="mt-8">
         {/* z-[2] is required as we use a blur hack in PriceTable */}
-        <Separator gradient="gray" className="z-[2] relative container" />
+        <Separator gradient="gray" className="container relative z-[2]" />
         <PriceTable />
         <Faq />
       </div>

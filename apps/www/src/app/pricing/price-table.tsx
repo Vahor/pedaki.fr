@@ -109,8 +109,8 @@ const FeatureTable = ({
 }) => {
   return (
     <section>
-      <a href={`#${id}`} className="sticky top-44 z-0 backdrop-blur mb-1 border-b pb-1 w-full">
-        <h3 className="text-xl font-bold scroll-mt-[180px]" id={id}>
+      <a href={`#${id}`} className="sticky top-44 z-0 mb-1 w-full border-b pb-1 backdrop-blur">
+        <h3 className="scroll-mt-[180px] text-xl font-bold" id={id}>
           {title}
         </h3>
       </a>
@@ -127,7 +127,7 @@ const FeatureTable = ({
                   <TooltipProvider delayDuration={0}>
                     <Tooltip>
                       <TooltipTrigger className="text-muted">
-                        <span className="border-secondary border-b border-dotted font-semibold">
+                        <span className="border-b border-dotted border-secondary font-semibold">
                           {feature.title}
                         </span>
                       </TooltipTrigger>

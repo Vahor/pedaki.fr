@@ -33,7 +33,7 @@ export const PageHeader = ({
           {/* z-[2] is required as we use a blur hack in PriceTable */}
           <Balancer
             as="h2"
-            className="text-center text-base leading-7 text-secondary md:text-lg z-[2] relative"
+            className="relative z-[2] text-center text-base leading-7 text-secondary md:text-lg"
           >
             {description}
           </Balancer>

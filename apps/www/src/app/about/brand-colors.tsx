@@ -10,7 +10,6 @@ import { cn } from '@pedaki/design/utils';
 import SectionTitle from '~/components/section/SectionTitle';
 import React from 'react';
 
-
 const BrandColors = () => {
   return (
     <section>
@@ -62,7 +61,7 @@ const Color = ({
       <Tooltip>
         <TooltipTrigger>
           <div className="text-left">
-            <p className="mb-0.5 font-medium text-primary">{title}</p>
+            <h4 className="mb-0.5 font-medium text-primary">{title}</h4>
 
             <div className="text-xs text-secondary">
               <p>{hex}</p>

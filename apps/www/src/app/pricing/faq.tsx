@@ -9,7 +9,6 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
-
 const elements = [
   {
     name: 'Remboursements ?',
@@ -47,8 +46,8 @@ const Faq = () => {
         </Link>
       </div>
       <Accordion type="single" collapsible>
-        {elements.map((element, index) => (
-          <AccordionItem value={element.name} className="border-transparent" key={index}>
+        {elements.map((element) => (
+          <AccordionItem value={element.name} className="border-transparent" key={element.name}>
             <AccordionTrigger>{element.name}</AccordionTrigger>
             <AccordionContent>{element.description}</AccordionContent>
           </AccordionItem>
