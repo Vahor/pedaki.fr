@@ -12,14 +12,14 @@ const AboutUs = () => {
     <section>
       <SectionTitle anchor="about-us">About Us</SectionTitle>
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col md:flex-row md:justify-between items-center">
+        <div className="flex flex-col items-center md:flex-row md:justify-between">
           <div className="mb-2 text-secondary">
             <p>
               Ce projet a été initialisé par 3 étudiants de{' '}
               <StyledLink href="/" className="text-primary" decoration="underline">
                 Mewo
               </StyledLink>{' '}
-              en 2023. Il s&apos;agit d&apos;un projet de fin d&apos;études.
+              en 2023 en tant que projet de fin d&apos;études.
             </p>
             <p>
               Pour en savoir plus sur le projet, vous pouvez consulter les articles sur notre
