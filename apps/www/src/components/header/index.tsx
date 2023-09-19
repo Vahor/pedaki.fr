@@ -19,16 +19,12 @@ const Header = () => {
 
         <div className="pt-8"></div>
       </div>
-      <header className="sticky inset-x-0 top-2 z-50 h-16">
-        <div
-          className="container mx-auto flex w-full max-w-screen-xl items-center justify-center md:w-max"
-          style={
-            {
-              // paddingRight: 'calc(2rem + var(--removed-body-scroll-bar-size, 0px))',
-            }
-          }
-        >
-          <div className="relative flex w-full flex-col rounded-lg bg-white px-4 py-2 shadow-xl">
+      <header className="container sticky inset-x-0 top-2 z-50 h-16 px-0">
+        <div className="container mx-auto flex w-full max-w-screen-xl items-center justify-center md:w-max">
+          <div
+            className="relative flex w-full flex-col rounded-lg bg-white px-4 py-2 shadow-xl"
+            id="header"
+          >
             <div className="flex justify-between gap-4">
               <Logo />
               <Navigation />

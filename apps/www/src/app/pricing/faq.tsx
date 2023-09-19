@@ -46,7 +46,7 @@ const Faq = () => {
         </Link>
       </div>
       <Accordion type="single" collapsible>
-        {elements.map((element) => (
+        {elements.map(element => (
           <AccordionItem value={element.name} className="border-transparent" key={element.name}>
             <AccordionTrigger>{element.name}</AccordionTrigger>
             <AccordionContent>{element.description}</AccordionContent>
