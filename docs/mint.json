@@ -47,7 +47,11 @@
     },
     {
       "name": "Nouveautés",
-      "url": "news"
+      "url": "changelog"
+    },
+    {
+      "name": "Blog",
+      "url": "blog"
     }
   ],
   "navigation": [
@@ -85,30 +89,43 @@
       "group": "Support",
       "pages": [
         "support/introduction",
-        "support/roadmap",
-        "support/faq"
+        "support/roadmap"
       ]
     },
     {
       "group": "FAQs",
-      "pages": ["faq/questions"]
-    },
-    {
-      "group": "News",
       "pages": [
-        "news/introduction"
+        "faq/questions"
       ]
     },
     {
-      "group": "Articles",
+      "group": "Nouveautés",
       "pages": [
-        "news/post/initial-press-release"
+        "changelog/latest"
       ]
     },
     {
-      "group": "Changelog",
+      "group": "2023",
       "pages": [
-        "news/changelog/2023-08"
+        "changelog/2023/september",
+        "changelog/2023/august"
+      ]
+    },
+    {
+      "group": "Blog",
+      "pages": [
+        "blog/latest"
+      ]
+    },
+    {
+      "group": "2023",
+      "pages": [
+        {
+          "group": "Auût",
+          "pages": [
+            "blog/2023/august/initial-press-release"
+          ]
+        }
       ]
     }
   ],

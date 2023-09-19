@@ -66,7 +66,7 @@ const PortalNav = ({
       <nav
         className={cn(
           'relative flex h-0 overflow-hidden transition-all duration-500 ease-in-out md:h-0',
-          mobileOpen ? 'h-[min(60vh,600px)]' : 'h-0',
+          mobileOpen ? 'h-[min(60vh,400px)]' : 'h-0',
         )}
       >
         <div className="mt-2 w-full border-t pt-2">
