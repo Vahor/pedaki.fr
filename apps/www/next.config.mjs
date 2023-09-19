@@ -8,7 +8,6 @@ const config = {
     swcMinify: true,
     poweredByHeader: false,
     experimental: {
-        appDir: true,
         serverActions: true,
         esmExternals: true,
     },
