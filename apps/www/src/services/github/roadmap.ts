@@ -19,7 +19,6 @@ export interface Issue {
   };
   repository: {
     resourcePath: string;
-    isPrivate: boolean;
     descriptionHTML: string;
   };
   author: {
@@ -73,7 +72,6 @@ query Roadmap {
                     }
                 }
                 repository {
-                    isPrivate
                     resourcePath
                     descriptionHTML
                 }

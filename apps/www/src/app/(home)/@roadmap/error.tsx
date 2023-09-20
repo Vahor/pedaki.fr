@@ -7,7 +7,6 @@ import Header from '~/app/(home)/@roadmap/header';
 import type { Issue } from '~/services/github/roadmap';
 import React from 'react';
 
-
 // TODO: remember to change this
 const fakeIssue: Issue = {
   number: 420,
@@ -28,7 +27,6 @@ const fakeIssue: Issue = {
   },
   repository: {
     resourcePath: 'pedaki-pedaki.fr',
-    isPrivate: false,
     descriptionHTML: 'The website of the Pedaki community',
   },
   author: {
