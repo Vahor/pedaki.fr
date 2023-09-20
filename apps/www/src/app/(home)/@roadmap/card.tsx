@@ -79,34 +79,34 @@ const StatusCircle = ({
 
 export const GithubCard = ({ issue }: { issue: Issue }) => {
   return (
-    <Link href={issue.content.url} prefetch={false} target="_blank" className="w-full">
+    <Link href={issue.url} prefetch={false} target="_blank" className="w-full">
       <Card className="cursor-pointer bg-white focus-within:border-orange hover:border-orange">
         <CardContent className="space-y-2 pb-3 pt-6">
           <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-secondary">
             <Tooltip>
               <TooltipTrigger>
-                <span className="underline">{issue.content.repository.resourcePath}</span>
+                <span className="underline">{issue.repository.resourcePath}</span>
               </TooltipTrigger>
               <TooltipContent className="max-w-xs">
                 <span
-                  dangerouslySetInnerHTML={{ __html: issue.content.repository.descriptionHTML }}
+                  dangerouslySetInnerHTML={{ __html: issue.repository.descriptionHTML }}
                 ></span>
               </TooltipContent>
             </Tooltip>
-            <span>on {dayjs(issue.content.createdAt).format('MMM DD')}</span>
+            <span>on {dayjs(issue.createdAt).format('MMM DD')}</span>
           </div>
           <div className="flex flex-row items-baseline gap-2">
-            <StatusCircle status={issue.content.state} stateReason={issue.content.stateReason} />
+            <StatusCircle status={issue.state} stateReason={issue.stateReason} />
             <div>
               <span
-                dangerouslySetInnerHTML={{ __html: issue.content.titleHTML }}
+                dangerouslySetInnerHTML={{ __html: issue.titleHTML }}
                 className="font-semibold"
               ></span>
-              <span className="ml-1 text-sm text-secondary">#{issue.content.number}</span>
+              <span className="ml-1 text-sm text-secondary">#{issue.number}</span>
             </div>
           </div>
           <div className="flex flex-row items-center gap-2">
-            {issue.content.labels.nodes.map(label => {
+            {issue.labels.nodes.map(label => {
               const hex = `#${label.color}`;
               const rgb = hexToRgb(hex);
               const dark = rgb ? isDark(rgb) : false;
@@ -141,17 +141,17 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
           <div className="flex items-center gap-2">
             <Avatar className="h-[20px] w-[20px]">
               <AvatarImage
-                src={issue.content.author.avatarUrl}
+                src={issue.author.avatarUrl}
                 className="my-auto"
                 height={20}
                 width={20}
-                alt={`Avatar of ${issue.content.author.name}, the author of the issue`}
+                alt={`Avatar of ${issue.author.name}, the author of the issue`}
               />
               <AvatarFallback>
                 <Skeleton />
               </AvatarFallback>
             </Avatar>
-            <span className="text-xs text-secondary">Ouvert par {issue.content.author.name}</span>
+            <span className="text-xs text-secondary">Ouvert par {issue.author.name}</span>
           </div>
         </CardFooter>
       </Card>
