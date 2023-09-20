@@ -8,12 +8,15 @@ const config = {
     swcMinify: true,
     poweredByHeader: false,
     experimental: {
-        appDir: true,
         serverActions: true,
         esmExternals: true,
     },
 
     transpilePackages: ["@pedaki/common"],
+
+    images: {
+        domains: ["pedaki.fr"],
+    },
 
 
     redirects: async () => [
@@ -38,6 +41,11 @@ const config = {
         "@pedaki/design/ui/icons": {
             transform: "@pedaki/design/ui/icons/{{member}}",
             preventFullImport: true,
+        },
+        "@pedaki/common/hooks": {
+            transform: "@pedaki/common/hooks/{{member}}",
+            preventFullImport: true,
+            skipDefaultConversion: true,
         }
     },
 

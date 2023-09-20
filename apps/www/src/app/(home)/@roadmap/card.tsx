@@ -79,10 +79,10 @@ const StatusCircle = ({
 
 export const GithubCard = ({ issue }: { issue: Issue }) => {
   return (
-    <Link href={issue.content.url} prefetch={false} target="_blank">
-      <Card className="cursor-pointer focus-within:border-primary hover:border-primary">
+    <Link href={issue.content.url} prefetch={false} target="_blank" className="w-full">
+      <Card className="cursor-pointer bg-white focus-within:border-orange hover:border-orange">
         <CardContent className="space-y-2 pb-3 pt-6">
-          <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-muted-foreground">
+          <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-secondary">
             <Tooltip>
               <TooltipTrigger>
                 <span className="underline">{issue.content.repository.resourcePath}</span>
@@ -102,7 +102,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
                 dangerouslySetInnerHTML={{ __html: issue.content.titleHTML }}
                 className="font-semibold"
               ></span>
-              <span className="ml-1 text-sm text-muted-foreground">#{issue.content.number}</span>
+              <span className="ml-1 text-sm text-secondary">#{issue.content.number}</span>
             </div>
           </div>
           <div className="flex flex-row items-center gap-2">
@@ -128,9 +128,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
 
               return (
                 <Tooltip key={label.name}>
-                  <TooltipTrigger className="text-muted-foreground">
-                    {badgeComponent}
-                  </TooltipTrigger>
+                  <TooltipTrigger className="text-secondary">{badgeComponent}</TooltipTrigger>
                   <TooltipContent className="max-w-xs">
                     <span>{label.description}</span>
                   </TooltipContent>
@@ -153,9 +151,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
                 <Skeleton />
               </AvatarFallback>
             </Avatar>
-            <span className="text-xs text-muted-foreground">
-              Ouvert par {issue.content.author.name}
-            </span>
+            <span className="text-xs text-secondary">Ouvert par {issue.content.author.name}</span>
           </div>
         </CardFooter>
       </Card>

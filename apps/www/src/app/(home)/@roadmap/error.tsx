@@ -45,13 +45,9 @@ export default function RoadmapError() {
     <section className="container py-16">
       <Header />
 
-      <div className="mt-8 grid grid-cols-2 gap-2">
-        <p className="col-span-2 md:col-span-1">
-          TODO: message disant qu&apos;on a eu une erreur pour charger la roadmap Et que si ils
-          veulent ils peuvent faire une issue
-        </p>
+      <div className="mt-8 flex justify-center">
         <TooltipProvider delayDuration={0}>
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-1 col-start-2">
             <GithubCard issue={fakeIssue} />
           </div>
         </TooltipProvider>

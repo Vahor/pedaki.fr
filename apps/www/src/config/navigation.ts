@@ -1,3 +1,5 @@
+import { env } from '~/env.mjs';
+
 type Navigation = {
   name: string;
 } & (
@@ -28,12 +30,38 @@ export const navigation = [
       {
         href: '/pricing',
         name: 'Pricing',
+        description: 'Here comes the money',
+      },
+      {
+        href: '/about',
+        name: 'About',
         description: 'About the project',
       },
     ],
   },
   {
     name: 'Documentation',
-    children: [],
+    children: [
+      {
+        href: `${env.NEXT_PUBLIC_DOCS_URL}/news/changelog`,
+        name: 'Changelog',
+        description: 'Voir les notes de version',
+      },
+      {
+        href: `${env.NEXT_PUBLIC_DOCS_URL}/support/roadmap`,
+        name: 'Roadmap',
+        description: 'Voir la feuille de route',
+      },
+      {
+        href: `${env.NEXT_PUBLIC_DOCS_URL}/faq`,
+        name: 'FAQ',
+        description: 'Voir les questions fréquentes',
+      },
+      {
+        href: `${env.NEXT_PUBLIC_DOCS_URL}/news/post`,
+        name: 'Posts',
+        description: 'Voir les articles',
+      },
+    ],
   },
 ] as Navigation[];

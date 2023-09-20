@@ -45,7 +45,7 @@ const Status = async () => {
           <StyledLink
             href="https://status.pedaki.fr"
             prefetch={false}
-            variant="secondary"
+            variant="subtle_secondary"
             className="flex items-baseline gap-2"
           >
             <StatusCircle status={status} />

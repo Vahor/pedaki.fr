@@ -51,7 +51,7 @@ const table1 = [
       <div>
         <span>inclus</span>
         <p>
-          <span className="text-xs text-primary">+ 20e pour plus gros</span>
+          <span className="text-xs text-orange">+ 20e pour plus gros</span>
         </p>
       </div>
     ),
@@ -62,15 +62,20 @@ const PriceTable = () => {
   return (
     <div>
       <h2 className="sr-only">Comparatif</h2>
-      <div className="sticky top-0 z-[1] w-full bg-background/90 pb-4 pt-20 backdrop-blur">
-        <div className="container flex text-base">
+      <div className="sticky top-12 z-[1] w-full pb-4 pt-8">
+        <div className="absolute inset-0 z-[1] -mt-12 backdrop-blur"></div>
+        <div className="container relative z-[20] flex text-base">
           <div className="w-0 sm:w-[24%]"></div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Self-Host</span>
             <div>
               <span className="text-3xl">Gratuit</span>
             </div>
-            <Link href="/docs/how-to-self-host" className="text-xs text-primary hover:underline">
+            {/*TOOD update self-host url */}
+            <Link
+              href="https://docs.pedaki.fr/resources/self-host"
+              className="text-xs text-orange hover:underline"
+            >
               Comment ça marche ?
             </Link>
           </div>
@@ -78,46 +83,51 @@ const PriceTable = () => {
             <span>Scaler</span>
             <div>
               <span className="text-3xl">20e</span>
-              <span className="pl-1 text-xs text-primary">/mois</span>
+              <span className="pl-1 text-xs text-orange">/mois</span>
             </div>
-            <span>Paiement à l&apos;année</span>
+            <span className="text-xs text-orange">Paiement à l&apos;année</span>
           </div>
         </div>
       </div>
-      <div className="container">
-        <FeatureTable features={table1} title="Features" />
-        <FeatureTable features={table1} title="Sécurité" />
-        <FeatureTable features={table1} title="Jsp" />
+      <div className="container relative">
+        <FeatureTable features={table1} title="Features" id="features" />
+        <FeatureTable features={table1} title="Sécurité" id="security" />
+        <FeatureTable features={table1} title="Jsp" id="aaaaaa" />
       </div>
     </div>
   );
 };
 
-const FeatureTable = ({ features, title }: { features: Feature[]; title: string }) => {
+const FeatureTable = ({
+  features,
+  title,
+  id,
+}: {
+  features: Feature[];
+  title: string;
+  id: string;
+}) => {
   return (
     <section>
-      {/* TODO: use static id */}
-      <a href={`#${title}`}>
-        <h3
-          className="sticky top-44 z-0 scroll-mt-[180px] border-b bg-background/90 pb-2 text-xl font-bold backdrop-blur"
-          id={title}
-        >
+      <a href={`#${id}`} className="sticky top-44 z-0 mb-1 w-full border-b pb-1 backdrop-blur">
+        <h3 className="scroll-mt-[180px] text-xl font-bold" id={id}>
           {title}
         </h3>
       </a>
+
       <div className="mb-4 w-full pb-12 text-base">
         <Card className="my-2 bg-secondary" withShadow={false}>
-          {features.map((feature, i) => (
+          {features.map(feature => (
             <div
-              className="flex flex-col items-center border-b text-sm transition last:border-transparent hover:bg-secondary sm:flex-row"
-              key={i}
+              className="flex flex-col items-center border-b text-sm transition last:border-transparent sm:flex-row"
+              key={feature.title}
             >
               <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left">
                 {feature.tooltip ? (
                   <TooltipProvider delayDuration={0}>
                     <Tooltip>
-                      <TooltipTrigger className="text-muted-foreground">
-                        <span className="border-b border-dotted border-foreground font-semibold">
+                      <TooltipTrigger className="text-muted">
+                        <span className="border-b border-dotted border-secondary font-semibold">
                           {feature.title}
                         </span>
                       </TooltipTrigger>
@@ -127,7 +137,7 @@ const FeatureTable = ({ features, title }: { features: Feature[]; title: string 
                     </Tooltip>
                   </TooltipProvider>
                 ) : (
-                  <span className="text-muted-foreground">{feature.title}</span>
+                  <span className="text-secondary">{feature.title}</span>
                 )}
               </div>
               <div className="flex flex-1 items-center pb-2 sm:pb-0">

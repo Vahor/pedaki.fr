@@ -1,4 +1,5 @@
 import { PageHeader } from '~/components/PageHeader';
+import { pageBaseStyle } from '~/styles/constants';
 import type { Metadata } from 'next';
 import React from 'react';
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 const CguPage = () => {
   return (
-    <div>
+    <div className={pageBaseStyle}>
       <PageHeader title="Conditions générales d'utilisation" />
     </div>
   );

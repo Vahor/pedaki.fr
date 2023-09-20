@@ -37,8 +37,10 @@ const User = () => {
 };
 
 const UserWithProvider = () => {
+  // We don't need to refetch the session as it's only used to
+  // display the username and avatar
   return (
-    <SessionProvider>
+    <SessionProvider refetchInterval={0} refetchOnWindowFocus={false}>
       <User />
     </SessionProvider>
   );
@@ -47,7 +49,9 @@ const UserWithProvider = () => {
 const Guest = () => {
   return (
     <Link href="/login" prefetch={false}>
-      <Button variant="default">Connexion</Button>
+      <Button variant="outline" className="font-semibold">
+        Connexion
+      </Button>
     </Link>
   );
 };

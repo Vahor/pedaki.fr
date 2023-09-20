@@ -16,11 +16,9 @@
   },
   "packageManager": "pnpm@8.7.5",
   "scripts": {
-    "dev": "mintlify dev",
-    "typecheck": "mintlify broken-links",
-    "prepare": "bash ./scripts/copy-assets.sh",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
+    "dev": "mintlify dev --port 8080",
+    "lint": "mintlify broken-links",
+    "prepare": "bash ./scripts/copy-assets.sh"
   },
   "dependencies": {
     "mintlify": "latest"
