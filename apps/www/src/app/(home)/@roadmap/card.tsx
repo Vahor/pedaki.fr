@@ -79,7 +79,7 @@ const StatusCircle = ({
 
 export const GithubCard = ({ issue }: { issue: Issue }) => {
   return (
-    <Link href={issue.content.url} prefetch={false} target="_blank">
+    <Link href={issue.content.url} prefetch={false} target="_blank" className="w-full">
       <Card className="cursor-pointer bg-white focus-within:border-orange hover:border-orange">
         <CardContent className="space-y-2 pb-3 pt-6">
           <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-secondary">
