@@ -47,11 +47,7 @@
     },
     {
       "name": "Nouveautés",
-      "url": "changelog"
-    },
-    {
-      "name": "Blog",
-      "url": "blog"
+      "url": "news"
     }
   ],
   "navigation": [
@@ -99,20 +95,15 @@
       ]
     },
     {
-      "group": "Nouveautés",
+      "group": "Articles",
       "pages": [
-        "changelog/0.0.1"
+        "news/overview"
       ]
     },
     {
-      "group": "2023",
+      "group": "Changelog",
       "pages": [
-        {
-          "group": "Août",
-          "pages": [
-            "blog/2023/august/initial-press-release"
-          ]
-        }
+        "news/version/0.0.1"
       ]
     }
   ],
