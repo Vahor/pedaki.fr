@@ -38,10 +38,10 @@ interface JsonResponse {
   data: {
     repository: {
       issues: {
-        nodes: (Issue &{
+        nodes: (Issue & {
           author: {
             login: string;
-          }
+          };
         })[];
       };
     };
@@ -127,7 +127,7 @@ const fetchIssues = async (owner: string, name: string): Promise<Issue[]> => {
   console.log({
     data: JSON.stringify(data),
     errors: JSON.stringify(errors),
-  })
+  });
 
   // log headers
   console.log(`Headers for ${owner}/${name}:`, {
@@ -147,17 +147,16 @@ const fetchIssues = async (owner: string, name: string): Promise<Issue[]> => {
   // to make sure that the ci was applied
   // And ignored users, labels and titles
   data.repository.issues.nodes = data.repository.issues.nodes.filter(issue => {
-
     if (ignoredUsers.includes(issue.author.name) || ignoredUsers.includes(issue.author.login)) {
-        return false;
+      return false;
     }
 
     if (ignoredLabels.some(label => issue.labels.nodes.some(node => node.name === label))) {
-        return false;
+      return false;
     }
 
     if (ignoredTitles.some(title => issue.titleHTML.includes(title))) {
-        return false;
+      return false;
     }
 
     const createdAt = new Date(issue.createdAt);
