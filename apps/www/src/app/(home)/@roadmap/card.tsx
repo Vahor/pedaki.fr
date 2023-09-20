@@ -88,9 +88,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
                 <span className="underline">{issue.repository.resourcePath}</span>
               </TooltipTrigger>
               <TooltipContent className="max-w-xs">
-                <span
-                  dangerouslySetInnerHTML={{ __html: issue.repository.descriptionHTML }}
-                ></span>
+                <span dangerouslySetInnerHTML={{ __html: issue.repository.descriptionHTML }}></span>
               </TooltipContent>
             </Tooltip>
             <span>on {dayjs(issue.createdAt).format('MMM DD')}</span>
