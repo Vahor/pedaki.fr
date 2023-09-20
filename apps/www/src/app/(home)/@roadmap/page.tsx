@@ -6,14 +6,14 @@ import React from 'react';
 import { GithubCard } from './card';
 
 const Roadmap = async () => {
-  const roadmap = await getRoadmapIssues();
-  // split the roadmap in 3 columns
-  const roadmapSize = roadmap.items.nodes.length;
+  const issues = await getRoadmapIssues();
+  // split the issues in 3 columns
+  const roadmapSize = issues.length;
   const roadmapSizePerColumn = Math.ceil(roadmapSize / 3);
   const roadmapColumns = [
-    roadmap.items.nodes.slice(0, roadmapSizePerColumn),
-    roadmap.items.nodes.slice(roadmapSizePerColumn, roadmapSizePerColumn * 2),
-    roadmap.items.nodes.slice(roadmapSizePerColumn * 2, roadmapSize),
+    issues.slice(0, roadmapSizePerColumn),
+    issues.slice(roadmapSizePerColumn, roadmapSizePerColumn * 2),
+    issues.slice(roadmapSizePerColumn * 2, roadmapSize),
   ] as const;
 
   return (
@@ -23,18 +23,18 @@ const Roadmap = async () => {
         <TooltipProvider delayDuration={0}>
           <div className="col-span-6 flex flex-col gap-4 md:col-span-3 lg:col-span-2 lg:scale-95">
             {roadmapColumns[0].map(issue => (
-              <GithubCard key={issue.content.number} issue={issue} />
+              <GithubCard key={issue.number} issue={issue} />
             ))}
           </div>
           <div className="col-span-6 flex flex-col gap-4 md:col-span-3 lg:col-span-2">
             {roadmapColumns[1].map(issue => (
-              <GithubCard key={issue.content.number} issue={issue} />
+              <GithubCard key={issue.number} issue={issue} />
             ))}
           </div>
           {/* Hide this column on smaller screen (shown on lg)*/}
           <div className="col-span-6 hidden flex-col gap-4 md:col-span-3 lg:col-span-2 lg:flex lg:scale-95">
             {roadmapColumns[2].map(issue => (
-              <GithubCard key={issue.content.number} issue={issue} />
+              <GithubCard key={issue.number} issue={issue} />
             ))}
           </div>
         </TooltipProvider>
