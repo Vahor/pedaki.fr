@@ -82,16 +82,16 @@
       ]
     },
     {
+      "group": "FAQs",
+      "pages": [
+        "faq/questions"
+      ]
+    },
+    {
       "group": "Support",
       "pages": [
         "support/introduction",
         "support/roadmap"
-      ]
-    },
-    {
-      "group": "FAQs",
-      "pages": [
-        "faq/questions"
       ]
     },
     {
