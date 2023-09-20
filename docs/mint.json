@@ -101,20 +101,7 @@
     {
       "group": "Nouveautés",
       "pages": [
-        "changelog/latest"
-      ]
-    },
-    {
-      "group": "2023",
-      "pages": [
-        "changelog/2023/september",
-        "changelog/2023/august"
-      ]
-    },
-    {
-      "group": "Blog",
-      "pages": [
-        "blog/latest"
+        "changelog/0.0.1"
       ]
     },
     {
