@@ -1,6 +1,12 @@
-# pedaki.fr
+[![Pedaki](.github/images/banner.png)](https://www.pedaki.fr)
 
-## Running Locally
+<p align="center">
+  <a aria-label="License" href="https://github.com/PedakiHQ/pedaki/blob/main/LICENSE-CC-BY-NC-SA">
+    <img alt="CC-BY-NC-SA" src="https://img.shields.io/badge/license-CC--BY--NC--SA--4.0-lightgrey">
+  </a>
+</p>
+
+# Running Locally
 
 1. Install dependencies using pnpm:
 
@@ -22,4 +28,7 @@ pnpm dev
 pnpm dev --filter <www|docs>
 ```
 
-## License
+# Contributing
+
+Pedaki is an open source project. Feel free to contribute by opening issues and/or pull requests.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.

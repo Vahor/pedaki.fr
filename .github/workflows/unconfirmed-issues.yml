@@ -14,9 +14,16 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            github.rest.issues.addLabels({
-              issue_number: context.payload.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: ['unconfirmed']
-            })
+            
+            // if the issue has the 'template: bug' label
+            
+            let confirmation_labels = ['template: bug']
+            
+            if (context.payload.issue.labels.some(label => confirmation_labels.includes(label.name))) {
+              github.rest.issues.addLabels({
+                issue_number: context.payload.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['unconfirmed']
+              })
+            }
