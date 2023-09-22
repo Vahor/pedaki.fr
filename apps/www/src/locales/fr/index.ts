@@ -1,14 +1,7 @@
-export const fr = {
-  footer: {
-    terms: 'Termes',
-    privacy: 'Confidentialité',
-    status: 'Statut',
-  },
-  language: {
-    en: 'Anglais',
-    fr: 'Français',
-    change: 'Changer de langue',
-  },
-} as const;
+import components from './components';
+import pages from './pages';
 
-export default fr;
+export default {
+  pages,
+  components,
+} as const;

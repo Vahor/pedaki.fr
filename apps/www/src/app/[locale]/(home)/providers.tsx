@@ -15,9 +15,7 @@ export const Providers = ({ children }: Props) => {
     <>
       <Toaster />
       <BalancerProvider>
-        <I18nProviderClient fallbackLocale={fr}>
-          {children}
-        </I18nProviderClient>
+        <I18nProviderClient fallbackLocale={fr}>{children}</I18nProviderClient>
       </BalancerProvider>
     </>
   );

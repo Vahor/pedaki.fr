@@ -11,12 +11,12 @@ import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
 const LanguageSelector = async () => {
-  const languageT = await getScopedI18n('language');
+  const languageT = await getScopedI18n('components.footer.language');
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="group" asChild>
-        <Button variant="outline" className="data-[state=open]:bg-accent" aria-label={languageT('change')}>
+        <Button variant="outline" aria-label={languageT('change')}>
           <div className="flex items-center">
             <div className="flex items-center gap-1">
               <IconTranslation className="h-4 w-4" />
