@@ -3,6 +3,7 @@ import Hero from '~/app/[locale]/(home)/hero';
 import SocialProof from '~/app/[locale]/(home)/social-proof';
 import VideoDemo from '~/app/[locale]/(home)/video-demo';
 import { getScopedI18n } from '~/locales/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
 export const generateMetadata = async () => {
@@ -21,7 +22,8 @@ export const generateMetadata = async () => {
   };
 };
 
-const Page = () => {
+const Page = ({ params }: { params: { locale: string } }) => {
+  setStaticParamsLocale(params.locale);
   return (
     <>
       <Hero />

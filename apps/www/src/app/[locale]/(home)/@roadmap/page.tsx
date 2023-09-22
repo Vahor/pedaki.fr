@@ -5,6 +5,7 @@ import { getRoadmapIssues } from '~/services/github/roadmap';
 import React from 'react';
 import { GithubCard } from './card';
 
+
 const Roadmap = async () => {
   const issues = await getRoadmapIssues();
   // split the issues in 3 columns

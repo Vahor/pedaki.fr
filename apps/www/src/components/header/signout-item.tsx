@@ -6,6 +6,7 @@ import { signOut } from 'next-auth/react';
 import React from 'react';
 import { toast } from 'sonner';
 
+
 export const SignOutItem = () => {
   const headerT = useScopedI18n('components.header');
 

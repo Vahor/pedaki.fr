@@ -7,6 +7,7 @@ import Naming from '~/app/[locale]/about/naming';
 import { PageHeader } from '~/components/PageHeader';
 import { getScopedI18n } from '~/locales/server';
 import { pageBaseStyle } from '~/styles/constants';
+import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
 export const generateMetadata = async () => {
@@ -18,7 +19,8 @@ export const generateMetadata = async () => {
   };
 };
 
-const AboutPage = async () => {
+const AboutPage = async ({ params }: { params: { locale: string } }) => {
+  setStaticParamsLocale(params.locale);
   const aboutT = await getScopedI18n('pages.about');
 
   return (

@@ -4,6 +4,7 @@ import PriceTable from '~/app/[locale]/pricing/price-table';
 import { PageHeader } from '~/components/PageHeader';
 import { getScopedI18n } from '~/locales/server';
 import { pageBaseStyle } from '~/styles/constants';
+import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
 export const generateMetadata = async () => {
@@ -15,7 +16,8 @@ export const generateMetadata = async () => {
   };
 };
 
-const PricingPage = async () => {
+const PricingPage = async ({ params }: { params: { locale: string } }) => {
+  setStaticParamsLocale(params.locale);
   const pricingT = await getScopedI18n('pages.pricing');
 
   return (

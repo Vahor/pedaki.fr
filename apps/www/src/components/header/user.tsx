@@ -2,14 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/design/ui/avatar';
 import { Button } from '@pedaki/design/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@pedaki/design/ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@pedaki/design/ui/dropdown-menu';
 import { Skeleton } from '@pedaki/design/ui/skeleton';
 import { useScopedI18n } from '~/locales/client';
 import type { Session } from 'next-auth';
@@ -18,6 +11,7 @@ import Link from 'next/link';
 import React from 'react';
 import { env } from '../../env.mjs';
 import { SignOutItem } from './signout-item';
+
 
 // TODO: RSC makes the page cache not work
 //  See the UserWithProvider below, but with this there is a flicker

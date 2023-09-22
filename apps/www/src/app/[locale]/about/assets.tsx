@@ -4,6 +4,7 @@ import { getScopedI18n } from '~/locales/server';
 import Image from 'next/image';
 import React from 'react';
 
+
 const Assets = async () => {
   const assetsT = await getScopedI18n('pages.about.assets');
 

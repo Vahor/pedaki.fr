@@ -3,6 +3,7 @@ import SectionTitle from '~/components/section/SectionTitle';
 import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
+
 const Fonts = async () => {
   const fontsT = await getScopedI18n('pages.about.fonts');
 

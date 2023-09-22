@@ -1,6 +1,7 @@
 import { PageHeader } from '~/components/PageHeader';
 import { getScopedI18n } from '~/locales/server';
 import { pageBaseStyle } from '~/styles/constants';
+import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
 export const generateMetadata = async () => {
@@ -12,7 +13,8 @@ export const generateMetadata = async () => {
   };
 };
 
-const TermsOfService = async () => {
+const TermsOfService = async ({ params }: { params: { locale: string } }) => {
+  setStaticParamsLocale(params.locale);
   const termsT = await getScopedI18n('pages.termsOfService');
 
   return (

@@ -13,6 +13,7 @@ import type { MonitoringStatus } from '~/services/betterstack/status';
 import { getMonitoringStatus } from '~/services/betterstack/status';
 import React from 'react';
 
+
 const StatusMap: Record<MonitoringStatus, [string, string]> = {
   degraded: ['bg-yellow-300', 'bg-yellow-500'],
   downtime: ['bg-red-300', 'bg-red-500'],

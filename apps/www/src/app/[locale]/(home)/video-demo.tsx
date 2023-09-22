@@ -4,6 +4,7 @@ import mock from '@public/a/mock-hero.webp';
 import Image from 'next/image';
 import React from 'react';
 
+
 const Arrow = () => {
   return (
     <div className="">

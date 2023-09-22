@@ -5,6 +5,7 @@ import { StyledLink } from '~/components/StyledLink';
 import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
+
 const Footer = async () => {
   const footerT = await getScopedI18n('components.footer');
 

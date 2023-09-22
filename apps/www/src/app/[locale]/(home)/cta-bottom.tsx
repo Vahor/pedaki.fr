@@ -3,6 +3,7 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
+
 const CallToActionBottom = () => {
   return (
     <div className="border-t bg-secondary py-16">
