@@ -12,7 +12,7 @@ import React from 'react';
 const elements = [
   {
     name: 'Remboursements ?',
-    description: 'Description 1',
+    description: 'Description 1 trigger',
   },
   {
     name: 'Moyens de paiement ?',
