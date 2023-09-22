@@ -46,7 +46,8 @@
     "@pedaki/eslint-config": "^0.0.6",
     "@pedaki/prettier-config": "^0.0.5",
     "@types/sanitize-html": "^2.9.0",
-    "autoprefixer": "^10.4.7"
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.30"
   },
   "prettier": "@pedaki/prettier-config"
 }
