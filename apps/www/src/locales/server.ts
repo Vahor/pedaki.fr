@@ -1,7 +1,7 @@
 import { createI18nServer } from 'next-international/server';
 import fr from './fr';
 
-export const { getI18n, getScopedI18n, getStaticParams } = createI18nServer(
+export const { getI18n, getScopedI18n, getStaticParams, getCurrentLocale } = createI18nServer(
   {
     fr: () => import('./fr'),
     en: () => import('./en'),
@@ -10,3 +10,5 @@ export const { getI18n, getScopedI18n, getStaticParams } = createI18nServer(
     fallbackLocale: fr,
   },
 );
+
+export type LocaleCode = ReturnType<typeof getCurrentLocale>;
