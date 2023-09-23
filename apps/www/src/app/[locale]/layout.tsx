@@ -3,11 +3,11 @@ import '@pedaki/design/tailwind/index.css';
 import '../../styles/globals.css';
 import { cn } from '@pedaki/design/utils';
 import { fontClassName } from '~/config/font';
+import { getStaticParams } from '~/locales/server';
 import type { Metadata } from 'next';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { Providers } from './(home)/providers';
-import {getStaticParams} from "~/locales/server";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,7 +26,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 export function generateStaticParams() {
   return getStaticParams();
 }
-
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pedaki.fr'),

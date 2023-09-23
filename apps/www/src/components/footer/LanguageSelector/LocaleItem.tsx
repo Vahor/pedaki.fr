@@ -7,7 +7,6 @@ import type { LocaleCode, locales } from '~/config/locales';
 import { useChangeLocale, useCurrentLocale } from '~/locales/client';
 import React from 'react';
 
-
 const LocaleIcon: Record<LocaleCode, IconType> = {
   fr: IconFlagFR,
   en: IconFlagGB,

@@ -11,7 +11,6 @@ import { useScopedI18n } from '~/locales/client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
-
 const Mobile = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 

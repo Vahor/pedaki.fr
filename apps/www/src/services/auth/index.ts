@@ -1,7 +1,6 @@
 import type { DefaultSession, NextAuthOptions } from 'next-auth';
 import { getServerSession } from 'next-auth';
 
-
 // Only used to extract the auth information
 // Mainly on the navbar to show a login button or the user's avatar.
 

@@ -4,7 +4,6 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
-
 const Features = () => {
   return (
     <section className="border-y bg-secondary py-16">

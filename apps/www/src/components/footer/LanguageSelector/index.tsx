@@ -10,7 +10,6 @@ import { locales } from '~/config/locales';
 import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-
 const LanguageSelector = async () => {
   const languageT = await getScopedI18n('components.footer.language');
 

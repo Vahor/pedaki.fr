@@ -11,7 +11,6 @@ import SectionTitle from '~/components/section/SectionTitle';
 import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
-
 const BrandColors = async () => {
   const brandColorsT = await getScopedI18n('pages.about.brandColors');
 

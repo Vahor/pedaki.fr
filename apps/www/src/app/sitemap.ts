@@ -1,7 +1,6 @@
 import { baseUrl } from '~/config/shared';
 import type { MetadataRoute } from 'next';
 
-
 const staticRoutes = [
   { url: '', priority: 1 },
   { url: '/pricing', priority: 1 },

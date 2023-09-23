@@ -9,7 +9,6 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
-
 const elements = [
   {
     name: 'Remboursements ?',

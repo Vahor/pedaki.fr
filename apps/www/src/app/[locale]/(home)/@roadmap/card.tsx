@@ -10,7 +10,6 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import React from 'react';
 
-
 type Status = 'OPEN' | 'CLOSED_COMPLETED' | 'CLOSED_NOT_PLANNED';
 const StatusMap = {
   OPEN: 'rgb(31, 136, 61)',

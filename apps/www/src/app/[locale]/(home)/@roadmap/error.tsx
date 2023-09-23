@@ -7,7 +7,6 @@ import Header from '~/app/[locale]/(home)/@roadmap/header';
 import type { Issue } from '~/services/github/roadmap';
 import React from 'react';
 
-
 // TODO: remember to change this
 const fakeIssue: Issue = {
   number: 420,
