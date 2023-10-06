@@ -8,6 +8,7 @@ import {
 } from '@pedaki/design/ui/tooltip';
 import { cn } from '@pedaki/design/utils';
 import { StyledLink } from '~/components/StyledLink';
+import { getScopedI18n } from '~/locales/server';
 import type { MonitoringStatus } from '~/services/betterstack/status';
 import { getMonitoringStatus } from '~/services/betterstack/status';
 import React from 'react';
@@ -37,6 +38,7 @@ const StatusCircle = ({ status }: { status: MonitoringStatus }) => {
 
 const Status = async () => {
   const status = await getMonitoringStatus();
+  const footerT = await getScopedI18n('components.footer');
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -49,12 +51,11 @@ const Status = async () => {
             className="flex items-baseline gap-2"
           >
             <StatusCircle status={status} />
-            <span>Status</span>
+            <span>{footerT('status.label')}</span>
           </StyledLink>
         </TooltipTrigger>
         <TooltipContent side="top" align="center">
-          {/*TODO: add translation (use status as key) */}
-          {status}
+          {footerT(`status.types.${status}`)}
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

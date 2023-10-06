@@ -15,11 +15,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": false,
     "noUncheckedIndexedAccess": true,
     "composite": false,
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
+    "declarationMap": false,
     "inlineSources": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -28,7 +28,8 @@
     "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@public/*": ["./public/*"]
     },
     "plugins": [
       {
