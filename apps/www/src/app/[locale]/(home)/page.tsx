@@ -12,13 +12,6 @@ export const generateMetadata = async () => {
   return {
     title: { absolute: homeT('metadata.title') },
     description: homeT('metadata.description'),
-    openGraph: {
-      images: [
-        // TODO
-      ],
-      locale: 'fr',
-      type: 'website',
-    },
   };
 };
 
