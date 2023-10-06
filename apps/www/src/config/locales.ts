@@ -8,5 +8,3 @@ export const locales = [
     code: 'fr',
   },
 ] as const;
-
-export type LocaleCode = (typeof locales)[number]['code'];
