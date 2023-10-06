@@ -1,4 +1,4 @@
-import { hexToRgb, isDark } from '@pedaki/common/utils';
+import { hexToRgb, isDark } from '@pedaki/common/utils/colors';
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/design/ui/avatar';
 import { Badge } from '@pedaki/design/ui/badge';
 import { Card, CardContent, CardFooter } from '@pedaki/design/ui/card';
