@@ -31,14 +31,14 @@
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "^18.17.17",
-    "@types/react": "^18.2.22",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "6.7.2",
-    "@typescript-eslint/parser": "6.7.2",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.10",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^7.3.0",
-    "rimraf": "^5.0.1",
-    "turbo": "^1.10.14",
+    "rimraf": "^5.0.5",
+    "turbo": "^1.10.15",
     "typescript": "^5.2.2"
   }
 }
