@@ -18,7 +18,7 @@ export const LocaleItem = ({ locale }: { locale: (typeof locales)[number] }) => 
   const isActive = locale.code === activeLocale;
   const Icon = LocaleIcon[locale.code];
 
-  const changeLocale = useChangeLocale();
+  const changeLocale = useChangeLocale({ preserveSearchParams: true });
 
   return (
     <DropdownMenuItem

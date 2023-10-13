@@ -8,7 +8,7 @@ import { IconChevronDown, IconTranslation } from '@pedaki/design/ui/icons';
 import { LocaleItem } from '~/components/footer/LanguageSelector/LocaleItem';
 import { locales } from '~/config/locales';
 import { getScopedI18n } from '~/locales/server';
-import React from 'react';
+import React, { Suspense } from 'react';
 
 const LanguageSelector = async () => {
   const languageT = await getScopedI18n('components.footer.language');
@@ -30,7 +30,11 @@ const LanguageSelector = async () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" side="top">
         {locales.map(locale => {
-          return <LocaleItem locale={locale} key={locale.code} />;
+          return (
+            <Suspense key={locale.code}>
+              <LocaleItem locale={locale} />
+            </Suspense>
+          );
         })}
       </DropdownMenuContent>
     </DropdownMenu>

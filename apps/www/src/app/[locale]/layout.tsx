@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang={locale} dir="ltr" className={cn(fontClassName)} suppressHydrationWarning>
       <body>
-        <Providers>
+        <Providers locale={locale}>
           <Header />
           <main>{children}</main>
           <Footer />
