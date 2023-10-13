@@ -35,7 +35,7 @@
     "million": "^2.6.4",
     "next": "13.5.4",
     "next-auth": "^4.23.2",
-    "next-international": "^1.0.1",
+    "next-international": "1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^1.1.0",
