@@ -8,7 +8,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <section>
-      <div className="flex flex-col items-center justify-center gap-4 px-4 pt-32">
+      <div className="flex flex-col items-center justify-center gap-4 px-4 pt-16 md:pt-32">
         <Badges />
         <PageHeader
           title="Le futur de la gestion scolaire"
