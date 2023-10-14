@@ -11,9 +11,7 @@ export default function HomeLayout(props: { children: ReactNode; github: ReactNo
       {props.children}
       <section className="container py-16">
         <FeatureWrapper
-          label="Open Source"
           title="Rejoignez notre communauté open source"
-          labelClassName="bg-blueA-3 text-blue-10"
           titleClassName="mb-2"
         >
           <div className="max-w-lg md:max-w-4xl mb-12">
