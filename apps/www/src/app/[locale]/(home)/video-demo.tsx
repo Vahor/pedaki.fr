@@ -180,11 +180,11 @@ const VideoDemo = () => {
       <Dialog>
         <DialogTrigger
           aria-label="Play video"
-          className="relative flex w-full cursor-pointer"
+          className="relative flex w-full cursor-pointer focus-orange-ring rounded-md"
         >
           <div className="absolute inset-0 flex items-center justify-center group">
             <div className="relative flex items-center justify-center">
-              <div className="flex h-12 w-12 z-[1] items-center justify-center rounded-full bg-orange shadow-outline shadow-orange/20 transition duration-300 hover:shadow-outline-lg group-hover:shadow-orange/30 group-hover:scale-110 md:h-16 md:w-16">
+              <div className="flex h-12 w-12 z-[1] items-center justify-center rounded-full bg-orange-9 shadow-outline shadow-orangeA-4 transition duration-300 hover:shadow-outline-lg group-hover:shadow-orangeA-6 group-hover:scale-110 md:h-16 md:w-16">
                 <svg
                   width="32"
                   height="32"
@@ -198,7 +198,7 @@ const VideoDemo = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute inset-0 z-0 animate-ping rounded-full bg-orange/30 transition" style={{animationDuration: '2000ms'}}></div>
+              <div className="absolute inset-0 z-0 animate-ping rounded-full bg-orangeA-6 transition" style={{animationDuration: '2000ms'}}></div>
             </div>
           </div>
           <Image src={mock} alt="mock" priority />

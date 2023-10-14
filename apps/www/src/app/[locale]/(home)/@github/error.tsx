@@ -1,11 +1,10 @@
 'use client';
 
 import { TooltipProvider } from '@pedaki/design/ui/tooltip';
-import { GithubCard } from '~/app/[locale]/(home)/@roadmap/card';
-import Footer from '~/app/[locale]/(home)/@roadmap/footer';
-import Header from '~/app/[locale]/(home)/@roadmap/header';
+import { GithubCard } from '~/app/[locale]/(home)/@github/card';
 import type { Issue } from '~/services/github/roadmap';
 import React from 'react';
+
 
 // TODO: remember to change this
 const fakeIssue: Issue = {
@@ -38,17 +37,12 @@ const fakeIssue: Issue = {
 
 export default function RoadmapError() {
   return (
-    <section className="container py-16">
-      <Header />
-
-      <div className="mt-8 flex justify-center">
-        <TooltipProvider delayDuration={0}>
-          <div className="col-span-1 col-start-2">
-            <GithubCard issue={fakeIssue} />
-          </div>
-        </TooltipProvider>
-      </div>
-      <Footer />
-    </section>
+    <div className="flex justify-center">
+      <TooltipProvider delayDuration={0}>
+        <div className="col-span-1 col-start-2">
+          <GithubCard issue={fakeIssue} />
+        </div>
+      </TooltipProvider>
+    </div>
   );
 }
