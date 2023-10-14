@@ -1,11 +1,11 @@
 'use client';
 
 import { Button } from '@pedaki/design/ui/button';
+import { env } from '~/env.mjs';
 import { useScopedI18n } from '~/locales/client';
 import { getCookie } from 'cookies-next';
 import Link from 'next/link';
 import React from 'react';
-import {env} from "~/env.mjs";
 
 const cookiesOptions = {
   httpOnly: true,
@@ -30,7 +30,7 @@ const getCookieValue = () => {
 };
 
 const User = () => {
-  const [cookie, setCookie] = React.useState<null | { url: string }>(null);
+  const [cookie, setCookie] = React.useState<ReturnType<typeof getCookieValue>>(null);
 
   React.useEffect(() => {
     setCookie(getCookieValue());
