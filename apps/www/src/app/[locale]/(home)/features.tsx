@@ -3,6 +3,7 @@ import { CardDescription, CardTitle } from '@pedaki/design/ui/card';
 import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
+import { cn } from '@pedaki/design/utils/cn';
 
 const Features = () => {
   return (
@@ -11,46 +12,70 @@ const Features = () => {
         <h2 className="sr-only" id="features">
           Features
         </h2>
-        <div className="relative mb-2 mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
-          <FeatureCard
-            title="Lorem ipsum dolor sit amet, consectetur. 1"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
-            learnMore="Super sécurisé"
-            link="https://docs.pedaki.fr"
-            video="a/v/feature1.mp4"
-            alt="mock"
-          />
-          <FeatureCard
-            title="Lorem ipsum dolor sit amet, consectetur. 2"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
-            learnMore="Gere les trucs"
-            link="https://docs.pedaki.fr"
-            video="a/v/feature2.mp4"
-            alt="mock"
-          />
+        <FeatureWrapper label="Sécurisé" title="Lorem ipsum dolor sit amet, consectetur."
+            labelClassName="bg-blueA-3 text-blue-10">
+          <div>oui</div>
+        </FeatureWrapper>
+        {/*<div className="relative mb-2 mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">*/}
+        {/*  <FeatureCard*/}
+        {/*    title="Lorem ipsum dolor sit amet, consectetur. 1"*/}
+        {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"*/}
+        {/*    learnMore="Super sécurisé"*/}
+        {/*    link="https://docs.pedaki.fr"*/}
+        {/*    video="a/v/feature1.mp4"*/}
+        {/*    alt="mock"*/}
+        {/*  />*/}
+        {/*  <FeatureCard*/}
+        {/*    title="Lorem ipsum dolor sit amet, consectetur. 2"*/}
+        {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"*/}
+        {/*    learnMore="Gere les trucs"*/}
+        {/*    link="https://docs.pedaki.fr"*/}
+        {/*    video="a/v/feature2.mp4"*/}
+        {/*    alt="mock"*/}
+        {/*  />*/}
 
-          <FeatureCard
-            title="Lorem ipsum dolor sit amet, consectetur. 3"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
-            learnMore="Host le chez toi"
-            link="https://docs.pedaki.fr"
-            video="a/v/feature3.mp4"
-            alt="mock"
-          />
+        {/*  <FeatureCard*/}
+        {/*    title="Lorem ipsum dolor sit amet, consectetur. 3"*/}
+        {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"*/}
+        {/*    learnMore="Host le chez toi"*/}
+        {/*    link="https://docs.pedaki.fr"*/}
+        {/*    video="a/v/feature3.mp4"*/}
+        {/*    alt="mock"*/}
+        {/*  />*/}
 
-          <FeatureCard
-            title="Lorem ipsum dolor sit amet, consectetur. 4"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"
-            learnMore="Super option 3"
-            link="https://docs.pedaki.fr"
-            video="a/v/feature3.mp4"
-            alt="mock"
-          />
-        </div>
+        {/*  <FeatureCard*/}
+        {/*    title="Lorem ipsum dolor sit amet, consectetur. 4"*/}
+        {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, yep?"*/}
+        {/*    learnMore="Super option 3"*/}
+        {/*    link="https://docs.pedaki.fr"*/}
+        {/*    video="a/v/feature3.mp4"*/}
+        {/*    alt="mock"*/}
+        {/*  />*/}
+        {/*</div>*/}
       </div>
     </section>
   );
 };
+
+const FeatureWrapper: React.FC<{
+    title: string;
+    label: string;
+    labelClassName: string;
+  children: React.ReactNode;
+}> = ({ title, label, labelClassName, children }) => {
+
+  return (
+      <div className="relative">
+        <div className={cn("rounded-sm px-2 py-1.5 w-max font-medium", labelClassName)}>
+          {label}
+        </div>
+        <h3>{title}</h3>
+        <div className="grid">
+            {children}
+        </div>
+      </div>
+    );
+}
 
 const FeatureCard: React.FC<{
   title: string;

@@ -1,13 +1,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@pedaki/design/ui/avatar';
 import { Button } from '@pedaki/design/ui/button';
 import { Skeleton } from '@pedaki/design/ui/skeleton';
+import { StyledLink } from '@pedaki/design/ui/styled-link';
 import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import SectionTitle from '~/components/section/SectionTitle';
-import { StyledLink } from '~/components/StyledLink';
 import { env } from '~/env.mjs';
 import { getScopedI18n } from '~/locales/server';
 import Link from 'next/link';
 import React from 'react';
+
 
 const AboutUs = async () => {
   const aboutUsT = await getScopedI18n('pages.about.aboutUs');

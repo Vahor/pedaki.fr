@@ -46,8 +46,8 @@ export default {
     },
     colors: {
       orange: { title: 'Orange', tooltip: "Couleur d'accentuation" },
-      brownOrange: {
-        title: 'Orange-brun',
+      lightOrange: {
+        title: 'Orange-clair',
         tooltip: 'Utilisé pour les ombres et effets où le orange est déjà présent',
       },
       darkGreen: { title: 'Vert foncé', tooltip: 'Vert utilisé dans le logo' },

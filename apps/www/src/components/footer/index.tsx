@@ -1,9 +1,9 @@
 import LanguageSelector from '~/components/footer/LanguageSelector';
 import Status from '~/components/footer/Status';
 import Logo from '~/components/header/logo';
-import { StyledLink } from '~/components/StyledLink';
 import { getScopedI18n } from '~/locales/server';
 import React from 'react';
+import {StyledLink} from "@pedaki/design/ui/styled-link";
 
 const Footer = async () => {
   const footerT = await getScopedI18n('components.footer');
