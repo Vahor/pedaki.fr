@@ -9,7 +9,7 @@ const Footer = async () => {
   const footerT = await getScopedI18n('components.footer');
 
   return (
-    <footer className="container border-t pt-8">
+    <footer className="container border-t pt-12">
       <div className="flex flex-row items-center justify-between gap-2 pb-4">
         <div className="flex flex-col gap-4">
           <Logo />
