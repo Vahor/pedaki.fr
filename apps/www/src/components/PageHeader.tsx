@@ -24,7 +24,7 @@ export const PageHeader = ({
     >
       <Balancer
         as="h1"
-        className={cn('text-center text-5xl font-bold text-gray-900', titleClassName)}
+        className={cn('text-center text-5xl font-extrabold text-gray-900', titleClassName)}
       >
         {title}
       </Balancer>
