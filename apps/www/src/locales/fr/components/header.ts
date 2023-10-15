@@ -1,14 +1,7 @@
 export default {
-  auth: {
-    login: 'Connexion',
-    logout: 'Déconnexion',
-  },
-  toast: {
-    logoutSuccess: 'Déconnexion réussie',
-  },
   user: {
-    profile: 'Profil',
-    dashboard: 'Dashboard',
+    guest: 'Créer un dashboard',
+    session: 'Accéder au dashboard',
   },
   navigation: {
     modules: {
