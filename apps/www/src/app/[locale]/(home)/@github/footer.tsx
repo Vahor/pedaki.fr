@@ -3,7 +3,7 @@ import { AnimatedChevronRight } from '~/components/AnimatedChevronRight';
 import Link from 'next/link';
 import React from 'react';
 
-const Footer = () => {
+const GithubFooter = () => {
   return (
     <div className="mt-8 flex w-full justify-center gap-4">
       <Link href="https://github.com/pedakihq/pedaki" prefetch={false} target="_blank">
@@ -23,4 +23,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default GithubFooter;

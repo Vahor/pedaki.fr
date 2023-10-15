@@ -12,7 +12,7 @@ const Fonts = async () => {
       <p className="mb-8 text-secondary">{fontsT('paragraphs.description')}</p>
       <div className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2">
         <Font
-          title="OpenSans"
+          title="Inter"
           fontFamily="var(--font-sans)"
           description={fontsT('fonts.openSans.description')}
           content={fontsT('fonts.openSans.content')}

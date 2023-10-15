@@ -27,13 +27,13 @@ const BrandColors = async () => {
           <TooltipProvider delayDuration={0}>
             <Color
               title={brandColorsT('colors.orange.title')}
-              hex="#F76808"
+              hex="#F76B15"
               tooltip={brandColorsT('colors.orange.tooltip')}
             />
             <Color
-              title={brandColorsT('colors.brownOrange.title')}
-              hex="#E48844"
-              tooltip={brandColorsT('colors.brownOrange.tooltip')}
+              title={brandColorsT('colors.lightOrange.title')}
+              hex="#FFDFB5"
+              tooltip={brandColorsT('colors.lightOrange.tooltip')}
             />
             <Color
               title={brandColorsT('colors.darkGreen.title')}
@@ -73,7 +73,7 @@ const Color = ({
     <div className={cn('flex items-center gap-2', className)}>
       <ColorPill color={hex} className="h-[1.5rem] min-h-[1.5rem] w-[1.5rem] min-w-[1.5rem]" />
       <Tooltip>
-        <TooltipTrigger>
+        <TooltipTrigger className="select-text">
           <div className="text-left">
             <h4 className="mb-0.5 font-medium text-primary">{title}</h4>
 

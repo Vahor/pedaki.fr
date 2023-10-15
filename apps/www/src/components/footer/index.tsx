@@ -1,7 +1,7 @@
+import { StyledLink } from '@pedaki/design/ui/styled-link';
 import LanguageSelector from '~/components/footer/LanguageSelector';
 import Status from '~/components/footer/Status';
 import Logo from '~/components/header/logo';
-import { StyledLink } from '~/components/StyledLink';
 import { getScopedI18n } from '~/locales/server';
 import React from 'react';
 
@@ -9,7 +9,7 @@ const Footer = async () => {
   const footerT = await getScopedI18n('components.footer');
 
   return (
-    <footer className="container border-t pt-8">
+    <footer className="container border-t pt-12">
       <div className="flex flex-row items-center justify-between gap-2 pb-4">
         <div className="flex flex-col gap-4">
           <Logo />

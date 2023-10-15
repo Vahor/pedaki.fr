@@ -14,7 +14,7 @@ const Header = () => {
             backgroundPositionX: '-16px',
           }}
         >
-          <div className="h-full w-full bg-gradient-to-b from-transparent via-white to-white"></div>
+          <div className="h-full w-full bg-gradient-to-b from-transparent to-white to-60%"></div>
         </div>
 
         <div className="pt-8"></div>

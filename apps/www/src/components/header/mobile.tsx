@@ -71,14 +71,14 @@ const PortalNav = ({
           mobileOpen ? 'h-[min(60vh,400px)]' : 'h-0',
         )}
       >
-        <div className="mt-2 w-full border-t pt-2">
+        <div className="mt-2 w-full border-t pt-4">
           <ScrollArea className="flex h-full w-full flex-col gap-2 overflow-auto">
             <ul className="mr-16">
               {navigation.map(item => {
                 if (item.children) {
                   return (
                     <li key={item.id} className="mt-6 first:mt-0">
-                      <div className="mb-3.5 font-semibold text-primary">
+                      <div className="mb-2 font-semibold text-primary">
                         {navT(`${item.id}.label`)}
                       </div>
                       <ul className="ml-4 flex flex-col gap-2">
