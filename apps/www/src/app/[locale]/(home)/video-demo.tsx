@@ -6,6 +6,7 @@ import { getCurrentLocale } from '~/locales/server';
 import Image from 'next/image';
 import React from 'react';
 
+
 const DesktopSvg = ({ locale }: { locale: LocaleCode }) => {
   switch (locale) {
     case 'en':
@@ -173,51 +174,52 @@ const Arrow = () => {
 
 const VideoDemo = () => {
   return (
-    <section className="relative mx-auto mt-20 w-full max-w-screen-xl bg-gradient-to-b from-transparent to-gray-50 px-8 md:mt-14 md:px-24 2xl:px-0">
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 sm:h-64"></div>
-      <Arrow />
-      <Dialog>
-        <DialogTrigger
-          aria-label="Play video"
-          className="focus-orange-ring relative flex w-full cursor-pointer rounded-md"
-        >
-          <div className="group absolute inset-0 flex items-center justify-center">
-            <div className="relative flex items-center justify-center">
-              <div className="z-[1] flex h-12 w-12 items-center justify-center rounded-full bg-orange-9 shadow-outline shadow-orangeA-4 transition duration-300 hover:shadow-outline-lg group-hover:scale-110 group-hover:shadow-orangeA-6 md:h-16 md:w-16">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 256 256"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="z-2"
-                >
-                  <path
-                    fill="#ffffff"
-                    d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128Z"
-                  />
-                </svg>
+    <section className="relative  mt-20 w-full  bg-gradient-to-b from-transparent to-gray-50">
+      <div className="w-full mx-auto max-w-screen-xl px-8 md:mt-14 md:px-24 2xl:px-0">
+        <Arrow />
+        <Dialog>
+          <DialogTrigger
+            aria-label="Play video"
+            className="focus-orange-ring relative flex w-full cursor-pointer rounded-md"
+          >
+            <div className="group absolute inset-0 flex items-center justify-center">
+              <div className="relative flex items-center justify-center">
+                <div className="z-[1] flex h-12 w-12 items-center justify-center rounded-full bg-orange-9 shadow-outline shadow-orangeA-4 transition duration-300 hover:shadow-outline-lg group-hover:scale-110 group-hover:shadow-orangeA-6 md:h-16 md:w-16">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 256 256"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="z-2"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128Z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  className="absolute inset-0 z-0 animate-ping rounded-full bg-orangeA-6 transition"
+                  style={{ animationDuration: '2000ms' }}
+                ></div>
               </div>
-              <div
-                className="absolute inset-0 z-0 animate-ping rounded-full bg-orangeA-6 transition"
-                style={{ animationDuration: '2000ms' }}
-              ></div>
             </div>
-          </div>
-          <Image src={mock} alt="mock" priority />
-        </DialogTrigger>
-        <DialogContent className="md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl">
-          <AspectRatio ratio={16 / 9} className="p-2">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
-              allowFullScreen
-              className="h-full w-full rounded-md object-cover"
-            ></iframe>
-          </AspectRatio>
-        </DialogContent>
-      </Dialog>
+            <Image src={mock} alt="mock" priority />
+          </DialogTrigger>
+          <DialogContent className="md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl">
+            <AspectRatio ratio={16 / 9} className="p-2">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+                allowFullScreen
+                className="h-full w-full rounded-md object-cover"
+              ></iframe>
+            </AspectRatio>
+          </DialogContent>
+        </Dialog>
+      </div>
     </section>
   );
 };
