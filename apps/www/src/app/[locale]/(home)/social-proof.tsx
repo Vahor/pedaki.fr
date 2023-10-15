@@ -7,15 +7,17 @@ import React from 'react';
 
 const SocialProof = () => {
   return (
-    <section className="relative mx-auto -mt-16 block w-full max-w-screen-xl border-t bg-white px-8 py-24">
-      {/* TODO: flex w-max overflow-hidden + slider ? */}
-      <div className="flex flex-col items-center gap-4 pb-8">
-        <p className="mb-2 text-xl font-medium text-muted">Soutenu par plusieurs universités</p>
-        <div className="flex max-w-screen-sm items-center">
-          {/* TODO: svg ?*/}
-          <OrganizationIcon src={grandEst} alt="grandest.fr" />
-          <OrganizationIcon src={mewo} alt="mewo.fr" />
-          <OrganizationIcon src={univLorraine} alt="univ-lorraine.fr" />
+    <section className="relative -mt-16 border-t bg-white px-8 py-24">
+      <div className="mx-auto block w-full max-w-screen-xl">
+        {/* TODO: flex w-max overflow-hidden + slider ? */}
+        <div className="flex flex-col items-center gap-4 pb-8">
+          <p className="mb-2 text-xl font-medium text-muted">Soutenu par plusieurs universités</p>
+          <div className="flex max-w-screen-sm items-center">
+            {/* TODO: svg ?*/}
+            <OrganizationIcon src={grandEst} alt="grandest.fr" />
+            <OrganizationIcon src={mewo} alt="mewo.fr" />
+            <OrganizationIcon src={univLorraine} alt="univ-lorraine.fr" />
+          </div>
         </div>
       </div>
     </section>
