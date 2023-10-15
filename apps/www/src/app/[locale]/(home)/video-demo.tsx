@@ -6,7 +6,6 @@ import { getCurrentLocale } from '~/locales/server';
 import Image from 'next/image';
 import React from 'react';
 
-
 const DesktopSvg = ({ locale }: { locale: LocaleCode }) => {
   switch (locale) {
     case 'en':
@@ -175,7 +174,7 @@ const Arrow = () => {
 const VideoDemo = () => {
   return (
     <section className="relative  mt-20 w-full  bg-gradient-to-b from-transparent to-gray-50">
-      <div className="w-full mx-auto max-w-screen-xl px-8 md:mt-14 md:px-24 2xl:px-0">
+      <div className="mx-auto w-full max-w-screen-xl px-8 md:mt-14 md:px-24 2xl:px-0">
         <Arrow />
         <Dialog>
           <DialogTrigger
