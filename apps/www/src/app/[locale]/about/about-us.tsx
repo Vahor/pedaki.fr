@@ -9,7 +9,6 @@ import { getScopedI18n } from '~/locales/server';
 import Link from 'next/link';
 import React from 'react';
 
-
 const AboutUs = async () => {
   const aboutUsT = await getScopedI18n('pages.about.aboutUs');
 

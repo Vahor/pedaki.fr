@@ -6,11 +6,12 @@ import React from 'react';
 const CallToActionBottom = () => {
   return (
     <div className="dark bg-secondary py-20">
-      <div className="container flex justify-between md:items-center flex-col md:flex-row gap-4">
+      <div className="container flex flex-col justify-between gap-4 md:flex-row md:items-center">
         <div>
           <h2 className="text-4xl font-bold lg:text-5xl" id="open-source">
             Un outil essentiel <br className="hidden md:block" />
-            pour <span className="underline decoration-orange-9 decoration-dotted">toutes</span> les écoles.
+            pour <span className="underline decoration-orange-9 decoration-dotted">toutes</span> les
+            écoles.
           </h2>
         </div>
         <div>

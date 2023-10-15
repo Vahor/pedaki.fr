@@ -6,7 +6,6 @@ import { getCurrentLocale } from '~/locales/server';
 import Image from 'next/image';
 import React from 'react';
 
-
 const DesktopSvg = ({ locale }: { locale: LocaleCode }) => {
   switch (locale) {
     case 'en':
@@ -174,17 +173,17 @@ const Arrow = () => {
 
 const VideoDemo = () => {
   return (
-    <section className="relative mx-auto mt-20 w-full max-w-screen-xl px-8 md:mt-14 md:px-24 2xl:px-0 bg-gradient-to-b from-transparent to-gray-50">
+    <section className="relative mx-auto mt-20 w-full max-w-screen-xl bg-gradient-to-b from-transparent to-gray-50 px-8 md:mt-14 md:px-24 2xl:px-0">
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-32 sm:h-64"></div>
       <Arrow />
       <Dialog>
         <DialogTrigger
           aria-label="Play video"
-          className="relative flex w-full cursor-pointer focus-orange-ring rounded-md"
+          className="focus-orange-ring relative flex w-full cursor-pointer rounded-md"
         >
-          <div className="absolute inset-0 flex items-center justify-center group">
+          <div className="group absolute inset-0 flex items-center justify-center">
             <div className="relative flex items-center justify-center">
-              <div className="flex h-12 w-12 z-[1] items-center justify-center rounded-full bg-orange-9 shadow-outline shadow-orangeA-4 transition duration-300 hover:shadow-outline-lg group-hover:shadow-orangeA-6 group-hover:scale-110 md:h-16 md:w-16">
+              <div className="z-[1] flex h-12 w-12 items-center justify-center rounded-full bg-orange-9 shadow-outline shadow-orangeA-4 transition duration-300 hover:shadow-outline-lg group-hover:scale-110 group-hover:shadow-orangeA-6 md:h-16 md:w-16">
                 <svg
                   width="32"
                   height="32"
@@ -198,7 +197,10 @@ const VideoDemo = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute inset-0 z-0 animate-ping rounded-full bg-orangeA-6 transition" style={{animationDuration: '2000ms'}}></div>
+              <div
+                className="absolute inset-0 z-0 animate-ping rounded-full bg-orangeA-6 transition"
+                style={{ animationDuration: '2000ms' }}
+              ></div>
             </div>
           </div>
           <Image src={mock} alt="mock" priority />

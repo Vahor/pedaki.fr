@@ -1,13 +1,17 @@
 'use server';
 
 import { StyledLink } from '@pedaki/design/ui/styled-link';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@pedaki/design/ui/tooltip';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@pedaki/design/ui/tooltip';
 import { cn } from '@pedaki/design/utils';
 import { getScopedI18n } from '~/locales/server';
 import type { MonitoringStatus } from '~/services/betterstack/status';
 import { getMonitoringStatus } from '~/services/betterstack/status';
 import React from 'react';
-
 
 const StatusMap: Record<MonitoringStatus, [string, string]> = {
   degraded: ['bg-yellow-300', 'bg-yellow-500'],

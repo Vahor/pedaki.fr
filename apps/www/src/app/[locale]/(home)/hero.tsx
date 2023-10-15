@@ -18,13 +18,13 @@ const Hero = () => {
         />
         <div className="mt-3 flex flex-col items-center justify-center gap-2 sm:flex-row md:mt-8">
           <Link href="https://app.pedaki.fr" className="w-full sm:w-auto">
-            <Button variant="outline" className="font-semibold w-full">
+            <Button variant="outline" className="w-full font-semibold">
               <span>Découvrir le projet</span>
               <AnimatedChevronRight />
             </Button>
           </Link>
           <Link href="https://demo.pedaki.fr" className="w-full sm:w-auto">
-            <Button variant="neutral" className="font-semibold w-full">
+            <Button variant="neutral" className="w-full font-semibold">
               <span>Ouvrir la démo</span>
               <AnimatedChevronRight className="text-white" />
             </Button>

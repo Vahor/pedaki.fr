@@ -5,7 +5,6 @@ import { GithubCard } from '~/app/[locale]/(home)/@github/card';
 import type { Issue } from '~/services/github/roadmap';
 import React from 'react';
 
-
 // TODO: remember to change this
 const fakeIssue: Issue = {
   number: 420,

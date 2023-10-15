@@ -10,9 +10,7 @@ const Features = () => {
           Features
         </h2>
         <div className="flex flex-col gap-16">
-          <FeatureWrapper
-            title="Lorem ipsum dolor sit amet, consectetur."
-          >
+          <FeatureWrapper title="Lorem ipsum dolor sit amet, consectetur.">
             <div>oui</div>
           </FeatureWrapper>
         </div>
@@ -29,7 +27,11 @@ export const FeatureWrapper: React.FC<{
   return (
     <div className="relative">
       <div className="max-w-lg md:max-w-2xl">
-        <Balancer as="h3" className={cn("text-4xl font-bold lg:text-5xl mb-12", titleClassName)} id="open-source">
+        <Balancer
+          as="h3"
+          className={cn('mb-12 text-4xl font-bold lg:text-5xl', titleClassName)}
+          id="open-source"
+        >
           {title}
         </Balancer>
       </div>
