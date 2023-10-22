@@ -40,6 +40,6 @@
     "rimraf": "^5.0.5",
     "turbo": "^1.10.15",
     "typescript": "^5.2.2",
-    "windy-radix-palette": "2.0.0-beta.2"
+    "windy-radix-palette": "2.0.0-beta.3"
   }
 }
