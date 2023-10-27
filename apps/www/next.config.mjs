@@ -22,7 +22,7 @@ const config = {
     redirects: async () => [
         {
             source: '/login',
-            destination: `${env.NEXT_PUBLIC_APP_URL}/auth/login`,
+            destination: `${env.NEXT_PUBLIC_STORE_URL}/auth/login`,
             permanent: false,
         },
         {
