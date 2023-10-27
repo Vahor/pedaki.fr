@@ -51,7 +51,7 @@ const table1 = [
       <div>
         <span>inclus</span>
         <p>
-          <span className="text-xs text-orange-9">+ 20e pour plus gros</span>
+          <span className="text-orange-9 text-xs">+ 20e pour plus gros</span>
         </p>
       </div>
     ),
@@ -74,7 +74,7 @@ const PriceTable = () => {
             {/*TOOD update self-host url */}
             <Link
               href="https://docs.pedaki.fr/resources/self-host"
-              className="text-xs text-orange-9 hover:underline"
+              className="text-orange-9 text-xs hover:underline"
             >
               Comment ça marche ?
             </Link>
@@ -83,9 +83,9 @@ const PriceTable = () => {
             <span>Scaler</span>
             <div>
               <span className="text-3xl">20e</span>
-              <span className="pl-1 text-xs text-orange-9">/mois</span>
+              <span className="text-orange-9 pl-1 text-xs">/mois</span>
             </div>
-            <span className="text-xs text-orange-9">Paiement à l&apos;année</span>
+            <span className="text-orange-9 text-xs">Paiement à l&apos;année</span>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ export const AnimatedChevronRight = ({ className }: AnimatedChevronRightProps) =
     <>
       <IconChevronRight
         className={cn(
-          'relative left-0 inline h-4 w-4 text-orange-9 transition-all group-hover:left-0.5',
+          'text-orange-9 relative left-0 inline h-4 w-4 transition-all group-hover:left-0.5',
           className,
         )}
       />
