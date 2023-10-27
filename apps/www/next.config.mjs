@@ -8,7 +8,6 @@ const config = {
     swcMinify: true,
     poweredByHeader: false,
     experimental: {
-        serverActions: true,
         esmExternals: true,
     },
 
@@ -67,6 +66,8 @@ const config = {
 
 // million is not needed here, it's just a test to see if it works
 //  before adding it to the other apps
-export default million.next(config, {
-    auto: {rsc: true},
-});
+// export default million.next(config, {
+//     auto: {rsc: true},
+// });
+
+export default config;

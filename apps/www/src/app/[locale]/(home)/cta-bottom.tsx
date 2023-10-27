@@ -10,7 +10,7 @@ const CallToActionBottom = () => {
         <div>
           <h2 className="text-4xl font-bold lg:text-5xl" id="open-source">
             Un outil essentiel <br className="hidden md:block" />
-            pour <span className="decoration-orange-9 underline decoration-dotted">toutes</span> les
+            pour <span className="underline decoration-orange-9 decoration-dotted">toutes</span> les
             écoles.
           </h2>
         </div>
