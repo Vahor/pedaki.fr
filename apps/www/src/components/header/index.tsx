@@ -15,7 +15,7 @@ const Header = () => {
           }}
         >
           <div className="relative h-full w-full">
-            <div className="absolute top-32 mx-auto inset-0 bg-gradient-to-b from-transparent to-white to-95%"></div>
+            <div className="absolute inset-0 top-32 mx-auto bg-gradient-to-b from-transparent to-white to-95%"></div>
           </div>
         </div>
 

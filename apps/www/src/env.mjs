@@ -12,7 +12,7 @@ export const env = createEnv({
     },
 
     client: {
-        NEXT_PUBLIC_APP_URL: z.string().url().default("https://app.pedaki.fr"),
+        NEXT_PUBLIC_STORE_URL: z.string().url().default("https://app.pedaki.fr"),
         NEXT_PUBLIC_DOCS_URL: z.string().url().default("https://docs.pedaki.fr"),
         NEXT_PUBLIC_DISCORD_INVITE: z.string().default("pedaki"),
     },
@@ -20,7 +20,7 @@ export const env = createEnv({
     runtimeEnv: {
         NODE_ENV: process.env.NODE_ENV,
 
-        NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+        NEXT_PUBLIC_STORE_URL: process.env.NEXT_PUBLIC_STORE_URL,
         NEXT_PUBLIC_DOCS_URL: process.env.NEXT_PUBLIC_DOCS_URL,
 
         NEXT_PUBLIC_DISCORD_INVITE: process.env.NEXT_PUBLIC_DISCORD_INVITE,

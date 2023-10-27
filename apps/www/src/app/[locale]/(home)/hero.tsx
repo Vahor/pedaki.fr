@@ -40,7 +40,7 @@ const Badges = () => {
     <Link href="https://docs.pedaki.fr/news/2023/august/initial-press-release" target="_blank">
       <Badge
         variant="outline"
-        className="group bg-secondary py-1 hover:border-orange-8"
+        className="hover:border-orange-8 group bg-secondary py-1"
         tabIndex={0}
       >
         <span>Ouverture prévue en 2024</span>

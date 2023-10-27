@@ -46,7 +46,7 @@ const Guest = () => {
   const headerT = useScopedI18n('components.header');
 
   return (
-    <Link href={env.NEXT_PUBLIC_APP_URL} prefetch={false}>
+    <Link href={env.NEXT_PUBLIC_STORE_URL} prefetch={false}>
       <Button variant="outline" className="font-semibold" suppressHydrationWarning>
         {headerT('user.guest')}
       </Button>
