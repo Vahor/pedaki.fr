@@ -32,6 +32,11 @@ export function generateStaticParams() {
   return getStaticParams();
 }
 
+export const viewport = {
+  colorScheme: 'light',
+  themeColor: '#ffffff',
+}
+
 export const generateMetadata = () => {
   const locale = getCurrentLocale();
 
@@ -51,9 +56,7 @@ export const generateMetadata = () => {
       url: '/',
     },
     keywords: ['management', 'school', 'école', 'gestion'], // TODO
-    themeColor: '#ffffff',
     robots: 'index, follow',
-    colorScheme: 'light',
     manifest: 'https://www.pedaki.fr/site.webmanifest',
     alternates: {
       canonical: '/',
