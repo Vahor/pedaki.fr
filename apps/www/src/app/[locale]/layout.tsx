@@ -35,7 +35,7 @@ export function generateStaticParams() {
 export const viewport = {
   colorScheme: 'light',
   themeColor: '#ffffff',
-}
+};
 
 export const generateMetadata = () => {
   const locale = getCurrentLocale();

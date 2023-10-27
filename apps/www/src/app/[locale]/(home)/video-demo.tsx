@@ -183,7 +183,7 @@ const VideoDemo = () => {
           >
             <div className="group absolute inset-0 flex items-center justify-center">
               <div className="relative flex items-center justify-center">
-                <div className="bg-orange-9 shadow-orangeA-4 group-hover:shadow-orangeA-6 z-[1] flex h-12 w-12 items-center justify-center rounded-full shadow-outline transition duration-300 hover:shadow-outline-lg group-hover:scale-110 md:h-16 md:w-16">
+                <div className="z-[1] flex h-12 w-12 items-center justify-center rounded-full bg-orange-9 shadow-outline shadow-orangeA-4 transition duration-300 hover:shadow-outline-lg group-hover:scale-110 group-hover:shadow-orangeA-6 md:h-16 md:w-16">
                   <svg
                     width="32"
                     height="32"
@@ -198,7 +198,7 @@ const VideoDemo = () => {
                   </svg>
                 </div>
                 <div
-                  className="bg-orangeA-6 absolute inset-0 z-0 animate-ping rounded-full transition"
+                  className="absolute inset-0 z-0 animate-ping rounded-full bg-orangeA-6 transition"
                   style={{ animationDuration: '2000ms' }}
                 ></div>
               </div>
