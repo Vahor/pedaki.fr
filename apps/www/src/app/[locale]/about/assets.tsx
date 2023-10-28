@@ -28,7 +28,7 @@ const Assets = async () => {
           className="bg-secondary"
           title={assetsT('images.logo.title')}
           alt={assetsT('images.logo.alt')}
-          image="https://static.pedaki.fr/logo/logo.png"
+          image="https://static.pedaki.fr/logo/logo-500x500.png"
         />
       </div>
     </section>
