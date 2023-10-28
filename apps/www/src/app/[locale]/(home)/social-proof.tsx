@@ -11,9 +11,21 @@ const SocialProof = () => {
           <p className="mb-2 text-xl font-medium text-muted">Soutenu par plusieurs universités</p>
           <div className="flex max-w-screen-sm items-center">
             {/* TODO: svg ?*/}
-            <OrganizationIcon src="https://static.pedaki.fr/www/grand-est.png" alt="grandest.fr" width={131}/>
-            <OrganizationIcon src="https://static.pedaki.fr/www/mewo.png" alt="mewo.fr" width={59}/>
-            <OrganizationIcon src="https://static.pedaki.fr/www/univ-lorraine.png" alt="univ-lorraine.fr" width={115} />
+            <OrganizationIcon
+              src="https://static.pedaki.fr/www/grand-est.png"
+              alt="grandest.fr"
+              width={131}
+            />
+            <OrganizationIcon
+              src="https://static.pedaki.fr/www/mewo.png"
+              alt="mewo.fr"
+              width={59}
+            />
+            <OrganizationIcon
+              src="https://static.pedaki.fr/www/univ-lorraine.png"
+              alt="univ-lorraine.fr"
+              width={115}
+            />
           </div>
         </div>
       </div>

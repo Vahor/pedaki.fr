@@ -203,11 +203,12 @@ const VideoDemo = () => {
               </div>
             </div>
             <Image
-                src="https://static.pedaki.fr/www/mock-hero.webp"
-                width={2048}
-                height={1224}
-                alt="mock"
-                priority />
+              src="https://static.pedaki.fr/www/mock-hero.webp"
+              width={2048}
+              height={1224}
+              alt="mock"
+              priority
+            />
           </DialogTrigger>
           <DialogContent className="md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl">
             <AspectRatio ratio={16 / 9} className="p-2">
