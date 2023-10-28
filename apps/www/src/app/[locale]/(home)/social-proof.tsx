@@ -1,6 +1,3 @@
-import grandEst from '@public/a/sp/grand-est.png';
-import mewo from '@public/a/sp/mewo.png';
-import univLorraine from '@public/a/sp/univ-lorraine.png';
 import type { ImageProps } from 'next/image';
 import Image from 'next/image';
 import React from 'react';
@@ -14,9 +11,9 @@ const SocialProof = () => {
           <p className="mb-2 text-xl font-medium text-muted">Soutenu par plusieurs universités</p>
           <div className="flex max-w-screen-sm items-center">
             {/* TODO: svg ?*/}
-            <OrganizationIcon src={grandEst} alt="grandest.fr" />
-            <OrganizationIcon src={mewo} alt="mewo.fr" />
-            <OrganizationIcon src={univLorraine} alt="univ-lorraine.fr" />
+            <OrganizationIcon src="https://static.pedaki.fr/www/grand-est.png" alt="grandest.fr" width={131}/>
+            <OrganizationIcon src="https://static.pedaki.fr/www/mewo.png" alt="mewo.fr" width={59}/>
+            <OrganizationIcon src="https://static.pedaki.fr/www/univ-lorraine.png" alt="univ-lorraine.fr" width={115} />
           </div>
         </div>
       </div>
@@ -24,9 +21,9 @@ const SocialProof = () => {
   );
 };
 
-const OrganizationIcon = ({ src, alt }: ImageProps) => (
+const OrganizationIcon = ({ src, alt, width }: ImageProps) => (
   <div className="transition-grayscale mx-auto px-8 grayscale duration-200 hover:grayscale-0 md:h-10">
-    <Image src={src} alt={alt} height={40} priority={false} />
+    <Image src={src} alt={alt} height={40} width={width} priority={false} />
   </div>
 );
 

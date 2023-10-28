@@ -16,19 +16,19 @@ const Assets = async () => {
           className="dark bg-primary"
           title={assetsT('images.logoDark.title')}
           alt={assetsT('images.logoDark.alt')}
-          image="https://pedaki.fr/logo-dark.svg"
+          image="https://static.pedaki.fr/logo/logo-dark.svg"
         />
         <AssetImage
           className="bg-secondary"
           title={assetsT('images.logoLight.title')}
           alt={assetsT('images.logoLight.alt')}
-          image="https://pedaki.fr/logo-light.svg"
+          image="https://static.pedaki.fr/logo/logo-light.svg"
         />
         <AssetImage
           className="bg-secondary"
           title={assetsT('images.logo.title')}
           alt={assetsT('images.logo.alt')}
-          image="https://pedaki.fr/logo.png"
+          image="https://static.pedaki.fr/logo/logo.png"
         />
       </div>
     </section>
