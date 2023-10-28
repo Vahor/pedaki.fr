@@ -1,6 +1,5 @@
 import { AspectRatio } from '@pedaki/design/ui/aspect-ratio';
 import { Dialog, DialogContent, DialogTrigger } from '@pedaki/design/ui/dialog';
-import mock from '@public/a/mock-hero.webp';
 import type { LocaleCode } from '~/locales/server';
 import { getCurrentLocale } from '~/locales/server';
 import Image from 'next/image';
@@ -203,7 +202,13 @@ const VideoDemo = () => {
                 ></div>
               </div>
             </div>
-            <Image src={mock} alt="mock" priority />
+            <Image
+              src="https://static.pedaki.fr/www/mock-hero.webp"
+              width={2048}
+              height={1224}
+              alt="mock"
+              priority
+            />
           </DialogTrigger>
           <DialogContent className="md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl">
             <AspectRatio ratio={16 / 9} className="p-2">

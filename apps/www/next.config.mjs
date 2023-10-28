@@ -14,7 +14,7 @@ const config = {
     transpilePackages: ["@pedaki/common"],
 
     images: {
-        domains: ["pedaki.fr"],
+        domains: ["static.pedaki.fr"],
     },
 
 

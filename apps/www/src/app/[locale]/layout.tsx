@@ -81,10 +81,10 @@ export const generateMetadata = () => {
       },
     ],
     icons: [
-      { rel: 'icon', url: 'https://www.pedaki.fr/favicon.ico' },
-      { rel: 'apple-touch-icon', url: 'https://www.pedaki.fr/apple-touch-icon.png' },
-      { rel: 'mask-icon', url: 'https://www.pedaki.fr/favicon.ico' },
-      { rel: 'image/x-icon', url: 'https://www.pedaki.fr/favicon.ico' },
+      { rel: 'icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
+      { rel: 'apple-touch-icon', url: 'https://static.pedaki.fr/logo/apple-touch-icon.png' },
+      { rel: 'mask-icon', url: 'https:/static.pedaki.fr/logo/favicon.ico' },
+      { rel: 'image/x-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
     ],
   };
 };
