@@ -33,10 +33,13 @@ jobs:
         run: pnpm install --child-concurrency 3 --frozen-lockfile --prefer-offline
 
       - name: Run eslint
+        if: always()
         run: pnpm lint
 
       - name: Run prettier
+        if: always()
         run: pnpm format:check
 
       - name: Run typescript
+        if: always()
         run: pnpm typecheck
