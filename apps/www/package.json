@@ -28,10 +28,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@pedaki/common": "^0.1.4",
-    "@pedaki/design": "^0.4.1",
+    "@pedaki/common": "^0.4.2-beta.9",
+    "@pedaki/design": "^0.4.2-beta.9",
     "@t3-oss/env-nextjs": "^0.7.1",
-    "cookies-next": "^4.0.0",
+    "cookies-next": "^4.1.0",
     "dayjs": "^1.11.10",
     "million": "^2.6.4",
     "next": "14.0.3",
@@ -44,9 +44,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@pedaki/eslint-config": "^0.1.1",
-    "@pedaki/prettier-config": "^0.0.5",
-    "@types/sanitize-html": "^2.9.3",
+    "@types/sanitize-html": "^2.9.5",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31"
   },
