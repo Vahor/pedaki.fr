@@ -3,7 +3,10 @@ import '@pedaki/design/tailwind/index.css';
 import '../../styles/globals.css';
 import { cn } from '@pedaki/design/utils';
 import { fontClassName } from '~/config/font';
-import { getCurrentLocale, getStaticParams } from '~/locales/server';
+import { getStaticParams } from '~/locales/server';
+import type { LocaleCode } from '~/locales/server';
+import { fallbackLocale, locales } from '~/locales/shared';
+import { notFound } from 'next/navigation';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { Providers } from './(home)/providers';
@@ -13,8 +16,12 @@ export default function RootLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: LocaleCode };
 }) {
+  if (!locales.includes(locale)) {
+    return notFound();
+  }
+
   return (
     <html lang={locale} dir="ltr" className={cn(fontClassName)} suppressHydrationWarning>
       <body>
@@ -37,8 +44,8 @@ export const viewport = {
   themeColor: '#ffffff',
 };
 
-export const generateMetadata = () => {
-  const locale = getCurrentLocale();
+export const generateMetadata = ({ params }: { params: { locale: string } }) => {
+  const locale = locales.includes(params.locale) ? params.locale : fallbackLocale;
 
   return {
     metadataBase: new URL('https://www.pedaki.fr'),
