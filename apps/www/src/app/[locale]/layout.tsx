@@ -3,7 +3,9 @@ import '@pedaki/design/tailwind/index.css';
 import '../../styles/globals.css';
 import { cn } from '@pedaki/design/utils';
 import { fontClassName } from '~/config/font';
-import { getCurrentLocale, getStaticParams } from '~/locales/server';
+import { getCurrentLocale, getStaticParams, type LocaleCode } from '~/locales/server';
+import { locales } from '~/locales/shared';
+import { notFound } from 'next/navigation';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { Providers } from './(home)/providers';
@@ -13,8 +15,12 @@ export default function RootLayout({
   params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: LocaleCode };
 }) {
+  if (!locales.includes(locale)) {
+    return notFound();
+  }
+
   return (
     <html lang={locale} dir="ltr" className={cn(fontClassName)} suppressHydrationWarning>
       <body>
