@@ -22,7 +22,7 @@ const AboutUs = async () => {
               {aboutUsT('paragraphs.projectStartedFor.1')}{' '}
               <StyledLink
                 href="https://www.mewo.fr/?ref=pedaki"
-                className="text-primary"
+                variant="primary"
                 decoration="underline"
               >
                 Mewo
