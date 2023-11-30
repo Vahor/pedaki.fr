@@ -22,7 +22,7 @@ const BrandColors = async () => {
         <br />
         {brandColorsT('paragraphs.description.2')}
       </p>
-      <Card className="bg-weaker">
+      <Card className="bg-weak">
         <div className="grid grid-cols-1 gap-x-8 gap-y-4 p-6 sm:grid-cols-2 lg:grid-cols-3">
           <TooltipProvider delayDuration={0}>
             <Color

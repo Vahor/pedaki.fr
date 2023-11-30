@@ -19,13 +19,13 @@ const Assets = async () => {
           image="https://static.pedaki.fr/logo/logo-dark.svg"
         />
         <AssetImage
-          className="bg-weaker"
+          className="bg-weak"
           title={assetsT('images.logoLight.title')}
           alt={assetsT('images.logoLight.alt')}
           image="https://static.pedaki.fr/logo/logo-light.svg"
         />
         <AssetImage
-          className="bg-weaker"
+          className="bg-weak"
           title={assetsT('images.logo.title')}
           alt={assetsT('images.logo.alt')}
           image="https://static.pedaki.fr/logo/logo-500x500.png"

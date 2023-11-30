@@ -116,7 +116,7 @@ const FeatureTable = ({
       </a>
 
       <div className="mb-4 w-full pb-12 text-soft">
-        <Card className="my-2 bg-weaker" withShadow={false}>
+        <Card className="my-2 bg-weak" withShadow={false}>
           {features.map(feature => (
             <div
               className="flex flex-col items-center border-b text-sm transition last:border-transparent sm:flex-row"

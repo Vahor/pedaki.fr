@@ -111,8 +111,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
 
               const badgeComponent = (
                 <Badge
-                  variant="outline"
-                  className={cn('border-transparent', { 'text-white': dark })}
+                  className={cn('border-transparent text-sub', { 'text-white': dark })}
                   style={{ backgroundColor: hex }}
                   key={label.name}
                 >

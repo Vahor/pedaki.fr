@@ -40,7 +40,7 @@ const Font = ({
   content: string;
 }) => {
   return (
-    <Card className="p-4 bg-weaker">
+    <Card className="p-4 bg-weak">
       <div className="mb-2">
         <h4 className="text-lg font-medium text-primary">{title}</h4>
         <p className="text-xs text-soft">{description}</p>
