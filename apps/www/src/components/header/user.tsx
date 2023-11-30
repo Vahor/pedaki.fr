@@ -47,7 +47,7 @@ const Guest = () => {
 
   return (
     <Link href={env.NEXT_PUBLIC_STORE_URL} prefetch={false}>
-      <Button variant="outline" className="font-semibold" suppressHydrationWarning>
+      <Button variant="stroke-primary-gray" className="font-semibold text-main" suppressHydrationWarning>
         {headerT('user.guest')}
       </Button>
     </Link>
@@ -59,7 +59,7 @@ const Authenticated = ({ url }: { url: string }) => {
 
   return (
     <Link href={url} prefetch={false}>
-      <Button variant="outline" className="font-semibold">
+      <Button variant="stroke-primary-gray" className="font-semibold">
         {headerT('user.session')}
       </Button>
     </Link>

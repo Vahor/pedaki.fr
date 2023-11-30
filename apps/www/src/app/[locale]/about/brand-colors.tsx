@@ -17,12 +17,12 @@ const BrandColors = async () => {
   return (
     <section>
       <SectionTitle anchor="assets">{brandColorsT('title')}</SectionTitle>
-      <p className="mb-8 text-secondary">
+      <p className="mb-8 text-soft">
         {brandColorsT('paragraphs.description.1')}
         <br />
         {brandColorsT('paragraphs.description.2')}
       </p>
-      <Card>
+      <Card className="bg-weaker">
         <div className="grid grid-cols-1 gap-x-8 gap-y-4 p-6 sm:grid-cols-2 lg:grid-cols-3">
           <TooltipProvider delayDuration={0}>
             <Color
@@ -77,7 +77,7 @@ const Color = ({
           <div className="text-left">
             <h4 className="mb-0.5 font-medium text-primary">{title}</h4>
 
-            <div className="text-xs text-secondary">
+            <div className="text-xs text-soft">
               <p>{hex}</p>
             </div>
           </div>

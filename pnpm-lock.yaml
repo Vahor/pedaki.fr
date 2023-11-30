@@ -76,7 +76,7 @@ importers:
         version: 2.6.4
       next:
         specifier: 14.0.3
-        version: 14.0.3(@babel/core@7.22.17)(react-dom@18.2.0)(react@18.2.0)(sass@1.66.1)
+        version: 14.0.3(@babel/core@7.22.17)(react-dom@18.2.0)(react@18.2.0)
       next-international:
         specifier: 1.1.4
         version: 1.1.4
@@ -99,6 +99,9 @@ importers:
         specifier: ^3.22.4
         version: 3.22.4
     devDependencies:
+      '@mertasan/tailwindcss-variables':
+        specifier: ^2.7.0
+        version: 2.7.0(autoprefixer@10.4.16)(postcss@8.4.31)
       '@types/sanitize-html':
         specifier: ^2.9.5
         version: 2.9.5
@@ -665,6 +668,18 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@mertasan/tailwindcss-variables@2.7.0(autoprefixer@10.4.16)(postcss@8.4.31):
+    resolution: {integrity: sha512-rKPhxi/0r6XWP0+OjPmsfrloX/TtQmvONj2Pr3Nl8BNBznQVP3M9sphguDBUDC0AiKYx2xgup3XzAhlIDLPLIA==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      autoprefixer: ^10.0.2
+      postcss: ^8.0.9
+    dependencies:
+      autoprefixer: 10.4.16(postcss@8.4.31)
+      lodash: 4.17.21
+      postcss: 8.4.31
+    dev: true
 
   /@next/env@14.0.3:
     resolution: {integrity: sha512-7xRqh9nMvP5xrW4/+L0jgRRX+HoNRGnfJpD+5Wq6/13j3dsdzxO3BCXn7D3hMqsDb+vjZnJq+vI7+EtgrYZTeA==}
@@ -3867,6 +3882,10 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: true
+
   /loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -3983,7 +4002,7 @@ packages:
       server-only: 0.0.1
     dev: false
 
-  /next@14.0.3(@babel/core@7.22.17)(react-dom@18.2.0)(react@18.2.0)(sass@1.66.1):
+  /next@14.0.3(@babel/core@7.22.17)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-AbYdRNfImBr3XGtvnwOxq8ekVCwbFTv/UJoLwmaX89nk9i051AEY4/HAWzU0YpaTDw8IofUpmuIlvzWF13jxIw==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -4005,7 +4024,6 @@ packages:
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: 1.66.1
       styled-jsx: 5.1.1(@babel/core@7.22.17)(react@18.2.0)
       watchpack: 2.4.0
     optionalDependencies:

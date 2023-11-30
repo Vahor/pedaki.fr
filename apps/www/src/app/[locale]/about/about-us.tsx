@@ -17,7 +17,7 @@ const AboutUs = async () => {
       <SectionTitle anchor="about-us">{aboutUsT('title')}</SectionTitle>
       <div className="flex flex-col gap-8">
         <div className="flex flex-col items-center md:flex-row md:justify-between">
-          <div className="mb-2 text-secondary">
+          <div className="mb-2 text-soft">
             <p>
               {aboutUsT('paragraphs.projectStartedFor.1')}{' '}
               <StyledLink
@@ -32,8 +32,8 @@ const AboutUs = async () => {
             <p>{aboutUsT('paragraphs.learnMore')}</p>
           </div>
           <Link href={`${env.NEXT_PUBLIC_DOCS_URL}/news/introduction`} prefetch={false}>
-            <Button variant="outline">
-              <span>{aboutUsT('viewArticles')}</span>
+            <Button variant="stroke-primary-gray">
+              <span className="text-main">{aboutUsT('viewArticles')}</span>
               <AnimatedChevronRight />
             </Button>
           </Link>
@@ -87,7 +87,7 @@ const Student = ({
         <StyledLink href={href} prefetch={false} variant="subtle_secondary">
           <p className="text-lg font-medium">{name}</p>
         </StyledLink>
-        <p className="text-sm text-secondary">{description}</p>
+        <p className="text-sm text-soft">{description}</p>
       </div>
     </div>
   );

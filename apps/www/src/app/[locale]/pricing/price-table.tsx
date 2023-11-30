@@ -51,7 +51,7 @@ const table1 = [
       <div>
         <span>inclus</span>
         <p>
-          <span className="text-xs text-orange-9">+ 20e pour plus gros</span>
+          <span className="text-xs text-primary-base">+ 20e pour plus gros</span>
         </p>
       </div>
     ),
@@ -74,7 +74,7 @@ const PriceTable = () => {
             {/*TOOD update self-host url */}
             <Link
               href="https://docs.pedaki.fr/resources/self-host"
-              className="text-xs text-orange-9 hover:underline"
+              className="text-xs text-primary-base hover:underline"
             >
               Comment ça marche ?
             </Link>
@@ -83,9 +83,9 @@ const PriceTable = () => {
             <span>Scaler</span>
             <div>
               <span className="text-3xl">20e</span>
-              <span className="pl-1 text-xs text-orange-9">/mois</span>
+              <span className="pl-1 text-xs text-primary-base">/mois</span>
             </div>
-            <span className="text-xs text-orange-9">Paiement à l&apos;année</span>
+            <span className="text-xs text-primary-base">Paiement à l&apos;année</span>
           </div>
         </div>
       </div>
@@ -115,8 +115,8 @@ const FeatureTable = ({
         </h3>
       </a>
 
-      <div className="mb-4 w-full pb-12 text-base">
-        <Card className="my-2 bg-secondary" withShadow={false}>
+      <div className="mb-4 w-full pb-12 text-soft">
+        <Card className="my-2 bg-weaker" withShadow={false}>
           {features.map(feature => (
             <div
               className="flex flex-col items-center border-b text-sm transition last:border-transparent sm:flex-row"
@@ -127,7 +127,7 @@ const FeatureTable = ({
                   <TooltipProvider delayDuration={0}>
                     <Tooltip>
                       <TooltipTrigger className="text-muted">
-                        <span className="border-b border-dotted border-secondary font-semibold">
+                        <span className="border-b border-dotted border-strong font-semibold">
                           {feature.title}
                         </span>
                       </TooltipTrigger>
@@ -137,10 +137,10 @@ const FeatureTable = ({
                     </Tooltip>
                   </TooltipProvider>
                 ) : (
-                  <span className="text-secondary">{feature.title}</span>
+                  <span className="text-soft">{feature.title}</span>
                 )}
               </div>
-              <div className="flex flex-1 items-center pb-2 sm:pb-0">
+              <div className="flex flex-1 items-center pb-2 sm:pb-0 text-main">
                 <div className="w-[50%] min-w-[180px] px-1.5 text-center sm:text-left">
                   {feature.selfHost}
                 </div>

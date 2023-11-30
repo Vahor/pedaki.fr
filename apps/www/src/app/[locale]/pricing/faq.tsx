@@ -34,13 +34,13 @@ const Faq = () => {
       {/* TODO: add patten somewhere */}
       <div className="flex flex-col gap-4">
         <h2 className="text-4xl font-bold">FAQ</h2>
-        <p className="text-sm text-secondary">
+        <p className="text-sm text-soft">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloribus fugiat
           provident quae ullam voluptates?
         </p>
         <Link href="/support">
-          <Button variant="outline" className="font-semibold">
-            <span>Contacte-nous</span>
+          <Button variant="stroke-primary-gray" className="font-semibold">
+            <span className="text-main">Contacte-nous</span>
             <AnimatedChevronRight />
           </Button>
         </Link>

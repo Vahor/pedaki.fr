@@ -16,7 +16,7 @@ const LanguageSelector = async () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="group" asChild>
-        <Button variant="outline" aria-label={languageT('change')}>
+        <Button variant="stroke-primary-gray" aria-label={languageT('change')} className="text-main">
           <div className="flex items-center">
             <div className="flex items-center gap-1">
               <IconTranslation className="h-4 w-4" />

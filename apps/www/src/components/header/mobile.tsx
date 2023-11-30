@@ -88,7 +88,7 @@ const PortalNav = ({
                               asChild
                               variant="transparent"
                               rounded="full"
-                              className="flex h-min justify-start p-0 font-semibold text-secondary"
+                              className="flex h-min justify-start p-0 font-semibold text-soft"
                               onClick={closeMobile}
                             >
                               <Link href={subitem.href}>

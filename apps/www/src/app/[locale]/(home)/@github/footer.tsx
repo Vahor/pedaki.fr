@@ -7,14 +7,14 @@ const GithubFooter = () => {
   return (
     <div className="mt-8 flex w-full justify-center gap-4">
       <Link href="https://github.com/pedakihq/pedaki" prefetch={false} target="_blank">
-        <Button variant="outline" className="font-semibold">
-          <span>Rejoindre la communauté</span>
+        <Button variant="stroke-primary-gray" className="font-semibold">
+          <span className="text-main">Rejoindre la communauté</span>
           <AnimatedChevronRight />
         </Button>
       </Link>
       {/*  TODO update self-host link*/}
       <Link href="https://docs.pedaki.fr/resources/self-host" prefetch={false} target="_blank">
-        <Button variant="transparent" className="font-semibold">
+        <Button variant="ghost-primary" className="font-semibold">
           <span>Voir comment self-host</span>
           <AnimatedChevronRight />
         </Button>

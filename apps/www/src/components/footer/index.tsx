@@ -15,14 +15,14 @@ const Footer = async () => {
           <Logo />
           <div>
             <p className="font-semibold">{footerT('title')}</p>
-            <p className="text-sm font-medium text-secondary">{footerT('description')}</p>
+            <p className="text-sm font-medium text-soft">{footerT('description')}</p>
           </div>
         </div>
         <div>
           <LanguageSelector />
         </div>
       </div>
-      <div className="border-t py-4 text-xs text-secondary">
+      <div className="border-t py-4 text-xs text-soft">
         <div className="flex flex-row items-center justify-between gap-2">
           <div className="flex flex-col gap-3.5 text-sm md:flex-row md:items-center">
             <StyledLink href="/legal/terms-of-service" prefetch={false} variant="subtle_secondary">
