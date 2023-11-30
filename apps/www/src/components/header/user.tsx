@@ -47,7 +47,11 @@ const Guest = () => {
 
   return (
     <Link href={env.NEXT_PUBLIC_STORE_URL} prefetch={false}>
-      <Button variant="stroke-primary-gray" className="font-semibold text-main" suppressHydrationWarning>
+      <Button
+        variant="stroke-primary-gray"
+        className="font-semibold text-main"
+        suppressHydrationWarning
+      >
         {headerT('user.guest')}
       </Button>
     </Link>

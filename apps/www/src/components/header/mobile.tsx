@@ -78,7 +78,7 @@ const PortalNav = ({
                 if (item.children) {
                   return (
                     <li key={item.id} className="mt-6 first:mt-0">
-                      <div className="mb-2 font-semibold text-primary">
+                      <div className="text-primary mb-2 font-semibold">
                         {navT(`${item.id}.label`)}
                       </div>
                       <ul className="ml-4 flex flex-col gap-2">

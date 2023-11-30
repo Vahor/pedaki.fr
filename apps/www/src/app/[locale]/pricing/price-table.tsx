@@ -140,7 +140,7 @@ const FeatureTable = ({
                   <span className="text-soft">{feature.title}</span>
                 )}
               </div>
-              <div className="flex flex-1 items-center pb-2 sm:pb-0 text-main">
+              <div className="flex flex-1 items-center pb-2 text-main sm:pb-0">
                 <div className="w-[50%] min-w-[180px] px-1.5 text-center sm:text-left">
                   {feature.selfHost}
                 </div>

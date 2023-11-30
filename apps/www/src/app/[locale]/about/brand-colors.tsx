@@ -75,7 +75,7 @@ const Color = ({
       <Tooltip>
         <TooltipTrigger className="select-text">
           <div className="text-left">
-            <h4 className="mb-0.5 font-medium text-primary">{title}</h4>
+            <h4 className="text-primary mb-0.5 font-medium">{title}</h4>
 
             <div className="text-xs text-soft">
               <p>{hex}</p>

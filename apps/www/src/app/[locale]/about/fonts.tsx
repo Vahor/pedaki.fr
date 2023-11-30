@@ -40,9 +40,9 @@ const Font = ({
   content: string;
 }) => {
   return (
-    <Card className="p-4 bg-weak">
+    <Card className="bg-weak p-4">
       <div className="mb-2">
-        <h4 className="text-lg font-medium text-primary">{title}</h4>
+        <h4 className="text-primary text-lg font-medium">{title}</h4>
         <p className="text-xs text-soft">{description}</p>
       </div>
       <p style={{ fontFamily }}>

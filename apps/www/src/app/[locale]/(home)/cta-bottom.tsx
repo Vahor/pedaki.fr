@@ -5,13 +5,15 @@ import React from 'react';
 
 const CallToActionBottom = () => {
   return (
-    <div className="bg-surface text-white py-20">
+    <div className="bg-surface py-20 text-white">
       <div className="container flex flex-col justify-between gap-4 md:flex-row md:items-center">
         <div>
           <h2 className="text-4xl font-bold lg:text-5xl" id="open-source">
             Un outil essentiel <br className="hidden md:block" />
-            pour <span className="underline decoration-primary-base decoration-dotted">toutes</span> les
-            écoles.
+            pour <span className="underline decoration-primary-base decoration-dotted">
+              toutes
+            </span>{' '}
+            les écoles.
           </h2>
         </div>
         <div>

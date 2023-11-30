@@ -172,7 +172,7 @@ const Arrow = () => {
 
 const VideoDemo = () => {
   return (
-    <section className="relative  mt-20 w-full  bg-gradient-to-b from-transparent to-gray-50">
+    <section className="to-gray-50  relative mt-20  w-full bg-gradient-to-b from-transparent">
       <div className="mx-auto w-full max-w-screen-xl px-8 md:mt-14 md:px-24 2xl:px-0">
         <Arrow />
         <Dialog>
