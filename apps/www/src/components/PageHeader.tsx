@@ -22,10 +22,7 @@ export const PageHeader = ({
         withPadding && wrapperClassName,
       )}
     >
-      <Balancer
-        as="h1"
-        className={cn('text-center text-5xl font-bold text-gray-900', titleClassName)}
-      >
+      <Balancer as="h1" className={cn('text-center text-5xl font-bold text-main', titleClassName)}>
         {title}
       </Balancer>
       {description && description.length > 0 && (
@@ -33,7 +30,7 @@ export const PageHeader = ({
           {/* z-[2] is required as we use a blur hack in PriceTable */}
           <Balancer
             as="h2"
-            className="relative z-[2] text-center text-base leading-7 text-secondary md:text-lg"
+            className="relative z-[2] text-center text-base leading-7 text-soft md:text-lg"
           >
             {description}
           </Balancer>

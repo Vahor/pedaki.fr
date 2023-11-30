@@ -13,11 +13,11 @@ import type { MonitoringStatus } from '~/services/betterstack/status';
 import { getMonitoringStatus } from '~/services/betterstack/status';
 import React from 'react';
 
-const StatusMap: Record<MonitoringStatus, [string, string]> = {
-  degraded: ['bg-yellow-300', 'bg-yellow-500'],
-  downtime: ['bg-red-300', 'bg-red-500'],
-  operational: ['bg-green-300', 'bg-green-500'],
-  unknown: ['bg-gray-300', 'bg-gray-500'],
+const StatusMap: Record<MonitoringStatus, string> = {
+  degraded: 'bg-yellow-base',
+  downtime: 'bg-red-base',
+  operational: 'bg-green-base',
+  unknown: 'bg-neutral-500',
 };
 
 const StatusCircle = ({ status }: { status: MonitoringStatus }) => {
@@ -28,10 +28,10 @@ const StatusCircle = ({ status }: { status: MonitoringStatus }) => {
       <span
         className={cn(
           'absolute inline-flex h-full w-full animate-ping rounded-full opacity-75',
-          statusColor[0],
+          statusColor,
         )}
       />
-      <span className={cn('relative inline-flex h-2.5 w-2.5 rounded-full', statusColor[1])} />
+      <span className={cn('relative inline-flex h-2.5 w-2.5 rounded-full', statusColor)} />
     </span>
   );
 };
@@ -47,7 +47,7 @@ const Status = async () => {
           <StyledLink
             href="https://status.pedaki.fr"
             prefetch={false}
-            variant="subtle_secondary"
+            variant="gray"
             className="flex items-baseline gap-2"
           >
             <StatusCircle status={status} />

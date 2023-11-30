@@ -23,6 +23,7 @@ const Page = ({ params }: { params: { locale: string } }) => {
       <VideoDemo />
       <SocialProof />
       <Features />
+      <Features />
     </>
   );
 };

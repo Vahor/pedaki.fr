@@ -9,7 +9,7 @@ const Fonts = async () => {
   return (
     <section>
       <SectionTitle anchor="assets">{fontsT('title')}</SectionTitle>
-      <p className="mb-8 text-secondary">{fontsT('paragraphs.description')}</p>
+      <p className="mb-8 text-soft">{fontsT('paragraphs.description')}</p>
       <div className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2">
         <Font
           title="Inter"
@@ -40,10 +40,10 @@ const Font = ({
   content: string;
 }) => {
   return (
-    <Card className="p-4">
+    <Card className="bg-weak p-4">
       <div className="mb-2">
-        <h4 className="text-lg font-medium text-primary">{title}</h4>
-        <p className="text-xs text-secondary">{description}</p>
+        <h4 className="text-primary text-lg font-medium">{title}</h4>
+        <p className="text-xs text-soft">{description}</p>
       </div>
       <p style={{ fontFamily }}>
         {content.split('\\n').map(line => (

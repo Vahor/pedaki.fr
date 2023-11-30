@@ -12,7 +12,7 @@ export default function HomeLayout(props: { children: ReactNode; github: ReactNo
       <section className="container py-16">
         <FeatureWrapper title="Rejoignez notre communauté open source" titleClassName="mb-2">
           <div className="mb-12 max-w-lg md:max-w-4xl">
-            <Balancer as="p" className="text-secondary">
+            <Balancer as="p" className="text-soft">
               Tout notre code est open source, vous pouvez le consulter sur github et y contribuer
               gratuitement.
             </Balancer>

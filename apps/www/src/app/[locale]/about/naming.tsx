@@ -8,7 +8,7 @@ const Naming = async () => {
   return (
     <section>
       <SectionTitle anchor="naming">{namingT('title')}</SectionTitle>
-      <p className="text-secondary">{namingT('paragraphs.description')}</p>
+      <p className="text-soft">{namingT('paragraphs.description')}</p>
     </section>
   );
 };

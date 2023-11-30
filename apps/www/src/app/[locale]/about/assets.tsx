@@ -10,22 +10,22 @@ const Assets = async () => {
   return (
     <section>
       <SectionTitle anchor="assets">{assetsT('title')}</SectionTitle>
-      <p className="mb-8 text-secondary">{assetsT('paragraphs.assetsAvailable')}</p>
+      <p className="mb-8 text-soft">{assetsT('paragraphs.assetsAvailable')}</p>
       <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <AssetImage
-          className="dark bg-primary"
+          className="dark bg-strong"
           title={assetsT('images.logoDark.title')}
           alt={assetsT('images.logoDark.alt')}
           image="https://static.pedaki.fr/logo/logo-dark.svg"
         />
         <AssetImage
-          className="bg-secondary"
+          className="bg-weak"
           title={assetsT('images.logoLight.title')}
           alt={assetsT('images.logoLight.alt')}
           image="https://static.pedaki.fr/logo/logo-light.svg"
         />
         <AssetImage
-          className="bg-secondary"
+          className="bg-weak"
           title={assetsT('images.logo.title')}
           alt={assetsT('images.logo.alt')}
           image="https://static.pedaki.fr/logo/logo-500x500.png"
