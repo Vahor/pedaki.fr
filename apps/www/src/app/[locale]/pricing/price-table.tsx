@@ -126,7 +126,7 @@ const FeatureTable = ({
                 {feature.tooltip ? (
                   <TooltipProvider delayDuration={0}>
                     <Tooltip>
-                      <TooltipTrigger className="text-muted">
+                      <TooltipTrigger className="text-sub">
                         <span className="border-b border-dotted border-strong font-semibold">
                           {feature.title}
                         </span>
