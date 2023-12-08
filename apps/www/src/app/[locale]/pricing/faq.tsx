@@ -33,8 +33,8 @@ const Faq = () => {
     <section className="container grid grid-cols-1 gap-8 pt-16 md:grid-cols-[1fr_2fr]" id="faq">
       {/* TODO: add patten somewhere */}
       <div className="flex flex-col gap-4">
-        <h2 className="text-4xl font-bold">FAQ</h2>
-        <p className="text-sm text-soft">
+        <h2 className="text-title-3 font-bold">FAQ</h2>
+        <p className="text-p-sm text-soft">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloribus fugiat
           provident quae ullam voluptates?
         </p>
