@@ -15,7 +15,7 @@ export default {
     },
   },
   language: {
-    en: 'Anglais',
+    en: 'English',
     fr: 'Français',
     change: 'Changer de langue',
   },
