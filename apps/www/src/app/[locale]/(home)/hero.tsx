@@ -38,9 +38,13 @@ const Hero = () => {
 const Badges = () => {
   return (
     <Link href="https://docs.pedaki.fr/news/2023/august/initial-press-release" target="_blank">
-      <Badge variant="outline" className="hover:border-orange-8 group bg-weak py-1 gap-1" tabIndex={0}>
+      <Badge
+        variant="outline"
+        className="hover:border-orange-8 group gap-1 bg-weak py-1"
+        tabIndex={0}
+      >
         <span>Ouverture prévue en 2024</span>
-        <AnimatedChevronRight className="text-primary-base h-3 w-3" />
+        <AnimatedChevronRight className="h-3 w-3 text-primary-base" />
       </Badge>
     </Link>
   );

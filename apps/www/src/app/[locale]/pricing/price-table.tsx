@@ -64,7 +64,7 @@ const PriceTable = () => {
       <h2 className="sr-only">Comparatif</h2>
       <div className="sticky top-12 z-[1] w-full pb-4 pt-8">
         <div className="absolute inset-0 z-[1] -mt-12 backdrop-blur"></div>
-        <div className="container relative z-[20] flex text-base">
+        <div className="text-base container relative z-[20] flex">
           <div className="w-0 sm:w-[24%]"></div>
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Self-Host</span>

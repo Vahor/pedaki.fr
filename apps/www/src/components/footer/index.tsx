@@ -23,20 +23,30 @@ const Footer = async () => {
         </div>
       </div>
       <div className="border-t py-4 text-sub-xs text-soft">
-        <div className="flex flex-row md:items-center justify-between gap-2">
+        <div className="flex flex-row justify-between gap-2 md:items-center">
           <div className="flex flex-col gap-3.5 text-sub-sm md:flex-row md:items-center">
-            <StyledLink href="/legal/terms-of-service" prefetch={false}  variant="gray" decoration="none">
+            <StyledLink
+              href="/legal/terms-of-service"
+              prefetch={false}
+              variant="gray"
+              decoration="none"
+            >
               {footerT('terms')}
             </StyledLink>
-            <StyledLink href="/legal/privacy-policy" prefetch={false}  variant="gray" decoration="none">
+            <StyledLink
+              href="/legal/privacy-policy"
+              prefetch={false}
+              variant="gray"
+              decoration="none"
+            >
               {footerT('privacy')}
             </StyledLink>
-            <StyledLink href="/about" prefetch={false}  variant="gray" decoration="none">
+            <StyledLink href="/about" prefetch={false} variant="gray" decoration="none">
               {footerT('about')}
             </StyledLink>
             <Status />
           </div>
-          <div className="flex flex-row md:items-center gap-2">
+          <div className="flex flex-row gap-2 md:items-center">
             <span>© 2023</span>
             <span>{footerT('copyright')}</span>
           </div>
