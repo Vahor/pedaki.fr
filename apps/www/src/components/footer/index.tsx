@@ -15,28 +15,28 @@ const Footer = async () => {
           <Logo />
           <div>
             <p className="font-semibold">{footerT('title')}</p>
-            <p className="text-sm font-medium text-soft">{footerT('description')}</p>
+            <p className="text-p-sm font-medium text-soft">{footerT('description')}</p>
           </div>
         </div>
         <div>
           <LanguageSelector />
         </div>
       </div>
-      <div className="border-t py-4 text-xs text-soft">
-        <div className="flex flex-row items-center justify-between gap-2">
-          <div className="flex flex-col gap-3.5 text-sm md:flex-row md:items-center">
-            <StyledLink href="/legal/terms-of-service" prefetch={false} variant="gray">
+      <div className="border-t py-4 text-sub-xs text-soft">
+        <div className="flex flex-row md:items-center justify-between gap-2">
+          <div className="flex flex-col gap-3.5 text-sub-sm md:flex-row md:items-center">
+            <StyledLink href="/legal/terms-of-service" prefetch={false}  variant="gray" decoration="none">
               {footerT('terms')}
             </StyledLink>
-            <StyledLink href="/legal/privacy-policy" prefetch={false} variant="gray">
+            <StyledLink href="/legal/privacy-policy" prefetch={false}  variant="gray" decoration="none">
               {footerT('privacy')}
             </StyledLink>
-            <StyledLink href="/about" prefetch={false} variant="gray">
+            <StyledLink href="/about" prefetch={false}  variant="gray" decoration="none">
               {footerT('about')}
             </StyledLink>
             <Status />
           </div>
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row md:items-center gap-2">
             <span>© 2023</span>
             <span>{footerT('copyright')}</span>
           </div>

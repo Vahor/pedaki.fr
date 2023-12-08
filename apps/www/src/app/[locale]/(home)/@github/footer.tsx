@@ -7,7 +7,7 @@ const GithubFooter = () => {
   return (
     <div className="mt-8 flex w-full justify-center gap-4">
       <Link href="https://github.com/pedakihq/pedaki" prefetch={false} target="_blank">
-        <Button variant="stroke-primary-gray" className="font-semibold">
+        <Button variant="stroke-primary-main" className="font-semibold">
           <span className="text-main">Rejoindre la communauté</span>
           <AnimatedChevronRight />
         </Button>

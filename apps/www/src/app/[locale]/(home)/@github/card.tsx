@@ -82,7 +82,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
     <Link href={issue.url} prefetch={false} target="_blank" className="w-full">
       <Card className="cursor-pointer bg-white focus-within:border-primary-base hover:border-primary-base">
         <CardContent className="space-y-2 pb-3 pt-6">
-          <div className="flex flex-row items-center gap-1 space-y-0 text-sm text-soft">
+          <div className="flex flex-row items-center gap-1 space-y-0 text-label-sm text-soft">
             <Tooltip>
               <TooltipTrigger>
                 <span className="underline">{issue.repository.resourcePath}</span>
@@ -100,7 +100,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
                 dangerouslySetInnerHTML={{ __html: issue.titleHTML }}
                 className="font-semibold"
               ></span>
-              <span className="ml-1 text-sm text-soft">#{issue.number}</span>
+              <span className="ml-1 text-sub-sm text-soft">#{issue.number}</span>
             </div>
           </div>
           <div className="flex flex-row items-center gap-2">
@@ -148,7 +148,7 @@ export const GithubCard = ({ issue }: { issue: Issue }) => {
                 <Skeleton />
               </AvatarFallback>
             </Avatar>
-            <span className="text-xs text-soft">Ouvert par {issue.author.name}</span>
+            <span className="text-sub-xs text-soft">Ouvert par {issue.author.name}</span>
           </div>
         </CardFooter>
       </Card>

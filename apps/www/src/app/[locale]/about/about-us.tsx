@@ -32,7 +32,7 @@ const AboutUs = async () => {
             <p>{aboutUsT('paragraphs.learnMore')}</p>
           </div>
           <Link href={`${env.NEXT_PUBLIC_DOCS_URL}/news/introduction`} prefetch={false}>
-            <Button variant="stroke-primary-gray">
+            <Button variant="stroke-primary-main">
               <span className="text-main">{aboutUsT('viewArticles')}</span>
               <AnimatedChevronRight />
             </Button>

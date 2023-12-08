@@ -22,7 +22,7 @@ export const PageHeader = ({
         withPadding && wrapperClassName,
       )}
     >
-      <Balancer as="h1" className={cn('text-center text-5xl font-bold text-main', titleClassName)}>
+      <Balancer as="h1" className={cn('text-center text-title-2 text-[72px] font-bold text-main', titleClassName)}>
         {title}
       </Balancer>
       {description && description.length > 0 && (

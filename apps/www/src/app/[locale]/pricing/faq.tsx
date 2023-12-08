@@ -39,7 +39,7 @@ const Faq = () => {
           provident quae ullam voluptates?
         </p>
         <Link href="/support">
-          <Button variant="stroke-primary-gray" className="font-semibold">
+          <Button variant="stroke-primary-main" className="font-semibold">
             <span className="text-main">Contacte-nous</span>
             <AnimatedChevronRight />
           </Button>

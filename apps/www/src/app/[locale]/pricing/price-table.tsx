@@ -51,7 +51,7 @@ const table1 = [
       <div>
         <span>inclus</span>
         <p>
-          <span className="text-xs text-primary-base">+ 20e pour plus gros</span>
+          <span className="text-p-xs text-primary-base">+ 20e pour plus gros</span>
         </p>
       </div>
     ),
@@ -69,12 +69,12 @@ const PriceTable = () => {
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Self-Host</span>
             <div>
-              <span className="text-3xl">Gratuit</span>
+              <span className="text-title-4">Gratuit</span>
             </div>
             {/*TOOD update self-host url */}
             <Link
               href="https://docs.pedaki.fr/resources/self-host"
-              className="text-xs text-primary-base hover:underline"
+              className="text-p-xs text-primary-base hover:underline"
             >
               Comment ça marche ?
             </Link>
@@ -82,10 +82,10 @@ const PriceTable = () => {
           <div className="w-[50%] text-left font-semibold sm:w-[38%]">
             <span>Scaler</span>
             <div>
-              <span className="text-3xl">20e</span>
-              <span className="pl-1 text-xs text-primary-base">/mois</span>
+              <span className="text-title-4 font-semibold">20e</span>
+              <span className="pl-1 text-p-xs text-primary-base">/mois</span>
             </div>
-            <span className="text-xs text-primary-base">Paiement à l&apos;année</span>
+            <span className="text-p-xs text-primary-base">Paiement à l&apos;année</span>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ const FeatureTable = ({
   return (
     <section>
       <a href={`#${id}`} className="sticky top-44 z-0 mb-1 w-full border-b pb-1 backdrop-blur">
-        <h3 className="scroll-mt-[180px] text-xl font-bold" id={id}>
+        <h3 className="scroll-mt-[180px] text-p-xl font-bold" id={id}>
           {title}
         </h3>
       </a>
@@ -119,7 +119,7 @@ const FeatureTable = ({
         <Card className="my-2 bg-weak" withShadow={false}>
           {features.map(feature => (
             <div
-              className="flex flex-col items-center border-b text-sm transition last:border-transparent sm:flex-row"
+              className="flex flex-col items-center border-b text-p-sm transition last:border-transparent sm:flex-row"
               key={feature.title}
             >
               <div className="w-[24%] min-w-[120px] py-4 pl-4 text-left">

@@ -197,6 +197,10 @@ export const getRoadmapIssues = async (): Promise<Issue[]> => {
       // shuffle and keep only 9 issues
       flatIssues.sort(() => Math.random() - 0.5);
       flatIssues.splice(9);
+      // sort by date
+      flatIssues.sort((a, b) => {
+        return new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime();
+      });
 
       return flatIssues;
     },

@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: ^0.4.2-beta.11
-        version: 0.4.2-beta.11(@tanstack/eslint-plugin-query@5.12.1)(@typescript-eslint/eslint-plugin@6.13.2)(@typescript-eslint/parser@6.13.2)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.55.0)
+        specifier: ^0.4.2
+        version: 0.4.2(@tanstack/eslint-plugin-query@5.12.1)(@typescript-eslint/eslint-plugin@6.13.2)(@typescript-eslint/parser@6.13.2)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.55.0)
       '@pedaki/prettier-config':
-        specifier: ^0.4.2-beta.11
-        version: 0.4.2-beta.11(prettier@3.1.0)
+        specifier: ^0.4.2
+        version: 0.4.2(prettier@3.1.0)
       '@radix-ui/colors':
         specifier: ^3.0.0
         version: 3.0.0
@@ -57,11 +57,11 @@ importers:
   apps/www:
     dependencies:
       '@pedaki/common':
-        specifier: ^0.4.2-beta.11
-        version: 0.4.2-beta.11(bcryptjs@2.4.3)(memory-cache@0.2.0)(nanoid@5.0.4)(sonner@1.2.4)
+        specifier: ^0.4.2
+        version: 0.4.2(bcryptjs@2.4.3)(memory-cache@0.2.0)(nanoid@5.0.4)(sonner@1.2.4)
       '@pedaki/design':
-        specifier: ^0.4.2-beta.11
-        version: 0.4.2-beta.11(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-aspect-ratio@1.0.3)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-checkbox@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-label@2.0.2)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-radio-group@1.1.3)(@radix-ui/react-scroll-area@1.0.5)(@radix-ui/react-select@2.0.0)(@radix-ui/react-separator@1.0.3)(@radix-ui/react-slider@1.1.2)(@radix-ui/react-slot@1.0.2)(@radix-ui/react-switch@1.0.3)(@radix-ui/react-tooltip@1.0.7)(class-variance-authority@0.7.0)(clsx@2.0.0)(mini-svg-data-uri@1.4.4)(sass@1.69.5)(tailwind-merge@2.1.0)(tailwindcss-animate@1.0.7)(tailwindcss@3.3.6)
+        specifier: ^0.4.2
+        version: 0.4.2(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-aspect-ratio@1.0.3)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-checkbox@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-label@2.0.2)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-radio-group@1.1.3)(@radix-ui/react-scroll-area@1.0.5)(@radix-ui/react-select@2.0.0)(@radix-ui/react-separator@1.0.3)(@radix-ui/react-slider@1.1.2)(@radix-ui/react-slot@1.0.2)(@radix-ui/react-switch@1.0.3)(@radix-ui/react-tooltip@1.0.7)(class-variance-authority@0.7.0)(clsx@2.0.0)(mini-svg-data-uri@1.4.4)(sass@1.69.5)(tailwind-merge@2.1.0)(tailwindcss-animate@1.0.7)(tailwindcss@3.3.6)
       '@t3-oss/env-nextjs':
         specifier: ^0.7.1
         version: 0.7.1(typescript@5.3.3)(zod@3.22.4)
@@ -786,8 +786,8 @@ packages:
       '@noble/hashes': 1.3.2
     dev: true
 
-  /@pedaki/common@0.4.2-beta.11(bcryptjs@2.4.3)(memory-cache@0.2.0)(nanoid@5.0.4)(sonner@1.2.4):
-    resolution: {integrity: sha512-WIUF8Ge71K7YyjkAtLWaNUASXYsi9frr63Omg5TR1K4RvpZ96JuEyeeFzRWZA6VZ2gj/ISkB1a4zm1dzpNvizw==}
+  /@pedaki/common@0.4.2(bcryptjs@2.4.3)(memory-cache@0.2.0)(nanoid@5.0.4)(sonner@1.2.4):
+    resolution: {integrity: sha512-oNB5iZOl1DJ+CryPDus1caaZpwX+o0YHErfz2uJSDpLGMpfviM/aaQpgY9AI4ceWxdDN1cWJjAw+FpxW5rbh7A==}
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}
     peerDependencies:
       bcryptjs: ^2.4.3
@@ -801,8 +801,8 @@ packages:
       sonner: 1.2.4(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@pedaki/design@0.4.2-beta.11(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-aspect-ratio@1.0.3)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-checkbox@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-label@2.0.2)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-radio-group@1.1.3)(@radix-ui/react-scroll-area@1.0.5)(@radix-ui/react-select@2.0.0)(@radix-ui/react-separator@1.0.3)(@radix-ui/react-slider@1.1.2)(@radix-ui/react-slot@1.0.2)(@radix-ui/react-switch@1.0.3)(@radix-ui/react-tooltip@1.0.7)(class-variance-authority@0.7.0)(clsx@2.0.0)(mini-svg-data-uri@1.4.4)(sass@1.69.5)(tailwind-merge@2.1.0)(tailwindcss-animate@1.0.7)(tailwindcss@3.3.6):
-    resolution: {integrity: sha512-PdcbtWiZR9BDBrI4u4qAuDxRq1cGye4cw0XIX5PajbDoJRTmoewz6R3lHexWcLkW1CUhrTLzGC8DkqJD/b/+nQ==}
+  /@pedaki/design@0.4.2(@radix-ui/react-accordion@1.1.2)(@radix-ui/react-aspect-ratio@1.0.3)(@radix-ui/react-avatar@1.0.4)(@radix-ui/react-checkbox@1.0.4)(@radix-ui/react-dialog@1.0.5)(@radix-ui/react-dropdown-menu@2.0.6)(@radix-ui/react-label@2.0.2)(@radix-ui/react-navigation-menu@1.1.4)(@radix-ui/react-radio-group@1.1.3)(@radix-ui/react-scroll-area@1.0.5)(@radix-ui/react-select@2.0.0)(@radix-ui/react-separator@1.0.3)(@radix-ui/react-slider@1.1.2)(@radix-ui/react-slot@1.0.2)(@radix-ui/react-switch@1.0.3)(@radix-ui/react-tooltip@1.0.7)(class-variance-authority@0.7.0)(clsx@2.0.0)(mini-svg-data-uri@1.4.4)(sass@1.69.5)(tailwind-merge@2.1.0)(tailwindcss-animate@1.0.7)(tailwindcss@3.3.6):
+    resolution: {integrity: sha512-RcssG/6X4f9r8ANqGcth5sCC/SE2YnPS4CU6vMSRHM3qYd/5G5kV8k5DRGD0kP3M90DX/fYj3ZcHGDWk9B065g==}
     engines: {node: '>=18.0.0 <19.0.0', npm: use-pnpm, pnpm: '>=8.0.0', yarn: use-pnpm}
     peerDependencies:
       '@radix-ui/react-accordion': ^1.1.2
@@ -858,8 +858,8 @@ packages:
       tailwindcss-animate: 1.0.7(tailwindcss@3.3.6)
     dev: false
 
-  /@pedaki/eslint-config@0.4.2-beta.11(@tanstack/eslint-plugin-query@5.12.1)(@typescript-eslint/eslint-plugin@6.13.2)(@typescript-eslint/parser@6.13.2)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.55.0):
-    resolution: {integrity: sha512-Fl2h4EewlP8EKtt4jfjXh8oD95TibhViFXadIKo3VF07Wqss5kDDTYkFjZQl6jOBaqqelFpik+kt8orFD90IMg==}
+  /@pedaki/eslint-config@0.4.2(@tanstack/eslint-plugin-query@5.12.1)(@typescript-eslint/eslint-plugin@6.13.2)(@typescript-eslint/parser@6.13.2)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.55.0):
+    resolution: {integrity: sha512-pX2m+NTXXnwjPNdZjyIQ2S7MH30wioFp3H8yzaHbt+tZU4VusuBHYmwR4Icz3xAWtx0xZsdkK+gEM4ZkscZOqg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@tanstack/eslint-plugin-query': ^5.0.0
@@ -879,8 +879,8 @@ packages:
       eslint-plugin-node: 11.1.0(eslint@8.55.0)
     dev: true
 
-  /@pedaki/prettier-config@0.4.2-beta.11(prettier@3.1.0):
-    resolution: {integrity: sha512-I8ghhng8fe4ylxa58FbJXDcKKCbO/IQs0oV//qFQwHedUc3qQsCeabuSxvyk/+TghVLnl0Z51kqgdrnB70R3Lg==}
+  /@pedaki/prettier-config@0.4.2(prettier@3.1.0):
+    resolution: {integrity: sha512-ocoeOsJMJYKlNL1lI+axn6zssqkgBNfC9nhUoIsIdI+uijgKuNkJB3AUBMJ+v3CuYB1vScrVF/MWPYJq0aeg6A==}
     peerDependencies:
       prettier: ^3.0.2
     dependencies:
