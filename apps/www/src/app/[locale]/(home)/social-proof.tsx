@@ -8,7 +8,7 @@ const SocialProof = () => {
       <div className="mx-auto block w-full max-w-screen-xl">
         {/* TODO: flex w-max overflow-hidden + slider ? */}
         <div className="flex flex-col items-center gap-4 pb-8">
-          <p className="mb-2 text-xl font-medium text-sub">Soutenu par plusieurs universités</p>
+          <p className="text-xl mb-2 font-medium text-sub">Soutenu par plusieurs universités</p>
           <div className="flex max-w-screen-sm items-center">
             {/* TODO: svg ?*/}
             <OrganizationIcon

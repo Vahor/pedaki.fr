@@ -29,7 +29,10 @@ export const FeatureWrapper: React.FC<{
       <div className="max-w-lg md:max-w-2xl">
         <Balancer
           as="h3"
-          className={cn('mb-12 text-4xl font-bold lg:text-5xl', titleClassName)}
+          className={cn(
+            'mb-12 text-title-3 font-bold lg:text-title-2 lg:font-bold',
+            titleClassName,
+          )}
           id="open-source"
         >
           {title}

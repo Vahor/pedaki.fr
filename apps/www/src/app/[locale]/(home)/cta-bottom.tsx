@@ -8,7 +8,7 @@ const CallToActionBottom = () => {
     <div className="bg-surface py-20 text-white">
       <div className="container flex flex-col justify-between gap-4 md:flex-row md:items-center">
         <div>
-          <h2 className="text-4xl font-bold lg:text-5xl" id="open-source">
+          <h2 className="text-title-3 font-bold lg:text-title-2 lg:font-bold" id="open-source">
             Un outil essentiel <br className="hidden md:block" />
             pour <span className="underline decoration-primary-base decoration-dotted">
               toutes

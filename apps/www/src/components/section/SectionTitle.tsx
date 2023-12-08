@@ -11,7 +11,7 @@ const SectionTitle = ({ children, anchor }: SectionTitleProps) => {
     <Link
       href={`#${anchor}`}
       id={anchor}
-      className="text-gray-900 block pb-2 text-xl font-bold sm:text-2xl"
+      className="text-gray-900 block pb-2 text-title-2 font-bold sm:text-title-3"
     >
       <h3>{children}</h3>
     </Link>

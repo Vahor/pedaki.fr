@@ -24,7 +24,6 @@ export const LocaleItem = ({ locale }: { locale: (typeof locales)[number] }) => 
     <DropdownMenuItem
       disabled={isActive}
       key={locale.code}
-      className="flex items-center space-x-2"
       onClick={() => changeLocale(locale.code)}
     >
       <Icon className="h-6 w-6 rounded-lg" />

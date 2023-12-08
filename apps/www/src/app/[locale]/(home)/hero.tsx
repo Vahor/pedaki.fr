@@ -14,11 +14,11 @@ const Hero = () => {
           title="Le futur de la gestion scolaire"
           description="Toutes les fonctionnalités pour gérer votre établissement, dans une seule application."
           withPadding={false}
-          titleClassName="md:text-7xl max-w-screen-md px-8"
+          titleClassName="md:text-[72px] md:font-bold max-w-screen-md px-8"
         />
         <div className="mt-3 flex flex-col items-center justify-center gap-4 sm:flex-row md:mt-8">
           <Link href="https://app.pedaki.fr" className="w-full sm:w-auto">
-            <Button variant="stroke-primary-gray" className="w-full font-semibold">
+            <Button variant="stroke-primary-main" className="w-full font-semibold">
               <span className="text-main">Découvrir le projet</span>
               <AnimatedChevronRight />
             </Button>
@@ -38,9 +38,13 @@ const Hero = () => {
 const Badges = () => {
   return (
     <Link href="https://docs.pedaki.fr/news/2023/august/initial-press-release" target="_blank">
-      <Badge variant="outline" className="hover:border-orange-8 group bg-weak py-1" tabIndex={0}>
+      <Badge
+        variant="outline"
+        className="hover:border-orange-8 group gap-1 bg-weak py-1"
+        tabIndex={0}
+      >
         <span>Ouverture prévue en 2024</span>
-        <AnimatedChevronRight className="text-primary h-3 w-3" />
+        <AnimatedChevronRight className="h-3 w-3 text-primary-base" />
       </Badge>
     </Link>
   );
