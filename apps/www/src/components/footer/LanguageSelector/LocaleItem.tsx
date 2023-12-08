@@ -3,8 +3,7 @@
 import { DropdownMenuItem, DropdownMenuLabel } from '@pedaki/design/ui/dropdown-menu';
 import type { IconType } from '@pedaki/design/ui/icons';
 import { IconFlagFR, IconFlagGB } from '@pedaki/design/ui/icons';
-import type { locales } from '~/config/locales';
-import { useChangeLocale, useCurrentLocale } from '~/locales/client';
+import { useChangeLocale, useCurrentLocale, useScopedI18n } from '~/locales/client';
 import type { LocaleCode } from '~/locales/server';
 import React from 'react';
 
@@ -13,21 +12,18 @@ const LocaleIcon: Record<LocaleCode, IconType> = {
   en: IconFlagGB,
 };
 
-export const LocaleItem = ({ locale }: { locale: (typeof locales)[number] }) => {
+export const LocaleItem = ({ locale }: { locale: LocaleCode }) => {
   const activeLocale = useCurrentLocale();
-  const isActive = locale.code === activeLocale;
-  const Icon = LocaleIcon[locale.code];
+  const isActive = locale === activeLocale;
+  const Icon = LocaleIcon[locale];
 
+  const languageT = useScopedI18n('components.footer.language');
   const changeLocale = useChangeLocale({ preserveSearchParams: true });
 
   return (
-    <DropdownMenuItem
-      disabled={isActive}
-      key={locale.code}
-      onClick={() => changeLocale(locale.code)}
-    >
+    <DropdownMenuItem disabled={isActive} key={locale} onClick={() => changeLocale(locale)}>
       <Icon className="h-6 w-6 rounded-lg" />
-      <DropdownMenuLabel>{locale.name}</DropdownMenuLabel>
+      <DropdownMenuLabel>{languageT(locale)}</DropdownMenuLabel>
     </DropdownMenuItem>
   );
 };
