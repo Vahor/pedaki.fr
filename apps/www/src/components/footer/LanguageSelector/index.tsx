@@ -6,8 +6,8 @@ import {
 } from '@pedaki/design/ui/dropdown-menu';
 import { IconChevronDown, IconTranslation } from '@pedaki/design/ui/icons';
 import { LocaleItem } from '~/components/footer/LanguageSelector/LocaleItem';
-import { locales } from '~/config/locales';
 import { getScopedI18n } from '~/locales/server';
+import { locales } from '~/locales/shared';
 import React, { Suspense } from 'react';
 
 const LanguageSelector = async () => {
@@ -35,7 +35,7 @@ const LanguageSelector = async () => {
       <DropdownMenuContent align="end" side="top">
         {locales.map(locale => {
           return (
-            <Suspense key={locale.code}>
+            <Suspense key={locale}>
               <LocaleItem locale={locale} />
             </Suspense>
           );
