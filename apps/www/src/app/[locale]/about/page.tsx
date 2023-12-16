@@ -7,13 +7,12 @@ import Naming from '~/app/[locale]/about/naming';
 import { PageHeader } from '~/components/PageHeader';
 import { getScopedI18n } from '~/locales/server';
 import type { LocaleCode } from '~/locales/server';
-import { fallbackLocale, locales } from '~/locales/shared';
+import { setStaticParamsLocale } from '~/locales/utils';
 import { pageBaseStyle } from '~/styles/constants';
-import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
 export const generateMetadata = async ({ params }: { params: { locale: LocaleCode } }) => {
-  setStaticParamsLocale(locales.includes(params.locale) ? params.locale : fallbackLocale);
+  setStaticParamsLocale(params.locale);
   const aboutT = await getScopedI18n('pages.about');
 
   return {

@@ -5,7 +5,8 @@ import { cn } from '@pedaki/design/utils';
 import { fontClassName } from '~/config/font';
 import { getStaticParams } from '~/locales/server';
 import type { LocaleCode } from '~/locales/server';
-import { fallbackLocale, locales } from '~/locales/shared';
+import { locales } from '~/locales/shared';
+import { fixLocale } from '~/locales/utils';
 import { setStaticParamsLocale } from 'next-international/server';
 import { notFound } from 'next/navigation';
 import Footer from '../../components/footer';
@@ -47,7 +48,7 @@ export const viewport = {
 };
 
 export const generateMetadata = ({ params }: { params: { locale: string } }) => {
-  const locale = locales.includes(params.locale) ? params.locale : fallbackLocale;
+  const locale = fixLocale(params.locale);
   setStaticParamsLocale(locale);
 
   return {
