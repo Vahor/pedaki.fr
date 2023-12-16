@@ -3,11 +3,13 @@ import Faq from '~/app/[locale]/pricing/faq';
 import PriceTable from '~/app/[locale]/pricing/price-table';
 import { PageHeader } from '~/components/PageHeader';
 import { getScopedI18n } from '~/locales/server';
+import type { LocaleCode } from '~/locales/server';
+import { setStaticParamsLocale } from '~/locales/utils';
 import { pageBaseStyle } from '~/styles/constants';
-import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({ params }: { params: { locale: LocaleCode } }) => {
+  setStaticParamsLocale(params.locale);
   const pricingT = await getScopedI18n('pages.pricing');
 
   return {

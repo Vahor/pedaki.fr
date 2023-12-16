@@ -1,17 +1,18 @@
 import React from 'react';
 import '@pedaki/design/tailwind/index.css';
 import '../../styles/globals.css';
-import { cn } from '@pedaki/design/utils';
-import { fontClassName } from '~/config/font';
 import { getStaticParams } from '~/locales/server';
 import type { LocaleCode } from '~/locales/server';
-import { fallbackLocale, locales } from '~/locales/shared';
+import { locales } from '~/locales/shared';
+import { fixLocale } from '~/locales/utils';
+import type { Metadata } from 'next';
+import { setStaticParamsLocale } from 'next-international/server';
 import { notFound } from 'next/navigation';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { Providers } from './(home)/providers';
 
-export default function RootLayout({
+export default function Layout({
   children,
   params: { locale },
 }: {
@@ -19,19 +20,16 @@ export default function RootLayout({
   params: { locale: LocaleCode };
 }) {
   if (!locales.includes(locale)) {
-    return notFound();
+    notFound();
+    return null;
   }
 
   return (
-    <html lang={locale} dir="ltr" className={cn(fontClassName)} suppressHydrationWarning>
-      <body>
-        <Providers locale={locale}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
-      </body>
-    </html>
+    <Providers locale={locale}>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </Providers>
   );
 }
 
@@ -45,7 +43,8 @@ export const viewport = {
 };
 
 export const generateMetadata = ({ params }: { params: { locale: string } }) => {
-  const locale = locales.includes(params.locale) ? params.locale : fallbackLocale;
+  const locale = fixLocale(params.locale);
+  setStaticParamsLocale(locale);
 
   return {
     metadataBase: new URL('https://www.pedaki.fr'),
@@ -56,8 +55,6 @@ export const generateMetadata = ({ params }: { params: { locale: string } }) => 
     description: 'todo',
     applicationName: 'Pedaki',
     openGraph: {
-      title: 'Pedaki',
-      description: 'todo',
       siteName: 'Pedaki',
       locale: locale,
       url: '/',
@@ -93,5 +90,5 @@ export const generateMetadata = ({ params }: { params: { locale: string } }) => 
       { rel: 'mask-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
       { rel: 'image/x-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
     ],
-  };
+  } satisfies Metadata;
 };
