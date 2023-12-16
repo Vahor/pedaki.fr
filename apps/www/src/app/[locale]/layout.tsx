@@ -59,8 +59,6 @@ export const generateMetadata = ({ params }: { params: { locale: string } }) => 
     description: 'todo',
     applicationName: 'Pedaki',
     openGraph: {
-      title: 'Pedaki',
-      description: 'todo',
       siteName: 'Pedaki',
       locale: locale,
       url: '/',
