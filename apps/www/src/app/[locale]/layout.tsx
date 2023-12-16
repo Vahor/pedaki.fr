@@ -7,6 +7,7 @@ import { getStaticParams } from '~/locales/server';
 import type { LocaleCode } from '~/locales/server';
 import { locales } from '~/locales/shared';
 import { fixLocale } from '~/locales/utils';
+import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 import { notFound } from 'next/navigation';
 import Footer from '../../components/footer';
@@ -95,5 +96,5 @@ export const generateMetadata = ({ params }: { params: { locale: string } }) => 
       { rel: 'mask-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
       { rel: 'image/x-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
     ],
-  };
+  } satisfies Metadata;
 };
