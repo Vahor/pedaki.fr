@@ -1,8 +1,6 @@
 import React from 'react';
 import '@pedaki/design/tailwind/index.css';
 import '../../styles/globals.css';
-import { cn } from '@pedaki/design/utils';
-import { fontClassName } from '~/config/font';
 import { getStaticParams } from '~/locales/server';
 import type { LocaleCode } from '~/locales/server';
 import { locales } from '~/locales/shared';
@@ -14,7 +12,7 @@ import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { Providers } from './(home)/providers';
 
-export default function RootLayout({
+export default function Layout({
   children,
   params: { locale },
 }: {
@@ -27,15 +25,11 @@ export default function RootLayout({
   }
 
   return (
-    <html lang={locale} dir="ltr" className={cn(fontClassName)} suppressHydrationWarning>
-      <body>
-        <Providers locale={locale}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
-      </body>
-    </html>
+    <Providers locale={locale}>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </Providers>
   );
 }
 
@@ -96,5 +90,8 @@ export const generateMetadata = ({ params }: { params: { locale: string } }) => 
       { rel: 'mask-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
       { rel: 'image/x-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
     ],
+    other: {
+      'content-language': locale,
+    },
   } satisfies Metadata;
 };
