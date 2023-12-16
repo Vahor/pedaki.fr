@@ -1,4 +1,5 @@
-import { getScopedI18n, type LocaleCode } from '~/locales/server';
+import { getScopedI18n } from '~/locales/server';
+import type { LocaleCode } from '~/locales/server';
 import { fallbackLocale, locales } from '~/locales/shared';
 import { setStaticParamsLocale } from 'next-international/server';
 
