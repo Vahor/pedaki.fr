@@ -90,8 +90,5 @@ export const generateMetadata = ({ params }: { params: { locale: string } }) => 
       { rel: 'mask-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
       { rel: 'image/x-icon', url: 'https://static.pedaki.fr/logo/favicon.ico' },
     ],
-    other: {
-      'content-language': locale,
-    },
   } satisfies Metadata;
 };
