@@ -6,6 +6,7 @@ import { fontClassName } from '~/config/font';
 import { getStaticParams } from '~/locales/server';
 import type { LocaleCode } from '~/locales/server';
 import { fallbackLocale, locales } from '~/locales/shared';
+import { setStaticParamsLocale } from 'next-international/server';
 import { notFound } from 'next/navigation';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
@@ -19,7 +20,8 @@ export default function RootLayout({
   params: { locale: LocaleCode };
 }) {
   if (!locales.includes(locale)) {
-    return notFound();
+    notFound();
+    return null;
   }
 
   return (
@@ -46,6 +48,7 @@ export const viewport = {
 
 export const generateMetadata = ({ params }: { params: { locale: string } }) => {
   const locale = locales.includes(params.locale) ? params.locale : fallbackLocale;
+  setStaticParamsLocale(locale);
 
   return {
     metadataBase: new URL('https://www.pedaki.fr'),

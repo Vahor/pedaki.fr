@@ -1,7 +1,9 @@
-import { getScopedI18n } from '~/locales/server';
+import { getScopedI18n, type LocaleCode } from '~/locales/server';
+import { fallbackLocale, locales } from '~/locales/shared';
 import { setStaticParamsLocale } from 'next-international/server';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({ params }: { params: { locale: LocaleCode } }) => {
+  setStaticParamsLocale(locales.includes(params.locale) ? params.locale : fallbackLocale);
   const notFoundT = await getScopedI18n('pages.notFound');
 
   return {
@@ -11,7 +13,7 @@ export const generateMetadata = async () => {
 };
 
 export default async function NotFound({ params }: { params: { locale: string } }) {
-  setStaticParamsLocale(params.locale);
+  setStaticParamsLocale(locales.includes(params.locale) ? params.locale : fallbackLocale);
   const notFoundT = await getScopedI18n('pages.notFound');
 
   return (

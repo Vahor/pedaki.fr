@@ -5,12 +5,14 @@ import BrandColors from '~/app/[locale]/about/brand-colors';
 import Fonts from '~/app/[locale]/about/fonts';
 import Naming from '~/app/[locale]/about/naming';
 import { PageHeader } from '~/components/PageHeader';
-import { getScopedI18n } from '~/locales/server';
+import { getScopedI18n, type LocaleCode } from '~/locales/server';
+import { fallbackLocale, locales } from '~/locales/shared';
 import { pageBaseStyle } from '~/styles/constants';
 import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({ params }: { params: { locale: LocaleCode } }) => {
+  setStaticParamsLocale(locales.includes(params.locale) ? params.locale : fallbackLocale);
   const aboutT = await getScopedI18n('pages.about');
 
   return {

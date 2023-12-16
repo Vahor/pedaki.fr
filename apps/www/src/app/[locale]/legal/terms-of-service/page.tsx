@@ -1,10 +1,12 @@
 import { PageHeader } from '~/components/PageHeader';
-import { getScopedI18n } from '~/locales/server';
+import { getScopedI18n, type LocaleCode } from '~/locales/server';
+import { fallbackLocale, locales } from '~/locales/shared';
 import { pageBaseStyle } from '~/styles/constants';
 import { setStaticParamsLocale } from 'next-international/server';
 import React from 'react';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({ params }: { params: { locale: LocaleCode } }) => {
+  setStaticParamsLocale(locales.includes(params.locale) ? params.locale : fallbackLocale);
   const termsT = await getScopedI18n('pages.termsOfService');
 
   return {
