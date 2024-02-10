@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.5.2-beta.6
-        version: 0.5.2-beta.6(@tanstack/eslint-plugin-query@5.17.7)(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.56.0)
+        specifier: 0.5.2-beta.7
+        version: 0.5.2-beta.7(@tanstack/eslint-plugin-query@5.17.7)(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.56.0)
       '@pedaki/prettier-config':
         specifier: 0.5.2-beta.6
         version: 0.5.2-beta.6(prettier@3.2.2)
@@ -851,13 +851,13 @@ packages:
       tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
     dev: false
 
-  /@pedaki/eslint-config@0.5.2-beta.6(@tanstack/eslint-plugin-query@5.17.7)(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.56.0):
-    resolution: {integrity: sha512-ZjQTt5QRkva5eq/Brz4tvy97FG7fo2SfB5T6MDGHp2lCgibij/4Ihj8PV+TLo5DdwiD0ro6xs6yQII+2dBBmJQ==}
+  /@pedaki/eslint-config@0.5.2-beta.7(@tanstack/eslint-plugin-query@5.17.7)(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.56.0):
+    resolution: {integrity: sha512-rdjuM/NsO/Ja9TueBKSbICEJuihKL6t6vkWLVQer/ySaRoYIBtTxy4wfPss+mAEqvsdx2dUMhkT3zBWI8bYdYg==}
     engines: {node: '>=20'}
     peerDependencies:
       '@tanstack/eslint-plugin-query': ^5.0.0
-      '@typescript-eslint/eslint-plugin': 6.19.0
-      '@typescript-eslint/parser': 6.19.0
+      '@typescript-eslint/eslint-plugin': 6.20.0
+      '@typescript-eslint/parser': 6.20.0
       eslint: ^8.47.0
       eslint-config-next: ^14.0.0
       eslint-config-prettier: ^9.0.0
