@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@pedaki/eslint-config": "0.5.2-beta.6",
-    "@pedaki/prettier-config": "0.5.2-beta.6",
+    "@pedaki/prettier-config": "0.5.2-beta.7",
     "@radix-ui/colors": "^3.0.0",
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "^20.11.17",

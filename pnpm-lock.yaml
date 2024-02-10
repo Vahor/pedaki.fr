@@ -12,8 +12,8 @@ importers:
         specifier: 0.5.2-beta.6
         version: 0.5.2-beta.6(@tanstack/eslint-plugin-query@5.17.7)(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-config-next@14.0.4)(eslint-config-prettier@9.1.0)(eslint-plugin-node@11.1.0)(eslint@8.56.0)
       '@pedaki/prettier-config':
-        specifier: 0.5.2-beta.6
-        version: 0.5.2-beta.6(prettier@3.2.2)
+        specifier: 0.5.2-beta.7
+        version: 0.5.2-beta.7(prettier@3.2.2)
       '@radix-ui/colors':
         specifier: ^3.0.0
         version: 3.0.0
@@ -872,8 +872,8 @@ packages:
       eslint-plugin-node: 11.1.0(eslint@8.56.0)
     dev: true
 
-  /@pedaki/prettier-config@0.5.2-beta.6(prettier@3.2.2):
-    resolution: {integrity: sha512-nu5fhXeAZywIjrEbKufJRh27wlSCgG1d5vpz+FvCFsBRBqK5bBebQAeB8CZXBfs51KmKtIfMOLAAvQ2Bnz/Grg==}
+  /@pedaki/prettier-config@0.5.2-beta.7(prettier@3.2.2):
+    resolution: {integrity: sha512-jwz1+KMJXJs8xylo66WAaOoRoR3hlOExBpyoSO+eM9UEvdWIU87qK2zd7bNwDnVVhjRHpMEL9RAyy1/DFKCOnQ==}
     peerDependencies:
       prettier: ^3.0.2
     dependencies:
