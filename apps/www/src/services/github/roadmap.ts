@@ -106,7 +106,7 @@ const repositories = [
   },
 ];
 
-const ignoredLabels = ['duplicate', 'wontfix', 'unconfirmed'];
+const ignoredLabels = ['duplicate', 'wontfix', 'unconfirmed', 'invalid'];
 const ignoredTitles = ['[WIP]'];
 const ignoredUsers = ['renovate'];
 
