@@ -97,6 +97,10 @@ const repositories = [
     name: 'pedaki',
   },
   {
+    owner: 'pedakihq',
+    name: 'pedaki-community',
+  },
+  {
     owner: 'vahor',
     name: 'pedaki-pedaki.fr',
   },
