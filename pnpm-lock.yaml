@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@pedaki/eslint-config':
-        specifier: 0.5.2-beta.11
-        version: 0.5.2-beta.11(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.1(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
+        specifier: 0.5.3
+        version: 0.5.3(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.1(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)
       '@pedaki/prettier-config':
         specifier: 0.5.2-beta.11
         version: 0.5.2-beta.11(prettier@3.2.5)
@@ -552,8 +552,8 @@ packages:
       react-hook-form:
         optional: true
 
-  '@pedaki/eslint-config@0.5.2-beta.11':
-    resolution: {integrity: sha512-Idp/Kl6MZiUNisMafokQM0fJ/3hByXxQqkPuuuE3Fnez57oPzADFUNCC3B6QYVfwsV3Fs6iHR7p7sfQw6gtwCg==}
+  '@pedaki/eslint-config@0.5.3':
+    resolution: {integrity: sha512-y6DzP5Raq8VClYnKGuVUZtxwEUgqjc/PTNjFQegjdkgXeXV/Wf58R+lFvfrJbmrv1BYvVm10mQOrEuM89ttuPg==}
     engines: {node: ^18 || ^20}
     peerDependencies:
       '@tanstack/eslint-plugin-query': ^5.0.0
@@ -2796,12 +2796,6 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  ts-api-utils@1.2.1:
-    resolution: {integrity: sha512-RIYA36cJn2WiH9Hy77hdF9r7oEwxAtB/TS9/S4Qd90Ap4z5FSiin5zEiTL44OII1Y3IIlEvxwxFUVgrHSZ/UpA==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      typescript: '>=4.2.0'
-
   ts-api-utils@1.3.0:
     resolution: {integrity: sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==}
     engines: {node: '>=16'}
@@ -3405,7 +3399,7 @@ snapshots:
       tailwindcss: 3.4.1
       tailwindcss-animate: 1.0.7(tailwindcss@3.4.1)
 
-  '@pedaki/eslint-config@0.5.2-beta.11(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.1(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)':
+  '@pedaki/eslint-config@0.5.3(@tanstack/eslint-plugin-query@5.20.1(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint-config-next@14.1.1(eslint@8.57.0)(typescript@5.4.5))(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint-plugin-node@11.1.0(eslint@8.57.0))(eslint@8.57.0)':
     dependencies:
       '@tanstack/eslint-plugin-query': 5.20.1(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/eslint-plugin': 7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -4176,7 +4170,7 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.6.0
-      ts-api-utils: 1.2.1(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
@@ -5710,7 +5704,7 @@ snapshots:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.5
-      source-map-js: 1.0.2
+      source-map-js: 1.2.0
 
   scheduler@0.23.0:
     dependencies:
@@ -5931,10 +5925,6 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
-
-  ts-api-utils@1.2.1(typescript@5.4.5):
-    dependencies:
-      typescript: 5.4.5
 
   ts-api-utils@1.3.0(typescript@5.4.5):
     dependencies:
