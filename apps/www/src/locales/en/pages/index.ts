@@ -1,7 +1,7 @@
-import about from './about';
-import notFound from './not-found';
+import about from "./about";
+import notFound from "./not-found";
 
 export default {
-  about,
-  notFound,
+	about,
+	notFound,
 } as const;

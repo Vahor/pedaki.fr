@@ -1,93 +1,96 @@
-import { Card } from '@pedaki/design/ui/card';
-import { ColorPill } from '@pedaki/design/ui/color-pill';
+import { Card } from "@pedaki/design/ui/card";
+import { ColorPill } from "@pedaki/design/ui/color-pill";
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@pedaki/design/ui/tooltip';
-import { cn } from '@pedaki/design/utils';
-import SectionTitle from '~/components/section/SectionTitle';
-import { getScopedI18n } from '~/locales/server';
-import React from 'react';
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "@pedaki/design/ui/tooltip";
+import { cn } from "@pedaki/design/utils";
+import SectionTitle from "~/components/section/SectionTitle";
+import { getScopedI18n } from "~/locales/server";
+import React from "react";
 
 const BrandColors = async () => {
-  const brandColorsT = await getScopedI18n('pages.about.brandColors');
+	const brandColorsT = await getScopedI18n("pages.about.brandColors");
 
-  return (
-    <section>
-      <SectionTitle anchor="assets">{brandColorsT('title')}</SectionTitle>
-      <p className="mb-8 text-soft">
-        {brandColorsT('paragraphs.description.1')}
-        <br />
-        {brandColorsT('paragraphs.description.2')}
-      </p>
-      <Card className="bg-weak">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-4 p-6 sm:grid-cols-2 lg:grid-cols-3">
-          <TooltipProvider delayDuration={0}>
-            <Color
-              title={brandColorsT('colors.orange.title')}
-              hex="#F76B15"
-              tooltip={brandColorsT('colors.orange.tooltip')}
-            />
-            <Color
-              title={brandColorsT('colors.lightOrange.title')}
-              hex="#FFDFB5"
-              tooltip={brandColorsT('colors.lightOrange.tooltip')}
-            />
-            <Color
-              title={brandColorsT('colors.darkGreen.title')}
-              hex="#4E867E"
-              tooltip={brandColorsT('colors.darkGreen.tooltip')}
-            />
-            <Color
-              title={brandColorsT('colors.lightGray.title')}
-              hex="#F9F9F9"
-              tooltip={brandColorsT('colors.lightGray.tooltip')}
-            />
-            <Color
-              title={brandColorsT('colors.darkGray.title')}
-              hex="#1A1A1A"
-              tooltip={brandColorsT('colors.darkGray.tooltip')}
-            />
-          </TooltipProvider>
-        </div>
-      </Card>
-    </section>
-  );
+	return (
+		<section>
+			<SectionTitle anchor="assets">{brandColorsT("title")}</SectionTitle>
+			<p className="mb-8 text-soft">
+				{brandColorsT("paragraphs.description.1")}
+				<br />
+				{brandColorsT("paragraphs.description.2")}
+			</p>
+			<Card className="bg-weak">
+				<div className="grid grid-cols-1 gap-x-8 gap-y-4 p-6 sm:grid-cols-2 lg:grid-cols-3">
+					<TooltipProvider delayDuration={0}>
+						<Color
+							title={brandColorsT("colors.orange.title")}
+							hex="#F76B15"
+							tooltip={brandColorsT("colors.orange.tooltip")}
+						/>
+						<Color
+							title={brandColorsT("colors.lightOrange.title")}
+							hex="#FFDFB5"
+							tooltip={brandColorsT("colors.lightOrange.tooltip")}
+						/>
+						<Color
+							title={brandColorsT("colors.darkGreen.title")}
+							hex="#4E867E"
+							tooltip={brandColorsT("colors.darkGreen.tooltip")}
+						/>
+						<Color
+							title={brandColorsT("colors.lightGray.title")}
+							hex="#F9F9F9"
+							tooltip={brandColorsT("colors.lightGray.tooltip")}
+						/>
+						<Color
+							title={brandColorsT("colors.darkGray.title")}
+							hex="#1A1A1A"
+							tooltip={brandColorsT("colors.darkGray.tooltip")}
+						/>
+					</TooltipProvider>
+				</div>
+			</Card>
+		</section>
+	);
 };
 
 const Color = ({
-  title,
-  hex,
-  className,
-  tooltip,
+	title,
+	hex,
+	className,
+	tooltip,
 }: {
-  title: string;
-  hex: string;
-  className?: string;
-  descriptionClassName?: string;
-  tooltip: string;
+	title: string;
+	hex: string;
+	className?: string;
+	descriptionClassName?: string;
+	tooltip: string;
 }) => {
-  return (
-    <div className={cn('flex items-center gap-2', className)}>
-      <ColorPill color={hex} className="h-[1.5rem] min-h-[1.5rem] w-[1.5rem] min-w-[1.5rem]" />
-      <Tooltip>
-        <TooltipTrigger className="select-text">
-          <div className="text-left">
-            <h4 className="text-primary mb-0.5 font-medium">{title}</h4>
+	return (
+		<div className={cn("flex items-center gap-2", className)}>
+			<ColorPill
+				color={hex}
+				className="h-[1.5rem] min-h-[1.5rem] w-[1.5rem] min-w-[1.5rem]"
+			/>
+			<Tooltip>
+				<TooltipTrigger className="select-text">
+					<div className="text-left">
+						<h4 className="text-primary mb-0.5 font-medium">{title}</h4>
 
-            <div className="text-xs text-soft">
-              <p>{hex}</p>
-            </div>
-          </div>
-        </TooltipTrigger>
-        <TooltipContent className="max-w-xs" side="top" align="center">
-          <p>{tooltip}</p>
-        </TooltipContent>
-      </Tooltip>
-    </div>
-  );
+						<div className="text-xs text-soft">
+							<p>{hex}</p>
+						</div>
+					</div>
+				</TooltipTrigger>
+				<TooltipContent className="max-w-xs" side="top" align="center">
+					<p>{tooltip}</p>
+				</TooltipContent>
+			</Tooltip>
+		</div>
+	);
 };
 
 export default BrandColors;

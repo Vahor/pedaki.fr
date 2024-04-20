@@ -1,7 +1,7 @@
-import footer from './footer';
-import header from './header';
+import footer from "./footer";
+import header from "./header";
 
 export default {
-  footer,
-  header,
+	footer,
+	header,
 } as const;

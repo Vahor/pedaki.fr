@@ -1,51 +1,50 @@
 {
-  "name": "www",
-  "version": "0.1.0",
-  "license": "MIT",
-  "type": "module",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/PedakiApp/pedaki.fr.git"
-  },
-  "bugs": {
-    "url": "https://github.com/PedakiApp/pedaki.fr/issues"
-  },
-  "homepage": "https://www.pedaki.fr",
-  "engines": {
-    "node": ">=20",
-    "pnpm": ">=8.0.0"
-  },
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev -p 3000",
-    "lint": "next lint",
-    "start": "next start",
-    "clean": "rimraf .next",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "format": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@pedaki/common": "0.5.3",
-    "@pedaki/design": "0.5.3",
-    "@t3-oss/env-nextjs": "^0.9.2",
-    "cookies-next": "^4.1.1",
-    "dayjs": "^1.11.10",
-    "million": "^3.0.6",
-    "next": "14.2.2",
-    "next-international": "1.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-wrap-balancer": "^1.1.0",
-    "sanitize-html": "^2.13.0",
-    "sharp": "^0.33.3",
-    "zod": "^3.22.5"
-  },
-  "devDependencies": {
-    "@types/sanitize-html": "^2.11.0",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38"
-  },
-  "prettier": "@pedaki/prettier-config"
+	"name": "www",
+	"version": "0.1.0",
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/PedakiApp/pedaki.fr.git"
+	},
+	"bugs": {
+		"url": "https://github.com/PedakiApp/pedaki.fr/issues"
+	},
+	"homepage": "https://www.pedaki.fr",
+	"engines": {
+		"node": ">=20",
+		"pnpm": ">=8.0.0"
+	},
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev -p 3000",
+		"start": "next start",
+		"clean": "rimraf .next",
+		"format": "pnpx @biomejs/biome format ./ --write",
+		"lint": "pnpx @biomejs/biome lint ./ --apply",
+		"format:check": "pnpx @biomejs/biome format ./",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@pedaki/common": "0.5.3",
+		"@pedaki/design": "0.5.3",
+		"@t3-oss/env-nextjs": "^0.9.2",
+		"cookies-next": "^4.1.1",
+		"dayjs": "^1.11.10",
+		"million": "^3.0.6",
+		"next": "14.2.2",
+		"next-international": "1.2.4",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-wrap-balancer": "^1.1.0",
+		"sanitize-html": "^2.13.0",
+		"sharp": "^0.33.3",
+		"zod": "^3.22.5"
+	},
+	"devDependencies": {
+		"@types/sanitize-html": "^2.11.0",
+		"autoprefixer": "^10.4.19",
+		"postcss": "^8.4.38"
+	}
 }

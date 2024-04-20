@@ -1,5 +1,5 @@
-import footer from './footer';
+import footer from "./footer";
 
 export default {
-  footer,
+	footer,
 } as const;

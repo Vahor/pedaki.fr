@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
 export const metadata = {
-  description: 'error description',
-  title: 'Error - Pedaki',
+	description: "error description",
+	title: "Error - Pedaki",
 };
 
-export default function Error() {
-  return (
-    <div>
-      <h1>Error</h1>
-    </div>
-  );
+export default function ErrorPage() {
+	return (
+		<div>
+			<h1>Error</h1>
+		</div>
+	);
 }
