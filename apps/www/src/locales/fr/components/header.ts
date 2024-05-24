@@ -8,21 +8,21 @@ export default {
 			label: "Modules",
 			children: {
 				management: {
-					label: "Gestion de classes 1",
-					description: "About the project",
+					label: "Gestion de classes",
+					description: "Créez et générez vos classes",
 				},
 			},
 		},
 		resources: {
-			label: "Modules",
+			label: "Ressources",
 			children: {
 				pricing: {
-					label: "Pricing",
-					description: "Here comes the money",
+					label: "Offres",
+					description: "Offres hebergées et gratuites",
 				},
 				about: {
-					label: "About",
-					description: "About the project",
+					label: "À propos",
+					description: "Informations et détails sur pedaki",
 				},
 			},
 		},
