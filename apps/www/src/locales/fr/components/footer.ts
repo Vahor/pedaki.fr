@@ -1,7 +1,7 @@
 export default {
-	title: "Lorem ipsum dolor sit amet.",
+	title: "Le futur de la gestion scolaire",
 	description:
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse.",
+		"Toutes les fonctionnalités pour gérer votre établissement scolaire, dans une seule application.",
 	copyright: "Lorem ipsum dolor sit amet.",
 	terms: "Termes",
 	privacy: "Confidentialité",

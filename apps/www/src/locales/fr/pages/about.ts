@@ -1,11 +1,11 @@
 export default {
 	metadata: {
 		title: "A propos",
-		description: "Lorem ipsum dolor sit amet",
+		description: "Regroupement des informations concernant pedaki et de nos ressouces.",
 	},
 	header: {
 		title: "A propos de pedaki",
-		description: "Page qui regroupe nos assets et informations sur pedaki.",
+		description: "Regroupement des informations concernant pedaki et de nos ressouces.",
 	},
 	aboutUs: {
 		title: "A propos",
@@ -83,7 +83,7 @@ export default {
 		title: "Le nom",
 		paragraphs: {
 			description:
-				"Là on explique ce qu'est le nom, comment il se dit, comment il s'écrit (en minuscule “pedaki“ et pas “Pedaki“ par exemple). Faudrait le respecter aussi, pas comme sur cette page.",
+				"Le nom du projet fait référence à l'univers éducatif au travers du prefix de \"Pédagogie\". Les critètes étaient la facilité de prononciation, la consonance enfantine et la simplicité de mémorisation. Il s'écrit en entièrement en minuscule.",
 		},
 	},
 } as const;

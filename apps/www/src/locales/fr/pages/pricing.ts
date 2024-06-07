@@ -5,7 +5,7 @@ export default {
 	},
 	header: {
 		title: "Trouve une offre qui te convient",
-		description: "Page qui regroupe nos assets et informations sur pedaki.",
+		description: "Accède aux informations détaillées et aux comparaisons des différentes offres de pedaki.",
 	},
 	// TODO:
 } as const;
