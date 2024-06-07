@@ -216,6 +216,7 @@ const VideoDemo = () => {
 							width={2048}
 							height={1224}
 							alt="mock"
+							unoptimized
 							priority
 						/>
 					</DialogTrigger>
